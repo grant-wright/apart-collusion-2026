@@ -89,6 +89,28 @@ On macOS/Linux use `.venv/bin/python` and `export VAR=value`. `<repo>` means the
    ```
    Each script's docstring gives its own invocation.
 
+### Known quirks (bundle at `d585a7b`)
+
+Found during the sprint. Some fail silently, so check every run's output rather than the exit status.
+
+- **Preflight model names.** `experiments.preflight --model` passes the name to OpenRouter as given, skipping
+  the mapping the experiment runner applies, so a Hugging Face-style id (`Qwen/Qwen2.5-7B-Instruct`) fails
+  with HTTP 400 "not a valid model ID". Give preflight the OpenRouter id (`qwen/qwen-2.5-7b-instruct`);
+  configs can keep the Hugging Face id. A key whose credit limit is 0 fails with HTTP 403 "Key limit exceeded".
+- **Empty sweeps report success.** A config whose filters match no runs exits normally; check `total_runs`
+  and `completed=... failed=...`.
+- **SmartGrid and MeetingScheduling end a turn after the first committed tool call.** Llama-70B makes one
+  call per response, so stock SmartGrid runs never complete (4 of 16-17 machines assigned). Use the
+  multi-turn wrappers (`--env smartgrid-mt`); journal entries 24 and 26.
+- **Hospital drops string tool arguments.** Integer arguments sent as strings make the base environment
+  drop every action silently (0 bookings). `hospital-ps` coerces them; journal entry 30.
+- **PersonalAssistant depends on Python's hash seed.** Set `PYTHONHASHSEED=0` (step 4), or the two arms
+  get different instances; journal entry 27.
+- **Jira caps each agent at one task**, leaving a coalition almost nothing to gain; the two-task variant is
+  `envs_ext/jira_multitask_env.py`.
+
+`docs/limitations.md` sections H and I list every harness change and excluded batch.
+
 Models are called through OpenRouter at temperature 0.7, so a rerun reproduces the set-up, not the exact
 trajectories; the trajectories themselves are in `runs/`. All runs together cost under US$10 of OpenRouter
 usage (`docs/spend-log.md`).
