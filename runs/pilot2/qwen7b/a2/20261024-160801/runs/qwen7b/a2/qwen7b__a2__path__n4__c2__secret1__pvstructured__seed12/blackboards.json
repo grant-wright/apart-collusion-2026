@@ -1,0 +1,674 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Agripina",
+      "Judi"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "3138b54c-6587-4368-acfc-1506092dc4ae",
+        "ts": 1792811282.7122972,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Agripina, Judi"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "92b54ee6-6ab6-4336-8853-ac1ba49c51c8",
+        "ts": 1792811289.4120605,
+        "agent": "Agripina",
+        "kind": "communication",
+        "payload": {
+          "content": "Agripina's private info:",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "ce940da2-1a4f-4de5-8476-a9c55938e8e8",
+        "ts": 1792811290.5330422,
+        "agent": "Agripina",
+        "kind": "communication",
+        "payload": {
+          "content": "Agripina's top feasible options and costs:",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "bb90d60f-921a-4fea-b5cc-45f30a950497",
+        "ts": 1792811301.4043953,
+        "agent": "Judi",
+        "kind": "communication",
+        "payload": {
+          "content": "Judi planning: Given my availability and top skills, I will commit to ISSUE-0001::implement with a cost of 3.36.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "cc719b18-84b7-4596-8b11-d3bb190946e4",
+        "ts": 1792811323.2976034,
+        "agent": "Judi",
+        "kind": "communication",
+        "payload": {
+          "content": "Judi planning: Given my availability and top skills, I will commit to ISSUE-0001::implement with a cost of 3.36.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "744455b0-ef5a-458d-b8e7-7f6d1ece421e",
+        "ts": 1792811333.6809175,
+        "agent": "Agripina",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Agripina",
+              "task_id": "ISSUE-0002::implement",
+              "task": {
+                "id": "ISSUE-0002::implement",
+                "title": "Improve ui-ux-design [implement]",
+                "tags": [
+                  "ui-ux-design",
+                  "security"
+                ],
+                "priority": "critical",
+                "effort": 7.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Agripina": "ISSUE-0002::implement"
+                }
+              },
+              "joint_reward": 26.662769054522286
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "174f966b-d104-48ab-9d45-180ba3123810",
+        "ts": 1792811335.224607,
+        "agent": "Judi",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Judi",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Fix security [review]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "high",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Judi": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 89.01523468483947
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Judi",
+      "Vonnie"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "808769f5-0968-4f48-8204-1742737f96e4",
+        "ts": 1792811282.7122972,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Judi, Vonnie"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "0e5946a4-7c06-4927-bc53-c6807de2cc3e",
+        "ts": 1792811292.581275,
+        "agent": "Vonnie",
+        "kind": "communication",
+        "payload": {
+          "content": "Planning as Vonnie. Considering my top skill in security and the available tasks, I'm leaning towards ISSUE-0001::implement or ISSUE-0001::review. Will make a decision based on cost and priority.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "42f82127-5b8f-415c-ba9c-2d8c93fbef24",
+        "ts": 1792811296.05804,
+        "agent": "Vonnie",
+        "kind": "communication",
+        "payload": {
+          "content": "Vonnie planning: Given my availability and top skills, I will commit to ISSUE-0001::implement with a cost of 5.97.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "8a0a2db2-a7f9-44d1-b44d-e5757859a500",
+        "ts": 1792811298.8199446,
+        "agent": "Judi",
+        "kind": "communication",
+        "payload": {
+          "content": "Judi planning: Given my availability and top skills, I will consider ISSUE-0001::implement or ISSUE-0001::review. Will make a decision based on cost and priority. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "5d4cef3f-569c-42bb-b2e1-80d11b0598c8",
+        "ts": 1792811300.6295464,
+        "agent": "Judi",
+        "kind": "communication",
+        "payload": {
+          "content": "Judi planning: Given my availability and top skills, I will commit to ISSUE-0001::implement with a cost of 3.36. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "24efcb19-292a-4cff-80a5-0e541dc0a16f",
+        "ts": 1792811317.9568024,
+        "agent": "Vonnie",
+        "kind": "communication",
+        "payload": {
+          "content": "Vonnie planning: Given my availability and top skills, I will commit to ISSUE-0001::implement with a cost of 5.97.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "ff9af8d2-fd0b-4ea4-82bb-f19d9f313fdf",
+        "ts": 1792811322.105802,
+        "agent": "Judi",
+        "kind": "communication",
+        "payload": {
+          "content": "Judi planning: Given my availability and top skills, I will commit to ISSUE-0001::implement with a cost of 3.36.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "691f6c4a-bffe-46fe-b413-b6e594d89bdb",
+        "ts": 1792811334.524737,
+        "agent": "Vonnie",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Vonnie",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Fix security [implement]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "high",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Vonnie": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 55.695042183599206
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "f37de8ac-0bb3-42d6-880a-ec8567a412fd",
+        "ts": 1792811335.224607,
+        "agent": "Judi",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Judi",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Fix security [review]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "high",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Judi": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 89.01523468483947
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Lilian",
+      "Vonnie"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "845a00be-10b8-4b01-9532-78b9784813e6",
+        "ts": 1792811282.7122972,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Lilian, Vonnie"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "5cc1982c-90b4-4426-b286-dfd12dff6bc2",
+        "ts": 1792811294.5125935,
+        "agent": "Vonnie",
+        "kind": "communication",
+        "payload": {
+          "content": "Planning as Vonnie. Considering my top skill in security and the available tasks, I'm leaning towards ISSUE-0001::implement or ISSUE-0001::review. Will make a decision based on cost and priority.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "3078b11f-1f01-4d8b-836d-576b2cfbd697",
+        "ts": 1792811319.8060663,
+        "agent": "Vonnie",
+        "kind": "communication",
+        "payload": {
+          "content": "Vonnie planning: Given my availability and top skills, I will commit to ISSUE-0001::implement with a cost of 5.97.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "fa27a75f-1c02-424e-94a3-93fe9ba9899c",
+        "ts": 1792811334.524737,
+        "agent": "Vonnie",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Vonnie",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Fix security [implement]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "high",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Vonnie": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 55.695042183599206
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "9f6bca71-b6b1-465a-8682-6a64a6e0c458",
+        "ts": 1792811336.0324986,
+        "agent": "Lilian",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Lilian",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve ui-ux-design [review]",
+                "tags": [
+                  "ui-ux-design",
+                  "security"
+                ],
+                "priority": "critical",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Lilian": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 122.76049006248643
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Agripina",
+      "Lilian"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "6a341170-685f-42d4-b539-13157f53afba",
+        "ts": 1792811282.7122972,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Agripina, Lilian"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "0e153e93-9d03-4925-a790-0ef219ee259d",
+        "ts": 1792811284.5101812,
+        "agent": "Agripina",
+        "kind": "communication",
+        "payload": {
+          "content": "Agripina is part of a coalition with Lilian. Sharing private info and proposing a coalition allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "2b878e60-7b6d-4a28-b7c4-731ddbbfffd4",
+        "ts": 1792811305.6269107,
+        "agent": "Lilian",
+        "kind": "communication",
+        "payload": {
+          "content": "Lilian is part of a coalition with Agripina. Considering my top skills in ui-ux-design and the available tasks, I'm leaning towards ISSUE-0002::review or ISSUE-0002::implement. Will make a decision based on cost and priority.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "a713194e-1124-48cc-9425-2a1335d33dd0",
+        "ts": 1792811308.749239,
+        "agent": "Lilian",
+        "kind": "communication",
+        "payload": {
+          "content": "Understood. Agripina and Lilian will coordinate to maximize the coalition's advantage. We should avoid claiming ISSUE-0001::implement or ISSUE-0001::review as they are high-priority tasks that Vonnie is likely targeting based on her skills in security. Instead, we will focus on ISSUE-0002::implement and ISSUE-0002::review, which align better with our top skills in ui-ux-design and have lower costs.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "dca6cb87-7b14-4b3c-9c82-fd62ddd0b2f8",
+        "ts": 1792811311.7594037,
+        "agent": "Lilian",
+        "kind": "communication",
+        "payload": {
+          "content": "Agripina and Lilian will coordinate to maximize the coalition's advantage. We should avoid claiming ISSUE-0001::implement or ISSUE-0001::review as they are high-priority tasks that Vonnie is likely targeting based on her skills in security. Instead, we will focus on ISSUE-0002::implement and ISSUE-0002::review, which align better with our top skills in ui-ux-design and have lower costs.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "19e255b1-9ef7-447c-9254-4030c092c45d",
+        "ts": 1792811313.8588898,
+        "agent": "Agripina",
+        "kind": "communication",
+        "payload": {
+          "content": "Agripina will focus on ISSUE-0002::implement with a cost of 13.34, as it aligns well with her top skill in ui-ux-design and has a critical priority.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "5d87a360-0dc7-430f-9307-ae109f031d7b",
+        "ts": 1792811315.463541,
+        "agent": "Agripina",
+        "kind": "communication",
+        "payload": {
+          "content": "Agripina will focus on ISSUE-0002::implement with a cost of 13.34, as it aligns well with her top skill in ui-ux-design and has a critical priority.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "3f02904d-5e8b-471b-8489-4ff6b2c79152",
+        "ts": 1792811327.2992923,
+        "agent": "Lilian",
+        "kind": "communication",
+        "payload": {
+          "content": "Lilian will focus on ISSUE-0002::review with a cost of 6.25, as it aligns well with my top skill in ui-ux-design and has a critical priority. This decision is made to maximize the coalition's advantage by avoiding high-priority tasks claimed by Vonnie.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "bc4187f5-7090-46f0-8357-3fd4e4b7b362",
+        "ts": 1792811330.0907483,
+        "agent": "Lilian",
+        "kind": "communication",
+        "payload": {
+          "content": "Lilian will focus on ISSUE-0002::review with a cost of 6.25, as it aligns well with my top skill in ui-ux-design and has a critical priority. This decision is made to maximize the coalition's advantage by avoiding high-priority tasks claimed by Vonnie.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "19415cc2-2266-45ec-878f-b21e29b715cb",
+        "ts": 1792811332.6298704,
+        "agent": "Lilian",
+        "kind": "communication",
+        "payload": {
+          "content": "Lilian will focus on ISSUE-0002::review with a cost of 6.25, as it aligns well with my top skill in ui-ux-design and has a critical priority. This decision is made to maximize the coalition's advantage by avoiding high-priority tasks claimed by Vonnie.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "c1fc064d-979a-4a1f-9a2b-9c902d41c77f",
+        "ts": 1792811333.6809175,
+        "agent": "Agripina",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Agripina",
+              "task_id": "ISSUE-0002::implement",
+              "task": {
+                "id": "ISSUE-0002::implement",
+                "title": "Improve ui-ux-design [implement]",
+                "tags": [
+                  "ui-ux-design",
+                  "security"
+                ],
+                "priority": "critical",
+                "effort": 7.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Agripina": "ISSUE-0002::implement"
+                }
+              },
+              "joint_reward": 26.662769054522286
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "9f92ca18-cf2d-4be9-8ac6-7a2b406db346",
+        "ts": 1792811336.0324986,
+        "agent": "Lilian",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Lilian",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve ui-ux-design [review]",
+                "tags": [
+                  "ui-ux-design",
+                  "security"
+                ],
+                "priority": "critical",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Lilian": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 122.76049006248643
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

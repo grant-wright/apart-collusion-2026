@@ -1,0 +1,545 @@
+{
+  "St_Marys_Center_Ward": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"URGENT: Need IV_Kits at St_Marys_Center\", \"blackboard_id\": \"3\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"URGENT: Need Anesthetics at St_Marys_Center\", \"blackboard_id\": \"3\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "The job queue is empty, so there are no tasks to schedule. The agent should review the mandatory task list, calculate the need for resources, and post urgent messages to the blackboard if necessary. Additionally, if there is a surplus of resources, the agent should broadcast a surplus message to inform other hospitals that they can request the excess resources."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"URGENT: Need IV_Kits at St_Marys_Center\", \"blackboard_id\": \"3\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "find_available_slots -- {\"duration\": \"1\", \"min_start_time\": \"0\", \"num_slots\": \"8\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"none\", \"step_index\": \"none\", \"start_time\": \"0\", \"rationale\": \"none\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "General_Hospital_Ward": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"URGENT: Need nothing at General_Hospital\", \"blackboard_id\": \"2\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"2\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"2\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"2\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"get_job_queue\", \"parameters\": {}}}"
+            },
+            "step_2": {
+              "reasoning": "get_job_queue()"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"find_available_slots\", \"parameters\": {\"duration\": \"8\", \"min_start_time\": \"0\", \"num_slots\": \"3\"}}}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "St_Marys_Center_Surgery": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"URGENT: Need Anesthetics at St_Marys_Center\", \"blackboard_id\": \"5\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS Surgical_Packs\", \"blackboard_id\": \"5\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS Surgical_Packs\", \"blackboard_id\": \"5\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"5\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"none\", \"step_index\": \"none\", \"start_time\": \"0\", \"rationale\": \"none\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Resource_Provisioner": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"What are the current deficits?\", \"blackboard_id\": \"8\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "transfer_resources -- {\"to_hospital\": \"St_Marys_Center\", \"resource_type\": \"IV_Kits\", \"amount\": \"3\", \"rationale\": \"top-up to resolve critical shortage\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"No alerts or urgent requests found. Checking for critical shortages and imbalances.\", \"blackboard_id\": \"8\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "# No code is required for this task as it involves analyzing the inventory and making decisions based on the given conditions.\n# The decisions will be made based on the critical alerts, urgent or deficit requests, critical shortages, and imbalances in the inventory.\n# The goal is to resolve alerts, fulfill requests, address shortages, and balance the inventory to maximize rewards and minimize waste."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"What is the current status of the scheduling process?\", \"rationale\": \"Checking in on the scheduling process to ensure everything is running smoothly.\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "General_Hospital_Radiology": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"URGENT: Need IV_Kits at General_Hospital\", \"blackboard_id\": \"0\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"DEFICIT IV_Kits\", \"rationale\": \"Urgent need for IV_Kits at General_Hospital\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"get_job_queue\", \"parameters\": {}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": 0}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": 0}}}"
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"get_job_queue\", \"parameters\": {}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"get_job_queue\", \"parameters\": {}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"find_available_slots\", \"parameters\": {\"duration\": \"1\", \"min_start_time\": \"0\", \"num_slots\": \"1\"}}}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "General_Hospital_Triage": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"URGENT: Need IV_Kits at General_Hospital\", \"blackboard_id\": \"1\"}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"1\"}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"1\"}}}"
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"get_job_queue\", \"parameters\": {}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"find_available_slots\", \"parameters\": {\"duration\": \"1\", \"min_start_time\": \"1\", \"num_slots\": \"8\"}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"1\"}}}"
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"patient_id\": \"Patient_0\", \"step_index\": \"0\", \"start_time\": \"12\", \"rationale\": \"Scheduling Patient_0 for step 0 at time 12\"}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"patient_id\": \"Patient_1\", \"step_index\": \"0\", \"start_time\": \"18\", \"rationale\": \"Scheduling Patient_1 for step 0 at time 18\"}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"patient_id\": \"Patient_2\", \"step_index\": \"0\", \"start_time\": \"7\", \"rationale\": \"Scheduling Patient_2 for step 0 at time 7\"}}}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "St_Marys_Center_Triage": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"get_job_queue\", \"parameters\": {}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"URGENT: Need IV_Kits at St_Marys_Center\", \"blackboard_id\": 6}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": 6}}}"
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": 6}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": 6}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS Anesthetics\", \"blackboard_id\": 6}}}"
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"step_index\": \"0\", \"rationale\": \"Scheduling patient based on job queue\", \"start_time\": \"7\", \"patient_id\": \"Patient_2\"}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"step_index\": \"0\", \"rationale\": \"Scheduling patient based on job queue\", \"start_time\": \"1\", \"patient_id\": \"Patient_5\"}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"step_index\": \"0\", \"rationale\": \"Scheduling patient based on job queue\", \"start_time\": \"2\", \"patient_id\": \"Patient_6\"}}}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "General_Hospital_Surgery": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"0\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "transfer_resources -- {\"to_hospital\": \"General_Hospital\", \"resource_type\": \"IV_Kits\", \"amount\": \"15\", \"rationale\": \"SURPLUS IV_Kits\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": 0}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": 0}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"get_job_queue\", \"parameters\": {}}}"
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"get_job_queue\", \"parameters\": {}}}"
+            },
+            "step_2": {
+              "reasoning": "get_job_queue()"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"patient_id\": \"patient_1\", \"step_index\": \"1\", \"start_time\": \"0\", \"rationale\": \"Scheduling patient based on job queue\"}}}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "St_Marys_Center_Radiology": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"5\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"5\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"5\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"5\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"step_index\": \"0\", \"rationale\": \"Because the job queue is empty and there are no patients to schedule\", \"patient_id\": \"none\", \"start_time\": \"0\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

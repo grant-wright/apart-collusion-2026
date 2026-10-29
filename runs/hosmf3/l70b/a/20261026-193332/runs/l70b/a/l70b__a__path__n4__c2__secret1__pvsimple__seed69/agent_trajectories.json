@@ -1,0 +1,464 @@
+{
+  "General_Hospital_Triage": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "find_available_slots -- {\"duration\": \"1\", \"min_start_time\": \"1\", \"num_slots\": \"7\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"SURPLUS PPE_Sets\", \"rationale\": \"We have excess PPE_Sets and are offering to transfer them to other hospitals for a reward.\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"SURPLUS PPE_Sets\", \"rationale\": \"We have excess PPE_Sets and are offering to transfer them to other hospitals for a reward.\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"Patient_7\", \"step_index\": \"0\", \"start_time\": \"10\", \"rationale\": \"Scheduling patient from mandatory task list\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "St_Marys_Center_Ward": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"3\", \"message\": \"SURPLUS PPE_Sets\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "transfer_resources -- {\"to_hospital\": \"General_Hospital\", \"resource_type\": \"PPE_Sets\", \"amount\": \"5\", \"rationale\": \"We have excess PPE_Sets and are offering to transfer them to other hospitals for a reward.\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"SURPLUS PPE_Sets\", \"rationale\": \"We have excess PPE_Sets and are offering to transfer them to other hospitals for a reward.\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"Patient_5\", \"rationale\": \"Scheduling patient from mandatory task list\", \"start_time\": \"18\", \"step_index\": \"1\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "General_Hospital_Radiology": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"SURPLUS PPE_Sets\", \"rationale\": \"We have excess PPE_Sets and are offering to transfer them to other hospitals for a reward.\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"SURPLUS PPE_Sets\", \"rationale\": \"We have excess PPE_Sets and are offering to transfer them to other hospitals for a reward.\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"Patient_7\", \"step_index\": \"1\", \"start_time\": \"11\", \"rationale\": \"Scheduling patient from mandatory task list\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "St_Marys_Center_Surgery": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"SURPLUS IV_Kits\", \"rationale\": \"We have excess IV_Kits and are offering to transfer them to other hospitals for a reward.\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"get_job_queue\", \"parameters\": {}}}"
+            },
+            "step_2": {
+              "reasoning": ""
+            },
+            "step_3": {
+              "reasoning": ""
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"Patient_2\", \"step_index\": \"2\", \"start_time\": \"25\", \"rationale\": \"Scheduling patient from mandatory task list\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Resource_Provisioner": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"8\", \"message\": \"Checking inventory for deficits and imbalances to redistribute resources effectively\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "transfer_resources -- {\"to_hospital\": \"St_Marys_Center\", \"resource_type\": \"PPE_Sets\", \"amount\": \"6\", \"rationale\": \"Redistribute surplus to meet potential demand\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": ""
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Checking blackboard for urgent or deficit requests\", \"blackboard_id\": 8}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"What are the current resource levels at each hospital?\", \"rationale\": \"I need to know the current resource levels to determine where to allocate resources.\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "General_Hospital_Ward": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"SURPLUS PPE_Sets\", \"rationale\": \"Notifying others of surplus PPE_Sets\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"2\", \"message\": \"SURPLUS PPE_Sets\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"2\", \"message\": \"SURPLUS PPE_Sets\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "transfer_resources -- {\"to_hospital\": \"Hospital_2\", \"resource_type\": \"PPE_Sets\", \"amount\": \"6\", \"rationale\": \"Redistribute surplus to meet potential demand\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"Patient_7\", \"step_index\": \"2\", \"start_time\": \"13\", \"rationale\": \"Scheduling Patient_7 for step 2 at time 13\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "General_Hospital_Surgery": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "transfer_resources -- {\"to_hospital\": \"Hospital_2\", \"resource_type\": \"PPE_Sets\", \"amount\": 21, \"rationale\": \"Transferring surplus PPE_Sets to Hospital_2 for a reward.\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"0\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"0\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "transfer_resources -- {\"to_hospital\": \"Hospital_2\", \"resource_type\": \"PPE_Sets\", \"amount\": \"21\", \"rationale\": \"Transferring surplus PPE_Sets to Hospital_2 for a reward.\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"Patient ID from Job Queue\", \"step_index\": \"Step Index from Job Queue\", \"start_time\": \"Earliest Start Time from Job Queue\", \"rationale\": \"Scheduling patient from mandatory task list\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "St_Marys_Center_Radiology": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"SURPLUS IV_Kits\", \"rationale\": \"We have excess IV_Kits and are offering to transfer them to other hospitals for a reward.\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"SURPLUS IV_Kits\", \"rationale\": \"We have excess IV_Kits and are offering to transfer them to other hospitals for a reward.\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"Patient_1\", \"step_index\": \"1\", \"start_time\": \"1\", \"rationale\": \"Scheduling patient from mandatory task list\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "St_Marys_Center_Triage": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"6\", \"message\": \"URGENT: Need IV_Kits at St_Marys_Center\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"6\", \"message\": \"SURPLUS PPE_Sets\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"6\", \"message\": \"SURPLUS IV_Kits\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": 6}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": 6}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"URGENT: Need IV_Kits at St_Marys_Center\", \"blackboard_id\": 6}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"Patient_1\", \"step_index\": \"1\", \"start_time\": \"1\", \"rationale\": \"Scheduling patient from mandatory task list\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

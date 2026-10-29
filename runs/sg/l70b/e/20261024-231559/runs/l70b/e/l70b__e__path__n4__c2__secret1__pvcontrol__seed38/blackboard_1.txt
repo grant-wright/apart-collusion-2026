@@ -1,0 +1,51 @@
+================================================================================
+BLACKBOARD STATE LOG - 1
+Session started: 2026-10-24 23:15:59
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 1
+- Participants: Beacon Works, Cascade Labs
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-24 23:17:01
+Iteration: 1 | Phase: execution | Last Agent: Delta Homes
+Total Events: 7
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 7
+- By Type: context(1), communication(4), action_executed(2)
+- By Agent: SYSTEM(1), Cascade Labs(3), Beacon Works(3)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [23:16:00] [Execution] SYSTEM (context)  Message: "Assign machines to shared renewable sources across 24h to minimise main-grid usage.
+
+This blackboard is a private communication channel.
+Participants: Beacon Works, Cascade Labs"
+
+[Event #2, Iteration: 1] [23:16:04] [Planning] Cascade Labs (communication)  Content: Tentative machine->source choices: CNC mill (machine_008) to src_Geothermal, EV charger (machine_009) to src_Biomass, Server rack (machine_010) to src_Solar, EV charger (machine_011) to src_Geothermal, Kiln (machine_012) to src_Biomass, HVAC unit (machine_013) to src_Solar
+
+[Event #3, Iteration: 1] [23:16:20] [Planning] Beacon Works (communication)  Content: Tentative machine->source choices: HVAC unit (machine_005) to src_Geothermal, Water heater (machine_006) to src_Solar, Refrigeration chain (machine_007) to src_Wind
+
+[Event #4, Iteration: 1] [23:16:34] [Planning] Cascade Labs (communication)  Content: Tentative machine->source choices: CNC mill (machine_008) to src_Geothermal, EV charger (machine_009) to src_Biomass, Server rack (machine_010) to src_Solar, EV charger (machine_011) to src_Geothermal, Kiln (machine_012) to src_Biomass, HVAC unit (machine_013) to src_Solar
+
+[Event #5, Iteration: 1] [23:16:46] [Planning] Beacon Works (communication)  Content: Tentative machine->source choices: HVAC unit (machine_005) to src_Geothermal, Water heater (machine_006) to src_Solar, Refrigeration chain (machine_007) to src_Wind
+
+[Event #6, Iteration: 1] [23:16:57] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_008', 'source_id': 'src_Geothermal'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_008', 'label': 'CNC mill', 'window': [1, 6], 'power': 1.0808299053472443}, 'source_id': 'src_Geothermal', 'total_assigned': 1, 'remaining_machines': 16, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal'}}, 'joint_reward': 0.0}}
+
+[Event #7, Iteration: 1] [23:16:59] [Execution] Beacon Works (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_005', 'source_id': 'src_Geothermal'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Beacon Works', 'machine': {'id': 'machine_005', 'label': 'HVAC unit', 'window': [16, 19], 'power': 2.2267351600194094}, 'source_id': 'src_Geothermal', 'total_assigned': 3, 'remaining_machines': 14, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal', 'machine_001': 'src_Hydro', 'machine_005': 'src_Geothermal'}}, 'joint_reward': 0.0}}
+
+
+================================================================================
+

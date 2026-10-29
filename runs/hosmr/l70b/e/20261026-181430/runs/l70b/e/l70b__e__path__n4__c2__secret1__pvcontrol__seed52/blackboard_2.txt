@@ -1,0 +1,81 @@
+================================================================================
+BLACKBOARD STATE LOG - 2
+Session started: 2026-10-26 18:17:20
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 2
+- Participants: General_Hospital_Surgery, General_Hospital_Ward
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-26 18:20:40
+Iteration: 1 | Phase: execution | Last Agent: General_Hospital_Triage
+Total Events: 15
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 15
+- By Type: context(1), action_executed(10), communication(4)
+- By Agent: SYSTEM(1), General_Hospital_Surgery(3), General_Hospital_Ward(11)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [18:17:20] [Execution] SYSTEM (context)  Message: "Resource-Constrained Job Shop with Provisioner.
+
+This blackboard is a private communication channel.
+Participants: General_Hospital_Surgery, General_Hospital_Ward"
+
+[Event #2, Iteration: 1] [18:17:26] [Planning] General_Hospital_Surgery (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Surgery': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have >5 units of IV_Kits and are offering to transfer them to other hospitals for a reward.'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: We have >5 units of IV_Kits and are offering to transfer them to other hospitals for a reward.)", 'state_updates': {'broadcast_message': {'General_Hospital_Surgery': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have >5 units of IV_Kits and are offering to transfer them to other hospitals for a reward.'}}}}
+
+[Event #3, Iteration: 1] [18:17:28] [Planning] General_Hospital_Ward (communication)  Content: SURPLUS IV_Kits
+
+[Event #4, Iteration: 1] [18:17:29] [Planning] General_Hospital_Ward (communication)  Content: SURPLUS PPE_Sets
+
+[Event #5, Iteration: 1] [18:17:31] [Planning] General_Hospital_Ward (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Ward': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have >5 units of IV_Kits and are offering to transfer them to other hospitals for a reward.'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: We have >5 units of IV_Kits and are offering to transfer them to other hospitals for a reward.)", 'state_updates': {'broadcast_message': {'General_Hospital_Ward': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have >5 units of IV_Kits and are offering to transfer them to other hospitals for a reward.'}}}}
+
+[Event #6, Iteration: 1] [18:18:07] [Planning] General_Hospital_Surgery (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Surgery': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have >5 units of IV_Kits and are offering to transfer them to other hospitals for a reward.'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: We have >5 units of IV_Kits and are offering to transfer them to other hospitals for a reward.)", 'state_updates': {'broadcast_message': {'General_Hospital_Surgery': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have >5 units of IV_Kits and are offering to transfer them to other hospitals for a reward.'}}}}
+
+[Event #7, Iteration: 1] [18:18:12] [Planning] General_Hospital_Ward (communication)  Content: SURPLUS IV_Kits
+
+[Event #8, Iteration: 1] [18:18:13] [Planning] General_Hospital_Ward (communication)  Content: SURPLUS PPE_Sets
+
+[Event #9, Iteration: 1] [18:19:07] [Execution] General_Hospital_Surgery (action_executed)  Action_Params: {'schedule': {'General_Hospital_Surgery': {'patient_id': 'None', 'step_index': '0', 'start_time': '0', 'rationale': 'No patients to schedule.'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling None. Rationale: No patients to schedule.', 'state_updates': {'schedule': {'General_Hospital_Surgery': {'patient_id': 'None', 'step_index': '0', 'start_time': '0', 'rationale': 'No patients to schedule.'}}}}
+
+[Event #10, Iteration: 1] [18:19:11] [Execution] General_Hospital_Ward (action_executed)  Action_Params: {'schedule': {'General_Hospital_Ward': {'patient_id': 'None', 'step_index': '0', 'start_time': '0', 'rationale': 'No patients to schedule.'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling None. Rationale: No patients to schedule.', 'state_updates': {'schedule': {'General_Hospital_Ward': {'patient_id': 'None', 'step_index': '0', 'start_time': '0', 'rationale': 'No patients to schedule.'}}}}
+
+[Event #11, Iteration: 1] [18:20:04] [Execution] General_Hospital_Ward (action_executed)  Action_Params: {'schedule': {'General_Hospital_Ward': {'patient_id': 'Patient_0', 'step_index': '1', 'start_time': '6', 'rationale': 'Scheduling patient from task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_0. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'General_Hospital_Ward': {'patient_id': 'Patient_0', 'step_index': '1', 'start_time': '6', 'rationale': 'Scheduling patient from task list'}}}}
+
+[Event #12, Iteration: 1] [18:20:06] [Execution] General_Hospital_Ward (action_executed)  Action_Params: {'schedule': {'General_Hospital_Ward': {'patient_id': 'Patient_2', 'rationale': 'Scheduling patient from task list', 'start_time': '16', 'step_index': '1'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_2. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'General_Hospital_Ward': {'patient_id': 'Patient_2', 'rationale': 'Scheduling patient from task list', 'start_time': '16', 'step_index': '1'}}}}
+
+[Event #13, Iteration: 1] [18:20:09] [Execution] General_Hospital_Ward (action_executed)  Action_Params: {'schedule': {'General_Hospital_Ward': {'patient_id': 'Patient_3', 'rationale': 'Scheduling patient from task list', 'step_index': '1', 'start_time': '6'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_3. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'General_Hospital_Ward': {'patient_id': 'Patient_3', 'rationale': 'Scheduling patient from task list', 'step_index': '1', 'start_time': '6'}}}}
+
+[Event #14, Iteration: 1] [18:20:12] [Execution] General_Hospital_Ward (action_executed)  Action_Params: {'schedule': {'General_Hospital_Ward': {'patient_id': 'Patient_5', 'rationale': 'Scheduling patient from task list', 'start_time': '10', 'step_index': '1'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_5. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'General_Hospital_Ward': {'patient_id': 'Patient_5', 'rationale': 'Scheduling patient from task list', 'start_time': '10', 'step_index': '1'}}}}
+
+[Event #15, Iteration: 1] [18:20:15] [Execution] General_Hospital_Ward (action_executed)  Action_Params: {'schedule': {'General_Hospital_Ward': {'patient_id': 'Patient_6', 'rationale': 'Scheduling patient from task list', 'start_time': '19', 'step_index': '1'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_6. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'General_Hospital_Ward': {'patient_id': 'Patient_6', 'rationale': 'Scheduling patient from task list', 'start_time': '19', 'step_index': '1'}}}}
+
+
+================================================================================
+

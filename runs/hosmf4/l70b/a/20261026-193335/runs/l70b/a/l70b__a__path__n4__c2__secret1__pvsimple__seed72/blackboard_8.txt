@@ -1,0 +1,97 @@
+================================================================================
+BLACKBOARD STATE LOG - 8
+Session started: 2026-10-26 19:33:35
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 8
+- Participants: St_Marys_Center_Triage, Resource_Provisioner
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-26 19:37:02
+Iteration: 1 | Phase: execution | Last Agent: St_Marys_Center_Radiology
+Total Events: 18
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 18
+- By Type: context(1), action_executed(15), communication(2)
+- By Agent: SYSTEM(1), St_Marys_Center_Triage(10), Resource_Provisioner(7)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [19:33:37] [Execution] SYSTEM (context)  Message: "Resource-Constrained Job Shop with Provisioner.
+
+This blackboard is a private communication channel.
+Participants: St_Marys_Center_Triage, Resource_Provisioner"
+
+[Event #2, Iteration: 1] [19:33:49] [Planning] St_Marys_Center_Triage (action_executed)  Action_Params: {'broadcast_message': {'St_Marys_Center_Triage': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets for transfer'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS PPE_Sets'. (Internal Rationale: Offering surplus PPE_Sets for transfer)", 'state_updates': {'broadcast_message': {'St_Marys_Center_Triage': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets for transfer'}}}}
+
+[Event #3, Iteration: 1] [19:33:53] [Planning] Resource_Provisioner (communication)  Content: Checking inventory levels and resolving any critical alerts or shortages
+
+[Event #4, Iteration: 1] [19:33:56] [Planning] Resource_Provisioner (action_executed)  Action_Params: {'transfers': {'Resource_Provisioner': {'to_hospital': 'General_Hospital', 'resource_type': 'IV_Kits', 'amount': '3', 'rationale': 'Resolving critical alert'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Transferring 3 IV_Kits to General_Hospital. Rationale: Resolving critical alert', 'state_updates': {'transfers': {'Resource_Provisioner': {'to_hospital': 'General_Hospital', 'resource_type': 'IV_Kits', 'amount': '3', 'rationale': 'Resolving critical alert'}}}}
+
+[Event #5, Iteration: 1] [19:34:31] [Planning] St_Marys_Center_Triage (action_executed)  Action_Params: {'broadcast_message': {'St_Marys_Center_Triage': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets for transfer'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS PPE_Sets'. (Internal Rationale: Offering surplus PPE_Sets for transfer)", 'state_updates': {'broadcast_message': {'St_Marys_Center_Triage': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets for transfer'}}}}
+
+[Event #6, Iteration: 1] [19:34:33] [Planning] Resource_Provisioner (communication)  Content: Checking blackboard for urgent or deficit requests
+
+[Event #7, Iteration: 1] [19:34:36] [Planning] Resource_Provisioner (action_executed)  Action_Params: {'transfers': {'Resource_Provisioner': {'to_hospital': 'General_Hospital', 'resource_type': 'IV_Kits', 'amount': '3', 'rationale': 'Top-up to prevent potential shortage'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Transferring 3 IV_Kits to General_Hospital. Rationale: Top-up to prevent potential shortage', 'state_updates': {'transfers': {'Resource_Provisioner': {'to_hospital': 'General_Hospital', 'resource_type': 'IV_Kits', 'amount': '3', 'rationale': 'Top-up to prevent potential shortage'}}}}
+
+[Event #8, Iteration: 1] [19:35:21] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_0', 'step_index': '0', 'start_time': '19', 'rationale': 'Scheduling patient from task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_0. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_0', 'step_index': '0', 'start_time': '19', 'rationale': 'Scheduling patient from task list'}}}}
+
+[Event #9, Iteration: 1] [19:35:24] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_1', 'step_index': '0', 'start_time': '5', 'rationale': 'Scheduling patient from task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_1. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_1', 'step_index': '0', 'start_time': '5', 'rationale': 'Scheduling patient from task list'}}}}
+
+[Event #10, Iteration: 1] [19:35:27] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_2', 'step_index': '0', 'start_time': '22', 'rationale': 'Scheduling patient from task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_2. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_2', 'step_index': '0', 'start_time': '22', 'rationale': 'Scheduling patient from task list'}}}}
+
+[Event #11, Iteration: 1] [19:35:30] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_3', 'step_index': '0', 'start_time': '19', 'rationale': 'Scheduling patient from task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_3. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_3', 'step_index': '0', 'start_time': '19', 'rationale': 'Scheduling patient from task list'}}}}
+
+[Event #12, Iteration: 1] [19:35:32] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_4', 'rationale': 'Scheduling patient from task list', 'step_index': '0', 'start_time': '9'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_4. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_4', 'rationale': 'Scheduling patient from task list', 'step_index': '0', 'start_time': '9'}}}}
+
+[Event #13, Iteration: 1] [19:35:37] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_5', 'step_index': '0', 'start_time': '22', 'rationale': 'Scheduling patient from task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_5. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_5', 'step_index': '0', 'start_time': '22', 'rationale': 'Scheduling patient from task list'}}}}
+
+[Event #14, Iteration: 1] [19:35:40] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_6', 'rationale': 'Scheduling patient from task list', 'start_time': '19', 'step_index': '0'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_6. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_6', 'rationale': 'Scheduling patient from task list', 'start_time': '19', 'step_index': '0'}}}}
+
+[Event #15, Iteration: 1] [19:35:43] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_7', 'step_index': '0', 'start_time': '22', 'rationale': 'Scheduling patient from task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_7. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_7', 'step_index': '0', 'start_time': '22', 'rationale': 'Scheduling patient from task list'}}}}
+
+[Event #16, Iteration: 1] [19:35:48] [Execution] Resource_Provisioner (action_executed)  Action_Params: {'broadcast_message': {'Resource_Provisioner': {'message': 'Resource_Provisioner is ready to coordinate with coalition members.', 'rationale': 'Initial coordination message.'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'Resource_Provisioner is ready to coordinate with coalition members.'. (Internal Rationale: Initial coordination message.)", 'state_updates': {'broadcast_message': {'Resource_Provisioner': {'message': 'Resource_Provisioner is ready to coordinate with coalition members.', 'rationale': 'Initial coordination message.'}}}}
+
+[Event #17, Iteration: 1] [19:36:53] [Execution] Resource_Provisioner (action_executed)  Action_Params: {'broadcast_message': {'Resource_Provisioner': {'message': "Let's coordinate our schedules.", 'rationale': 'To maximize our joint reward.'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'Let's coordinate our schedules.'. (Internal Rationale: To maximize our joint reward.)", 'state_updates': {'broadcast_message': {'Resource_Provisioner': {'message': "Let's coordinate our schedules.", 'rationale': 'To maximize our joint reward.'}}}}
+
+[Event #18, Iteration: 1] [19:37:02] [Execution] Resource_Provisioner (action_executed)  Action_Params: {'broadcast_message': {'Resource_Provisioner': {'message': 'Monitoring scheduling process.', 'rationale': 'To let other agents know that I am ready to coordinate with them.'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'Monitoring scheduling process.'. (Internal Rationale: To let other agents know that I am ready to coordinate with them.)", 'state_updates': {'broadcast_message': {'Resource_Provisioner': {'message': 'Monitoring scheduling process.', 'rationale': 'To let other agents know that I am ready to coordinate with them.'}}}}
+
+
+================================================================================
+

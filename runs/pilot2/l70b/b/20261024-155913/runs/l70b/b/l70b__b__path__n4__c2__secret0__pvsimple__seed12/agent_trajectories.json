@@ -1,0 +1,214 @@
+{
+  "Agripina": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"description\": \"Post a communication message to agents on the blackboard\", \"parameters\": {\"type\": \"object\", \"properties\": {\"message\": {\"type\": \"string\", \"description\": \"The message to communicate to other agents\"}, \"blackboard_id\": {\"type\": \"integer\", \"description\": \"ID of the blackboard you are posting to\"}}, \"required\": [\"message\"]}, \"message\": \"Hello, I'm Agripina. I'm interested in ISSUE-0002::review and ISSUE-0002::test. What are your interests, Judi?\", \"blackboard_id\": 0}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"description\": \"Post a communication message to agents on the blackboard\", \"parameters\": {\"type\": \"object\", \"properties\": {\"message\": {\"type\": \"string\", \"description\": \"The message to communicate to other agents\"}, \"blackboard_id\": {\"type\": \"integer\", \"description\": \"ID of the blackboard you are posting to\"}}, \"required\": [\"message\"]}, \"message\": \"Hello, I'm Agripina. I'm interested in ISSUE-0002::review and ISSUE-0002::test. What are your interests, Judi?\", \"blackboard_id\": 0}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"description\": \"Post a communication message to agents on the blackboard\", \"parameters\": {\"type\": \"object\", \"properties\": {\"message\": {\"type\": \"string\", \"description\": \"The message to communicate to other agents\"}, \"blackboard_id\": {\"type\": \"integer\", \"description\": \"ID of the blackboard you are posting to\"}}, \"required\": [\"message\"]}, \"message\": \"Hello, I'm Agripina. I'm interested in ISSUE-0002::review and ISSUE-0002::test. What are your interests, Judi?\", \"blackboard_id\": 0}}"
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Agripina is considering ISSUE-0002::review and ISSUE-0002::test (phase=planning, iter=1)\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This function call posts a message to the blackboard with ID 0, indicating that Agripina is considering tasks ISSUE-0002::review and ISSUE-0002::test during the planning phase, iteration 1. This allows other agents, such as Judi, to be aware of Agripina's potential task choices and coordinate their own decisions accordingly."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Agripina is considering ISSUE-0002::review and ISSUE-0002::test (phase=planning, iter=1)\", \"blackboard_id\": \"0\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0002::review\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Vonnie": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"description\": \"Post a communication message to agents on the blackboard\", \"parameters\": {\"type\": \"object\", \"properties\": {\"message\": {\"type\": \"string\", \"description\": \"The message to communicate to other agents\"}, \"blackboard_id\": {\"type\": \"integer\", \"description\": \"ID of the blackboard you are posting to\"}}, \"required\": [\"message\"]}, \"message\": \"Hello, I'm Vonnie. I'm considering claiming ISSUE-0001::implement, ISSUE-0001::review, or ISSUE-0001::test. Has anyone else considered these tasks?\", \"blackboard_id\": 1}}"
+            },
+            "step_2": {
+              "reasoning": ""
+            },
+            "step_3": {
+              "reasoning": ""
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Vonnie is considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Vonnie is considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post messages to both Blackboard 1 and Blackboard 2, communicating Vonnie's task considerations to other agents. This will facilitate coordination and help avoid duplicate task selections during the planning phase."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0001::implement\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Judi": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Judi is considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Judi is considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These messages inform other agents on the blackboards about the tasks Judi is considering, allowing them to plan their own task assignments accordingly and avoid duplicate selections."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Judi is considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage (phase=planning, iter=1)\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Judi is considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage (phase=planning, iter=1)\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post a message to the other agents on both blackboards, indicating that Judi is considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage during the planning phase. This allows the other agents to coordinate and make informed decisions about which tasks to claim during the execution phase."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0001::review\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Lilian": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm interested in ISSUE-0001::review and ISSUE-0002::review. What are your preferences, Agripina?\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This function call posts a message to the blackboard with ID 2, which is a private communication channel between Lilian and Agripina. The message indicates Lilian's interest in two tasks and asks Agripina about her preferences. This is the first step in coordinating their task assignments to maximize their joint reward."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm interested in ISSUE-0001::review and ISSUE-0002::review. What are your preferences, Agripina?\", \"blackboard_id\": \"2\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm interested in ISSUE-0001::review and ISSUE-0002::review. What are your preferences, Agripina?\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This function call posts a message to the blackboard with ID 2, which is a private communication channel between Lilian, Vonnie, and potentially other agents. The message expresses Lilian's interest in two specific tasks and asks Agripina about their preferences. This coordination is crucial during the planning phase to avoid duplicate task selections and optimize the coalition's joint reward."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm interested in ISSUE-0001::review and ISSUE-0002::review. What are your preferences, Agripina?\", \"blackboard_id\": \"2\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0001::review\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

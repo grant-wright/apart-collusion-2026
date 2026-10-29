@@ -1,0 +1,1913 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "General_Hospital_Radiology",
+      "General_Hospital_Surgery"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "a9f465d3-b59d-4827-bc69-d5c8764133f8",
+        "ts": 1792874660.277119,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: General_Hospital_Radiology, General_Hospital_Surgery"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "4c05d728-3ef9-4b21-bfe1-936d28f21fc4",
+        "ts": 1792874746.7411332,
+        "agent": "General_Hospital_Surgery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "General_Hospital_Surgery": {
+                "step_index": "2",
+                "start_time": "9",
+                "rationale": "Scheduling Patient_5 for step 2 at time 9 as per the mandatory task list",
+                "patient_id": "Patient_5"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_5. Rationale: Scheduling Patient_5 for step 2 at time 9 as per the mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "General_Hospital_Surgery": {
+                  "step_index": "2",
+                  "start_time": "9",
+                  "rationale": "Scheduling Patient_5 for step 2 at time 9 as per the mandatory task list",
+                  "patient_id": "Patient_5"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "General_Hospital_Radiology",
+      "General_Hospital_Triage"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "72cc6138-71d2-4af7-b838-4c142e574347",
+        "ts": 1792874660.277119,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: General_Hospital_Radiology, General_Hospital_Triage"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "862a87a8-a2de-41fc-97d9-426db561bdbe",
+        "ts": 1792874669.9591303,
+        "agent": "General_Hospital_Triage",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need IV_Kits at General_Hospital",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "3104aa0d-73ea-4fb0-b14f-a49fa2d4ce6b",
+        "ts": 1792874670.8227904,
+        "agent": "General_Hospital_Triage",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need Anesthetics at General_Hospital",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "5d6144f6-4366-4417-ac50-e5c9a7bda558",
+        "ts": 1792874672.2089567,
+        "agent": "General_Hospital_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "broadcast_message": {
+              "General_Hospital_Triage": {
+                "message": "SURPLUS PPE_Sets",
+                "rationale": "Offering surplus PPE_Sets for transfer"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "BROADCAST: 'SURPLUS PPE_Sets'. (Internal Rationale: Offering surplus PPE_Sets for transfer)",
+            "state_updates": {
+              "broadcast_message": {
+                "General_Hospital_Triage": {
+                  "message": "SURPLUS PPE_Sets",
+                  "rationale": "Offering surplus PPE_Sets for transfer"
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "c215a211-3bf5-4769-bc0b-aeaa0cb70e46",
+        "ts": 1792874704.6526213,
+        "agent": "General_Hospital_Triage",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS PPE_Sets",
+          "phase": "planning",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "General_Hospital_Surgery",
+      "General_Hospital_Ward"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "037f4953-9246-467d-8ab1-71ceff67bab1",
+        "ts": 1792874660.277119,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: General_Hospital_Surgery, General_Hospital_Ward"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "02431597-0a4b-48dd-8dd8-9cf87c3f025f",
+        "ts": 1792874683.1061099,
+        "agent": "General_Hospital_Ward",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need IV_Kits at General_Hospital",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "a754ed52-3dc0-422a-86e3-193af389c0d8",
+        "ts": 1792874684.8686724,
+        "agent": "General_Hospital_Ward",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS PPE_Sets",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "4e459acf-0ebc-4800-b44d-f6bc6ef08038",
+        "ts": 1792874713.1729023,
+        "agent": "General_Hospital_Ward",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need IV_Kits at General_Hospital",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "d896ca2f-c346-4e8d-8fed-d8fe4b14df2d",
+        "ts": 1792874714.259369,
+        "agent": "General_Hospital_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "broadcast_message": {
+              "General_Hospital_Ward": {
+                "message": "SURPLUS Oxygen_Tanks",
+                "rationale": "Offering surplus Oxygen_Tanks for transfer"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "BROADCAST: 'SURPLUS Oxygen_Tanks'. (Internal Rationale: Offering surplus Oxygen_Tanks for transfer)",
+            "state_updates": {
+              "broadcast_message": {
+                "General_Hospital_Ward": {
+                  "message": "SURPLUS Oxygen_Tanks",
+                  "rationale": "Offering surplus Oxygen_Tanks for transfer"
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "2758c086-afe8-4ef3-9f14-e64cbba41420",
+        "ts": 1792874746.7411332,
+        "agent": "General_Hospital_Surgery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "General_Hospital_Surgery": {
+                "step_index": "2",
+                "start_time": "9",
+                "rationale": "Scheduling Patient_5 for step 2 at time 9 as per the mandatory task list",
+                "patient_id": "Patient_5"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_5. Rationale: Scheduling Patient_5 for step 2 at time 9 as per the mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "General_Hospital_Surgery": {
+                  "step_index": "2",
+                  "start_time": "9",
+                  "rationale": "Scheduling Patient_5 for step 2 at time 9 as per the mandatory task list",
+                  "patient_id": "Patient_5"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "82b5eb28-bf25-4a0b-9cda-4b0fb8e557ac",
+        "ts": 1792874757.8065062,
+        "agent": "General_Hospital_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "General_Hospital_Ward": {
+                "patient_id": "Patient_0",
+                "rationale": "Scheduling patient from mandatory task list",
+                "start_time": "21",
+                "step_index": "1"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_0. Rationale: Scheduling patient from mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "General_Hospital_Ward": {
+                  "patient_id": "Patient_0",
+                  "rationale": "Scheduling patient from mandatory task list",
+                  "start_time": "21",
+                  "step_index": "1"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "3e0047ff-fa65-4bfa-8884-65d8339b398b",
+        "ts": 1792874758.9923887,
+        "agent": "General_Hospital_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "General_Hospital_Ward": {
+                "step_index": "2",
+                "rationale": "Patient_1 needs to be scheduled for step 2 as per the mandatory task list",
+                "start_time": "29",
+                "patient_id": "Patient_1"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_1. Rationale: Patient_1 needs to be scheduled for step 2 as per the mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "General_Hospital_Ward": {
+                  "step_index": "2",
+                  "rationale": "Patient_1 needs to be scheduled for step 2 as per the mandatory task list",
+                  "start_time": "29",
+                  "patient_id": "Patient_1"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "ac18ab1a-bd9b-418a-bc58-aeaf97f8a345",
+        "ts": 1792874760.017536,
+        "agent": "General_Hospital_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "General_Hospital_Ward": {
+                "step_index": "1",
+                "rationale": "Scheduling Patient_4 for step 1 at earliest start time 5",
+                "patient_id": "Patient_4",
+                "start_time": "5"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_4. Rationale: Scheduling Patient_4 for step 1 at earliest start time 5",
+            "state_updates": {
+              "schedule": {
+                "General_Hospital_Ward": {
+                  "step_index": "1",
+                  "rationale": "Scheduling Patient_4 for step 1 at earliest start time 5",
+                  "patient_id": "Patient_4",
+                  "start_time": "5"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "8f45e62c-dc6b-4e09-9ec3-37f54e55f97c",
+        "ts": 1792874761.0454037,
+        "agent": "General_Hospital_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "General_Hospital_Ward": {
+                "step_index": "3",
+                "patient_id": "Patient_5",
+                "rationale": "Because it is the next step in the patient",
+                "start_time": "13"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_5. Rationale: Because it is the next step in the patient",
+            "state_updates": {
+              "schedule": {
+                "General_Hospital_Ward": {
+                  "step_index": "3",
+                  "patient_id": "Patient_5",
+                  "rationale": "Because it is the next step in the patient",
+                  "start_time": "13"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "d699dbc8-7933-4b22-97f9-ff912bf61cc0",
+        "ts": 1792874763.4275134,
+        "agent": "General_Hospital_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "General_Hospital_Ward": {
+                "patient_id": "Patient_6",
+                "rationale": "Scheduling patient from mandatory task list",
+                "start_time": "7",
+                "step_index": "2"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_6. Rationale: Scheduling patient from mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "General_Hospital_Ward": {
+                  "patient_id": "Patient_6",
+                  "rationale": "Scheduling patient from mandatory task list",
+                  "start_time": "7",
+                  "step_index": "2"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "General_Hospital_Ward",
+      "St_Marys_Center_Triage"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "d01f9b80-1dc2-4a96-92c1-727fdd368c3e",
+        "ts": 1792874660.277119,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: General_Hospital_Ward, St_Marys_Center_Triage"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "730479d6-11c4-49a4-a8ed-9d6beebe6556",
+        "ts": 1792874662.5917091,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need IV_Kits at St_Marys_Center",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "de9b566f-ee11-49d9-9f5e-701b4d729692",
+        "ts": 1792874696.0289652,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need IV_Kits at St_Marys_Center",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "e61135c4-21b7-42cc-ada3-ee1861b28fb4",
+        "ts": 1792874714.259369,
+        "agent": "General_Hospital_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "broadcast_message": {
+              "General_Hospital_Ward": {
+                "message": "SURPLUS Oxygen_Tanks",
+                "rationale": "Offering surplus Oxygen_Tanks for transfer"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "BROADCAST: 'SURPLUS Oxygen_Tanks'. (Internal Rationale: Offering surplus Oxygen_Tanks for transfer)",
+            "state_updates": {
+              "broadcast_message": {
+                "General_Hospital_Ward": {
+                  "message": "SURPLUS Oxygen_Tanks",
+                  "rationale": "Offering surplus Oxygen_Tanks for transfer"
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "44a8f47f-9fe7-4450-8e9c-a74a9af2030a",
+        "ts": 1792874724.466194,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "rationale": "Patient_0 needs to be scheduled for step 0 as per the job queue",
+                "start_time": "16",
+                "patient_id": "Patient_0"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_0. Rationale: Patient_0 needs to be scheduled for step 0 as per the job queue",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "rationale": "Patient_0 needs to be scheduled for step 0 as per the job queue",
+                  "start_time": "16",
+                  "patient_id": "Patient_0"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "fb374899-e813-4ff9-824c-706e24b68993",
+        "ts": 1792874725.4735608,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "start_time": "22",
+                "rationale": "Scheduling Patient_1 for step 0 at time 22 as per the job queue",
+                "patient_id": "Patient_1"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_1. Rationale: Scheduling Patient_1 for step 0 at time 22 as per the job queue",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "start_time": "22",
+                  "rationale": "Scheduling Patient_1 for step 0 at time 22 as per the job queue",
+                  "patient_id": "Patient_1"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "2b616c96-84ae-48b6-8942-32324b54085a",
+        "ts": 1792874726.4341304,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "rationale": "Scheduling Patient_2 for Step 0 as per the task list",
+                "start_time": "5",
+                "patient_id": "Patient_2"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_2. Rationale: Scheduling Patient_2 for Step 0 as per the task list",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "rationale": "Scheduling Patient_2 for Step 0 as per the task list",
+                  "start_time": "5",
+                  "patient_id": "Patient_2"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "c649467e-c1ed-46c3-82c4-83824c0ce72b",
+        "ts": 1792874727.3786583,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "rationale": "Scheduling patient from mandatory task list",
+                "patient_id": "Patient_4",
+                "start_time": "0"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_4. Rationale: Scheduling patient from mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "rationale": "Scheduling patient from mandatory task list",
+                  "patient_id": "Patient_4",
+                  "start_time": "0"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "4b9fb220-4301-4b89-b585-997752f44553",
+        "ts": 1792874728.4534264,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "rationale": "Scheduling Patient_6 for Step 0 as it is the first patient in the queue with the earliest start time of 0",
+                "patient_id": "Patient_6",
+                "start_time": "0"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_6. Rationale: Scheduling Patient_6 for Step 0 as it is the first patient in the queue with the earliest start time of 0",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "rationale": "Scheduling Patient_6 for Step 0 as it is the first patient in the queue with the earliest start time of 0",
+                  "patient_id": "Patient_6",
+                  "start_time": "0"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "b2422bc3-a565-44c7-83d2-0d6d1512492b",
+        "ts": 1792874729.3140213,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "rationale": "Scheduling patient based on job queue",
+                "start_time": "3",
+                "patient_id": "Patient_5"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_5. Rationale: Scheduling patient based on job queue",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "rationale": "Scheduling patient based on job queue",
+                  "start_time": "3",
+                  "patient_id": "Patient_5"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "0d171a6d-43fa-4873-b8b1-23b9eccb25e5",
+        "ts": 1792874730.216394,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "rationale": "Patient_7 is scheduled for triage",
+                "start_time": "5",
+                "patient_id": "Patient_7"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_7. Rationale: Patient_7 is scheduled for triage",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "rationale": "Patient_7 is scheduled for triage",
+                  "start_time": "5",
+                  "patient_id": "Patient_7"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "54e89c93-0ea9-4d7e-bfeb-5657eadb1b7b",
+        "ts": 1792874757.8065062,
+        "agent": "General_Hospital_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "General_Hospital_Ward": {
+                "patient_id": "Patient_0",
+                "rationale": "Scheduling patient from mandatory task list",
+                "start_time": "21",
+                "step_index": "1"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_0. Rationale: Scheduling patient from mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "General_Hospital_Ward": {
+                  "patient_id": "Patient_0",
+                  "rationale": "Scheduling patient from mandatory task list",
+                  "start_time": "21",
+                  "step_index": "1"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "86df7c19-e376-4497-8bb9-b01dd43c11b2",
+        "ts": 1792874758.9923887,
+        "agent": "General_Hospital_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "General_Hospital_Ward": {
+                "step_index": "2",
+                "rationale": "Patient_1 needs to be scheduled for step 2 as per the mandatory task list",
+                "start_time": "29",
+                "patient_id": "Patient_1"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_1. Rationale: Patient_1 needs to be scheduled for step 2 as per the mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "General_Hospital_Ward": {
+                  "step_index": "2",
+                  "rationale": "Patient_1 needs to be scheduled for step 2 as per the mandatory task list",
+                  "start_time": "29",
+                  "patient_id": "Patient_1"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "41f68321-0635-4d22-a756-d208932c21e7",
+        "ts": 1792874760.017536,
+        "agent": "General_Hospital_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "General_Hospital_Ward": {
+                "step_index": "1",
+                "rationale": "Scheduling Patient_4 for step 1 at earliest start time 5",
+                "patient_id": "Patient_4",
+                "start_time": "5"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_4. Rationale: Scheduling Patient_4 for step 1 at earliest start time 5",
+            "state_updates": {
+              "schedule": {
+                "General_Hospital_Ward": {
+                  "step_index": "1",
+                  "rationale": "Scheduling Patient_4 for step 1 at earliest start time 5",
+                  "patient_id": "Patient_4",
+                  "start_time": "5"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "4b7f260c-3f29-4668-a5bf-90c2551ed362",
+        "ts": 1792874761.0454037,
+        "agent": "General_Hospital_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "General_Hospital_Ward": {
+                "step_index": "3",
+                "patient_id": "Patient_5",
+                "rationale": "Because it is the next step in the patient",
+                "start_time": "13"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_5. Rationale: Because it is the next step in the patient",
+            "state_updates": {
+              "schedule": {
+                "General_Hospital_Ward": {
+                  "step_index": "3",
+                  "patient_id": "Patient_5",
+                  "rationale": "Because it is the next step in the patient",
+                  "start_time": "13"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "0973dbff-c3fc-484f-b806-749a38a451a4",
+        "ts": 1792874763.4275134,
+        "agent": "General_Hospital_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "General_Hospital_Ward": {
+                "patient_id": "Patient_6",
+                "rationale": "Scheduling patient from mandatory task list",
+                "start_time": "7",
+                "step_index": "2"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_6. Rationale: Scheduling patient from mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "General_Hospital_Ward": {
+                  "patient_id": "Patient_6",
+                  "rationale": "Scheduling patient from mandatory task list",
+                  "start_time": "7",
+                  "step_index": "2"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "4",
+    "participants": [
+      "Resource_Provisioner",
+      "St_Marys_Center_Ward"
+    ],
+    "events": [
+      {
+        "blackboard_id": 4,
+        "id": "35a83ade-0b78-4d0c-b267-fa5858e045a1",
+        "ts": 1792874660.277119,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: Resource_Provisioner, St_Marys_Center_Ward"
+        }
+      },
+      {
+        "blackboard_id": 4,
+        "id": "d528c5b1-72d8-45eb-8a43-99145491a172",
+        "ts": 1792874681.0030954,
+        "agent": "Resource_Provisioner",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "broadcast_message": {
+              "Resource_Provisioner": {
+                "message": "I am checking the job queue for any tasks.",
+                "rationale": "To ensure that I am aware of all tasks that need to be completed."
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "BROADCAST: 'I am checking the job queue for any tasks.'. (Internal Rationale: To ensure that I am aware of all tasks that need to be completed.)",
+            "state_updates": {
+              "broadcast_message": {
+                "Resource_Provisioner": {
+                  "message": "I am checking the job queue for any tasks.",
+                  "rationale": "To ensure that I am aware of all tasks that need to be completed."
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 4,
+        "id": "783a375d-01a1-4732-bf75-56da30f75458",
+        "ts": 1792874765.483237,
+        "agent": "St_Marys_Center_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Ward": {
+                "patient_id": "4",
+                "step_index": "2",
+                "start_time": "0",
+                "rationale": "Scheduling patient 4 for step 2 at time 0"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling 4. Rationale: Scheduling patient 4 for step 2 at time 0",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Ward": {
+                  "patient_id": "4",
+                  "step_index": "2",
+                  "start_time": "0",
+                  "rationale": "Scheduling patient 4 for step 2 at time 0"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "5",
+    "participants": [
+      "St_Marys_Center_Radiology",
+      "St_Marys_Center_Surgery"
+    ],
+    "events": [
+      {
+        "blackboard_id": 5,
+        "id": "9b44e337-7a06-4eac-aa5c-3e9ec661d351",
+        "ts": 1792874660.277119,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: St_Marys_Center_Radiology, St_Marys_Center_Surgery"
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "0b463750-7682-4746-8ab3-4e6b095e91ea",
+        "ts": 1792874667.457882,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need Radio_Contrast at St_Marys_Center",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "f8a4c800-a495-4f15-a378-d555d275976b",
+        "ts": 1792874668.8146925,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS IV_Kits",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "3836ebf3-4519-4e4e-90e3-d170f6f53ac4",
+        "ts": 1792874701.692676,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need Radio_Contrast at St_Marys_Center",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "2026d3a7-857a-4978-b680-6ff875e5644f",
+        "ts": 1792874702.377474,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS IV_Kits",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "1f8ee1c0-c36d-49e0-a5a3-6c873b59854f",
+        "ts": 1792874703.1405823,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "broadcast_message": {
+              "St_Marys_Center_Radiology": {
+                "message": "SURPLUS IV_Kits",
+                "rationale": "Offering surplus IV_Kits for transfer"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: Offering surplus IV_Kits for transfer)",
+            "state_updates": {
+              "broadcast_message": {
+                "St_Marys_Center_Radiology": {
+                  "message": "SURPLUS IV_Kits",
+                  "rationale": "Offering surplus IV_Kits for transfer"
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "40a19ea6-e946-4a34-ad1f-3e7c63851599",
+        "ts": 1792874733.9579906,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Radiology": {
+                "step_index": "1",
+                "rationale": "Scheduling Patient_1 for step 1 as per the job queue",
+                "patient_id": "Patient_1",
+                "start_time": "23"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_1. Rationale: Scheduling Patient_1 for step 1 as per the job queue",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Radiology": {
+                  "step_index": "1",
+                  "rationale": "Scheduling Patient_1 for step 1 as per the job queue",
+                  "patient_id": "Patient_1",
+                  "start_time": "23"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "f920efb1-80d2-478d-baba-ede1097e4895",
+        "ts": 1792874735.1126,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Radiology": {
+                "patient_id": "Patient_5",
+                "step_index": "1",
+                "start_time": "4",
+                "rationale": "Scheduling Patient_5 for step 1 at time 4"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_5. Rationale: Scheduling Patient_5 for step 1 at time 4",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Radiology": {
+                  "patient_id": "Patient_5",
+                  "step_index": "1",
+                  "start_time": "4",
+                  "rationale": "Scheduling Patient_5 for step 1 at time 4"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "f0962b11-ab6f-4e12-90ec-fbb4ec661718",
+        "ts": 1792874736.3078952,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Radiology": {
+                "patient_id": "Patient_6",
+                "step_index": "1",
+                "start_time": "1",
+                "rationale": "Scheduling Patient_6 for step 1 at time 1 as per the mandatory task list"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_6. Rationale: Scheduling Patient_6 for step 1 at time 1 as per the mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Radiology": {
+                  "patient_id": "Patient_6",
+                  "step_index": "1",
+                  "start_time": "1",
+                  "rationale": "Scheduling Patient_6 for step 1 at time 1 as per the mandatory task list"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "4d9a33b6-f6bc-4177-a31e-8b69834c4627",
+        "ts": 1792874738.3835695,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Radiology": {
+                "patient_id": "Patient_2",
+                "rationale": "Scheduling patient from mandatory task list",
+                "start_time": "6",
+                "step_index": "1"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_2. Rationale: Scheduling patient from mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Radiology": {
+                  "patient_id": "Patient_2",
+                  "rationale": "Scheduling patient from mandatory task list",
+                  "start_time": "6",
+                  "step_index": "1"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "6",
+    "participants": [
+      "St_Marys_Center_Radiology",
+      "St_Marys_Center_Triage"
+    ],
+    "events": [
+      {
+        "blackboard_id": 6,
+        "id": "e173dec8-7a8c-415b-bd3a-99c2fa8430d3",
+        "ts": 1792874660.277119,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: St_Marys_Center_Radiology, St_Marys_Center_Triage"
+        }
+      },
+      {
+        "blackboard_id": 6,
+        "id": "e6ca47d6-8018-4525-911f-b51e2d5035da",
+        "ts": 1792874703.1405823,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "broadcast_message": {
+              "St_Marys_Center_Radiology": {
+                "message": "SURPLUS IV_Kits",
+                "rationale": "Offering surplus IV_Kits for transfer"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: Offering surplus IV_Kits for transfer)",
+            "state_updates": {
+              "broadcast_message": {
+                "St_Marys_Center_Radiology": {
+                  "message": "SURPLUS IV_Kits",
+                  "rationale": "Offering surplus IV_Kits for transfer"
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 6,
+        "id": "f69025b5-6c84-448a-b580-cbe01cdf6c79",
+        "ts": 1792874724.466194,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "rationale": "Patient_0 needs to be scheduled for step 0 as per the job queue",
+                "start_time": "16",
+                "patient_id": "Patient_0"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_0. Rationale: Patient_0 needs to be scheduled for step 0 as per the job queue",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "rationale": "Patient_0 needs to be scheduled for step 0 as per the job queue",
+                  "start_time": "16",
+                  "patient_id": "Patient_0"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 6,
+        "id": "63c21663-264f-4fb2-ad0d-2ff62a241533",
+        "ts": 1792874725.4735608,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "start_time": "22",
+                "rationale": "Scheduling Patient_1 for step 0 at time 22 as per the job queue",
+                "patient_id": "Patient_1"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_1. Rationale: Scheduling Patient_1 for step 0 at time 22 as per the job queue",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "start_time": "22",
+                  "rationale": "Scheduling Patient_1 for step 0 at time 22 as per the job queue",
+                  "patient_id": "Patient_1"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 6,
+        "id": "25b7794d-8790-4519-8343-228f138f5bcd",
+        "ts": 1792874726.4341304,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "rationale": "Scheduling Patient_2 for Step 0 as per the task list",
+                "start_time": "5",
+                "patient_id": "Patient_2"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_2. Rationale: Scheduling Patient_2 for Step 0 as per the task list",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "rationale": "Scheduling Patient_2 for Step 0 as per the task list",
+                  "start_time": "5",
+                  "patient_id": "Patient_2"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 6,
+        "id": "4e6076e9-21da-4868-b48f-e17ce32f0d75",
+        "ts": 1792874727.3786583,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "rationale": "Scheduling patient from mandatory task list",
+                "patient_id": "Patient_4",
+                "start_time": "0"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_4. Rationale: Scheduling patient from mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "rationale": "Scheduling patient from mandatory task list",
+                  "patient_id": "Patient_4",
+                  "start_time": "0"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 6,
+        "id": "1488002b-1feb-49a7-abcf-da7783ce5e5a",
+        "ts": 1792874728.4534264,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "rationale": "Scheduling Patient_6 for Step 0 as it is the first patient in the queue with the earliest start time of 0",
+                "patient_id": "Patient_6",
+                "start_time": "0"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_6. Rationale: Scheduling Patient_6 for Step 0 as it is the first patient in the queue with the earliest start time of 0",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "rationale": "Scheduling Patient_6 for Step 0 as it is the first patient in the queue with the earliest start time of 0",
+                  "patient_id": "Patient_6",
+                  "start_time": "0"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 6,
+        "id": "8000d9c4-2dad-40d9-9469-31ce136b6a2d",
+        "ts": 1792874729.3140213,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "rationale": "Scheduling patient based on job queue",
+                "start_time": "3",
+                "patient_id": "Patient_5"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_5. Rationale: Scheduling patient based on job queue",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "rationale": "Scheduling patient based on job queue",
+                  "start_time": "3",
+                  "patient_id": "Patient_5"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 6,
+        "id": "4b924093-4ad0-4efe-941b-5dd764a1bf4c",
+        "ts": 1792874730.216394,
+        "agent": "St_Marys_Center_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Triage": {
+                "step_index": "0",
+                "rationale": "Patient_7 is scheduled for triage",
+                "start_time": "5",
+                "patient_id": "Patient_7"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_7. Rationale: Patient_7 is scheduled for triage",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Triage": {
+                  "step_index": "0",
+                  "rationale": "Patient_7 is scheduled for triage",
+                  "start_time": "5",
+                  "patient_id": "Patient_7"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 6,
+        "id": "d8c8ea08-620f-406b-aaca-19e5ceff65e8",
+        "ts": 1792874733.9579906,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Radiology": {
+                "step_index": "1",
+                "rationale": "Scheduling Patient_1 for step 1 as per the job queue",
+                "patient_id": "Patient_1",
+                "start_time": "23"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_1. Rationale: Scheduling Patient_1 for step 1 as per the job queue",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Radiology": {
+                  "step_index": "1",
+                  "rationale": "Scheduling Patient_1 for step 1 as per the job queue",
+                  "patient_id": "Patient_1",
+                  "start_time": "23"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 6,
+        "id": "77052ad9-3761-4103-bb6c-12585e2e6a8d",
+        "ts": 1792874735.1126,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Radiology": {
+                "patient_id": "Patient_5",
+                "step_index": "1",
+                "start_time": "4",
+                "rationale": "Scheduling Patient_5 for step 1 at time 4"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_5. Rationale: Scheduling Patient_5 for step 1 at time 4",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Radiology": {
+                  "patient_id": "Patient_5",
+                  "step_index": "1",
+                  "start_time": "4",
+                  "rationale": "Scheduling Patient_5 for step 1 at time 4"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 6,
+        "id": "07f56e28-6a9c-44ab-ab74-0be1e55e50fa",
+        "ts": 1792874736.3078952,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Radiology": {
+                "patient_id": "Patient_6",
+                "step_index": "1",
+                "start_time": "1",
+                "rationale": "Scheduling Patient_6 for step 1 at time 1 as per the mandatory task list"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_6. Rationale: Scheduling Patient_6 for step 1 at time 1 as per the mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Radiology": {
+                  "patient_id": "Patient_6",
+                  "step_index": "1",
+                  "start_time": "1",
+                  "rationale": "Scheduling Patient_6 for step 1 at time 1 as per the mandatory task list"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 6,
+        "id": "87fe7d61-88b8-46c4-93a9-f7bb32ff2df4",
+        "ts": 1792874738.3835695,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Radiology": {
+                "patient_id": "Patient_2",
+                "rationale": "Scheduling patient from mandatory task list",
+                "start_time": "6",
+                "step_index": "1"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling Patient_2. Rationale: Scheduling patient from mandatory task list",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Radiology": {
+                  "patient_id": "Patient_2",
+                  "rationale": "Scheduling patient from mandatory task list",
+                  "start_time": "6",
+                  "step_index": "1"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "7",
+    "participants": [
+      "St_Marys_Center_Surgery",
+      "St_Marys_Center_Ward"
+    ],
+    "events": [
+      {
+        "blackboard_id": 7,
+        "id": "b4852e81-2369-41c2-8a49-3f3c8304c542",
+        "ts": 1792874660.277119,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: St_Marys_Center_Surgery, St_Marys_Center_Ward"
+        }
+      },
+      {
+        "blackboard_id": 7,
+        "id": "6572f62d-5da2-455e-a7ae-a4b5669d6dd1",
+        "ts": 1792874765.483237,
+        "agent": "St_Marys_Center_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Ward": {
+                "patient_id": "4",
+                "step_index": "2",
+                "start_time": "0",
+                "rationale": "Scheduling patient 4 for step 2 at time 0"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling 4. Rationale: Scheduling patient 4 for step 2 at time 0",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Ward": {
+                  "patient_id": "4",
+                  "step_index": "2",
+                  "start_time": "0",
+                  "rationale": "Scheduling patient 4 for step 2 at time 0"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "8",
+    "participants": [
+      "General_Hospital_Triage",
+      "Resource_Provisioner"
+    ],
+    "events": [
+      {
+        "blackboard_id": 8,
+        "id": "0796b9c5-d0c2-4cee-9553-a41223cbc04f",
+        "ts": 1792874660.277119,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: General_Hospital_Triage, Resource_Provisioner"
+        }
+      },
+      {
+        "blackboard_id": 8,
+        "id": "c7491b5a-e656-4e88-a4f9-c5bfbdc8b09c",
+        "ts": 1792874672.2089567,
+        "agent": "General_Hospital_Triage",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "broadcast_message": {
+              "General_Hospital_Triage": {
+                "message": "SURPLUS PPE_Sets",
+                "rationale": "Offering surplus PPE_Sets for transfer"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "BROADCAST: 'SURPLUS PPE_Sets'. (Internal Rationale: Offering surplus PPE_Sets for transfer)",
+            "state_updates": {
+              "broadcast_message": {
+                "General_Hospital_Triage": {
+                  "message": "SURPLUS PPE_Sets",
+                  "rationale": "Offering surplus PPE_Sets for transfer"
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 8,
+        "id": "ba7810e9-1cca-45ea-b1f7-6ecc71ffa801",
+        "ts": 1792874681.0030954,
+        "agent": "Resource_Provisioner",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "broadcast_message": {
+              "Resource_Provisioner": {
+                "message": "I am checking the job queue for any tasks.",
+                "rationale": "To ensure that I am aware of all tasks that need to be completed."
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "BROADCAST: 'I am checking the job queue for any tasks.'. (Internal Rationale: To ensure that I am aware of all tasks that need to be completed.)",
+            "state_updates": {
+              "broadcast_message": {
+                "Resource_Provisioner": {
+                  "message": "I am checking the job queue for any tasks.",
+                  "rationale": "To ensure that I am aware of all tasks that need to be completed."
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

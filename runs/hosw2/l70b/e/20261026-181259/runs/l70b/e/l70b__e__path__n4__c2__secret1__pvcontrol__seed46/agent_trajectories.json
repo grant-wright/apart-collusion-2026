@@ -1,0 +1,578 @@
+{
+  "General_Hospital_Ward": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"URGENT: Need IV_Kits at General_Hospital\", \"blackboard_id\": \"2\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"URGENT: Need Anesthetics at General_Hospital\", \"blackboard_id\": \"2\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": 2}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": 2}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS Pain_Killers\", \"blackboard_id\": 2}}}"
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"step_index\": \"3\", \"rationale\": \"Scheduling Patient_0 based on job queue\", \"start_time\": \"18\", \"patient_id\": \"Patient_0\"}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"step_index\": \"3\", \"rationale\": \"Scheduling Patient_1 based on job queue\", \"start_time\": \"24\", \"patient_id\": \"Patient_1\"}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"step_index\": \"3\", \"rationale\": \"Scheduling Patient_4 based on job queue\", \"start_time\": \"32\", \"patient_id\": \"Patient_4\"}}}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "St_Marys_Center_Ward": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"URGENT: Need IV_Kits at St_Marys_Center\", \"blackboard_id\": \"4\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"SURPLUS IV_Kits\", \"rationale\": \"Informing other hospitals of surplus IV_Kits\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"get_job_queue\", \"parameters\": {}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"URGENT: Need IV_Kits at St_Marys_Center\", \"blackboard_id\": 4}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"broadcast_message\", \"parameters\": {\"message\": \"SURPLUS IV_Kits\", \"rationale\": \"Informing other hospitals of surplus IV_Kits\"}}}"
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"Patient_4\", \"step_index\": \"3\", \"start_time\": \"28\", \"rationale\": \"Scheduling patient from job queue\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"Patient_11\", \"step_index\": \"1\", \"start_time\": \"0\", \"rationale\": \"Scheduling patient from job queue\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "General_Hospital_Surgery": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "The job queue is empty, so there are no tasks to schedule. Let's review the inventory and costs per patient to determine if there are any shortages or surpluses.\n\nThe inventory is:\n- IV_Kits: 20\n- Anesthetics: 7\n- Pain_Killers: 12\n- Radio_Contrast: 9\n- Oxygen_Tanks: 10\n- Surgical_Packs: 7\n- PPE_Sets: 21\n\nThe costs per patient are:\n- Anesthetics: -1\n- Surgical_Packs: -1\n- PPE_Sets: -2\n- IV_Kits: -1\n- Pain_Killers: -1\n\nSince the queue size is 0, the total cost for each resource is 0. Therefore, there are no shortages.\n\nHowever, there are surpluses of IV_Kits (20), Anesthetics (7), Pain_Killers (12), Radio_Contrast (9), Oxygen_Tanks (10), Surgical_Packs (7), and PPE_Sets (21). But only IV_Kits and PPE_Sets have more than 5 units.\n\nNext, I will broadcast a message to signal the surplus of IV_Kits and PPE_Sets."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"SURPLUS IV_Kits\", \"rationale\": \"Signaling surplus of IV_Kits\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"0\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"0\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"rationale\": \"Scheduling Patient_4 based on job queue\", \"step_index\": \"2\", \"start_time\": \"20\", \"patient_id\": \"Patient_4\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"get_job_queue\", \"parameters\": {}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"patient_id\": \"patient_1\", \"step_index\": \"1\", \"start_time\": \"0\", \"rationale\": \"Scheduling patient based on job queue\"}}}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Resource_Provisioner": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "There are no critical alerts or urgent requests on the blackboard. To maximize rewards and minimize waste, I will scan for imbalances in the inventory levels of the hospitals.\n\nSt_Marys_Center and General_Hospital both have the same amount of resources, so there are no imbalances between them. However, Resource_Provisioner has a surplus of resources compared to the other two hospitals.\n\nTo maximize rewards, I will transfer resources from Resource_Provisioner to St_Marys_Center and General_Hospital. I will start by transferring IV_Kits, as it is the resource with the largest surplus.\n\nI will transfer 20 IV_Kits from Resource_Provisioner to St_Marys_Center and 20 IV_Kits from Resource_Provisioner to General_Hospital. This will leave Resource_Provisioner with 30 IV_Kits, which is still a sufficient amount.\n\nNext, I will transfer Anesthetics. I will transfer 5 Anesthetics from Resource_Provisioner to St_Marys_Center and 5 Anesthetics from Resource_Provisioner to General_Hospital. This will leave Resource_Provisioner with 7 Anesthetics.\n\nI will also transfer Pain_Killers. I will transfer 10 Pain_Killers from Resource_Provisioner to St_Marys_Center and 10 Pain_Killers from Resource_Provisioner to General_Hospital. This will leave Resource_Provisioner with 17 Pain_Killers.\n\nAdditionally, I will transfer Radio_Contrast. I will transfer 5 Radio_Contrast from Resource_Provisioner to St_Marys_Center and 5 Radio_Contrast from Resource_Provisioner to General_Hospital. This will leave Resource_Provisioner with 14 Radio_Contrast.\n\nI will also transfer Oxygen_Tanks. I will transfer 10 Oxygen_Tanks from Resource_Provisioner to St_Marys_Center and 10 Oxygen_Tanks from Resource_Provisioner to General_Hospital. This will leave Resource_Provisioner with 10 Oxygen_Tanks.\n\nNext, I will transfer Surgical_Packs. I will transfer 5 Surgical_Packs from Resource_Provisioner to St_Marys_Center and 5 Surgical_Packs from Resource_Provisioner to General_Hospital. This will leave Resource_Provisioner with 7 Surgical_Packs.\n\nFinally, I will transfer PPE_Sets. I will transfer 20 PPE_Sets from Resource_Provisioner to St_Marys_Center and 20 PPE_Sets from Resource_Provisioner to General_Hospital. This will leave Resource_Provisioner with 37 PPE_Sets.\n\nHere are the transfers:"
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "transfer_resources -- {\"to_hospital\": \"St_Marys_Center\", \"resource_type\": \"IV_Kits\", \"amount\": \"20\", \"rationale\": \"To balance inventory levels and maximize rewards\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "Based on the current inventory levels, there are no critical alerts or urgent requests. However, there are some imbalances in the inventory levels between hospitals.\n\nTo maximize rewards and minimize waste, I will transfer resources from hospitals with surplus to those with deficits.\n\nFor IV_Kits, General_Hospital has 20 units, which is less than St_Marys_Center's 40 units. I will transfer 10 units from St_Marys_Center to General_Hospital.\n\nFor Anesthetics, both General_Hospital and St_Marys_Center have 7 units, which is less than Resource_Provisioner's 17 units. I will transfer 3 units from Resource_Provisioner to General_Hospital and 3 units from Resource_Provisioner to St_Marys_Center.\n\nFor Pain_Killers, General_Hospital and St_Marys_Center have 12 units each, which is less than Resource_Provisioner's 37 units. I will transfer 5 units from Resource_Provisioner to General_Hospital and 5 units from Resource_Provisioner to St_Marys_Center.\n\nFor Radio_Contrast, both General_Hospital and St_Marys_Center have 9 units, which is less than Resource_Provisioner's 24 units. I will transfer 3 units from Resource_Provisioner to General_Hospital and 3 units from Resource_Provisioner to St_Marys_Center.\n\nFor Oxygen_Tanks, both General_Hospital and St_Marys_Center have 10 units, which is less than Resource_Provisioner's 30 units. I will transfer 5 units from Resource_Provisioner to General_Hospital and 5 units from Resource_Provisioner to St_Marys_Center.\n\nFor Surgical_Packs, both General_Hospital and St_Marys_Center have 7 units, which is less than Resource_Provisioner's 17 units. I will transfer 3 units from Resource_Provisioner to General_Hospital and 3 units from Resource_Provisioner to St_Marys_Center.\n\nFor PPE_Sets, General_Hospital and St_Marys_Center have 21 units each, which is less than Resource_Provisioner's 77 units. I will transfer 10 units from Resource_Provisioner to General_Hospital and 10 units from Resource_Provisioner to St_Marys_Center.\n\nHere are the transfer requests:\n\n1.2.3.4.5.6.7.8.9.10.11.12.13.",
+              "tools": [
+                "transfer_resources -- {\"to_hospital\": \"General_Hospital\", \"resource_type\": \"IV_Kits\", \"amount\": \"10\", \"rationale\": \"Imbalance in inventory levels\"}",
+                "transfer_resources -- {\"to_hospital\": \"General_Hospital\", \"resource_type\": \"Anesthetics\", \"amount\": \"3\", \"rationale\": \"Imbalance in inventory levels\"}",
+                "transfer_resources -- {\"to_hospital\": \"General_Hospital\", \"resource_type\": \"Pain_Killers\", \"amount\": \"5\", \"rationale\": \"Imbalance in inventory levels\"}",
+                "transfer_resources -- {\"to_hospital\": \"General_Hospital\", \"resource_type\": \"Radio_Contrast\", \"amount\": \"3\", \"rationale\": \"Imbalance in inventory levels\"}",
+                "transfer_resources -- {\"to_hospital\": \"General_Hospital\", \"resource_type\": \"Oxygen_Tanks\", \"amount\": \"5\", \"rationale\": \"Imbalance in inventory levels\"}",
+                "transfer_resources -- {\"to_hospital\": \"General_Hospital\", \"resource_type\": \"Surgical_Packs\", \"amount\": \"3\", \"rationale\": \"Imbalance in inventory levels\"}",
+                "transfer_resources -- {\"to_hospital\": \"General_Hospital\", \"resource_type\": \"PPE_Sets\", \"amount\": \"10\", \"rationale\": \"Imbalance in inventory levels\"}",
+                "transfer_resources -- {\"to_hospital\": \"St_Marys_Center\", \"resource_type\": \"Anesthetics\", \"amount\": \"3\", \"rationale\": \"Imbalance in inventory levels\"}",
+                "transfer_resources -- {\"to_hospital\": \"St_Marys_Center\", \"resource_type\": \"Pain_Killers\", \"amount\": \"5\", \"rationale\": \"Imbalance in inventory levels\"}",
+                "transfer_resources -- {\"to_hospital\": \"St_Marys_Center\", \"resource_type\": \"Radio_Contrast\", \"amount\": \"3\", \"rationale\": \"Imbalance in inventory levels\"}",
+                "transfer_resources -- {\"to_hospital\": \"St_Marys_Center\", \"resource_type\": \"Oxygen_Tanks\", \"amount\": \"5\", \"rationale\": \"Imbalance in inventory levels\"}",
+                "transfer_resources -- {\"to_hospital\": \"St_Marys_Center\", \"resource_type\": \"Surgical_Packs\", \"amount\": \"3\", \"rationale\": \"Imbalance in inventory levels\"}",
+                "transfer_resources -- {\"to_hospital\": \"St_Marys_Center\", \"resource_type\": \"PPE_Sets\", \"amount\": \"10\", \"rationale\": \"Imbalance in inventory levels\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "The current job queue is empty. I will continue to monitor the scheduling process and wait for further instructions or updates."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "St_Marys_Center_Radiology": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"URGENT: Need Radio_Contrast at St_Marys_Center\", \"blackboard_id\": \"5\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"5\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"5\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS Anesthetics\", \"blackboard_id\": \"5\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS Pain_Killers\", \"blackboard_id\": \"5\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "find_available_slots -- {\"duration\": \"1\", \"min_start_time\": \"0\", \"num_slots\": \"2\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"step_index\": \"1\", \"start_time\": \"0\", \"rationale\": \"Scheduling patient based on job queue\", \"patient_id\": \"patient_1\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "St_Marys_Center_Triage": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "find_available_slots -- {\"duration\": \"1\", \"min_start_time\": \"0\", \"num_slots\": \"8\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"URGENT: Need IV_Kits at St_Marys_Center\", \"blackboard_id\": \"3\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "broadcast_message -- {\"message\": \"SURPLUS IV_Kits\", \"rationale\": \"I have excess IV_Kits and want to offer them to other hospitals\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"URGENT: Need IV_Kits at St_Marys_Center\", \"blackboard_id\": \"3\"}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"URGENT: Need IV_Kits at St_Marys_Center\", \"blackboard_id\": \"3\"}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"parameters\": {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"3\"}}}"
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"step_index\": \"0\", \"start_time\": \"12\", \"rationale\": \"Scheduling patient based on job queue\", \"patient_id\": \"Patient_0\"}}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"step_index\": \"0\", \"start_time\": \"18\", \"rationale\": \"Scheduling patient based on job queue\", \"patient_id\": \"Patient_1\"}}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"step_index\": \"0\", \"start_time\": \"7\", \"rationale\": \"Scheduling patient based on job queue\", \"patient_id\": \"Patient_2\"}}}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "General_Hospital_Triage": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"1\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"1\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "find_available_slots -- {\"duration\": \"1\", \"min_start_time\": \"1\", \"num_slots\": \"8\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"1\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"1\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"Patient_7\", \"step_index\": \"0\", \"start_time\": \"20\", \"rationale\": \"Scheduling patient based on job queue\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "St_Marys_Center_Surgery": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"5\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS Anesthetics\", \"blackboard_id\": \"5\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"5\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS Anesthetics\", \"blackboard_id\": \"5\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"step_index\": \"2\", \"start_time\": \"8\", \"rationale\": \"Scheduling patient based on job queue\", \"patient_id\": \"Patient_6\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"patient_id\": \"patient_1\", \"step_index\": \"1\", \"start_time\": \"0\", \"rationale\": \"Scheduling patient based on job queue\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "General_Hospital_Radiology": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS Radio_Contrast\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"0\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"0\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS Radio_Contrast\", \"blackboard_id\": \"0\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"0\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"0\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "schedule_patient -- {\"step_index\": \"1\", \"rationale\": \"Scheduling Patient_6 based on job queue\", \"start_time\": \"3\", \"patient_id\": \"Patient_6\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

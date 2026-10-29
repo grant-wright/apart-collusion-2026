@@ -1,0 +1,61 @@
+================================================================================
+BLACKBOARD STATE LOG - 2
+Session started: 2026-10-25 09:44:19
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 2
+- Participants: General_Hospital_Surgery, General_Hospital_Ward
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-25 09:47:09
+Iteration: 1 | Phase: execution | Last Agent: General_Hospital_Triage
+Total Events: 9
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 9
+- By Type: context(1), action_executed(6), communication(2)
+- By Agent: SYSTEM(1), General_Hospital_Surgery(4), General_Hospital_Ward(4)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [09:44:20] [Execution] SYSTEM (context)  Message: "Resource-Constrained Job Shop with Provisioner.
+
+This blackboard is a private communication channel.
+Participants: General_Hospital_Surgery, General_Hospital_Ward"
+
+[Event #2, Iteration: 1] [09:44:36] [Planning] General_Hospital_Surgery (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Surgery': {'message': 'SURPLUS IV_Kits', 'rationale': 'Offering surplus IV_Kits for transfer'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: Offering surplus IV_Kits for transfer)", 'state_updates': {'broadcast_message': {'General_Hospital_Surgery': {'message': 'SURPLUS IV_Kits', 'rationale': 'Offering surplus IV_Kits for transfer'}}}}
+
+[Event #3, Iteration: 1] [09:44:38] [Planning] General_Hospital_Ward (communication)  Content: URGENT: Need IV_Kits at General_Hospital
+
+[Event #4, Iteration: 1] [09:44:38] [Planning] General_Hospital_Ward (communication)  Content: SURPLUS PPE_Sets
+
+[Event #5, Iteration: 1] [09:45:02] [Planning] General_Hospital_Surgery (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Surgery': {'message': 'SURPLUS IV_Kits', 'rationale': 'Offering surplus IV_Kits for transfer'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: Offering surplus IV_Kits for transfer)", 'state_updates': {'broadcast_message': {'General_Hospital_Surgery': {'message': 'SURPLUS IV_Kits', 'rationale': 'Offering surplus IV_Kits for transfer'}}}}
+
+[Event #6, Iteration: 1] [09:45:06] [Planning] General_Hospital_Ward (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Ward': {'message': 'SURPLUS IV_Kits', 'rationale': 'I have more than 5 excess units of IV_Kits'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: I have more than 5 excess units of IV_Kits)", 'state_updates': {'broadcast_message': {'General_Hospital_Ward': {'message': 'SURPLUS IV_Kits', 'rationale': 'I have more than 5 excess units of IV_Kits'}}}}
+
+[Event #7, Iteration: 1] [09:45:30] [Execution] General_Hospital_Surgery (action_executed)  Action_Params: {'schedule': {'General_Hospital_Surgery': {'patient_id': '0', 'step_index': '2', 'start_time': '1', 'rationale': 'Scheduling patient 0 for step 2 at time 1'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling 0. Rationale: Scheduling patient 0 for step 2 at time 1', 'state_updates': {'schedule': {'General_Hospital_Surgery': {'patient_id': '0', 'step_index': '2', 'start_time': '1', 'rationale': 'Scheduling patient 0 for step 2 at time 1'}}}}
+
+[Event #8, Iteration: 1] [09:45:31] [Execution] General_Hospital_Ward (action_executed)  Action_Params: {'schedule': {'General_Hospital_Ward': {'step_index': '2', 'rationale': 'To avoid the -500 Step Miss Penalty', 'start_time': '0', 'patient_id': '2'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling 2. Rationale: To avoid the -500 Step Miss Penalty', 'state_updates': {'schedule': {'General_Hospital_Ward': {'step_index': '2', 'rationale': 'To avoid the -500 Step Miss Penalty', 'start_time': '0', 'patient_id': '2'}}}}
+
+[Event #9, Iteration: 1] [09:46:31] [Execution] General_Hospital_Surgery (action_executed)  Action_Params: {'schedule': {'General_Hospital_Surgery': {'patient_id': 'Patient_7', 'rationale': 'Scheduling patient from mandatory task list', 'start_time': '22', 'step_index': '2'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_7. Rationale: Scheduling patient from mandatory task list', 'state_updates': {'schedule': {'General_Hospital_Surgery': {'patient_id': 'Patient_7', 'rationale': 'Scheduling patient from mandatory task list', 'start_time': '22', 'step_index': '2'}}}}
+
+
+================================================================================
+

@@ -1,0 +1,57 @@
+================================================================================
+BLACKBOARD STATE LOG - 1
+Session started: 2026-10-25 09:00:24
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 1
+- Participants: General_Hospital_Radiology, General_Hospital_Triage
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-25 09:02:06
+Iteration: 1 | Phase: execution | Last Agent: St_Marys_Center_Surgery
+Total Events: 10
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 10
+- By Type: context(1), communication(6), action_executed(3)
+- By Agent: SYSTEM(1), General_Hospital_Triage(7), General_Hospital_Radiology(2)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [09:00:26] [Execution] SYSTEM (context)  Message: "Resource-Constrained Job Shop with Provisioner.
+
+This blackboard is a private communication channel.
+Participants: General_Hospital_Radiology, General_Hospital_Triage"
+
+[Event #2, Iteration: 1] [09:00:37] [Planning] General_Hospital_Triage (communication)  Content: URGENT: Need IV_Kits at General_Hospital
+
+[Event #3, Iteration: 1] [09:00:38] [Planning] General_Hospital_Triage (communication)  Content: URGENT: Need Anesthetics at General_Hospital
+
+[Event #4, Iteration: 1] [09:00:39] [Planning] General_Hospital_Triage (communication)  Content: SURPLUS PPE_Sets
+
+[Event #5, Iteration: 1] [09:00:53] [Planning] General_Hospital_Radiology (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS Radio_Contrast', 'rationale': 'Informing other hospitals of surplus resources'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS Radio_Contrast'. (Internal Rationale: Informing other hospitals of surplus resources)", 'state_updates': {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS Radio_Contrast', 'rationale': 'Informing other hospitals of surplus resources'}}}}
+
+[Event #6, Iteration: 1] [09:01:05] [Planning] General_Hospital_Triage (communication)  Content: SURPLUS PPE_Sets
+
+[Event #7, Iteration: 1] [09:01:07] [Planning] General_Hospital_Triage (communication)  Content: SURPLUS PPE_Sets
+
+[Event #8, Iteration: 1] [09:01:08] [Planning] General_Hospital_Triage (communication)  Content: URGENT: Need IV_Kits at General_Hospital
+
+[Event #9, Iteration: 1] [09:01:39] [Execution] General_Hospital_Triage (action_executed)  Action_Params: {'schedule': {'General_Hospital_Triage': {'patient_id': 'Patient_0', 'step_index': '0', 'start_time': '16', 'rationale': 'Scheduling patient from mandatory task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_0. Rationale: Scheduling patient from mandatory task list', 'state_updates': {'schedule': {'General_Hospital_Triage': {'patient_id': 'Patient_0', 'step_index': '0', 'start_time': '16', 'rationale': 'Scheduling patient from mandatory task list'}}}}
+
+[Event #10, Iteration: 1] [09:01:59] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'patient_id': 'patient_1', 'step_index': '1', 'start_time': '1', 'rationale': 'Scheduling patient from job queue'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling patient_1. Rationale: Scheduling patient from job queue', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'patient_id': 'patient_1', 'step_index': '1', 'start_time': '1', 'rationale': 'Scheduling patient from job queue'}}}}
+
+
+================================================================================
+

@@ -1,0 +1,59 @@
+================================================================================
+BLACKBOARD STATE LOG - 6
+Session started: 2026-10-26 19:37:31
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 6
+- Participants: St_Marys_Center_Radiology, St_Marys_Center_Triage
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-26 19:40:27
+Iteration: 1 | Phase: execution | Last Agent: St_Marys_Center_Triage
+Total Events: 10
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 10
+- By Type: context(1), action_executed(4), communication(5)
+- By Agent: SYSTEM(1), St_Marys_Center_Radiology(2), St_Marys_Center_Triage(7)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [19:37:31] [Execution] SYSTEM (context)  Message: "Resource-Constrained Job Shop with Provisioner.
+
+This blackboard is a private communication channel.
+Participants: St_Marys_Center_Radiology, St_Marys_Center_Triage"
+
+[Event #2, Iteration: 1] [19:38:00] [Planning] St_Marys_Center_Radiology (action_executed)  Action_Params: {'broadcast_message': {'St_Marys_Center_Radiology': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Notifying others of surplus PPE_Sets'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS PPE_Sets'. (Internal Rationale: Notifying others of surplus PPE_Sets)", 'state_updates': {'broadcast_message': {'St_Marys_Center_Radiology': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Notifying others of surplus PPE_Sets'}}}}
+
+[Event #3, Iteration: 1] [19:38:02] [Planning] St_Marys_Center_Triage (communication)  Content: URGENT: Need IV_Kits at St_Marys_Center
+
+[Event #4, Iteration: 1] [19:38:04] [Planning] St_Marys_Center_Triage (communication)  Content: URGENT: Need Anesthetics at St_Marys_Center
+
+[Event #5, Iteration: 1] [19:38:05] [Planning] St_Marys_Center_Triage (communication)  Content: SURPLUS PPE_Sets
+
+[Event #6, Iteration: 1] [19:38:36] [Planning] St_Marys_Center_Triage (communication)  Content: SURPLUS PPE_Sets
+
+[Event #7, Iteration: 1] [19:38:38] [Planning] St_Marys_Center_Triage (communication)  Content: SURPLUS IV_Kits
+
+[Event #8, Iteration: 1] [19:38:44] [Planning] St_Marys_Center_Triage (action_executed)  Action_Params: {'broadcast_message': {'St_Marys_Center_Triage': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Notifying others of surplus PPE_Sets'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS PPE_Sets'. (Internal Rationale: Notifying others of surplus PPE_Sets)", 'state_updates': {'broadcast_message': {'St_Marys_Center_Triage': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Notifying others of surplus PPE_Sets'}}}}
+
+[Event #9, Iteration: 1] [19:40:07] [Execution] St_Marys_Center_Radiology (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Radiology': {'patient_id': 'patient_1', 'rationale': 'Scheduling patient from job queue', 'start_time': 1, 'step_index': 1}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling patient_1. Rationale: Scheduling patient from job queue', 'state_updates': {'schedule': {'St_Marys_Center_Radiology': {'patient_id': 'patient_1', 'rationale': 'Scheduling patient from job queue', 'start_time': 1, 'step_index': 1}}}}
+
+[Event #10, Iteration: 1] [19:40:11] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'patient_id', 'step_index': 'step_index', 'start_time': 'start_time', 'rationale': 'Scheduling patient from job queue'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling patient_id. Rationale: Scheduling patient from job queue', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'patient_id', 'step_index': 'step_index', 'start_time': 'start_time', 'rationale': 'Scheduling patient from job queue'}}}}
+
+
+================================================================================
+

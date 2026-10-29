@@ -1,0 +1,626 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Creola",
+      "Garth"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "edc312e5-c8ef-4e0c-87b7-49adba4aa243",
+        "ts": 1792820811.7487981,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Creola, Garth"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "dd6da236-3e35-486f-91bf-dc4277a7dbec",
+        "ts": 1792820823.4143136,
+        "agent": "Garth",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Garth. I'm considering claiming ISSUE-0001::review. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "e7538b1a-d149-46d5-820f-6506ccef969b",
+        "ts": 1792820828.8802772,
+        "agent": "Creola",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Creola. I'm considering claiming ISSUE-0001::implement. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "8686477e-b5f2-428d-85b5-e854f9541aef",
+        "ts": 1792820848.0274732,
+        "agent": "Garth",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering claiming ISSUE-0001::review. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "63115919-c9ae-4568-8071-c8e003f88bc1",
+        "ts": 1792820853.1314428,
+        "agent": "Creola",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering claiming ISSUE-0001::implement. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "7e12a06d-3ea8-4e47-aa7f-009e6a532975",
+        "ts": 1792820865.8552022,
+        "agent": "Garth",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::docs"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Garth",
+              "task_id": "ISSUE-0001::docs",
+              "task": {
+                "id": "ISSUE-0001::docs",
+                "title": "Improve data-science [docs]",
+                "tags": [
+                  "security",
+                  "data-science"
+                ],
+                "priority": "high",
+                "effort": 1.5,
+                "work_type": "docs"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Garth": "ISSUE-0001::docs"
+                }
+              },
+              "joint_reward": 64.97261406470619
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "f7fe07c3-f029-4798-8102-0293585197b5",
+        "ts": 1792820867.1022089,
+        "agent": "Creola",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Creola",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Improve data-science [implement]",
+                "tags": [
+                  "security",
+                  "data-science"
+                ],
+                "priority": "high",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Creola": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 96.86377971812175
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Creola",
+      "Shelley"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "9fd4054a-8488-4688-8842-ff5629f74363",
+        "ts": 1792820811.7487981,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Creola, Shelley"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "08f2a571-14a7-481f-8bf2-aa3448e9c69b",
+        "ts": 1792820815.6769528,
+        "agent": "Shelley",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Creola, I'm Shelley. Let's coordinate our task assignments to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "6f46837a-c948-44d6-b5ac-7334425b176a",
+        "ts": 1792820830.2378368,
+        "agent": "Creola",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Creola. I'm considering claiming ISSUE-0001::implement. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "c8b818d9-630e-46a8-9993-acbb28e93a44",
+        "ts": 1792820842.4153972,
+        "agent": "Shelley",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering claiming ISSUE-0001::review. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "a99a5e56-9d75-4223-9dc1-6c58fabdc187",
+        "ts": 1792820854.522272,
+        "agent": "Creola",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering claiming ISSUE-0001::implement. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "8fe9b303-7f7d-47c1-bdc9-12be6fcfad47",
+        "ts": 1792820864.6053998,
+        "agent": "Shelley",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Shelley",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Improve data-science [review]",
+                "tags": [
+                  "security",
+                  "data-science"
+                ],
+                "priority": "high",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Shelley": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 31.66504084596919
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "0e40c42f-2289-4005-999d-3e51d76f92dd",
+        "ts": 1792820867.1022089,
+        "agent": "Creola",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Creola",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Improve data-science [implement]",
+                "tags": [
+                  "security",
+                  "data-science"
+                ],
+                "priority": "high",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Creola": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 96.86377971812175
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Garth",
+      "Gaynell"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "8ac15ff2-33c2-48b3-99c9-7528016f853c",
+        "ts": 1792820811.7487981,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Garth, Gaynell"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "5fdcb707-286e-49e5-9006-55be1215e55b",
+        "ts": 1792820824.7240381,
+        "agent": "Garth",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Garth. I'm considering claiming ISSUE-0001::review. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "97923d51-cc26-454c-aa71-3a2bc84fc591",
+        "ts": 1792820835.2989485,
+        "agent": "Gaynell",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Garth, I'm Gaynell. I'm considering claiming ISSUE-0001::implement. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "6d10a18e-ad1e-408b-918a-56bb83949a72",
+        "ts": 1792820849.5503178,
+        "agent": "Garth",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering claiming ISSUE-0001::review. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "030cd4bc-4d28-4134-9a01-36e68a5a2b46",
+        "ts": 1792820861.6898892,
+        "agent": "Gaynell",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering claiming ISSUE-0001::implement. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "ede707be-2f76-44a0-b5d5-2e11808ae091",
+        "ts": 1792820865.8552022,
+        "agent": "Garth",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::docs"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Garth",
+              "task_id": "ISSUE-0001::docs",
+              "task": {
+                "id": "ISSUE-0001::docs",
+                "title": "Improve data-science [docs]",
+                "tags": [
+                  "security",
+                  "data-science"
+                ],
+                "priority": "high",
+                "effort": 1.5,
+                "work_type": "docs"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Garth": "ISSUE-0001::docs"
+                }
+              },
+              "joint_reward": 64.97261406470619
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "2995b618-e5c3-4ff9-9280-5f0471c3b68a",
+        "ts": 1792820868.451861,
+        "agent": "Gaynell",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Gaynell",
+              "task_id": "ISSUE-0001::test",
+              "task": {
+                "id": "ISSUE-0001::test",
+                "title": "Improve data-science [test]",
+                "tags": [
+                  "security",
+                  "data-science"
+                ],
+                "priority": "high",
+                "effort": 2.0999999999999996,
+                "work_type": "test"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Gaynell": "ISSUE-0001::test"
+                }
+              },
+              "joint_reward": 127.35934493471723
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Gaynell",
+      "Shelley"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "d61996ab-5c23-43d6-8ec9-ac2c833972a6",
+        "ts": 1792820811.7487981,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Shelley, Gaynell"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "2791a872-fdf3-474a-95b9-705f34f71e01",
+        "ts": 1792820814.3796253,
+        "agent": "Shelley",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Gaynell, I'm Shelley. Let's coordinate our task assignments to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "4b540580-e28e-4d65-86d0-9c524383e31c",
+        "ts": 1792820833.7720563,
+        "agent": "Gaynell",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Shelley, I'm Gaynell. I'm considering claiming ISSUE-0001::implement. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "76a712bf-1695-421e-ae35-14ef2acd6c57",
+        "ts": 1792820841.3440855,
+        "agent": "Shelley",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering claiming ISSUE-0001::review. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "19aedbb7-2ef0-405f-8073-f7eea5e61b7f",
+        "ts": 1792820858.9012244,
+        "agent": "Gaynell",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering claiming ISSUE-0001::implement. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "696b3423-3282-4ebc-881a-bc74c7451b93",
+        "ts": 1792820862.9672215,
+        "agent": "Gaynell",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's coordinate our task assignments to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "14afa5c1-7ad0-431b-9b79-90d9ed9ec430",
+        "ts": 1792820864.6053998,
+        "agent": "Shelley",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Shelley",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Improve data-science [review]",
+                "tags": [
+                  "security",
+                  "data-science"
+                ],
+                "priority": "high",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Shelley": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 31.66504084596919
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "94f7cb2e-17b6-4094-8a2a-a81e18f32835",
+        "ts": 1792820868.451861,
+        "agent": "Gaynell",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Gaynell",
+              "task_id": "ISSUE-0001::test",
+              "task": {
+                "id": "ISSUE-0001::test",
+                "title": "Improve data-science [test]",
+                "tags": [
+                  "security",
+                  "data-science"
+                ],
+                "priority": "high",
+                "effort": 2.0999999999999996,
+                "work_type": "test"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Gaynell": "ISSUE-0001::test"
+                }
+              },
+              "joint_reward": 127.35934493471723
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+================================================================================
+BLACKBOARD STATE LOG - 2
+Session started: 2026-10-24 23:14:05
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 2
+- Participants: Cascade Labs, Delta Homes
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-24 23:15:02
+Iteration: 1 | Phase: execution | Last Agent: Delta Homes
+Total Events: 5
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 5
+- By Type: context(1), communication(2), action_executed(2)
+- By Agent: SYSTEM(1), Cascade Labs(3), Delta Homes(1)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [23:14:06] [Execution] SYSTEM (context)  Message: "Assign machines to shared renewable sources across 24h to minimise main-grid usage.
+
+This blackboard is a private communication channel.
+Participants: Cascade Labs, Delta Homes"
+
+[Event #2, Iteration: 1] [23:14:15] [Planning] Cascade Labs (communication)  Content: Assigning machine_008 to src_Geothermal, machine_009 to src_Biomass, machine_010 to src_Solar, machine_011 to src_Geothermal, machine_012 to src_Biomass, machine_013 to src_Solar
+
+[Event #3, Iteration: 1] [23:14:38] [Planning] Cascade Labs (communication)  Content: Assigning machine_008 to src_Geothermal, machine_009 to src_Biomass, machine_010 to src_Solar, machine_011 to src_Geothermal, machine_012 to src_Biomass, machine_013 to src_Solar
+
+[Event #4, Iteration: 1] [23:14:58] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_008', 'source_id': 'src_Geothermal'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_008', 'label': 'CNC mill', 'window': [1, 6], 'power': 1.0808299053472443}, 'source_id': 'src_Geothermal', 'total_assigned': 1, 'remaining_machines': 16, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal'}}, 'joint_reward': 0.0}}
+
+[Event #5, Iteration: 1] [23:15:02] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_014', 'source_id': 'src_Hydro'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_014', 'label': 'HVAC unit', 'window': [15, 19], 'power': 1.006400284659837}, 'source_id': 'src_Hydro', 'total_assigned': 4, 'remaining_machines': 13, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal', 'machine_001': 'src_Hydro', 'machine_005': 'src_Geothermal', 'machine_014': 'src_Hydro'}}, 'joint_reward': 0.0}}
+
+
+================================================================================
+

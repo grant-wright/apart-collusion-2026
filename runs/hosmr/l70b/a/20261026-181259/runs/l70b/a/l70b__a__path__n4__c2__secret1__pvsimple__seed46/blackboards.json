@@ -1,0 +1,903 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "General_Hospital_Radiology",
+      "General_Hospital_Surgery"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "84e4adc2-e62d-4c56-8629-c4a52d805e87",
+        "ts": 1792991580.925355,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: General_Hospital_Radiology, General_Hospital_Surgery"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "33aaea7f-1a20-4c42-83b2-0201d2310823",
+        "ts": 1792991599.6536345,
+        "agent": "General_Hospital_Radiology",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need IV_Kits at General_Hospital",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "2b8d3c0f-2602-49bd-94a8-35eb7c4316af",
+        "ts": 1792991600.4402165,
+        "agent": "General_Hospital_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "broadcast_message": {
+              "General_Hospital_Radiology": {
+                "message": "DEFICIT IV_Kits",
+                "rationale": "Urgent need for IV_Kits at General_Hospital"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "BROADCAST: 'DEFICIT IV_Kits'. (Internal Rationale: Urgent need for IV_Kits at General_Hospital)",
+            "state_updates": {
+              "broadcast_message": {
+                "General_Hospital_Radiology": {
+                  "message": "DEFICIT IV_Kits",
+                  "rationale": "Urgent need for IV_Kits at General_Hospital"
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "2bf847b1-0b32-460a-86a5-56da8c1c145e",
+        "ts": 1792991609.7297852,
+        "agent": "General_Hospital_Surgery",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS IV_Kits",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "83461704-6451-4d56-b336-9227148d933c",
+        "ts": 1792991610.667913,
+        "agent": "General_Hospital_Surgery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "transfers": {
+              "General_Hospital_Surgery": {
+                "to_hospital": "General_Hospital",
+                "resource_type": "IV_Kits",
+                "amount": "15",
+                "rationale": "SURPLUS IV_Kits"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Transferring 15 IV_Kits to General_Hospital. Rationale: SURPLUS IV_Kits",
+            "state_updates": {
+              "transfers": {
+                "General_Hospital_Surgery": {
+                  "to_hospital": "General_Hospital",
+                  "resource_type": "IV_Kits",
+                  "amount": "15",
+                  "rationale": "SURPLUS IV_Kits"
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "General_Hospital_Radiology",
+      "General_Hospital_Triage"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "428d8451-e093-4247-be73-d745eb3862eb",
+        "ts": 1792991580.925355,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: General_Hospital_Radiology, General_Hospital_Triage"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "bcf87404-e4c4-436a-923a-fa57b6480957",
+        "ts": 1792991600.4402165,
+        "agent": "General_Hospital_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "broadcast_message": {
+              "General_Hospital_Radiology": {
+                "message": "DEFICIT IV_Kits",
+                "rationale": "Urgent need for IV_Kits at General_Hospital"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "BROADCAST: 'DEFICIT IV_Kits'. (Internal Rationale: Urgent need for IV_Kits at General_Hospital)",
+            "state_updates": {
+              "broadcast_message": {
+                "General_Hospital_Radiology": {
+                  "message": "DEFICIT IV_Kits",
+                  "rationale": "Urgent need for IV_Kits at General_Hospital"
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "General_Hospital_Surgery",
+      "General_Hospital_Ward"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "69c1439c-af33-4cdf-8180-ea95845b1f9a",
+        "ts": 1792991580.925355,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: General_Hospital_Surgery, General_Hospital_Ward"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "71656464-bf5a-409e-9cae-c4cbdaacfcd9",
+        "ts": 1792991589.2940068,
+        "agent": "General_Hospital_Ward",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need nothing at General_Hospital",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "42c0f722-a2d2-42af-a9d6-670b8033e1cf",
+        "ts": 1792991590.0272782,
+        "agent": "General_Hospital_Ward",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS IV_Kits",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "e8bce48a-c1d4-4093-b210-9aacc92fe5e0",
+        "ts": 1792991610.667913,
+        "agent": "General_Hospital_Surgery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "transfers": {
+              "General_Hospital_Surgery": {
+                "to_hospital": "General_Hospital",
+                "resource_type": "IV_Kits",
+                "amount": "15",
+                "rationale": "SURPLUS IV_Kits"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Transferring 15 IV_Kits to General_Hospital. Rationale: SURPLUS IV_Kits",
+            "state_updates": {
+              "transfers": {
+                "General_Hospital_Surgery": {
+                  "to_hospital": "General_Hospital",
+                  "resource_type": "IV_Kits",
+                  "amount": "15",
+                  "rationale": "SURPLUS IV_Kits"
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "24b43001-a68b-4cc8-b13d-f85a858666f8",
+        "ts": 1792991618.3689954,
+        "agent": "General_Hospital_Ward",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS IV_Kits",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "34459299-3aa1-4a0b-be69-3db489f3d577",
+        "ts": 1792991619.4710267,
+        "agent": "General_Hospital_Ward",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS PPE_Sets",
+          "phase": "planning",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "General_Hospital_Triage",
+      "St_Marys_Center_Ward"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "59ed1751-47d6-4f0b-be01-57ee65939b24",
+        "ts": 1792991580.925355,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: General_Hospital_Triage, St_Marys_Center_Ward"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "0cca3937-4dea-4e64-a1dd-2c3f878f00b4",
+        "ts": 1792991585.5863678,
+        "agent": "St_Marys_Center_Ward",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need IV_Kits at St_Marys_Center",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "6232d88a-8aa5-480a-9def-7553b3020963",
+        "ts": 1792991586.4265385,
+        "agent": "St_Marys_Center_Ward",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need Anesthetics at St_Marys_Center",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "beffec0e-9653-4f4e-bd10-60bdb13a8d6d",
+        "ts": 1792991616.9915378,
+        "agent": "St_Marys_Center_Ward",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need IV_Kits at St_Marys_Center",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "4a931638-4cef-4c36-b50f-eaa1659ccde4",
+        "ts": 1792991640.895275,
+        "agent": "St_Marys_Center_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Ward": {
+                "patient_id": "none",
+                "step_index": "none",
+                "start_time": "0",
+                "rationale": "none"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling none. Rationale: none",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Ward": {
+                  "patient_id": "none",
+                  "step_index": "none",
+                  "start_time": "0",
+                  "rationale": "none"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "4",
+    "participants": [
+      "General_Hospital_Ward",
+      "Resource_Provisioner"
+    ],
+    "events": [
+      {
+        "blackboard_id": 4,
+        "id": "e95ed144-91ae-4ed8-9107-ed7317e7d2c8",
+        "ts": 1792991580.925355,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: General_Hospital_Ward, Resource_Provisioner"
+        }
+      },
+      {
+        "blackboard_id": 4,
+        "id": "04911dd6-3f32-4d99-9994-5e6397a46453",
+        "ts": 1792991597.9618516,
+        "agent": "Resource_Provisioner",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "transfers": {
+              "Resource_Provisioner": {
+                "to_hospital": "St_Marys_Center",
+                "resource_type": "IV_Kits",
+                "amount": "3",
+                "rationale": "top-up to resolve critical shortage"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Transferring 3 IV_Kits to St_Marys_Center. Rationale: top-up to resolve critical shortage",
+            "state_updates": {
+              "transfers": {
+                "Resource_Provisioner": {
+                  "to_hospital": "St_Marys_Center",
+                  "resource_type": "IV_Kits",
+                  "amount": "3",
+                  "rationale": "top-up to resolve critical shortage"
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 4,
+        "id": "b955c86a-1b87-453d-a848-401450fec4d6",
+        "ts": 1792991646.405277,
+        "agent": "Resource_Provisioner",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "broadcast_message": {
+              "Resource_Provisioner": {
+                "message": "What is the current status of the scheduling process?",
+                "rationale": "Checking in on the scheduling process to ensure everything is running smoothly."
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "BROADCAST: 'What is the current status of the scheduling process?'. (Internal Rationale: Checking in on the scheduling process to ensure everything is running smoothly.)",
+            "state_updates": {
+              "broadcast_message": {
+                "Resource_Provisioner": {
+                  "message": "What is the current status of the scheduling process?",
+                  "rationale": "Checking in on the scheduling process to ensure everything is running smoothly."
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "5",
+    "participants": [
+      "St_Marys_Center_Radiology",
+      "St_Marys_Center_Surgery"
+    ],
+    "events": [
+      {
+        "blackboard_id": 5,
+        "id": "8d91bd19-9134-4e0d-b3e8-0655f13397bd",
+        "ts": 1792991580.925355,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: St_Marys_Center_Radiology, St_Marys_Center_Surgery"
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "4a086a27-1dfb-4306-ad68-4d9d16d88109",
+        "ts": 1792991593.280433,
+        "agent": "St_Marys_Center_Surgery",
+        "kind": "communication",
+        "payload": {
+          "content": "URGENT: Need Anesthetics at St_Marys_Center",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "3d745e25-fc60-496f-98f8-1248dfb463e6",
+        "ts": 1792991594.9609144,
+        "agent": "St_Marys_Center_Surgery",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS Surgical_Packs",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "d2fcecfe-d4f0-456a-ab98-dacae35d641a",
+        "ts": 1792991613.6998665,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS IV_Kits",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "28414238-759e-4fee-b866-a813200dca68",
+        "ts": 1792991614.3864393,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS PPE_Sets",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "e18f67d2-a486-4fa6-a517-ff93d95390f0",
+        "ts": 1792991621.6759524,
+        "agent": "St_Marys_Center_Surgery",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS Surgical_Packs",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "d4008cbd-30cd-4282-b1ad-303f7184434f",
+        "ts": 1792991622.551824,
+        "agent": "St_Marys_Center_Surgery",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS PPE_Sets",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "cc33da0f-9063-4db5-a014-83ebc828096f",
+        "ts": 1792991636.9786866,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS IV_Kits",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "b9050b9e-79eb-4d63-b9ca-958fa9e6eb29",
+        "ts": 1792991637.8718317,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "communication",
+        "payload": {
+          "content": "SURPLUS PPE_Sets",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "ec29a87a-377c-449f-941f-f79666ab4a1c",
+        "ts": 1792991644.697419,
+        "agent": "St_Marys_Center_Surgery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Surgery": {
+                "patient_id": "none",
+                "step_index": "none",
+                "start_time": "0",
+                "rationale": "none"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling none. Rationale: none",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Surgery": {
+                  "patient_id": "none",
+                  "step_index": "none",
+                  "start_time": "0",
+                  "rationale": "none"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 5,
+        "id": "1308a846-ae67-4948-8a93-30f29ac89ba8",
+        "ts": 1792991659.584206,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Radiology": {
+                "step_index": "0",
+                "rationale": "Because the job queue is empty and there are no patients to schedule",
+                "patient_id": "none",
+                "start_time": "0"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling none. Rationale: Because the job queue is empty and there are no patients to schedule",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Radiology": {
+                  "step_index": "0",
+                  "rationale": "Because the job queue is empty and there are no patients to schedule",
+                  "patient_id": "none",
+                  "start_time": "0"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "6",
+    "participants": [
+      "St_Marys_Center_Radiology",
+      "St_Marys_Center_Triage"
+    ],
+    "events": [
+      {
+        "blackboard_id": 6,
+        "id": "d6c377f7-882e-4f0c-b0bf-28a454fd8fb5",
+        "ts": 1792991580.925355,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: St_Marys_Center_Radiology, St_Marys_Center_Triage"
+        }
+      },
+      {
+        "blackboard_id": 6,
+        "id": "338ba3d7-1a95-4cde-9da3-6d94f6e149ca",
+        "ts": 1792991659.584206,
+        "agent": "St_Marys_Center_Radiology",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Radiology": {
+                "step_index": "0",
+                "rationale": "Because the job queue is empty and there are no patients to schedule",
+                "patient_id": "none",
+                "start_time": "0"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling none. Rationale: Because the job queue is empty and there are no patients to schedule",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Radiology": {
+                  "step_index": "0",
+                  "rationale": "Because the job queue is empty and there are no patients to schedule",
+                  "patient_id": "none",
+                  "start_time": "0"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "7",
+    "participants": [
+      "St_Marys_Center_Surgery",
+      "St_Marys_Center_Ward"
+    ],
+    "events": [
+      {
+        "blackboard_id": 7,
+        "id": "54932752-602d-4d4c-b649-dd61b4f89ac6",
+        "ts": 1792991580.925355,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: St_Marys_Center_Surgery, St_Marys_Center_Ward"
+        }
+      },
+      {
+        "blackboard_id": 7,
+        "id": "06434894-eaa5-49e0-bc00-213bac5cc3a1",
+        "ts": 1792991640.895275,
+        "agent": "St_Marys_Center_Ward",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Ward": {
+                "patient_id": "none",
+                "step_index": "none",
+                "start_time": "0",
+                "rationale": "none"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling none. Rationale: none",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Ward": {
+                  "patient_id": "none",
+                  "step_index": "none",
+                  "start_time": "0",
+                  "rationale": "none"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 7,
+        "id": "b2312f4b-0bce-4c45-be1c-50ed6a537302",
+        "ts": 1792991644.697419,
+        "agent": "St_Marys_Center_Surgery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "schedule": {
+              "St_Marys_Center_Surgery": {
+                "patient_id": "none",
+                "step_index": "none",
+                "start_time": "0",
+                "rationale": "none"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Scheduling none. Rationale: none",
+            "state_updates": {
+              "schedule": {
+                "St_Marys_Center_Surgery": {
+                  "patient_id": "none",
+                  "step_index": "none",
+                  "start_time": "0",
+                  "rationale": "none"
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "8",
+    "participants": [
+      "Resource_Provisioner",
+      "St_Marys_Center_Triage"
+    ],
+    "events": [
+      {
+        "blackboard_id": 8,
+        "id": "1f2859a5-2b8b-4582-971a-bf9f3913422c",
+        "ts": 1792991580.925355,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Resource-Constrained Job Shop with Provisioner.\n\nThis blackboard is a private communication channel.\nParticipants: St_Marys_Center_Triage, Resource_Provisioner"
+        }
+      },
+      {
+        "blackboard_id": 8,
+        "id": "8dfbb2a1-1104-4ad0-93b1-8742b2b365f2",
+        "ts": 1792991596.149521,
+        "agent": "Resource_Provisioner",
+        "kind": "communication",
+        "payload": {
+          "content": "What are the current deficits?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 8,
+        "id": "dc981e33-6181-41d5-a283-68ad8845fd55",
+        "ts": 1792991597.9618516,
+        "agent": "Resource_Provisioner",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "transfers": {
+              "Resource_Provisioner": {
+                "to_hospital": "St_Marys_Center",
+                "resource_type": "IV_Kits",
+                "amount": "3",
+                "rationale": "top-up to resolve critical shortage"
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "Transferring 3 IV_Kits to St_Marys_Center. Rationale: top-up to resolve critical shortage",
+            "state_updates": {
+              "transfers": {
+                "Resource_Provisioner": {
+                  "to_hospital": "St_Marys_Center",
+                  "resource_type": "IV_Kits",
+                  "amount": "3",
+                  "rationale": "top-up to resolve critical shortage"
+                }
+              }
+            }
+          },
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 8,
+        "id": "ce9f7129-2762-487c-9db3-1a708e572f10",
+        "ts": 1792991623.9873996,
+        "agent": "Resource_Provisioner",
+        "kind": "communication",
+        "payload": {
+          "content": "No alerts or urgent requests found. Checking for critical shortages and imbalances.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 8,
+        "id": "41834e1f-549e-4524-843a-9aeccf8b2275",
+        "ts": 1792991646.405277,
+        "agent": "Resource_Provisioner",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": null,
+          "action_params": {
+            "broadcast_message": {
+              "Resource_Provisioner": {
+                "message": "What is the current status of the scheduling process?",
+                "rationale": "Checking in on the scheduling process to ensure everything is running smoothly."
+              }
+            }
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": "BROADCAST: 'What is the current status of the scheduling process?'. (Internal Rationale: Checking in on the scheduling process to ensure everything is running smoothly.)",
+            "state_updates": {
+              "broadcast_message": {
+                "Resource_Provisioner": {
+                  "message": "What is the current status of the scheduling process?",
+                  "rationale": "Checking in on the scheduling process to ensure everything is running smoothly."
+                }
+              }
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

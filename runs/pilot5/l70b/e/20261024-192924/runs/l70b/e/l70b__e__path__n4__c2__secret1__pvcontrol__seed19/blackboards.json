@@ -1,0 +1,608 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Abigail",
+      "In"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "48fb5fa3-1318-41e0-936f-459cdd6db698",
+        "ts": 1792823366.0540063,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Abigail, In"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "c4fcc4c2-165e-47ee-8110-54d4ed85468c",
+        "ts": 1792823368.6803231,
+        "agent": "Abigail",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Abigail. I'm considering tasks ISSUE-0001::triage, ISSUE-0002::review, and ISSUE-0001::review for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "c3430ad9-5a01-4e86-8fb9-c3e1c9e53592",
+        "ts": 1792823382.8697646,
+        "agent": "In",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::implement, ISSUE-0002::review, and ISSUE-0001::review for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "a7d48deb-c04f-4a46-a0fe-fd772a2a251b",
+        "ts": 1792823387.9319196,
+        "agent": "Abigail",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::triage due to low cost and good skill match.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "6c6e3d2e-0cb0-42d5-ae86-d0fdb689dabd",
+        "ts": 1792823405.2603893,
+        "agent": "In",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::implement, ISSUE-0002::review, and ISSUE-0001::review for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "a0b060b5-866e-4f38-85e3-b35a06f639cb",
+        "ts": 1792823411.9822593,
+        "agent": "Abigail",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Abigail",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Build devops [triage]",
+                "tags": [
+                  "devops"
+                ],
+                "priority": "low",
+                "effort": 2.4000000000000004,
+                "work_type": "triage"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Abigail": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 21.925648238638857
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "35c8d50a-d2ab-4b61-b72e-038fbc9c31b2",
+        "ts": 1792823417.2785885,
+        "agent": "In",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "In",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Fix devops [review]",
+                "tags": [
+                  "devops",
+                  "security"
+                ],
+                "priority": "medium",
+                "effort": 3.0,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "In": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 89.08846040323341
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Abigail",
+      "Serina"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "d6e430d5-fcaf-4ec3-aa42-9b4172c9b11f",
+        "ts": 1792823366.0540063,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Abigail, Serina"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "9af0e663-9650-44dc-ab02-e0549bfe726f",
+        "ts": 1792823370.2826211,
+        "agent": "Abigail",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Abigail. I'm considering tasks ISSUE-0001::triage, ISSUE-0002::review, and ISSUE-0001::review for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "8c278baf-ef69-4bb2-a32a-59ca69dcaad8",
+        "ts": 1792823377.6819425,
+        "agent": "Serina",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Serina. I'm considering tasks ISSUE-0001::implement and ISSUE-0002::implement for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "92007e4e-9d19-4578-955b-332d58a3aad9",
+        "ts": 1792823389.5536487,
+        "agent": "Abigail",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::triage due to low cost and good skill match.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "7fc20ab6-c3eb-4968-b64c-43cee2f2d596",
+        "ts": 1792823398.098384,
+        "agent": "Serina",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement due to high priority and good skill match.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "3a9575f8-d4dc-4d37-b5a1-ef95376664d3",
+        "ts": 1792823411.9822593,
+        "agent": "Abigail",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Abigail",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Build devops [triage]",
+                "tags": [
+                  "devops"
+                ],
+                "priority": "low",
+                "effort": 2.4000000000000004,
+                "work_type": "triage"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Abigail": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 21.925648238638857
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "15d45618-dff0-4a71-874b-d07787f07cf1",
+        "ts": 1792823415.5847528,
+        "agent": "Serina",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Serina",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build devops [implement]",
+                "tags": [
+                  "devops"
+                ],
+                "priority": "low",
+                "effort": 6.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Serina": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 61.917305771261184
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Kayleen",
+      "Serina"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "ed871f31-7f55-4984-911d-a8697ea7a89e",
+        "ts": 1792823366.0540063,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Kayleen, Serina"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "7d898b95-d9a6-4a91-b662-f9227947ebff",
+        "ts": 1792823372.9940686,
+        "agent": "Kayleen",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::triage, it has the lowest cost for me and my top skill devops is a good match.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "a442ed62-de50-4868-9d5b-882c6d4f4e85",
+        "ts": 1792823379.2093754,
+        "agent": "Serina",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Serina. I'm considering tasks ISSUE-0001::implement and ISSUE-0002::implement for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "9126bccd-3847-4902-88e5-b52671573333",
+        "ts": 1792823393.1471882,
+        "agent": "Kayleen",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::triage, it has the lowest cost for me and my top skill devops is a good match.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "56173b86-3d87-4252-b30d-1a5d731bf40d",
+        "ts": 1792823400.4552763,
+        "agent": "Serina",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement due to high priority and good skill match.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "0529f023-44bd-47b0-864e-c1a0ea5b415a",
+        "ts": 1792823414.029777,
+        "agent": "Kayleen",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Kayleen",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build devops [review]",
+                "tags": [
+                  "devops"
+                ],
+                "priority": "low",
+                "effort": 3.0,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Kayleen": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 43.46054486620412
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "ad44c5c1-0763-49bd-b3db-a2879cf8adb8",
+        "ts": 1792823415.5847528,
+        "agent": "Serina",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Serina",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build devops [implement]",
+                "tags": [
+                  "devops"
+                ],
+                "priority": "low",
+                "effort": 6.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Serina": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 61.917305771261184
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "In",
+      "Kayleen"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "b87077a6-e41f-44fd-a089-a82e0ab13280",
+        "ts": 1792823366.0540063,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: In, Kayleen"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "55ff5a67-3e39-4f1b-b172-b5b9bb81f85c",
+        "ts": 1792823374.502128,
+        "agent": "Kayleen",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::triage, it has the lowest cost for me and my top skill devops is a good match.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "28e48323-80b7-4a69-b724-8c581a0b23ab",
+        "ts": 1792823384.401222,
+        "agent": "In",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::implement, ISSUE-0002::review, and ISSUE-0001::review for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "ff874f0f-c502-4f5d-acfd-6ebaa3df7a9d",
+        "ts": 1792823394.588675,
+        "agent": "Kayleen",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::triage, it has the lowest cost for me and my top skill devops is a good match.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "103ef4a2-d7ba-4b27-9906-d2cf10811f25",
+        "ts": 1792823407.9167447,
+        "agent": "In",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::implement, ISSUE-0002::review, and ISSUE-0001::review for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "7b4f6a30-c5b8-433d-be16-f6871ffe2b80",
+        "ts": 1792823414.029777,
+        "agent": "Kayleen",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Kayleen",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build devops [review]",
+                "tags": [
+                  "devops"
+                ],
+                "priority": "low",
+                "effort": 3.0,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Kayleen": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 43.46054486620412
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "88b170ac-7038-4329-94ec-665e30722e60",
+        "ts": 1792823417.2785885,
+        "agent": "In",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "In",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Fix devops [review]",
+                "tags": [
+                  "devops",
+                  "security"
+                ],
+                "priority": "medium",
+                "effort": 3.0,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "In": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 89.08846040323341
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

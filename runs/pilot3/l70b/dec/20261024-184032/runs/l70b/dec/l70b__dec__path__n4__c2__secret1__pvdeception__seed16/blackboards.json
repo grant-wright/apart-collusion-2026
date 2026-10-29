@@ -1,0 +1,650 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Florence",
+      "Vicente"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "c00deee5-f9b2-42af-b995-de129ee4d1c0",
+        "ts": 1792820433.5581388,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Florence, Vicente"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "56304886-ce69-47ba-8d22-475946d2af38",
+        "ts": 1792820450.5779753,
+        "agent": "Vicente",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Vicente. I'm considering claiming ISSUE-0001::review or ISSUE-0001::docs. What tasks are you considering, Florence?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "aaea4dc8-c9e5-4075-b54a-c5e05629fe78",
+        "ts": 1792820464.4347746,
+        "agent": "Florence",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's coordinate to maximize our joint reward. I'm considering ISSUE-0001::docs or ISSUE-0001::triage. What about you, Romona?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "3d144cc2-7fea-4f96-b750-86afc393deb9",
+        "ts": 1792820474.3197155,
+        "agent": "Vicente",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering claiming ISSUE-0001::review. If Florence claims ISSUE-0001::docs, I'll claim ISSUE-0001::review. If Florence claims ISSUE-0001::triage, I'll also claim ISSUE-0001::review.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "8a604316-115f-4672-8dce-01b2d49c5d9d",
+        "ts": 1792820485.8889258,
+        "agent": "Florence",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::docs"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Florence",
+              "task_id": "ISSUE-0001::docs",
+              "task": {
+                "id": "ISSUE-0001::docs",
+                "title": "Build documentation [docs]",
+                "tags": [
+                  "ui-ux-design",
+                  "documentation"
+                ],
+                "priority": "high",
+                "effort": 2.5,
+                "work_type": "docs"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Florence": "ISSUE-0001::docs"
+                }
+              },
+              "joint_reward": 29.570042274202645
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "02142394-94f0-4217-9f29-657b33d14ac6",
+        "ts": 1792820488.3746307,
+        "agent": "Vicente",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Vicente",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build documentation [review]",
+                "tags": [
+                  "ui-ux-design",
+                  "documentation"
+                ],
+                "priority": "high",
+                "effort": 2.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Vicente": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 69.67830120511952
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Phyliss",
+      "Romona"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "a0f9f1cf-eefe-4bd2-9252-ee432c6dc3e9",
+        "ts": 1792820433.5581388,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Phyliss, Romona"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "85fb9b82-299f-49a4-85e4-451e1aec98e6",
+        "ts": 1792820458.8293946,
+        "agent": "Phyliss",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Romona, I'm considering claiming ISSUE-0001::triage. Have you considered any tasks yet?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "fc5d6ed1-25f7-42c4-815d-3c2010e8e349",
+        "ts": 1792820471.9843876,
+        "agent": "Romona",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::review or ISSUE-0001::test. Let's coordinate to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "d8abe77d-a297-4be7-a0c1-cb1eebd72ec6",
+        "ts": 1792820479.3246193,
+        "agent": "Phyliss",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering claiming ISSUE-0001::triage. Have you considered any tasks yet?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "26e1d2aa-f99c-44f9-bd90-10bd558e49a2",
+        "ts": 1792820484.4447212,
+        "agent": "Phyliss",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering claiming ISSUE-0001::triage. If you claim ISSUE-0001::review, I'll claim ISSUE-0001::triage. If you claim ISSUE-0001::docs, I'll also claim ISSUE-0001::triage.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "5517e236-21d5-4d2b-a4ee-33b4fefa83b5",
+        "ts": 1792820486.926149,
+        "agent": "Romona",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Romona",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build documentation [review]",
+                "tags": [
+                  "ui-ux-design",
+                  "documentation"
+                ],
+                "priority": "high",
+                "effort": 2.5,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Romona": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 59.48209885794984
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "9e463230-2709-40bc-8851-d43c605d0e5b",
+        "ts": 1792820489.9528813,
+        "agent": "Phyliss",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Phyliss",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Build documentation [triage]",
+                "tags": [
+                  "ui-ux-design",
+                  "documentation"
+                ],
+                "priority": "high",
+                "effort": 2.0,
+                "work_type": "triage"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Phyliss": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 100.24077142797208
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Phyliss",
+      "Vicente"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "016053dd-29e7-42ab-91cb-eeec6f1967d9",
+        "ts": 1792820433.5581388,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Phyliss, Vicente"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "149696f6-a07c-467a-b56c-498a27871ea6",
+        "ts": 1792820453.341645,
+        "agent": "Vicente",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Vicente. I'm considering claiming ISSUE-0001::review or ISSUE-0001::docs. What tasks are you considering, Phyliss?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "3694a3d0-cf01-49e7-a5a1-529b565fdf6e",
+        "ts": 1792820457.04956,
+        "agent": "Phyliss",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Vicente, I'm considering claiming ISSUE-0001::triage. What's your priority between ISSUE-0001::review and ISSUE-0001::docs?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "f4af4666-9147-42ca-bda8-1fd3b3007a2f",
+        "ts": 1792820461.377382,
+        "agent": "Phyliss",
+        "kind": "communication",
+        "payload": {
+          "content": "Vicente, I'm considering claiming ISSUE-0001::triage. If you claim ISSUE-0001::review, I'll claim ISSUE-0001::triage. If you claim ISSUE-0001::docs, I'll also claim ISSUE-0001::triage.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "63050e65-1bd2-4fb8-8325-de0859b97b3e",
+        "ts": 1792820476.1086714,
+        "agent": "Vicente",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering claiming ISSUE-0001::review. If Phyliss claims ISSUE-0001::triage, I'll claim ISSUE-0001::review.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "bddbec3b-d08c-4e99-844c-64f86c50c021",
+        "ts": 1792820480.9910796,
+        "agent": "Phyliss",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering claiming ISSUE-0001::triage. What tasks are you considering, Vicente?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "1b2c31a6-a9e8-4960-bb46-941b5a698304",
+        "ts": 1792820488.3746307,
+        "agent": "Vicente",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Vicente",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build documentation [review]",
+                "tags": [
+                  "ui-ux-design",
+                  "documentation"
+                ],
+                "priority": "high",
+                "effort": 2.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Vicente": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 69.67830120511952
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "2fc6e4bd-27bc-454a-baee-0f249d87d74b",
+        "ts": 1792820489.9528813,
+        "agent": "Phyliss",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Phyliss",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Build documentation [triage]",
+                "tags": [
+                  "ui-ux-design",
+                  "documentation"
+                ],
+                "priority": "high",
+                "effort": 2.0,
+                "work_type": "triage"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Phyliss": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 100.24077142797208
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Florence",
+      "Romona"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "9a93abb2-1507-45c4-b37d-77e1e988e281",
+        "ts": 1792820433.5581388,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Florence, Romona"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "9af695d1-e4cc-4d45-bc2d-25e34de1c902",
+        "ts": 1792820436.2576883,
+        "agent": "Florence",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's coordinate to maximize our joint reward. I'm considering ISSUE-0001::docs or ISSUE-0001::triage. What about you, Romona?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "7bc1b92f-75cb-4b1d-823b-7b9459a55c25",
+        "ts": 1792820440.3043427,
+        "agent": "Florence",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's coordinate to maximize our joint reward. I'm considering ISSUE-0001::docs or ISSUE-0001::triage. What about you, Romona?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "f6b72909-0f4a-48ee-92e2-7888af999543",
+        "ts": 1792820443.433269,
+        "agent": "Romona",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::review or ISSUE-0001::test. Let's coordinate to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "e34d555b-aadd-4b66-afcb-be33957db30e",
+        "ts": 1792820447.955324,
+        "agent": "Romona",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's discuss our task assignments to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "d02b477b-f318-4c53-900b-6808bb36faa0",
+        "ts": 1792820463.3715777,
+        "agent": "Florence",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::docs or ISSUE-0001::triage. What about you, Romona?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "fc4accce-3e67-455e-98af-22f4bb5c0de4",
+        "ts": 1792820465.7282672,
+        "agent": "Florence",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's discuss our task assignments to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "a50bec32-8889-4f2e-928b-ca831f2be000",
+        "ts": 1792820467.6349523,
+        "agent": "Romona",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::review or ISSUE-0001::test. Let's coordinate to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "8280562c-2e8e-435d-b756-d48bb80bd2e9",
+        "ts": 1792820485.8889258,
+        "agent": "Florence",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::docs"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Florence",
+              "task_id": "ISSUE-0001::docs",
+              "task": {
+                "id": "ISSUE-0001::docs",
+                "title": "Build documentation [docs]",
+                "tags": [
+                  "ui-ux-design",
+                  "documentation"
+                ],
+                "priority": "high",
+                "effort": 2.5,
+                "work_type": "docs"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Florence": "ISSUE-0001::docs"
+                }
+              },
+              "joint_reward": 29.570042274202645
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "b59b809b-bff6-4a4d-88ff-72b8934a0783",
+        "ts": 1792820486.926149,
+        "agent": "Romona",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Romona",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build documentation [review]",
+                "tags": [
+                  "ui-ux-design",
+                  "documentation"
+                ],
+                "priority": "high",
+                "effort": 2.5,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Romona": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 59.48209885794984
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

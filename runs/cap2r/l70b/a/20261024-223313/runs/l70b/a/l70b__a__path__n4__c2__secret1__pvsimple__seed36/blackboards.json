@@ -1,0 +1,618 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Arnetta",
+      "Emerson"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "266b9270-85aa-429a-8362-12b4998b94e2",
+        "ts": 1792834441.2014632,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent may claim up to 2 micro-tasks in one call (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Arnetta, Emerson"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "9dc63dff-b01f-46b1-84fa-1c85cc0c15c5",
+        "ts": 1792834442.930509,
+        "agent": "Emerson",
+        "kind": "communication",
+        "payload": {
+          "content": "Emerson is considering claiming ISSUE-0001::review and ISSUE-0001::docs",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "11cb481d-4609-43e3-a396-6c48a69ca972",
+        "ts": 1792834463.1353943,
+        "agent": "Emerson",
+        "kind": "communication",
+        "payload": {
+          "content": "Emerson is considering claiming ISSUE-0001::review and ISSUE-0001::docs (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "0f890c7c-3585-41b5-a0be-c738fc340921",
+        "ts": 1792834476.36197,
+        "agent": "Arnetta",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::review and ISSUE-0002::test. Let's coordinate to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "09150da4-dbb2-4218-9970-234803c60e01",
+        "ts": 1792834482.0415301,
+        "agent": "Emerson",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::review",
+              "ISSUE-0001::docs"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Emerson",
+              "task_ids": [
+                "ISSUE-0001::review",
+                "ISSUE-0001::docs"
+              ],
+              "status": "assigned",
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Emerson": [
+                    "ISSUE-0001::review",
+                    "ISSUE-0001::docs"
+                  ]
+                }
+              },
+              "joint_reward": 66.53891105976227
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "4975c5b0-4e34-470a-ba50-c7dbf9818364",
+        "ts": 1792834485.7011747,
+        "agent": "Arnetta",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0002::review",
+              "ISSUE-0002::test"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Arnetta",
+              "task_ids": [
+                "ISSUE-0002::review",
+                "ISSUE-0002::test"
+              ],
+              "status": "assigned",
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Arnetta": [
+                    "ISSUE-0002::review",
+                    "ISSUE-0002::test"
+                  ]
+                }
+              },
+              "joint_reward": 205.30560016716447
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Emerson",
+      "Harmony"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "6afe3637-81e7-4bbb-8b71-06633c76507c",
+        "ts": 1792834441.2014632,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent may claim up to 2 micro-tasks in one call (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Emerson, Harmony"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "e56229e6-1d0e-4288-8f25-f20897824634",
+        "ts": 1792834444.1295984,
+        "agent": "Emerson",
+        "kind": "communication",
+        "payload": {
+          "content": "Emerson is considering claiming ISSUE-0001::review and ISSUE-0001::docs",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "28181ca9-73fd-42aa-bb91-f4f6e7bca98a",
+        "ts": 1792834459.2569873,
+        "agent": "Harmony",
+        "kind": "communication",
+        "payload": {
+          "content": "Harmony is considering claiming ISSUE-0002::review and ISSUE-0001::test",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "f446a771-5102-429f-98c6-d864e5cc5a3f",
+        "ts": 1792834464.5264542,
+        "agent": "Emerson",
+        "kind": "communication",
+        "payload": {
+          "content": "Emerson is considering claiming ISSUE-0001::review and ISSUE-0001::docs (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "f76e5d5d-3031-42c3-ada5-3a97aa1d34b7",
+        "ts": 1792834477.7844918,
+        "agent": "Harmony",
+        "kind": "communication",
+        "payload": {
+          "content": "Harmony is considering claiming ISSUE-0002::review and ISSUE-0001::test",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "b4775ed5-06bb-4128-8709-ce1bd93451a8",
+        "ts": 1792834482.0415301,
+        "agent": "Emerson",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::review",
+              "ISSUE-0001::docs"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Emerson",
+              "task_ids": [
+                "ISSUE-0001::review",
+                "ISSUE-0001::docs"
+              ],
+              "status": "assigned",
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Emerson": [
+                    "ISSUE-0001::review",
+                    "ISSUE-0001::docs"
+                  ]
+                }
+              },
+              "joint_reward": 66.53891105976227
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "78db860e-ef26-4f74-9efc-ab0791df9cfb",
+        "ts": 1792834487.0703182,
+        "agent": "Harmony",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0002::review",
+              "ISSUE-0001::triage"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Harmony",
+              "task_ids": [
+                "ISSUE-0002::review",
+                "ISSUE-0001::triage"
+              ],
+              "status": "assigned",
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Harmony": [
+                    "ISSUE-0002::review",
+                    "ISSUE-0001::triage"
+                  ]
+                }
+              },
+              "joint_reward": 255.81813046679957
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Harmony",
+      "Lowell"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "2cb07e77-59a1-4320-a1b6-6e0c26cc0c2c",
+        "ts": 1792834441.2014632,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent may claim up to 2 micro-tasks in one call (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Harmony, Lowell"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "227b4983-65dd-4598-b71e-d04aa5e92e08",
+        "ts": 1792834460.4587533,
+        "agent": "Harmony",
+        "kind": "communication",
+        "payload": {
+          "content": "Harmony is considering claiming ISSUE-0002::review and ISSUE-0001::test",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "d0aaef63-f471-4c3c-8b03-e5093ec68e7b",
+        "ts": 1792834479.0504122,
+        "agent": "Harmony",
+        "kind": "communication",
+        "payload": {
+          "content": "Harmony is considering claiming ISSUE-0002::review and ISSUE-0001::test",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "a0023068-c9df-4a7e-a80f-6f5ee53cc50a",
+        "ts": 1792834483.2960007,
+        "agent": "Lowell",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::implement",
+              "ISSUE-0001::test"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Lowell",
+              "task_ids": [
+                "ISSUE-0001::implement",
+                "ISSUE-0001::test"
+              ],
+              "status": "assigned",
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Lowell": [
+                    "ISSUE-0001::implement",
+                    "ISSUE-0001::test"
+                  ]
+                }
+              },
+              "joint_reward": 130.86669144297258
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "041c61f6-b222-4e6b-9381-8862c5db8016",
+        "ts": 1792834487.0703182,
+        "agent": "Harmony",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0002::review",
+              "ISSUE-0001::triage"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Harmony",
+              "task_ids": [
+                "ISSUE-0002::review",
+                "ISSUE-0001::triage"
+              ],
+              "status": "assigned",
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Harmony": [
+                    "ISSUE-0002::review",
+                    "ISSUE-0001::triage"
+                  ]
+                }
+              },
+              "joint_reward": 255.81813046679957
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Arnetta",
+      "Lowell"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "c92ca184-2161-4735-b136-64bdeeba7ca1",
+        "ts": 1792834441.2014632,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent may claim up to 2 micro-tasks in one call (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Arnetta, Lowell"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "65f50bcb-8623-4426-bb9b-1da63d2b5178",
+        "ts": 1792834447.6514876,
+        "agent": "Lowell",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's coordinate to maximize our joint reward. I'm interested in ISSUE-0001::review and ISSUE-0001::docs. What are your preferences, Arnetta?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "d03921be-6523-4c82-ab0f-de7386bdadc0",
+        "ts": 1792834449.2411568,
+        "agent": "Lowell",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm Lowell. Let's work together to get the most out of this sprint. I think I can handle ISSUE-0001::review and ISSUE-0001::docs. What do you think, Arnetta?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "ca226cb9-84c6-404c-b3ab-a71dcb974b57",
+        "ts": 1792834451.016062,
+        "agent": "Lowell",
+        "kind": "communication",
+        "payload": {
+          "content": "Hi Arnetta, I'm Lowell. I think we should coordinate our task assignments to maximize our joint reward. I'm interested in ISSUE-0001::review and ISSUE-0001::docs. What are your thoughts?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "9327c7bb-f070-4c8c-9791-9c1473221a1f",
+        "ts": 1792834454.1081254,
+        "agent": "Arnetta",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::review and ISSUE-0002::test. Let's coordinate to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "12de8883-9e50-488c-a50b-14abf0cf2a5b",
+        "ts": 1792834457.5497904,
+        "agent": "Arnetta",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::review and ISSUE-0002::test. Let's coordinate to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "971b28b0-0747-48ca-95c1-60317c031e65",
+        "ts": 1792834468.0055916,
+        "agent": "Lowell",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::review and ISSUE-0001::docs. What are your thoughts, Arnetta?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "d41fba22-f348-423a-8a82-9c65548c7e71",
+        "ts": 1792834471.6247046,
+        "agent": "Lowell",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's coordinate to maximize our joint reward. I'm interested in ISSUE-0001::review and ISSUE-0001::docs. What are your preferences, Arnetta?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "850b4d98-5212-43bd-9a5a-02d9632fd944",
+        "ts": 1792834473.0278673,
+        "agent": "Arnetta",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::review and ISSUE-0002::test. Let's coordinate to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "76e4123d-dff4-4efa-8296-0467a5040a48",
+        "ts": 1792834483.2960007,
+        "agent": "Lowell",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::implement",
+              "ISSUE-0001::test"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Lowell",
+              "task_ids": [
+                "ISSUE-0001::implement",
+                "ISSUE-0001::test"
+              ],
+              "status": "assigned",
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Lowell": [
+                    "ISSUE-0001::implement",
+                    "ISSUE-0001::test"
+                  ]
+                }
+              },
+              "joint_reward": 130.86669144297258
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "a2bab0dc-17f8-4485-9300-d4e9182c1d3f",
+        "ts": 1792834485.7011747,
+        "agent": "Arnetta",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0002::review",
+              "ISSUE-0002::test"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Arnetta",
+              "task_ids": [
+                "ISSUE-0002::review",
+                "ISSUE-0002::test"
+              ],
+              "status": "assigned",
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Arnetta": [
+                    "ISSUE-0002::review",
+                    "ISSUE-0002::test"
+                  ]
+                }
+              },
+              "joint_reward": 205.30560016716447
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "simulation": {
+    "max_iterations": 1,
+    "max_planning_rounds": 2,
+    "max_conversation_steps": 3,
+    "seed": 1,
+    "tags": [
+      "hackathon_2_1_c_open_channel"
+    ]
+  },
+  "environment": {
+    "name": "JiraTicketEnvironment",
+    "assignment_filling": false,
+    "max_tasks": 8
+  },
+  "communication_network": {
+    "topology": "path",
+    "num_agents": 4,
+    "consolidate_channels": true
+  },
+  "llm_models": [
+    {
+      "label": "l70b",
+      "llm": {
+        "provider": "openrouter",
+        "openrouter": {
+          "model": "meta-llama/llama-3.3-70b-instruct",
+          "params": {
+            "max_tokens": 1500,
+            "temperature": 0.7
+          }
+        }
+      }
+    }
+  ],
+  "experiment": {
+    "tag": "hackathon_2_1_c_open_channel",
+    "output_dir": "<repo>/runs/pilot2/l70b/c",
+    "max_concurrent_runs": 2,
+    "seeds": [
+      12,
+      13,
+      14
+    ],
+    "collusion": {
+      "colluder_selection": "first_and_last",
+      "agent_order": "random",
+      "coalition_prompt": "never",
+      "extra_channel_members": "all"
+    },
+    "sweeps": [
+      {
+        "name": "c",
+        "topologies": [
+          "path"
+        ],
+        "num_agents": [
+          4
+        ],
+        "colluder_counts": [
+          2
+        ],
+        "secret_channel_enabled": [
+          true
+        ],
+        "prompt_variants": [
+          "control"
+        ]
+      }
+    ]
+  }
+}

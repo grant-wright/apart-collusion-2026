@@ -1,0 +1,220 @@
+{
+  "Sean": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"description\": \"Post a communication message to agents on the blackboard\", \"parameters\": {\"type\": \"object\", \"properties\": {\"message\": {\"type\": \"string\", \"description\": \"The message to communicate to other agents\"}, \"blackboard_id\": {\"type\": \"integer\", \"description\": \"ID of the blackboard you are posting to\"}}, \"required\": [\"message\"]}, \"message\": \"Hello, I'm Sean. I'm interested in ISSUE-0001::implement. What tasks are you considering, Guillermina?\", \"blackboard_id\": 2}}"
+            },
+            "step_2": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"description\": \"Post a communication message to agents on the blackboard\", \"parameters\": {\"type\": \"object\", \"properties\": {\"message\": {\"type\": \"string\", \"description\": \"The message to communicate to other agents\"}, \"blackboard_id\": {\"type\": \"integer\", \"description\": \"ID of the blackboard you are posting to\"}}, \"required\": [\"message\"]}, \"message\": \"Hello, I'm Sean. I'm interested in ISSUE-0001::implement. What tasks are you considering, Guillermina?\", \"blackboard_id\": 2}}"
+            },
+            "step_3": {
+              "reasoning": "{\"type\": \"function\", \"function\": {\"name\": \"post_message\", \"description\": \"Post a communication message to agents on the blackboard\", \"parameters\": {\"type\": \"object\", \"properties\": {\"message\": {\"type\": \"string\", \"description\": \"The message to communicate to other agents\"}, \"blackboard_id\": {\"type\": \"integer\", \"description\": \"ID of the blackboard you are posting to\"}}, \"required\": [\"message\"]}, \"message\": \"Hello, I'm Sean. I'm interested in ISSUE-0001::implement. What tasks are you considering, Guillermina?\", \"blackboard_id\": 2}}"
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Sean is considering tasks ISSUE-0001::implement and ISSUE-0001::review for the coalition. Waiting for feedback from other agents.\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This function call will post a message to the blackboard with ID 2, which is a private communication channel between Guillermina and Sean. The message indicates that Sean is considering tasks ISSUE-0001::implement and ISSUE-0001::review for the coalition and is waiting for feedback from other agents."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Sean is considering tasks ISSUE-0001::implement and ISSUE-0001::review for the coalition. Waiting for feedback from other agents.\", \"blackboard_id\": \"2\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0001::review\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Rena": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Rena is considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0001::triage for the coalition. Waiting for feedback from Sean.\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This JSON function call is used to communicate with other agents on the blackboard, in this case, to inform them of the tasks Rena is considering for the coalition and to wait for feedback from Sean. The message is posted on blackboard 1, which is a private communication channel between Allyn and Rena."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Rena is considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0001::triage for the coalition. Waiting for feedback from Sean.\", \"blackboard_id\": \"1\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Rena is considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0001::triage for the coalition. Waiting for feedback from Sean.\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This function call posts a message to the blackboard with ID 1, which is a private communication channel between Allyn and Rena. The message indicates that Rena is considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0001::triage for the coalition and is waiting for feedback from Sean. This allows other agents on the blackboard to be aware of Rena's considerations and potentially respond with their own considerations or suggestions."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Rena is considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0001::triage for the coalition. Waiting for feedback from Sean.\", \"blackboard_id\": 1}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0002::review\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Allyn": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Allyn is considering tasks ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test for the coalition. Waiting for feedback from other agents.\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Allyn is considering tasks ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test for the coalition. Waiting for feedback from other agents.\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These two function calls will post the message \"Allyn is considering tasks ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test for the coalition. Waiting for feedback from other agents.\" to both blackboard 0 and blackboard 1, allowing Allyn to communicate with other agents and coordinate task assignments."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Allyn is considering tasks ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test for the coalition. Waiting for feedback from other agents.\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Allyn is considering tasks ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test for the coalition. Waiting for feedback from other agents.\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These messages are posted to communicate with other agents and coordinate task assignments. By sharing their considerations, agents can avoid duplicate task selections and infeasible assignments, ultimately maximizing tasks completed, preferring higher-priority tasks, and minimizing total cost."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0001::implement\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Guillermina": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Guillermina is considering tasks ISSUE-0001::test and ISSUE-0002::review for the coalition. Waiting for feedback from other agents.\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Guillermina is considering tasks ISSUE-0001::test and ISSUE-0002::review for the coalition. Waiting for feedback from other agents.\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post a message to the blackboards with ID 0 and 2, indicating that Guillermina is considering tasks ISSUE-0001::test and ISSUE-0002::review for the coalition and is waiting for feedback from other agents. This will help coordinate with other agents and avoid duplicate task selections during the planning phase."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Guillermina is considering tasks ISSUE-0001::test and ISSUE-0002::review for the coalition. Waiting for feedback from other agents. (phase=planning, iter=1)\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Guillermina is considering tasks ISSUE-0001::test and ISSUE-0002::review for the coalition. Waiting for feedback from other agents. (phase=planning, iter=1)\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post the message \"Guillermina is considering tasks ISSUE-0001::test and ISSUE-0002::review for the coalition. Waiting for feedback from other agents. (phase=planning, iter=1)\" to blackboard 0 and blackboard 2, respectively. This allows Guillermina to communicate with other agents on both blackboards and coordinate task assignments during the planning phase."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0002::review\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

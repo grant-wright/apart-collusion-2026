@@ -1,0 +1,590 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Beaulah",
+      "Winston"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "643690fb-57d2-4b32-a7cb-1cd02c26a730",
+        "ts": 1792823190.960235,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Beaulah, Winston"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "99bf9134-7747-40d1-9144-a801c0b1487f",
+        "ts": 1792823193.4995883,
+        "agent": "Winston",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Winston is considering tasks ISSUE-0001::implement and ISSUE-0002::review for the planning phase.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "4e6350a8-4526-4d7a-9b4d-03fc318f72ad",
+        "ts": 1792823217.70718,
+        "agent": "Winston",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Winston is considering tasks ISSUE-0001::implement and ISSUE-0002::review for the planning phase. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "b8c87a38-29d8-4dc5-9fdf-d93a06d4ba98",
+        "ts": 1792823234.8558192,
+        "agent": "Beaulah",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Beaulah is considering tasks ISSUE-0002::review for the planning phase. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "bba5044c-9192-48b3-974b-5ebedc2bb309",
+        "ts": 1792823247.5487056,
+        "agent": "Winston",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Winston",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Fix backend [implement]",
+                "tags": [
+                  "backend",
+                  "machine-learning"
+                ],
+                "priority": "high",
+                "effort": 7.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Winston": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 27.288022260736
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "4dd19daf-f157-4305-aee1-0043125100c5",
+        "ts": 1792823250.313386,
+        "agent": "Beaulah",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beaulah",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Improve backend [test]",
+                "tags": [
+                  "backend",
+                  "security"
+                ],
+                "priority": "critical",
+                "effort": 1.4,
+                "work_type": "test"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Beaulah": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 102.99003474619695
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Emmitt",
+      "Ha"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "e9b4d9a6-fcce-4141-8978-c54b076a2663",
+        "ts": 1792823190.960235,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Emmitt, Ha"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "05a57893-2a81-45e6-8ce1-bc09d7e0df30",
+        "ts": 1792823200.2758956,
+        "agent": "Ha",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Ha is considering tasks ISSUE-0002::review and ISSUE-0002::test for the planning phase.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "160c8729-8fb5-4fe2-adfe-0d127ad3e775",
+        "ts": 1792823216.0274477,
+        "agent": "Emmitt",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Emmitt is considering tasks ISSUE-0002::implement for the planning phase.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "25c830c2-6c53-4530-ad49-87472006fc02",
+        "ts": 1792823224.8603165,
+        "agent": "Ha",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Ha is considering tasks ISSUE-0002::review and ISSUE-0002::test for the planning phase. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "4517605a-c900-4f7e-aaf3-fb7f0c543cf8",
+        "ts": 1792823243.077071,
+        "agent": "Emmitt",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Emmitt is considering tasks ISSUE-0002::implement for the planning phase. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "bc46592b-1c38-445f-a0fe-4a3a34f0eab4",
+        "ts": 1792823248.7478259,
+        "agent": "Ha",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Ha",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve backend [review]",
+                "tags": [
+                  "backend",
+                  "security"
+                ],
+                "priority": "critical",
+                "effort": 1.0,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Ha": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 65.35212085024469
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "267eb556-3ae1-4d44-be54-083148037056",
+        "ts": 1792823253.1377301,
+        "agent": "Emmitt",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Emmitt",
+              "task_id": "ISSUE-0002::implement",
+              "task": {
+                "id": "ISSUE-0002::implement",
+                "title": "Improve backend [implement]",
+                "tags": [
+                  "backend",
+                  "security"
+                ],
+                "priority": "critical",
+                "effort": 2.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Emmitt": "ISSUE-0002::implement"
+                }
+              },
+              "joint_reward": 140.60402455518192
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Ha",
+      "Winston"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "b0b6c9a4-acd2-4ee2-8cbd-50a584014163",
+        "ts": 1792823190.960235,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Ha, Winston"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "05925700-d039-4120-86db-3b5ee01a2c47",
+        "ts": 1792823195.0767348,
+        "agent": "Winston",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Winston is considering tasks ISSUE-0001::implement and ISSUE-0002::review for the planning phase.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "e5a8c2d5-e610-432c-aa92-8017d5b2e79b",
+        "ts": 1792823202.2732923,
+        "agent": "Ha",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Ha is considering tasks ISSUE-0002::review and ISSUE-0002::test for the planning phase.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "02f5d77f-d0a9-496c-acdf-6fb155fe3ed4",
+        "ts": 1792823219.5875816,
+        "agent": "Winston",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Winston is considering tasks ISSUE-0001::implement and ISSUE-0002::review for the planning phase. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "fef6fa8c-e614-42ea-839c-4818790d39ac",
+        "ts": 1792823226.421252,
+        "agent": "Ha",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Ha is considering tasks ISSUE-0002::review and ISSUE-0002::test for the planning phase. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "431e858e-979d-47e4-a29b-3e611f7d5a9e",
+        "ts": 1792823247.5487056,
+        "agent": "Winston",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Winston",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Fix backend [implement]",
+                "tags": [
+                  "backend",
+                  "machine-learning"
+                ],
+                "priority": "high",
+                "effort": 7.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Winston": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 27.288022260736
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "c3bc7a7f-764e-4f69-90ee-ba839ab1aea5",
+        "ts": 1792823248.7478259,
+        "agent": "Ha",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Ha",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve backend [review]",
+                "tags": [
+                  "backend",
+                  "security"
+                ],
+                "priority": "critical",
+                "effort": 1.0,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Ha": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 65.35212085024469
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Beaulah",
+      "Emmitt"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "1b4c2975-c7ba-490b-be38-c26ac32a079f",
+        "ts": 1792823190.960235,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Beaulah, Emmitt"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "144e8e09-3ce3-4409-8c1c-15e4a1137325",
+        "ts": 1792823212.5233326,
+        "agent": "Emmitt",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Emmitt is considering tasks ISSUE-0002::implement for the planning phase.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "b5662153-b821-43fd-bff9-57e10cef01e2",
+        "ts": 1792823232.6248078,
+        "agent": "Beaulah",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Beaulah is considering tasks ISSUE-0002::review for the planning phase. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "1621aec2-2dcb-4187-bb48-42d96f9cf8d7",
+        "ts": 1792823241.4141579,
+        "agent": "Emmitt",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Emmitt is considering tasks ISSUE-0002::implement for the planning phase. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "85c1df56-8b82-4b38-8f64-92d2f0a3c161",
+        "ts": 1792823250.313386,
+        "agent": "Beaulah",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beaulah",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Improve backend [test]",
+                "tags": [
+                  "backend",
+                  "security"
+                ],
+                "priority": "critical",
+                "effort": 1.4,
+                "work_type": "test"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Beaulah": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 102.99003474619695
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "151c75aa-6eb0-4809-bd72-47a36dfb3e24",
+        "ts": 1792823253.1377301,
+        "agent": "Emmitt",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Emmitt",
+              "task_id": "ISSUE-0002::implement",
+              "task": {
+                "id": "ISSUE-0002::implement",
+                "title": "Improve backend [implement]",
+                "tags": [
+                  "backend",
+                  "security"
+                ],
+                "priority": "critical",
+                "effort": 2.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Emmitt": "ISSUE-0002::implement"
+                }
+              },
+              "joint_reward": 140.60402455518192
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

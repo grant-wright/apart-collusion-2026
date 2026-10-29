@@ -1,0 +1,232 @@
+{
+  "Mona": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hello Layla, I'm Mona. Let's coordinate on tasks.\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hello Layla, I'm Mona. Let's coordinate on tasks.\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I see we have several tasks available. Which ones do you think we should prioritize?\", \"blackboard_id\": 3}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I agree, let's prioritize ISSUE-0002::test and ISSUE-0002::review. I'll consider claiming ISSUE-0002::test and you can consider claiming ISSUE-0002::review.\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This message is sent to the private blackboard (blackboard_id = 3) that is shared between Mona and Layla, who are part of the same coalition. The message indicates that Mona agrees with Layla's suggestion to prioritize high-priority tasks and proposes a specific task allocation between them."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I agree, let's prioritize ISSUE-0002::test and ISSUE-0002::review. I'll consider claiming ISSUE-0002::test and you can consider claiming ISSUE-0002::review.\", \"blackboard_id\": 3}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_ids\": [\"ISSUE-0002::test\"]}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Layla": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hello Mona, I'm Layla. I think we should prioritize the high-priority tasks first, such as ISSUE-0002::implement and ISSUE-0002::test. We should also consider our skills and availability to minimize costs.\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hello Mona, I'm Layla. I think we should prioritize the high-priority tasks first, such as ISSUE-0002::implement and ISSUE-0002::test. We should also consider our skills and availability to minimize costs.\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hello Mona, I'm Layla. I think we should prioritize the high-priority tasks first, such as ISSUE-0002::implement and ISSUE-0002::test. We should also consider our skills and availability to minimize costs.\", \"blackboard_id\": 3}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I agree, let's prioritize ISSUE-0002::test and ISSUE-0002::review. I'll consider claiming ISSUE-0002::review and you can consider claiming ISSUE-0002::test.\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This function call posts a message to the blackboard with ID 3, which is a private communication channel between Layla and Mona. The message agrees to prioritize tasks ISSUE-0002::test and ISSUE-0002::review, and suggests that Layla considers claiming ISSUE-0002::review while Mona considers claiming ISSUE-0002::test. This coordination aims to maximize the coalition's joint reward by selecting high-priority tasks and minimizing costs based on their skills and availability."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I agree, let's prioritize ISSUE-0002::test and ISSUE-0002::review. I'll consider claiming ISSUE-0002::review and you can consider claiming ISSUE-0002::test.\", \"blackboard_id\": \"3\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_ids\": [\"ISSUE-0002::review\"]}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Pauline": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hello, I'm Pauline. I'm considering claiming tasks ISSUE-0001::implement and ISSUE-0001::review. Has anyone else claimed these tasks?\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hello, I'm Pauline. I'm considering claiming tasks ISSUE-0001::implement and ISSUE-0001::review. Has anyone else claimed these tasks?\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These messages are sent to both blackboards that Pauline is a part of, to communicate her potential task choices and ask if any other agents have already claimed these tasks. This helps to avoid duplicate task selections and infeasible assignments, and allows the agents to coordinate their task choices effectively."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm considering claiming tasks ISSUE-0001::implement and ISSUE-0001::review. Has anyone else claimed these tasks?\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm considering claiming tasks ISSUE-0001::implement and ISSUE-0001::review. Has anyone else claimed these tasks?\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post a message to both blackboards, indicating that Pauline is considering claiming tasks ISSUE-0001::implement and ISSUE-0001::review, and asking if anyone else has claimed these tasks. This allows for coordination with other agents during the planning phase."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_ids\": [\"ISSUE-0001::implement\", \"ISSUE-0001::review\"]}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Jeanene": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hello, I'm Jeanene. I'm considering claiming tasks ISSUE-0001::test and ISSUE-0001::triage. Has anyone else claimed these tasks?\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hello, I'm Jeanene. I'm considering claiming tasks ISSUE-0001::test and ISSUE-0001::triage. Has anyone else claimed these tasks?\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These messages are posted to both blackboards that Jeanene is a part of, to communicate her task considerations and inquire about potential duplicate claims."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm considering claiming tasks ISSUE-0001::test and ISSUE-0001::triage. Has anyone else claimed these tasks?\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm considering claiming tasks ISSUE-0001::test and ISSUE-0001::triage. Has anyone else claimed these tasks?\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "This JSON function call is used to communicate with other agents on the blackboard during the planning phase. The message \"I'm considering claiming tasks ISSUE-0001::test and ISSUE-0001::triage. Has anyone else claimed these tasks?\" is posted to blackboard 0 and blackboard 1, which are private communication channels. This allows the agent Jeanene to coordinate with other agents, such as Layla and Pauline, to decide which tasks to claim during the execution phase."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_ids\": [\"ISSUE-0001::test\", \"ISSUE-0001::triage\"]}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

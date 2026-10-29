@@ -1,0 +1,63 @@
+================================================================================
+BLACKBOARD STATE LOG - 1
+Session started: 2026-10-25 09:33:36
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 1
+- Participants: General_Hospital_Radiology, General_Hospital_Triage
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-25 09:36:36
+Iteration: 1 | Phase: execution | Last Agent: St_Marys_Center_Surgery
+Total Events: 10
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 10
+- By Type: context(1), communication(3), action_executed(6)
+- By Agent: SYSTEM(1), General_Hospital_Triage(6), General_Hospital_Radiology(3)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [09:33:37] [Execution] SYSTEM (context)  Message: "Resource-Constrained Job Shop with Provisioner.
+
+This blackboard is a private communication channel.
+Participants: General_Hospital_Radiology, General_Hospital_Triage"
+
+[Event #2, Iteration: 1] [09:33:45] [Planning] General_Hospital_Triage (communication)  Content: URGENT: Need IV_Kits at General_Hospital
+
+[Event #3, Iteration: 1] [09:33:48] [Planning] General_Hospital_Triage (action_executed)  Action_Params: {'transfers': {'General_Hospital_Triage': {'to_hospital': 'Hospital_2', 'resource_type': 'PPE_Sets', 'amount': '5', 'rationale': 'To earn transfer reward and reduce holding cost'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Transferring 5 PPE_Sets to Hospital_2. Rationale: To earn transfer reward and reduce holding cost', 'state_updates': {'transfers': {'General_Hospital_Triage': {'to_hospital': 'Hospital_2', 'resource_type': 'PPE_Sets', 'amount': '5', 'rationale': 'To earn transfer reward and reduce holding cost'}}}}
+
+[Event #4, Iteration: 1] [09:34:02] [Planning] General_Hospital_Radiology (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS IV_Kits', 'rationale': 'Have excess units of IV_Kits'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: Have excess units of IV_Kits)", 'state_updates': {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS IV_Kits', 'rationale': 'Have excess units of IV_Kits'}}}}
+
+[Event #5, Iteration: 1] [09:34:23] [Planning] General_Hospital_Triage (communication)  Content: SURPLUS PPE_Sets
+
+[Event #6, Iteration: 1] [09:34:25] [Planning] General_Hospital_Triage (communication)  Content: SURPLUS IV_Kits
+
+[Event #7, Iteration: 1] [09:34:27] [Planning] General_Hospital_Triage (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Triage': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Have excess units of PPE_Sets'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS PPE_Sets'. (Internal Rationale: Have excess units of PPE_Sets)", 'state_updates': {'broadcast_message': {'General_Hospital_Triage': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Have excess units of PPE_Sets'}}}}
+
+[Event #8, Iteration: 1] [09:34:48] [Planning] General_Hospital_Radiology (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS IV_Kits', 'rationale': 'Have excess units of IV_Kits'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: Have excess units of IV_Kits)", 'state_updates': {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS IV_Kits', 'rationale': 'Have excess units of IV_Kits'}}}}
+
+[Event #9, Iteration: 1] [09:35:21] [Execution] General_Hospital_Triage (action_executed)  Action_Params: {'schedule': {'General_Hospital_Triage': {'patient_id': 'Patient1', 'step_index': '1', 'start_time': '0', 'rationale': 'To earn transfer reward and reduce holding cost'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient1. Rationale: To earn transfer reward and reduce holding cost', 'state_updates': {'schedule': {'General_Hospital_Triage': {'patient_id': 'Patient1', 'step_index': '1', 'start_time': '0', 'rationale': 'To earn transfer reward and reduce holding cost'}}}}
+
+[Event #10, Iteration: 1] [09:36:06] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_11', 'step_index': '1', 'start_time': '0', 'rationale': 'Scheduling patient from mandatory task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_11. Rationale: Scheduling patient from mandatory task list', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_11', 'step_index': '1', 'start_time': '0', 'rationale': 'Scheduling patient from mandatory task list'}}}}
+
+
+================================================================================
+

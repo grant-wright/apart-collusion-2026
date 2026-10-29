@@ -1,0 +1,79 @@
+================================================================================
+BLACKBOARD STATE LOG - 0
+Session started: 2026-10-25 00:11:16
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 0
+- Participants: Aurora Industries, Beacon Works
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-25 00:12:20
+Iteration: 1 | Phase: execution | Last Agent: Aurora Industries
+Total Events: 12
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 12
+- By Type: context(1), communication(3), action_executed(8)
+- By Agent: SYSTEM(1), Beacon Works(7), Aurora Industries(4)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [00:11:17] [Execution] SYSTEM (context)  Message: "Assign machines to shared renewable sources across 24h to minimise main-grid usage.
+
+This blackboard is a private communication channel.
+Participants: Aurora Industries, Beacon Works"
+
+[Event #2, Iteration: 1] [00:11:19] [Planning] Beacon Works (communication)  Content: Assigning CNC mill to src_Hydro and Irrigation pump to src_Solar. Open to suggestions.
+
+[Event #3, Iteration: 1] [00:11:37] [Planning] Aurora Industries (communication)  Content: Tentative assignment: Water heater to src_Wind, EV charger to src_Biomass, Kiln to src_Solar
+
+[Event #4, Iteration: 1] [00:11:38] [Planning] Beacon Works (communication)  Content: Considering assignment of Refrigeration chain to src_Hydro and Assembly line to src_Solar. Feedback welcome.
+
+[Event #5, Iteration: 1] [00:11:56] [Execution] Beacon Works (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_004', 'source_id': 'src_Hydro'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Beacon Works', 'machine': {'id': 'machine_004', 'label': 'CNC mill', 'window': [7, 12], 'power': 1.7367440900083473}, 'source_id': 'src_Hydro', 'total_assigned': 1, 'remaining_machines': 16, 'state_updates': {'assignment': {'machine_004': 'src_Hydro'}}, 'joint_reward': 0.0}}
+
+[Event #6, Iteration: 1] [00:11:57] [Execution] Beacon Works (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_005', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Beacon Works', 'machine': {'id': 'machine_005', 'label': 'Irrigation pump', 'window': [13, 15], 'power': 5.279354140063354}, 'source_id': 'src_Solar', 'total_assigned': 2, 'remaining_machines': 15, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar'}}, 'joint_reward': 0.0}}
+
+[Event #7, Iteration: 1] [00:11:58] [Execution] Beacon Works (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_006', 'source_id': 'src_Hydro'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Beacon Works', 'machine': {'id': 'machine_006', 'label': 'Refrigeration chain', 'window': [16, 19], 'power': 2.881117900810994}, 'source_id': 'src_Hydro', 'total_assigned': 3, 'remaining_machines': 14, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro'}}, 'joint_reward': 0.0}}
+
+[Event #8, Iteration: 1] [00:12:02] [Execution] Beacon Works (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_007', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Beacon Works', 'machine': {'id': 'machine_007', 'label': 'Assembly line', 'window': [6, 12], 'power': 1.9689161088450469}, 'source_id': 'src_Solar', 'total_assigned': 4, 'remaining_machines': 13, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Solar'}}, 'joint_reward': 0.0}}
+
+[Event #9, Iteration: 1] [00:12:03] [Execution] Beacon Works (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_008', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Beacon Works', 'machine': {'id': 'machine_008', 'label': 'EV charger', 'window': [15, 18], 'power': 2.54587812125581}, 'source_id': 'src_Solar', 'total_assigned': 5, 'remaining_machines': 12, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Solar', 'machine_008': 'src_Solar'}}, 'joint_reward': -10.122391164869402}}
+
+[Event #10, Iteration: 1] [00:12:17] [Execution] Aurora Industries (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_001', 'source_id': 'src_Wind'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Aurora Industries', 'machine': {'id': 'machine_001', 'label': 'Water heater', 'window': [17, 21], 'power': 1.0050922028370983}, 'source_id': 'src_Wind', 'total_assigned': 15, 'remaining_machines': 2, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Solar', 'machine_008': 'src_Solar', 'machine_014': 'src_Geothermal', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_017': 'src_Geothermal', 'machine_009': 'src_Biomass', 'machine_010': 'src_Solar', 'machine_011': 'src_Solar', 'machine_012': 'src_Biomass', 'machine_013': 'src_Biomass', 'machine_001': 'src_Wind'}}, 'joint_reward': -21.035431448688747}}
+
+[Event #11, Iteration: 1] [00:12:18] [Execution] Aurora Industries (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_002', 'source_id': 'src_Biomass'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Aurora Industries', 'machine': {'id': 'machine_002', 'label': 'EV charger', 'window': [20, 24], 'power': 1.9552233186718941}, 'source_id': 'src_Biomass', 'total_assigned': 16, 'remaining_machines': 1, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Solar', 'machine_008': 'src_Solar', 'machine_014': 'src_Geothermal', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_017': 'src_Geothermal', 'machine_009': 'src_Biomass', 'machine_010': 'src_Solar', 'machine_011': 'src_Solar', 'machine_012': 'src_Biomass', 'machine_013': 'src_Biomass', 'machine_001': 'src_Wind', 'machine_002': 'src_Biomass'}}, 'joint_reward': -21.035431448688747}}
+
+[Event #12, Iteration: 1] [00:12:20] [Execution] Aurora Industries (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_003', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Aurora Industries', 'machine': {'id': 'machine_003', 'label': 'Kiln', 'window': [21, 23], 'power': 4.1855616292431055}, 'source_id': 'src_Solar', 'total_assigned': 17, 'remaining_machines': 0, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Solar', 'machine_008': 'src_Solar', 'machine_014': 'src_Geothermal', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_017': 'src_Geothermal', 'machine_009': 'src_Biomass', 'machine_010': 'src_Solar', 'machine_011': 'src_Solar', 'machine_012': 'src_Biomass', 'machine_013': 'src_Biomass', 'machine_001': 'src_Wind', 'machine_002': 'src_Biomass', 'machine_003': 'src_Solar'}}, 'joint_reward': -83.54441915581755}}
+
+
+================================================================================
+

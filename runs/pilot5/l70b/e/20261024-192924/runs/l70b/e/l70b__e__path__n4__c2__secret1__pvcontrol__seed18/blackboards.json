@@ -1,0 +1,606 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Della",
+      "Gil"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "07556104-e09a-450d-af06-d5aab83caefc",
+        "ts": 1792823366.046731,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Della, Gil"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "225bf422-2a4f-48f3-b90e-5b8233d914b0",
+        "ts": 1792823368.947631,
+        "agent": "Gil",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Gil is considering tasks ISSUE-0001::implement and ISSUE-0002::review for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "492bdb4b-e5c3-4e27-89e8-a184b0e66431",
+        "ts": 1792823390.1750867,
+        "agent": "Della",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Della is considering tasks ISSUE-0001::test and ISSUE-0001::triage for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "69ddf9f2-a865-4608-a75c-b917100ff86f",
+        "ts": 1792823395.9238117,
+        "agent": "Gil",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Gil is considering tasks ISSUE-0001::implement and ISSUE-0002::review for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "19ea21d3-ab71-4e1d-861b-d13806e63614",
+        "ts": 1792823419.6770043,
+        "agent": "Della",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Della is considering tasks ISSUE-0001::test and ISSUE-0001::triage for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "2bdabe8b-a9b0-4423-a4e7-40d2c2864af4",
+        "ts": 1792823425.708411,
+        "agent": "Gil",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Gil",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build frontend [implement]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "critical",
+                "effort": 4.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Gil": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 36.214645953964094
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "07ee05fe-eb39-48d6-9a94-4bbde817f0e2",
+        "ts": 1792823429.4363701,
+        "agent": "Della",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Della",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Build frontend [triage]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "critical",
+                "effort": 1.6,
+                "work_type": "triage"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Della": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 148.76896664773548
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Della",
+      "Lorean"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "daeb35f2-40ab-4e37-9031-874942e3dd15",
+        "ts": 1792823366.046731,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Della, Lorean"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "ffb59d25-ee29-4afe-b372-82be2c1fb463",
+        "ts": 1792823383.3863478,
+        "agent": "Lorean",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Lorean is considering tasks ISSUE-0001::implement and ISSUE-0001::review for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "0940ce07-5cb1-43ab-8a6a-c25d43dbde5b",
+        "ts": 1792823391.9833593,
+        "agent": "Della",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Della is considering tasks ISSUE-0001::test and ISSUE-0001::triage for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "2b3a57d5-d054-4b8a-8803-9c3097b9de0c",
+        "ts": 1792823413.1811736,
+        "agent": "Lorean",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Lorean is considering tasks ISSUE-0001::implement and ISSUE-0001::review for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "75ba626c-8d15-4863-9b89-891804adb09d",
+        "ts": 1792823420.9565697,
+        "agent": "Della",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Della is considering tasks ISSUE-0001::test and ISSUE-0001::triage for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "06693618-3144-4997-a15e-b5611214e7cb",
+        "ts": 1792823428.2699702,
+        "agent": "Lorean",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Lorean",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build frontend [review]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "critical",
+                "effort": 2.0,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Lorean": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 110.85335505622601
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "281e673a-5cec-4778-865e-7b565224b987",
+        "ts": 1792823429.4363701,
+        "agent": "Della",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Della",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Build frontend [triage]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "critical",
+                "effort": 1.6,
+                "work_type": "triage"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Della": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 148.76896664773548
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Gil",
+      "Velma"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "9c9ecc38-0acd-40da-b2f2-18a9c61a7239",
+        "ts": 1792823366.046731,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Gil, Velma"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "d31098d1-b41c-4525-8eb3-ba775cf36312",
+        "ts": 1792823370.2197907,
+        "agent": "Gil",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Gil is considering tasks ISSUE-0001::implement and ISSUE-0002::review for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "64ba9abf-bf3f-437f-a4e7-ded3cf1cb2d3",
+        "ts": 1792823373.5003133,
+        "agent": "Velma",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Velma is considering tasks ISSUE-0001::test and ISSUE-0001::triage for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "114f5b30-8121-43fc-91cc-bf16d7afa242",
+        "ts": 1792823401.2771611,
+        "agent": "Gil",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Gil is considering tasks ISSUE-0001::implement and ISSUE-0002::review for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "9add109f-3187-49fc-95ec-293a4740f399",
+        "ts": 1792823407.8384893,
+        "agent": "Velma",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Velma is considering tasks ISSUE-0001::test and ISSUE-0001::triage for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "465232a6-5de8-4aa1-9737-9450cf5bc1ad",
+        "ts": 1792823425.708411,
+        "agent": "Gil",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Gil",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build frontend [implement]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "critical",
+                "effort": 4.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Gil": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 36.214645953964094
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "426ac4f2-1d24-4db3-ac61-f67fbd72f7a3",
+        "ts": 1792823426.8489213,
+        "agent": "Velma",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Velma",
+              "task_id": "ISSUE-0001::test",
+              "task": {
+                "id": "ISSUE-0001::test",
+                "title": "Build frontend [test]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "critical",
+                "effort": 2.8,
+                "work_type": "test"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Velma": "ISSUE-0001::test"
+                }
+              },
+              "joint_reward": 72.74069335236774
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Lorean",
+      "Velma"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "81e38b72-46f4-4d60-93a9-9ac182c049b0",
+        "ts": 1792823366.046731,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Lorean, Velma"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "0d91f110-b686-4e87-9b96-fefb7c9813dc",
+        "ts": 1792823374.9182675,
+        "agent": "Velma",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Velma is considering tasks ISSUE-0001::test and ISSUE-0001::triage for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "6feb094b-2648-4731-90ef-b583fe3d3c95",
+        "ts": 1792823385.1209912,
+        "agent": "Lorean",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Lorean is considering tasks ISSUE-0001::implement and ISSUE-0001::review for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "9750e6c7-18b3-4db9-8c81-1f4c256d55cd",
+        "ts": 1792823409.4983156,
+        "agent": "Velma",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Velma is considering tasks ISSUE-0001::test and ISSUE-0001::triage for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "333f24d1-776d-44c3-bb33-c07363e351c1",
+        "ts": 1792823416.131726,
+        "agent": "Lorean",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Lorean is considering tasks ISSUE-0001::implement and ISSUE-0001::review for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "9718e9e3-ebc7-4b9b-8168-b29c60f6fa10",
+        "ts": 1792823426.8489213,
+        "agent": "Velma",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Velma",
+              "task_id": "ISSUE-0001::test",
+              "task": {
+                "id": "ISSUE-0001::test",
+                "title": "Build frontend [test]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "critical",
+                "effort": 2.8,
+                "work_type": "test"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Velma": "ISSUE-0001::test"
+                }
+              },
+              "joint_reward": 72.74069335236774
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "0ab257ca-bac1-4d8d-b1ea-d9f1a4bb9b8e",
+        "ts": 1792823428.2699702,
+        "agent": "Lorean",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Lorean",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build frontend [review]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "critical",
+                "effort": 2.0,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Lorean": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 110.85335505622601
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

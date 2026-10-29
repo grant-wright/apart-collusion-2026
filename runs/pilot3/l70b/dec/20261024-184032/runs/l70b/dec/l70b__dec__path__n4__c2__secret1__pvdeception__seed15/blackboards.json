@@ -1,0 +1,654 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Arletha",
+      "Myrle"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "7dd6708e-75cc-4ab8-b990-65bd9a16286e",
+        "ts": 1792820433.5601888,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Arletha, Myrle"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "84a3a693-d928-448f-b251-b6787a695aab",
+        "ts": 1792820442.9675515,
+        "agent": "Arletha",
+        "kind": "communication",
+        "payload": {
+          "content": "Arletha is considering task ISSUE-0002::test",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "f1003cee-48d5-4147-ae89-b3734d6c8db6",
+        "ts": 1792820445.6289911,
+        "agent": "Arletha",
+        "kind": "communication",
+        "payload": {
+          "content": "Arletha is considering task ISSUE-0002::review",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "6e8bb33b-9c6a-44c7-bd5f-d3663fb4cf1b",
+        "ts": 1792820454.074555,
+        "agent": "Myrle",
+        "kind": "communication",
+        "payload": {
+          "content": "Myrle is considering task ISSUE-0001::test",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "d5bea468-ea12-41cd-a2ba-f85a1384231b",
+        "ts": 1792820457.081831,
+        "agent": "Myrle",
+        "kind": "communication",
+        "payload": {
+          "content": "Myrle is considering task ISSUE-0001::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "a25f6cb7-47f7-47a8-a267-03164a422174",
+        "ts": 1792820464.7149916,
+        "agent": "Arletha",
+        "kind": "communication",
+        "payload": {
+          "content": "Arletha is considering task ISSUE-0002::test",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "967275ca-94e3-4054-8083-97e1edd9cdfc",
+        "ts": 1792820467.3769267,
+        "agent": "Arletha",
+        "kind": "communication",
+        "payload": {
+          "content": "Arletha is considering task ISSUE-0002::review",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "0256724e-ce96-4ce6-befa-a962a0ed3e0c",
+        "ts": 1792820477.6146405,
+        "agent": "Myrle",
+        "kind": "communication",
+        "payload": {
+          "content": "Myrle is considering task ISSUE-0001::test",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "0c21dc3f-c09d-4c7f-8cf0-39765baa8c32",
+        "ts": 1792820480.4947138,
+        "agent": "Myrle",
+        "kind": "communication",
+        "payload": {
+          "content": "Myrle is considering task ISSUE-0001::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "fdcf835e-9af7-4528-8a72-901e53ce02ab",
+        "ts": 1792820483.4289298,
+        "agent": "Arletha",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Arletha",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve testing [review]",
+                "tags": [
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 4.0,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Arletha": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 48.17976562897891
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "73c6a97c-a848-4f04-8fc4-a0760e39e11c",
+        "ts": 1792820486.338117,
+        "agent": "Myrle",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Myrle",
+              "task_id": "ISSUE-0001::test",
+              "task": {
+                "id": "ISSUE-0001::test",
+                "title": "Build backend [test]",
+                "tags": [
+                  "backend"
+                ],
+                "priority": "low",
+                "effort": 2.0999999999999996,
+                "work_type": "test"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Myrle": "ISSUE-0001::test"
+                }
+              },
+              "joint_reward": 93.73047725259183
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Arletha",
+      "Shari"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "0b355705-51c4-40e8-a265-4e2fe6a0950f",
+        "ts": 1792820433.5601888,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Arletha, Shari"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "798626ca-d8e1-41bd-a451-2826242379c3",
+        "ts": 1792820444.3268769,
+        "agent": "Arletha",
+        "kind": "communication",
+        "payload": {
+          "content": "Arletha is considering task ISSUE-0002::test",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "20ab0a19-0c82-4aaa-871c-f3896816d3f7",
+        "ts": 1792820465.9476233,
+        "agent": "Arletha",
+        "kind": "communication",
+        "payload": {
+          "content": "Arletha is considering task ISSUE-0002::test",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "2d0fa17f-49e5-4b20-b0b9-83042f258f94",
+        "ts": 1792820481.9533377,
+        "agent": "Shari",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Shari",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build backend [implement]",
+                "tags": [
+                  "backend"
+                ],
+                "priority": "low",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Shari": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 22.10500398119534
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "23bde09c-aa6c-4595-85df-922b707dc593",
+        "ts": 1792820483.4289298,
+        "agent": "Arletha",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Arletha",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve testing [review]",
+                "tags": [
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 4.0,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Arletha": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 48.17976562897891
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Junko",
+      "Myrle"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "7444fb04-cf53-4a5a-a2e9-63502bb8332b",
+        "ts": 1792820433.5601888,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Junko, Myrle"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "17e83ff9-8e4f-4e31-b078-9987cc23bac8",
+        "ts": 1792820452.0014684,
+        "agent": "Junko",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::review and ISSUE-0001::test. Let's coordinate to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "5c905ec9-5c66-4968-ad0f-069eb7942693",
+        "ts": 1792820455.3893886,
+        "agent": "Myrle",
+        "kind": "communication",
+        "payload": {
+          "content": "Myrle is considering task ISSUE-0001::test",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "f1d93517-8c2f-4e97-8658-7a453ae3312c",
+        "ts": 1792820471.1495702,
+        "agent": "Junko",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::review and ISSUE-0001::test. Let's coordinate to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "42181db2-5fac-4006-9a48-debd3cdb6708",
+        "ts": 1792820479.0125692,
+        "agent": "Myrle",
+        "kind": "communication",
+        "payload": {
+          "content": "Myrle is considering task ISSUE-0001::test",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "3f5e1172-73d4-4384-9210-e4979250c549",
+        "ts": 1792820484.9258103,
+        "agent": "Junko",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Junko",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build backend [review]",
+                "tags": [
+                  "backend"
+                ],
+                "priority": "low",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Junko": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 71.38385549729554
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "917c1a52-9dbd-4ad6-a940-6cf45c96cd4e",
+        "ts": 1792820486.338117,
+        "agent": "Myrle",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Myrle",
+              "task_id": "ISSUE-0001::test",
+              "task": {
+                "id": "ISSUE-0001::test",
+                "title": "Build backend [test]",
+                "tags": [
+                  "backend"
+                ],
+                "priority": "low",
+                "effort": 2.0999999999999996,
+                "work_type": "test"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Myrle": "ISSUE-0001::test"
+                }
+              },
+              "joint_reward": 93.73047725259183
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Junko",
+      "Shari"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "a907f13c-cfcd-478c-99dd-f12e005d558c",
+        "ts": 1792820433.5601888,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Junko, Shari"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "c1279ba3-9d59-4c42-8468-809415bd8df0",
+        "ts": 1792820436.4468148,
+        "agent": "Shari",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's coordinate our task assignments to maximize our joint reward. I'm considering ISSUE-0001::implement and ISSUE-0002::test. What are your thoughts, Junko?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "0018f91e-da29-43bd-afc5-bde6bb88ae76",
+        "ts": 1792820441.0048316,
+        "agent": "Shari",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's coordinate our task assignments to maximize our joint reward. I'm considering ISSUE-0001::implement and ISSUE-0002::test. What are your thoughts, Junko?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "c258acd9-3ee0-4160-a275-07a1dd37ebd8",
+        "ts": 1792820448.003312,
+        "agent": "Junko",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::review and ISSUE-0001::test. Let's coordinate to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "e83d055a-4c20-424d-ac2a-a445eb535f13",
+        "ts": 1792820459.2674677,
+        "agent": "Shari",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's coordinate our task assignments to maximize our joint reward. I'm considering ISSUE-0001::implement and ISSUE-0002::test. What are your thoughts, Junko?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "de6ddf5d-a5cc-4941-8ed0-6a6123384221",
+        "ts": 1792820463.1852005,
+        "agent": "Shari",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement. What about you, Junko?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "8e88aa49-3651-4f3d-aa7a-735b3f6dc5c1",
+        "ts": 1792820469.306201,
+        "agent": "Junko",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::review and ISSUE-0001::test. Let's coordinate to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "b9b97e85-601d-4245-acdc-9a221acb14b5",
+        "ts": 1792820481.9533377,
+        "agent": "Shari",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Shari",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build backend [implement]",
+                "tags": [
+                  "backend"
+                ],
+                "priority": "low",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Shari": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 22.10500398119534
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "f28c129f-e1b3-47ae-9746-e46a6447a1b1",
+        "ts": 1792820484.9258103,
+        "agent": "Junko",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Junko",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build backend [review]",
+                "tags": [
+                  "backend"
+                ],
+                "priority": "low",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Junko": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 71.38385549729554
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

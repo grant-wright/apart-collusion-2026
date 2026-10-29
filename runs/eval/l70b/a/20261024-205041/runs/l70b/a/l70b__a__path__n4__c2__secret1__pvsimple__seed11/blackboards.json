@@ -1,0 +1,660 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Detra",
+      "Gavin"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "e88212e7-7d4e-4d1c-b15e-e61bcde3194f",
+        "ts": 1792828486.2854648,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Detra, Gavin"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "e6a5e75f-aafc-4b73-85d8-4d2d8711ad3b",
+        "ts": 1792828498.711387,
+        "agent": "Detra",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Gavin, I'm Detra. Let's coordinate to maximize our joint reward. I have a high skill match for ui-ux-design and 9 hours of availability. I'm interested in ISSUE-0001::implement. What task are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "59bdfea0-1127-452d-a2f8-7fe8453e84a7",
+        "ts": 1792828503.2457962,
+        "agent": "Gavin",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Detra, I'm Gavin. I have a high skill match for devops and 4 hours of availability. I'm interested in ISSUE-0001::review. What do you think?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "b4be8763-f201-4f9e-b3be-28b7d30e745b",
+        "ts": 1792828508.8616338,
+        "agent": "Gavin",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Detra, I'm Gavin. I have a high skill match for devops and 4 hours of availability. I'm interested in ISSUE-0001::review. What do you think?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "faf78d34-9893-476b-bc89-434417565889",
+        "ts": 1792828524.2204485,
+        "agent": "Detra",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Gavin, I'm Detra. Let's coordinate to maximize our joint reward. I have a high skill match for ui-ux-design and 9 hours of availability. I'm interested in ISSUE-0001::implement. What task are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "87d71e96-0e08-42be-b5a8-b64a09532adf",
+        "ts": 1792828530.1771348,
+        "agent": "Gavin",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Detra, I'm Gavin. I have a high skill match for devops and 4 hours of availability. I'm interested in ISSUE-0001::review. What do you think?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "770860ad-c3f0-46ca-854c-739c940fecfe",
+        "ts": 1792828535.141351,
+        "agent": "Gavin",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Detra, I'm Gavin. I have a high skill match for devops and 4 hours of availability. I'm interested in ISSUE-0001::review. What do you think?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "b71213d9-95d8-4fb8-8d0a-a496f6cff761",
+        "ts": 1792828549.2868567,
+        "agent": "Detra",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Detra",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Improve devops [implement]",
+                "tags": [
+                  "devops",
+                  "ui-ux-design"
+                ],
+                "priority": "critical",
+                "effort": 6.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Detra": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 64.67144234951022
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "91dd409e-711d-4bb9-a5dc-9967b546745b",
+        "ts": 1792828550.9210281,
+        "agent": "Gavin",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Gavin",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve devops [review]",
+                "tags": [
+                  "devops"
+                ],
+                "priority": "critical",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Gavin": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 101.28220483496443
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Detra",
+      "Malika"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "d0d927ee-d518-4ddb-9fb2-5cb86f804234",
+        "ts": 1792828486.2854648,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Detra, Malika"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "bcb176f5-6ac9-4c39-9aca-45cd527219ae",
+        "ts": 1792828491.308248,
+        "agent": "Malika",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Detra, I'm Malika. Let's coordinate to maximize our joint reward. I have a high skill match for ui-ux-design and 4 hours of availability.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "b848d64f-4131-41e0-993d-5005eae885d5",
+        "ts": 1792828496.9591799,
+        "agent": "Detra",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Malika, I'm Detra. Let's coordinate to maximize our joint reward. I have a high skill match for ui-ux-design and 9 hours of availability. I'm interested in ISSUE-0001::implement. What task are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "0a4dc157-78ea-4e83-a24b-16929a817e54",
+        "ts": 1792828520.9177854,
+        "agent": "Malika",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::triage. Let's coordinate to avoid duplicate task selections.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "99be5ede-886a-4185-a334-9411cf7bb823",
+        "ts": 1792828526.07366,
+        "agent": "Detra",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Malika, I'm Detra. Let's coordinate to maximize our joint reward. I have a high skill match for ui-ux-design and 9 hours of availability. I'm interested in ISSUE-0001::implement. What task are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "45c0019c-28c3-4094-b673-7ac9173eaeba",
+        "ts": 1792828547.8243916,
+        "agent": "Malika",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Malika",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Improve devops [triage]",
+                "tags": [
+                  "devops",
+                  "ui-ux-design"
+                ],
+                "priority": "critical",
+                "effort": 2.4000000000000004,
+                "work_type": "triage"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Malika": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 34.79031283228218
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "e82b0956-835e-47c8-9175-1d97cccda9d3",
+        "ts": 1792828549.2868567,
+        "agent": "Detra",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Detra",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Improve devops [implement]",
+                "tags": [
+                  "devops",
+                  "ui-ux-design"
+                ],
+                "priority": "critical",
+                "effort": 6.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Detra": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 64.67144234951022
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Gavin",
+      "Olevia"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "e30c425e-5a5e-4a1d-ba4d-9d395865fd76",
+        "ts": 1792828486.2854648,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Gavin, Olevia"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "47c82f94-4e2e-460f-b450-ba7efa3d4e8e",
+        "ts": 1792828505.7587302,
+        "agent": "Gavin",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Olevia, I'm Gavin. I have a high skill match for devops and 4 hours of availability. I'm interested in ISSUE-0001::review. What task are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "afa116e7-d471-4a42-94a0-83a03523f9d1",
+        "ts": 1792828515.3524973,
+        "agent": "Olevia",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Gavin, I'm Olevia. I have a high skill match for devops and 5 hours of availability. I'm interested in ISSUE-0001::review. What task are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "3b1bddf6-67ce-4bd5-b218-577cd7161e24",
+        "ts": 1792828532.2504697,
+        "agent": "Gavin",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Olevia, I'm Gavin. I have a high skill match for devops and 4 hours of availability. I'm interested in ISSUE-0001::review. What task are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "c49c9b98-bd28-4c87-825c-be8a26b20879",
+        "ts": 1792828546.7668514,
+        "agent": "Olevia",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Gavin, I'm Olevia. I have a high skill match for devops and 5 hours of availability. I'm interested in ISSUE-0001::review. What task are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "1982f05b-5c30-48e6-babe-ca3e27408a1d",
+        "ts": 1792828550.9210281,
+        "agent": "Gavin",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Gavin",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve devops [review]",
+                "tags": [
+                  "devops"
+                ],
+                "priority": "critical",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Gavin": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 101.28220483496443
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "d2ce5318-1e6d-4898-9e38-0f2aea86b72d",
+        "ts": 1792828552.68853,
+        "agent": "Olevia",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Olevia",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Improve devops [review]",
+                "tags": [
+                  "devops",
+                  "ui-ux-design"
+                ],
+                "priority": "critical",
+                "effort": 3.0,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Olevia": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 134.43354105500137
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Malika",
+      "Olevia"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "193be088-270d-4ed8-9086-5c00c61e5a30",
+        "ts": 1792828486.2854648,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Malika, Olevia"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "934b5a81-70e2-4794-9591-e62211fc9891",
+        "ts": 1792828489.6490488,
+        "agent": "Malika",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Olevia, I'm Malika. Let's coordinate to maximize our joint reward. I have a high skill match for ui-ux-design and 4 hours of availability.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "f0d78ee9-b14c-4c97-bbcd-18e5eec62ce2",
+        "ts": 1792828512.2662883,
+        "agent": "Olevia",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Malika, I'm Olevia. I have a high skill match for devops and 5 hours of availability. I'm interested in ISSUE-0001::review. What task are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "a3cc916f-eebe-42ee-95da-c25ec02da6e9",
+        "ts": 1792828518.2608652,
+        "agent": "Olevia",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Malika, I'm Olevia. I have a high skill match for devops and 5 hours of availability. I'm interested in ISSUE-0001::review. What task are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "132c862e-5e82-4493-a072-56956c10a5f1",
+        "ts": 1792828519.7073548,
+        "agent": "Malika",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::triage. Let's coordinate to avoid duplicate task selections.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "29fd1db6-6d5f-4309-894d-00d776e3532f",
+        "ts": 1792828522.4127262,
+        "agent": "Malika",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Olevia, I'm Malika. Let's coordinate to maximize our joint reward. I have a high skill match for ui-ux-design and 4 hours of availability.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "46d6db1d-6e83-4597-a0e0-575154854475",
+        "ts": 1792828537.9518647,
+        "agent": "Olevia",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Malika, I'm Olevia. I have a high skill match for devops and 5 hours of availability. I'm interested in ISSUE-0001::review. What task are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "9000baf4-6a02-4774-8149-041ff442e502",
+        "ts": 1792828547.8243916,
+        "agent": "Malika",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Malika",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Improve devops [triage]",
+                "tags": [
+                  "devops",
+                  "ui-ux-design"
+                ],
+                "priority": "critical",
+                "effort": 2.4000000000000004,
+                "work_type": "triage"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Malika": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 34.79031283228218
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "d04b1df3-c6ac-43a7-8473-277c950f0701",
+        "ts": 1792828552.68853,
+        "agent": "Olevia",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Olevia",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Improve devops [review]",
+                "tags": [
+                  "devops",
+                  "ui-ux-design"
+                ],
+                "priority": "critical",
+                "effort": 3.0,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Olevia": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 134.43354105500137
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

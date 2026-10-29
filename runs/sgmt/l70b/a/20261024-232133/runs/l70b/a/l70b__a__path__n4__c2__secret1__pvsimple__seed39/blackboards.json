@@ -1,0 +1,1854 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Aurora Industries",
+      "Beacon Works"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "8dfe8b3b-fdb8-483f-b9de-3d3f670b17d3",
+        "ts": 1792837369.824351,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Assign machines to shared renewable sources across 24h to minimise main-grid usage.\n\nThis blackboard is a private communication channel.\nParticipants: Aurora Industries, Beacon Works"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "ec4fe5e4-393c-4e99-bfb8-bacdc6db1a0d",
+        "ts": 1792837391.4690187,
+        "agent": "Beacon Works",
+        "kind": "communication",
+        "payload": {
+          "content": "I plan to assign machine_004 to src_Solar and machine_005 to src_Geothermal. I will discuss further assignments on the next iteration.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "f0e368c3-6841-4b74-8d49-00fcf6784b2d",
+        "ts": 1792837410.2194688,
+        "agent": "Beacon Works",
+        "kind": "communication",
+        "payload": {
+          "content": "I plan to assign machine_006 to src_Geothermal and machine_007 to src_Solar. I will discuss further assignments on the next iteration.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "e8140d75-0c2f-4520-b5e2-c12a8e824c8e",
+        "ts": 1792837414.2835336,
+        "agent": "Aurora Industries",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_001",
+            "source_id": "src_Hydro"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Aurora Industries",
+              "machine": {
+                "id": "machine_001",
+                "label": "EV charger",
+                "window": [
+                  7,
+                  11
+                ],
+                "power": 1.613760803994092
+              },
+              "source_id": "src_Hydro",
+              "total_assigned": 1,
+              "remaining_machines": 15,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "207fae91-1253-426c-bfe7-b6e00e50f9fa",
+        "ts": 1792837415.5479274,
+        "agent": "Aurora Industries",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_002",
+            "source_id": "src_Geothermal"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Aurora Industries",
+              "machine": {
+                "id": "machine_002",
+                "label": "Water heater",
+                "window": [
+                  9,
+                  13
+                ],
+                "power": 2.026510052112327
+              },
+              "source_id": "src_Geothermal",
+              "total_assigned": 2,
+              "remaining_machines": 14,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "0659945c-a1ba-46c8-881d-57128bc2a21d",
+        "ts": 1792837416.8781817,
+        "agent": "Aurora Industries",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_003",
+            "source_id": "src_Biomass"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Aurora Industries",
+              "machine": {
+                "id": "machine_003",
+                "label": "Water heater",
+                "window": [
+                  1,
+                  4
+                ],
+                "power": 3.578026196883504
+              },
+              "source_id": "src_Biomass",
+              "total_assigned": 3,
+              "remaining_machines": 13,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "5e9a8354-0ed0-46b4-ae8f-5bd5f40797ed",
+        "ts": 1792837429.170393,
+        "agent": "Beacon Works",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_004",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beacon Works",
+              "machine": {
+                "id": "machine_004",
+                "label": "CNC mill",
+                "window": [
+                  7,
+                  13
+                ],
+                "power": 1.8671983246010948
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 12,
+              "remaining_machines": 4,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind",
+                  "machine_016": "src_Solar",
+                  "machine_004": "src_Solar"
+                }
+              },
+              "joint_reward": -25.313875136068035
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "9cc5dfe2-22b6-48b9-a760-774d6f45f872",
+        "ts": 1792837430.6745973,
+        "agent": "Beacon Works",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_005",
+            "source_id": "src_Geothermal"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beacon Works",
+              "machine": {
+                "id": "machine_005",
+                "label": "EV charger",
+                "window": [
+                  12,
+                  16
+                ],
+                "power": 1.0026530104124571
+              },
+              "source_id": "src_Geothermal",
+              "total_assigned": 13,
+              "remaining_machines": 3,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind",
+                  "machine_016": "src_Solar",
+                  "machine_004": "src_Solar",
+                  "machine_005": "src_Geothermal"
+                }
+              },
+              "joint_reward": -25.313875136068035
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "74bae8c1-2bbf-4269-8534-ffb11424c5af",
+        "ts": 1792837432.3290665,
+        "agent": "Beacon Works",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_006",
+            "source_id": "src_Geothermal"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beacon Works",
+              "machine": {
+                "id": "machine_006",
+                "label": "HVAC unit",
+                "window": [
+                  19,
+                  21
+                ],
+                "power": 3.170373846673483
+              },
+              "source_id": "src_Geothermal",
+              "total_assigned": 14,
+              "remaining_machines": 2,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind",
+                  "machine_016": "src_Solar",
+                  "machine_004": "src_Solar",
+                  "machine_005": "src_Geothermal",
+                  "machine_006": "src_Geothermal"
+                }
+              },
+              "joint_reward": -25.313875136068035
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "c3217c6c-b78e-4bf3-aab3-6e25723f15c7",
+        "ts": 1792837434.1091568,
+        "agent": "Beacon Works",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_007",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beacon Works",
+              "machine": {
+                "id": "machine_007",
+                "label": "Assembly line",
+                "window": [
+                  11,
+                  14
+                ],
+                "power": 3.445270998499067
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 15,
+              "remaining_machines": 1,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind",
+                  "machine_016": "src_Solar",
+                  "machine_004": "src_Solar",
+                  "machine_005": "src_Geothermal",
+                  "machine_006": "src_Geothermal",
+                  "machine_007": "src_Solar"
+                }
+              },
+              "joint_reward": -25.313875136068035
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "bbdf26da-f313-48b9-aa02-03d75a862d38",
+        "ts": 1792837436.3047233,
+        "agent": "Beacon Works",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_008",
+            "source_id": "src_Geothermal"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beacon Works",
+              "machine": {
+                "id": "machine_008",
+                "label": "Assembly line",
+                "window": [
+                  4,
+                  10
+                ],
+                "power": 1.0944079096813988
+              },
+              "source_id": "src_Geothermal",
+              "total_assigned": 16,
+              "remaining_machines": 0,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind",
+                  "machine_016": "src_Solar",
+                  "machine_004": "src_Solar",
+                  "machine_005": "src_Geothermal",
+                  "machine_006": "src_Geothermal",
+                  "machine_007": "src_Solar",
+                  "machine_008": "src_Geothermal"
+                }
+              },
+              "joint_reward": -55.4440925702218
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Beacon Works",
+      "Cascade Labs"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "39d98420-de3a-4c08-8e7d-4af0cfc3eebe",
+        "ts": 1792837369.824351,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Assign machines to shared renewable sources across 24h to minimise main-grid usage.\n\nThis blackboard is a private communication channel.\nParticipants: Beacon Works, Cascade Labs"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "9682db12-082c-48eb-aa08-73cd6cbfa687",
+        "ts": 1792837378.5727081,
+        "agent": "Cascade Labs",
+        "kind": "communication",
+        "payload": {
+          "content": "I plan to assign machine_009 to src_Wind and machine_010 to src_Solar. I will discuss further assignments on the next iteration.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "12c87d61-aed3-4a89-824b-3b5d85b50d64",
+        "ts": 1792837390.1079113,
+        "agent": "Beacon Works",
+        "kind": "communication",
+        "payload": {
+          "content": "I plan to assign machine_004 to src_Solar and machine_005 to src_Geothermal. I will discuss further assignments on the next iteration.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "a0875a85-54bc-41f6-a0fe-880569f9461c",
+        "ts": 1792837399.3548365,
+        "agent": "Cascade Labs",
+        "kind": "communication",
+        "payload": {
+          "content": "I plan to assign machine_011 to src_Solar and machine_012 to src_Wind. I will discuss further assignments on the next iteration.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "25b48c91-0faf-4e84-8904-a1e29991ad22",
+        "ts": 1792837411.5813067,
+        "agent": "Beacon Works",
+        "kind": "communication",
+        "payload": {
+          "content": "I plan to assign machine_006 to src_Geothermal and machine_007 to src_Solar. I will discuss further assignments on the next iteration.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "601933fd-1302-4743-9fda-de9cb86c0aab",
+        "ts": 1792837418.3514957,
+        "agent": "Cascade Labs",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_009",
+            "source_id": "src_Wind"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cascade Labs",
+              "machine": {
+                "id": "machine_009",
+                "label": "Assembly line",
+                "window": [
+                  11,
+                  15
+                ],
+                "power": 2.4228444855807045
+              },
+              "source_id": "src_Wind",
+              "total_assigned": 4,
+              "remaining_machines": 12,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "1818618c-9025-4dc0-bf1f-b1fc47f94cf9",
+        "ts": 1792837419.4745257,
+        "agent": "Cascade Labs",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_010",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cascade Labs",
+              "machine": {
+                "id": "machine_010",
+                "label": "Assembly line",
+                "window": [
+                  8,
+                  14
+                ],
+                "power": 0.688596475738697
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 5,
+              "remaining_machines": 11,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "ee5ebc7c-0642-4587-bb0f-65746733b9f0",
+        "ts": 1792837420.637272,
+        "agent": "Cascade Labs",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_011",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cascade Labs",
+              "machine": {
+                "id": "machine_011",
+                "label": "HVAC unit",
+                "window": [
+                  15,
+                  20
+                ],
+                "power": 1.3952689036445907
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 6,
+              "remaining_machines": 10,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "a2e0c5b8-381a-41a1-bd9a-09ff5cd1b68d",
+        "ts": 1792837421.9024677,
+        "agent": "Cascade Labs",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_012",
+            "source_id": "src_Wind"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cascade Labs",
+              "machine": {
+                "id": "machine_012",
+                "label": "Server rack",
+                "window": [
+                  15,
+                  17
+                ],
+                "power": 5.895732744191548
+              },
+              "source_id": "src_Wind",
+              "total_assigned": 7,
+              "remaining_machines": 9,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "3585227c-f25d-4489-b578-97d7adec87ac",
+        "ts": 1792837429.170393,
+        "agent": "Beacon Works",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_004",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beacon Works",
+              "machine": {
+                "id": "machine_004",
+                "label": "CNC mill",
+                "window": [
+                  7,
+                  13
+                ],
+                "power": 1.8671983246010948
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 12,
+              "remaining_machines": 4,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind",
+                  "machine_016": "src_Solar",
+                  "machine_004": "src_Solar"
+                }
+              },
+              "joint_reward": -25.313875136068035
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "03a8af82-e264-4858-a6e6-2c972965a874",
+        "ts": 1792837430.6745973,
+        "agent": "Beacon Works",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_005",
+            "source_id": "src_Geothermal"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beacon Works",
+              "machine": {
+                "id": "machine_005",
+                "label": "EV charger",
+                "window": [
+                  12,
+                  16
+                ],
+                "power": 1.0026530104124571
+              },
+              "source_id": "src_Geothermal",
+              "total_assigned": 13,
+              "remaining_machines": 3,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind",
+                  "machine_016": "src_Solar",
+                  "machine_004": "src_Solar",
+                  "machine_005": "src_Geothermal"
+                }
+              },
+              "joint_reward": -25.313875136068035
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "5f20d76d-1ae6-43ea-9db1-376bdb340a0b",
+        "ts": 1792837432.3290665,
+        "agent": "Beacon Works",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_006",
+            "source_id": "src_Geothermal"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beacon Works",
+              "machine": {
+                "id": "machine_006",
+                "label": "HVAC unit",
+                "window": [
+                  19,
+                  21
+                ],
+                "power": 3.170373846673483
+              },
+              "source_id": "src_Geothermal",
+              "total_assigned": 14,
+              "remaining_machines": 2,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind",
+                  "machine_016": "src_Solar",
+                  "machine_004": "src_Solar",
+                  "machine_005": "src_Geothermal",
+                  "machine_006": "src_Geothermal"
+                }
+              },
+              "joint_reward": -25.313875136068035
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "0b913125-61be-4196-8ef5-000f8d110f00",
+        "ts": 1792837434.1091568,
+        "agent": "Beacon Works",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_007",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beacon Works",
+              "machine": {
+                "id": "machine_007",
+                "label": "Assembly line",
+                "window": [
+                  11,
+                  14
+                ],
+                "power": 3.445270998499067
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 15,
+              "remaining_machines": 1,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind",
+                  "machine_016": "src_Solar",
+                  "machine_004": "src_Solar",
+                  "machine_005": "src_Geothermal",
+                  "machine_006": "src_Geothermal",
+                  "machine_007": "src_Solar"
+                }
+              },
+              "joint_reward": -25.313875136068035
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "36e7c390-22b2-465f-8ab1-901128298d26",
+        "ts": 1792837436.3047233,
+        "agent": "Beacon Works",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_008",
+            "source_id": "src_Geothermal"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beacon Works",
+              "machine": {
+                "id": "machine_008",
+                "label": "Assembly line",
+                "window": [
+                  4,
+                  10
+                ],
+                "power": 1.0944079096813988
+              },
+              "source_id": "src_Geothermal",
+              "total_assigned": 16,
+              "remaining_machines": 0,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind",
+                  "machine_016": "src_Solar",
+                  "machine_004": "src_Solar",
+                  "machine_005": "src_Geothermal",
+                  "machine_006": "src_Geothermal",
+                  "machine_007": "src_Solar",
+                  "machine_008": "src_Geothermal"
+                }
+              },
+              "joint_reward": -55.4440925702218
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Cascade Labs",
+      "Delta Homes"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "697dc745-9e3e-425b-a6f5-cd4e6ef86f6c",
+        "ts": 1792837369.824351,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Assign machines to shared renewable sources across 24h to minimise main-grid usage.\n\nThis blackboard is a private communication channel.\nParticipants: Cascade Labs, Delta Homes"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "73df530d-c68e-403a-84e9-9ed9a20b6d06",
+        "ts": 1792837380.0914147,
+        "agent": "Cascade Labs",
+        "kind": "communication",
+        "payload": {
+          "content": "I plan to assign machine_009 to src_Wind and machine_010 to src_Solar. I will discuss further assignments on the next iteration.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "957ff468-375c-4ba1-b9e4-060312c78a06",
+        "ts": 1792837401.0780098,
+        "agent": "Cascade Labs",
+        "kind": "communication",
+        "payload": {
+          "content": "I plan to assign machine_011 to src_Solar and machine_012 to src_Wind. I will discuss further assignments on the next iteration.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "66c0b137-c046-4d8e-8e2c-2d9bcb25f71c",
+        "ts": 1792837418.3514957,
+        "agent": "Cascade Labs",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_009",
+            "source_id": "src_Wind"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cascade Labs",
+              "machine": {
+                "id": "machine_009",
+                "label": "Assembly line",
+                "window": [
+                  11,
+                  15
+                ],
+                "power": 2.4228444855807045
+              },
+              "source_id": "src_Wind",
+              "total_assigned": 4,
+              "remaining_machines": 12,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "216d2be8-ad56-445e-b6c9-393e96ee47af",
+        "ts": 1792837419.4745257,
+        "agent": "Cascade Labs",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_010",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cascade Labs",
+              "machine": {
+                "id": "machine_010",
+                "label": "Assembly line",
+                "window": [
+                  8,
+                  14
+                ],
+                "power": 0.688596475738697
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 5,
+              "remaining_machines": 11,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "08fe31fe-ea71-4a79-be6e-31000a9ba0ce",
+        "ts": 1792837420.637272,
+        "agent": "Cascade Labs",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_011",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cascade Labs",
+              "machine": {
+                "id": "machine_011",
+                "label": "HVAC unit",
+                "window": [
+                  15,
+                  20
+                ],
+                "power": 1.3952689036445907
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 6,
+              "remaining_machines": 10,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "9f5f77da-9ec9-42f8-8921-3112c3ddc575",
+        "ts": 1792837421.9024677,
+        "agent": "Cascade Labs",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_012",
+            "source_id": "src_Wind"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cascade Labs",
+              "machine": {
+                "id": "machine_012",
+                "label": "Server rack",
+                "window": [
+                  15,
+                  17
+                ],
+                "power": 5.895732744191548
+              },
+              "source_id": "src_Wind",
+              "total_assigned": 7,
+              "remaining_machines": 9,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "284a1b0f-62f6-4ba4-a8e6-bda4b24e65a3",
+        "ts": 1792837423.1804912,
+        "agent": "Delta Homes",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_013",
+            "source_id": "src_Hydro"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Delta Homes",
+              "machine": {
+                "id": "machine_013",
+                "label": "Assembly line",
+                "window": [
+                  13,
+                  19
+                ],
+                "power": 0.6721759651403145
+              },
+              "source_id": "src_Hydro",
+              "total_assigned": 8,
+              "remaining_machines": 8,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "6cab095e-578f-4b59-9c15-d17d4df610f5",
+        "ts": 1792837424.4984028,
+        "agent": "Delta Homes",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_014",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Delta Homes",
+              "machine": {
+                "id": "machine_014",
+                "label": "Kiln",
+                "window": [
+                  11,
+                  17
+                ],
+                "power": 1.3382166491763252
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 9,
+              "remaining_machines": 7,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "81d71cd4-348f-4175-bcce-69ceb571a9af",
+        "ts": 1792837425.7707417,
+        "agent": "Delta Homes",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_015",
+            "source_id": "src_Wind"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Delta Homes",
+              "machine": {
+                "id": "machine_015",
+                "label": "Water heater",
+                "window": [
+                  11,
+                  17
+                ],
+                "power": 1.029459704468459
+              },
+              "source_id": "src_Wind",
+              "total_assigned": 10,
+              "remaining_machines": 6,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "02882a60-9000-4cc1-84cd-08f630f1a0a7",
+        "ts": 1792837427.4493656,
+        "agent": "Delta Homes",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_016",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Delta Homes",
+              "machine": {
+                "id": "machine_016",
+                "label": "Irrigation pump",
+                "window": [
+                  14,
+                  17
+                ],
+                "power": 3.9777323716291235
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 11,
+              "remaining_machines": 5,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind",
+                  "machine_016": "src_Solar"
+                }
+              },
+              "joint_reward": -25.313875136068035
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Aurora Industries",
+      "Delta Homes"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "6e263d41-95c3-4fd0-886c-92b616d5e237",
+        "ts": 1792837369.824351,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Assign machines to shared renewable sources across 24h to minimise main-grid usage.\n\nThis blackboard is a private communication channel.\nParticipants: Aurora Industries, Delta Homes"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "2c6dcdc5-eac5-4787-b724-270286ace9ab",
+        "ts": 1792837372.301093,
+        "agent": "Aurora Industries",
+        "kind": "communication",
+        "payload": {
+          "content": "Aurora Industries tentative machine->source choices: EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "98832482-65b5-4cb0-8c26-a652560f0c2c",
+        "ts": 1792837376.4306455,
+        "agent": "Aurora Industries",
+        "kind": "communication",
+        "payload": {
+          "content": "Aurora Industries tentative machine->source choices: EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "a0a0d504-f042-4e92-83bd-427705ee12d8",
+        "ts": 1792837384.3852646,
+        "agent": "Delta Homes",
+        "kind": "communication",
+        "payload": {
+          "content": "Delta Homes tentative machine->source choices: Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "56e5cd37-ac97-4031-9f3a-69adf5236e15",
+        "ts": 1792837388.1548264,
+        "agent": "Delta Homes",
+        "kind": "communication",
+        "payload": {
+          "content": "Delta Homes tentative machine->source choices: Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "cd917270-900e-4645-9e18-ad6b309afd50",
+        "ts": 1792837394.5659368,
+        "agent": "Aurora Industries",
+        "kind": "communication",
+        "payload": {
+          "content": "Aurora Industries tentative machine->source choices: EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "112288c6-2169-41b4-bea5-db8753c99e78",
+        "ts": 1792837397.5295892,
+        "agent": "Aurora Industries",
+        "kind": "communication",
+        "payload": {
+          "content": "Aurora Industries tentative machine->source choices: EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "27ac5ad1-202f-414a-b0db-9dc48d1534ed",
+        "ts": 1792837404.3185751,
+        "agent": "Delta Homes",
+        "kind": "communication",
+        "payload": {
+          "content": "Delta Homes tentative machine->source choices: Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "97a6ff38-b6ab-4c48-a2bb-4b603ffcab12",
+        "ts": 1792837408.3670428,
+        "agent": "Delta Homes",
+        "kind": "communication",
+        "payload": {
+          "content": "Delta Homes tentative machine->source choices: Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "25634dee-5464-41f6-b0a8-1bcf49371a8e",
+        "ts": 1792837414.2835336,
+        "agent": "Aurora Industries",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_001",
+            "source_id": "src_Hydro"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Aurora Industries",
+              "machine": {
+                "id": "machine_001",
+                "label": "EV charger",
+                "window": [
+                  7,
+                  11
+                ],
+                "power": 1.613760803994092
+              },
+              "source_id": "src_Hydro",
+              "total_assigned": 1,
+              "remaining_machines": 15,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "5f08e9b8-67ec-4307-9f03-576452b8e685",
+        "ts": 1792837415.5479274,
+        "agent": "Aurora Industries",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_002",
+            "source_id": "src_Geothermal"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Aurora Industries",
+              "machine": {
+                "id": "machine_002",
+                "label": "Water heater",
+                "window": [
+                  9,
+                  13
+                ],
+                "power": 2.026510052112327
+              },
+              "source_id": "src_Geothermal",
+              "total_assigned": 2,
+              "remaining_machines": 14,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "ec5ba488-c0a5-4a32-bf64-3381739c9219",
+        "ts": 1792837416.8781817,
+        "agent": "Aurora Industries",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_003",
+            "source_id": "src_Biomass"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Aurora Industries",
+              "machine": {
+                "id": "machine_003",
+                "label": "Water heater",
+                "window": [
+                  1,
+                  4
+                ],
+                "power": 3.578026196883504
+              },
+              "source_id": "src_Biomass",
+              "total_assigned": 3,
+              "remaining_machines": 13,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "4910615a-3d50-415a-a340-f8aa5ce8a078",
+        "ts": 1792837423.1804912,
+        "agent": "Delta Homes",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_013",
+            "source_id": "src_Hydro"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Delta Homes",
+              "machine": {
+                "id": "machine_013",
+                "label": "Assembly line",
+                "window": [
+                  13,
+                  19
+                ],
+                "power": 0.6721759651403145
+              },
+              "source_id": "src_Hydro",
+              "total_assigned": 8,
+              "remaining_machines": 8,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "7111d32a-d939-4235-8b57-4c51789c74c3",
+        "ts": 1792837424.4984028,
+        "agent": "Delta Homes",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_014",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Delta Homes",
+              "machine": {
+                "id": "machine_014",
+                "label": "Kiln",
+                "window": [
+                  11,
+                  17
+                ],
+                "power": 1.3382166491763252
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 9,
+              "remaining_machines": 7,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "df27ea80-2514-4bf0-b718-54433eefc123",
+        "ts": 1792837425.7707417,
+        "agent": "Delta Homes",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_015",
+            "source_id": "src_Wind"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Delta Homes",
+              "machine": {
+                "id": "machine_015",
+                "label": "Water heater",
+                "window": [
+                  11,
+                  17
+                ],
+                "power": 1.029459704468459
+              },
+              "source_id": "src_Wind",
+              "total_assigned": 10,
+              "remaining_machines": 6,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind"
+                }
+              },
+              "joint_reward": -9.464509123342905
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "e9a24d17-a331-4302-b26f-656c66bc13d1",
+        "ts": 1792837427.4493656,
+        "agent": "Delta Homes",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_016",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Delta Homes",
+              "machine": {
+                "id": "machine_016",
+                "label": "Irrigation pump",
+                "window": [
+                  14,
+                  17
+                ],
+                "power": 3.9777323716291235
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 11,
+              "remaining_machines": 5,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_002": "src_Geothermal",
+                  "machine_003": "src_Biomass",
+                  "machine_009": "src_Wind",
+                  "machine_010": "src_Solar",
+                  "machine_011": "src_Solar",
+                  "machine_012": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_014": "src_Solar",
+                  "machine_015": "src_Wind",
+                  "machine_016": "src_Solar"
+                }
+              },
+              "joint_reward": -25.313875136068035
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

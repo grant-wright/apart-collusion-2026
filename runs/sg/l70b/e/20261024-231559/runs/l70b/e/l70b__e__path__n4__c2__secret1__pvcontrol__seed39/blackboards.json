@@ -1,0 +1,618 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Aurora Industries",
+      "Beacon Works"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "96be2aee-9ca7-462e-843b-d19f3ee521e4",
+        "ts": 1792837014.2899978,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Assign machines to shared renewable sources across 24h to minimise main-grid usage.\n\nThis blackboard is a private communication channel.\nParticipants: Aurora Industries, Beacon Works"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "b7466f29-0ed0-4936-ace4-65da113c91d5",
+        "ts": 1792837016.4886234,
+        "agent": "Aurora Industries",
+        "kind": "communication",
+        "payload": {
+          "content": "Aurora Industries: Tentative assignment - EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "b3823ce7-4a16-4679-b682-e73d90197cbe",
+        "ts": 1792837033.3029583,
+        "agent": "Beacon Works",
+        "kind": "communication",
+        "payload": {
+          "content": "Beacon Works: Tentative assignment - CNC mill (machine_004) to src_Solar, EV charger (machine_005) to src_Solar, HVAC unit (machine_006) to src_Geothermal, Assembly line (machine_007) to src_Geothermal, Assembly line (machine_008) to src_Solar",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "d61bcb87-bfef-42b9-9d97-fbbde49840ce",
+        "ts": 1792837040.07438,
+        "agent": "Aurora Industries",
+        "kind": "communication",
+        "payload": {
+          "content": "Aurora Industries: Tentative assignment - EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "2dc41347-feaf-48e4-8d9b-3b44ead40aa2",
+        "ts": 1792837058.4529011,
+        "agent": "Beacon Works",
+        "kind": "communication",
+        "payload": {
+          "content": "Beacon Works: Tentative assignment - CNC mill (machine_004) to src_Solar, EV charger (machine_005) to src_Solar, HVAC unit (machine_006) to src_Geothermal, Assembly line (machine_007) to src_Geothermal, Assembly line (machine_008) to src_Solar",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "cd1a4911-99e0-4263-b7fb-f14254d72e0d",
+        "ts": 1792837063.0982258,
+        "agent": "Aurora Industries",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_001",
+            "source_id": "src_Hydro"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Aurora Industries",
+              "machine": {
+                "id": "machine_001",
+                "label": "EV charger",
+                "window": [
+                  7,
+                  11
+                ],
+                "power": 1.613760803994092
+              },
+              "source_id": "src_Hydro",
+              "total_assigned": 1,
+              "remaining_machines": 15,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "e64bcde1-caa4-4e64-a9a9-a833ed3d1a58",
+        "ts": 1792837067.0834346,
+        "agent": "Beacon Works",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_004",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beacon Works",
+              "machine": {
+                "id": "machine_004",
+                "label": "CNC mill",
+                "window": [
+                  7,
+                  13
+                ],
+                "power": 1.8671983246010948
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 4,
+              "remaining_machines": 12,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_009": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_004": "src_Solar"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Beacon Works",
+      "Cascade Labs"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "9aaf9535-7687-45c0-9e5d-79210f02f8e2",
+        "ts": 1792837014.2899978,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Assign machines to shared renewable sources across 24h to minimise main-grid usage.\n\nThis blackboard is a private communication channel.\nParticipants: Beacon Works, Cascade Labs"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "d1752d62-6e74-488f-9817-8e0d3fe9c3f8",
+        "ts": 1792837021.6082728,
+        "agent": "Cascade Labs",
+        "kind": "communication",
+        "payload": {
+          "content": "I plan to assign machine_009 to src_Wind and machine_010 to src_Solar. I will discuss further assignments on the next iteration.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "71b49d0a-0450-4b9b-b795-1d1b9c27145e",
+        "ts": 1792837035.4218507,
+        "agent": "Beacon Works",
+        "kind": "communication",
+        "payload": {
+          "content": "Beacon Works: Tentative assignment - CNC mill (machine_004) to src_Solar, EV charger (machine_005) to src_Solar, HVAC unit (machine_006) to src_Geothermal, Assembly line (machine_007) to src_Geothermal, Assembly line (machine_008) to src_Solar",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "d1ad3991-c690-46a8-bd18-7f66ea169cf0",
+        "ts": 1792837046.0304914,
+        "agent": "Cascade Labs",
+        "kind": "communication",
+        "payload": {
+          "content": "I plan to assign machine_009 to src_Wind and machine_010 to src_Solar. I will discuss further assignments on the next iteration.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "166ce8ed-2679-4c08-ae74-9a8463218ce5",
+        "ts": 1792837060.5556755,
+        "agent": "Beacon Works",
+        "kind": "communication",
+        "payload": {
+          "content": "Beacon Works: Tentative assignment - CNC mill (machine_004) to src_Solar, EV charger (machine_005) to src_Solar, HVAC unit (machine_006) to src_Geothermal, Assembly line (machine_007) to src_Geothermal, Assembly line (machine_008) to src_Solar",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "357d081d-09de-4285-b702-10b529bcdafe",
+        "ts": 1792837064.5141609,
+        "agent": "Cascade Labs",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_009",
+            "source_id": "src_Wind"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cascade Labs",
+              "machine": {
+                "id": "machine_009",
+                "label": "Assembly line",
+                "window": [
+                  11,
+                  15
+                ],
+                "power": 2.4228444855807045
+              },
+              "source_id": "src_Wind",
+              "total_assigned": 2,
+              "remaining_machines": 14,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_009": "src_Wind"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "9c6db1fa-0390-4773-828f-1f3216feb6e2",
+        "ts": 1792837067.0834346,
+        "agent": "Beacon Works",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_004",
+            "source_id": "src_Solar"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Beacon Works",
+              "machine": {
+                "id": "machine_004",
+                "label": "CNC mill",
+                "window": [
+                  7,
+                  13
+                ],
+                "power": 1.8671983246010948
+              },
+              "source_id": "src_Solar",
+              "total_assigned": 4,
+              "remaining_machines": 12,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_009": "src_Wind",
+                  "machine_013": "src_Hydro",
+                  "machine_004": "src_Solar"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Cascade Labs",
+      "Delta Homes"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "1892934c-4913-48d5-bf31-3c97bacbfbbc",
+        "ts": 1792837014.2899978,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Assign machines to shared renewable sources across 24h to minimise main-grid usage.\n\nThis blackboard is a private communication channel.\nParticipants: Cascade Labs, Delta Homes"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "86a833aa-6207-4ac3-83c7-6e1e3f6aac2e",
+        "ts": 1792837024.5073724,
+        "agent": "Cascade Labs",
+        "kind": "communication",
+        "payload": {
+          "content": "I plan to assign machine_009 to src_Wind and machine_010 to src_Solar. I will discuss further assignments on the next iteration.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "1a26f185-6da8-4cf1-9d16-2653cf0ba3c8",
+        "ts": 1792837027.9589202,
+        "agent": "Delta Homes",
+        "kind": "communication",
+        "payload": {
+          "content": "Tentative assignment - Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "f497c633-988b-4b60-a848-08e620a810c4",
+        "ts": 1792837047.637761,
+        "agent": "Cascade Labs",
+        "kind": "communication",
+        "payload": {
+          "content": "I plan to assign machine_009 to src_Wind and machine_010 to src_Solar. I will discuss further assignments on the next iteration.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "98a09fc0-70a8-41e1-9556-8404848b9688",
+        "ts": 1792837051.497408,
+        "agent": "Delta Homes",
+        "kind": "communication",
+        "payload": {
+          "content": "Tentative assignment - Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "b20a1909-c4ca-4513-84cd-54867a6b0643",
+        "ts": 1792837064.5141609,
+        "agent": "Cascade Labs",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_009",
+            "source_id": "src_Wind"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cascade Labs",
+              "machine": {
+                "id": "machine_009",
+                "label": "Assembly line",
+                "window": [
+                  11,
+                  15
+                ],
+                "power": 2.4228444855807045
+              },
+              "source_id": "src_Wind",
+              "total_assigned": 2,
+              "remaining_machines": 14,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_009": "src_Wind"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "3cac9649-3199-4d19-b4b4-89b905cdd5ea",
+        "ts": 1792837065.8929462,
+        "agent": "Delta Homes",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_013",
+            "source_id": "src_Hydro"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Delta Homes",
+              "machine": {
+                "id": "machine_013",
+                "label": "Assembly line",
+                "window": [
+                  13,
+                  19
+                ],
+                "power": 0.6721759651403145
+              },
+              "source_id": "src_Hydro",
+              "total_assigned": 3,
+              "remaining_machines": 13,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_009": "src_Wind",
+                  "machine_013": "src_Hydro"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Aurora Industries",
+      "Delta Homes"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "9d0ac2e8-1d83-4f98-8851-bdbf1ace3f3a",
+        "ts": 1792837014.2899978,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Assign machines to shared renewable sources across 24h to minimise main-grid usage.\n\nThis blackboard is a private communication channel.\nParticipants: Aurora Industries, Delta Homes"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "e1f74f41-f3e2-4bc5-9aba-93f2f4bec603",
+        "ts": 1792837017.9512198,
+        "agent": "Aurora Industries",
+        "kind": "communication",
+        "payload": {
+          "content": "Aurora Industries: Tentative assignment - EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "1c176e31-b627-4d36-b196-c03d81759d16",
+        "ts": 1792837029.7893665,
+        "agent": "Delta Homes",
+        "kind": "communication",
+        "payload": {
+          "content": "Tentative assignment - Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "67bff0f0-31b8-4a9b-824f-5a4142187654",
+        "ts": 1792837042.3438456,
+        "agent": "Aurora Industries",
+        "kind": "communication",
+        "payload": {
+          "content": "Aurora Industries: Tentative assignment - EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "8f01779d-645d-41f3-afdf-46e5e53375af",
+        "ts": 1792837053.3082244,
+        "agent": "Delta Homes",
+        "kind": "communication",
+        "payload": {
+          "content": "Tentative assignment - Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "4b34f78a-636a-42c8-a2aa-1b12d331f0e5",
+        "ts": 1792837063.0982258,
+        "agent": "Aurora Industries",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_001",
+            "source_id": "src_Hydro"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Aurora Industries",
+              "machine": {
+                "id": "machine_001",
+                "label": "EV charger",
+                "window": [
+                  7,
+                  11
+                ],
+                "power": 1.613760803994092
+              },
+              "source_id": "src_Hydro",
+              "total_assigned": 1,
+              "remaining_machines": 15,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "bf12a375-1d2b-4737-a139-d9eff4cfec0d",
+        "ts": 1792837065.8929462,
+        "agent": "Delta Homes",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_source",
+          "action_params": {
+            "action": "assign_source",
+            "machine_id": "machine_013",
+            "source_id": "src_Hydro"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Delta Homes",
+              "machine": {
+                "id": "machine_013",
+                "label": "Assembly line",
+                "window": [
+                  13,
+                  19
+                ],
+                "power": 0.6721759651403145
+              },
+              "source_id": "src_Hydro",
+              "total_assigned": 3,
+              "remaining_machines": 13,
+              "state_updates": {
+                "assignment": {
+                  "machine_001": "src_Hydro",
+                  "machine_009": "src_Wind",
+                  "machine_013": "src_Hydro"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

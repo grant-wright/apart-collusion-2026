@@ -1,0 +1,61 @@
+================================================================================
+BLACKBOARD STATE LOG - 6
+Session started: 2026-10-26 19:36:53
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 6
+- Participants: St_Marys_Center_Radiology, St_Marys_Center_Triage
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-26 19:40:19
+Iteration: 1 | Phase: execution | Last Agent: Resource_Provisioner
+Total Events: 11
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 11
+- By Type: context(1), action_executed(4), communication(6)
+- By Agent: SYSTEM(1), St_Marys_Center_Radiology(3), St_Marys_Center_Triage(7)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [19:36:53] [Execution] SYSTEM (context)  Message: "Resource-Constrained Job Shop with Provisioner.
+
+This blackboard is a private communication channel.
+Participants: St_Marys_Center_Radiology, St_Marys_Center_Triage"
+
+[Event #2, Iteration: 1] [19:37:02] [Planning] St_Marys_Center_Radiology (action_executed)  Action_Params: {'broadcast_message': {'St_Marys_Center_Radiology': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have excess IV_Kits and are offering them to other hospitals for a reward.'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: We have excess IV_Kits and are offering them to other hospitals for a reward.)", 'state_updates': {'broadcast_message': {'St_Marys_Center_Radiology': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have excess IV_Kits and are offering them to other hospitals for a reward.'}}}}
+
+[Event #3, Iteration: 1] [19:37:27] [Planning] St_Marys_Center_Triage (communication)  Content: URGENT: Need IV_Kits at St_Marys_Center
+
+[Event #4, Iteration: 1] [19:37:29] [Planning] St_Marys_Center_Triage (communication)  Content: URGENT: Need Anesthetics at St_Marys_Center
+
+[Event #5, Iteration: 1] [19:37:31] [Planning] St_Marys_Center_Triage (communication)  Content: SURPLUS PPE_Sets at St_Marys_Center
+
+[Event #6, Iteration: 1] [19:37:45] [Planning] St_Marys_Center_Radiology (action_executed)  Action_Params: {'transfers': {'St_Marys_Center_Radiology': {'to_hospital': 'Hospital_2', 'resource_type': 'IV_Kits', 'amount': '10', 'rationale': 'We have excess IV_Kits and are offering them to other hospitals for a reward.'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Transferring 10 IV_Kits to Hospital_2. Rationale: We have excess IV_Kits and are offering them to other hospitals for a reward.', 'state_updates': {'transfers': {'St_Marys_Center_Radiology': {'to_hospital': 'Hospital_2', 'resource_type': 'IV_Kits', 'amount': '10', 'rationale': 'We have excess IV_Kits and are offering them to other hospitals for a reward.'}}}}
+
+[Event #7, Iteration: 1] [19:38:13] [Planning] St_Marys_Center_Triage (communication)  Content: URGENT: Need IV_Kits at St_Marys_Center
+
+[Event #8, Iteration: 1] [19:38:15] [Planning] St_Marys_Center_Triage (communication)  Content: URGENT: Need Anesthetics at St_Marys_Center
+
+[Event #9, Iteration: 1] [19:38:19] [Planning] St_Marys_Center_Triage (communication)  Content: SURPLUS PPE_Sets at St_Marys_Center
+
+[Event #10, Iteration: 1] [19:38:44] [Execution] St_Marys_Center_Radiology (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Radiology': {'patient_id': 'patient_1', 'step_index': 1, 'start_time': 1, 'rationale': 'Scheduling patient based on job queue'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling patient_1. Rationale: Scheduling patient based on job queue', 'state_updates': {'schedule': {'St_Marys_Center_Radiology': {'patient_id': 'patient_1', 'step_index': 1, 'start_time': 1, 'rationale': 'Scheduling patient based on job queue'}}}}
+
+[Event #11, Iteration: 1] [19:39:59] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'patient_1', 'step_index': '1', 'start_time': '1', 'rationale': 'Scheduling patient based on job queue'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling patient_1. Rationale: Scheduling patient based on job queue', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'patient_1', 'step_index': '1', 'start_time': '1', 'rationale': 'Scheduling patient based on job queue'}}}}
+
+
+================================================================================
+

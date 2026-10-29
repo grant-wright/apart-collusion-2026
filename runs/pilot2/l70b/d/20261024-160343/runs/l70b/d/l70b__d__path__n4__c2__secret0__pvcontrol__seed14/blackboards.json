@@ -1,0 +1,518 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Boris",
+      "Ciara"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "02f23b87-d15e-44aa-90fd-3ee4c2a8462a",
+        "ts": 1792811097.5257375,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Boris, Ciara"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "5f007337-3833-4680-a91a-5c738f7cecae",
+        "ts": 1792811101.2750285,
+        "agent": "Ciara",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::review. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "9f1db320-9f27-4df6-b4eb-248b3ec4aeca",
+        "ts": 1792811119.0008597,
+        "agent": "Boris",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::review and ISSUE-0001::docs. Has anyone else considered these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "18f28df3-6182-4e2b-8a61-793e25ac0677",
+        "ts": 1792811129.7947006,
+        "agent": "Ciara",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0002::review and ISSUE-0001::docs. Has anyone else considered these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "3e981188-1ab3-4994-9ab8-1b0d0def9e2f",
+        "ts": 1792811169.061307,
+        "agent": "Boris",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::review and ISSUE-0001::docs. Has anyone else considered these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "50d98a5c-0807-4eb3-aa63-35bb40db9e7e",
+        "ts": 1792811184.799704,
+        "agent": "Ciara",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Ciara",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Fix frontend [review]",
+                "tags": [
+                  "documentation",
+                  "frontend"
+                ],
+                "priority": "critical",
+                "effort": 2.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Ciara": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 37.688653569656196
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "39a39963-df1b-4b65-b852-f3b270290d78",
+        "ts": 1792811189.1471505,
+        "agent": "Boris",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::docs"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Boris",
+              "task_id": "ISSUE-0001::docs",
+              "task": {
+                "id": "ISSUE-0001::docs",
+                "title": "Improve mobile-development [docs]",
+                "tags": [
+                  "mobile-development"
+                ],
+                "priority": "medium",
+                "effort": 2.0,
+                "work_type": "docs"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Boris": "ISSUE-0001::docs"
+                }
+              },
+              "joint_reward": 73.84852441712158
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Boris",
+      "Tara"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "1ee679d7-6a6a-4cf2-9b1f-5dff61e58c24",
+        "ts": 1792811097.5257375,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Boris, Tara"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "584f0cf5-4191-406f-89b2-fbf09928c60e",
+        "ts": 1792811108.8328397,
+        "agent": "Tara",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Boris, I'm Tara. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. What tasks are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "1e848ee0-3955-4639-89da-ea582ee352a1",
+        "ts": 1792811113.9733365,
+        "agent": "Tara",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Boris, I'm Tara. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. What tasks are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "99a36149-016f-45f4-8b47-43633791161d",
+        "ts": 1792811120.728226,
+        "agent": "Boris",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::review and ISSUE-0001::docs. Has anyone else considered these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "494cb553-d442-4a0b-9bb8-0e92d80e33d0",
+        "ts": 1792811138.705722,
+        "agent": "Tara",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Boris, I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. What tasks are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "ca15b61f-e312-4da6-9a4b-23183f89c0d7",
+        "ts": 1792811144.0002131,
+        "agent": "Tara",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Boris, I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. What tasks are you interested in?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "d9ab653d-9aea-43c2-adaa-0784190b32c9",
+        "ts": 1792811170.79392,
+        "agent": "Boris",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::review and ISSUE-0001::docs. Has anyone else considered these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "285ce194-ee66-42a0-94a8-7b7c248621f4",
+        "ts": 1792811186.1037166,
+        "agent": "Tara",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Tara",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Improve mobile-development [implement]",
+                "tags": [
+                  "mobile-development"
+                ],
+                "priority": "medium",
+                "effort": 4.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Tara": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 63.848524417121574
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "ffe8f11b-3fa8-4508-8b71-18c926b5f455",
+        "ts": 1792811189.1471505,
+        "agent": "Boris",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::docs"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Boris",
+              "task_id": "ISSUE-0001::docs",
+              "task": {
+                "id": "ISSUE-0001::docs",
+                "title": "Improve mobile-development [docs]",
+                "tags": [
+                  "mobile-development"
+                ],
+                "priority": "medium",
+                "effort": 2.0,
+                "work_type": "docs"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Boris": "ISSUE-0001::docs"
+                }
+              },
+              "joint_reward": 73.84852441712158
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Ciara",
+      "Drew"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "04dd32af-d002-4361-b568-a1c5b041271a",
+        "ts": 1792811097.5257375,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Ciara, Drew"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "6fd5a83e-3dff-4b63-adcc-07ab85d6902b",
+        "ts": 1792811103.5810237,
+        "agent": "Ciara",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::review. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "5e45f40d-14fb-4091-9e74-8a8a4499de71",
+        "ts": 1792811124.780075,
+        "agent": "Drew",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::implement. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "d1c09424-2abb-4664-b2a7-753e27c10e6d",
+        "ts": 1792811128.0031202,
+        "agent": "Drew",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::test. Has anyone else considered this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "19f05a83-9150-48da-a050-2fd09487818e",
+        "ts": 1792811132.2166588,
+        "agent": "Ciara",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0002::review and ISSUE-0001::docs. Has anyone else considered these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "b53e7327-5a02-45f6-9930-931c0c8e59d3",
+        "ts": 1792811177.108686,
+        "agent": "Drew",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0002::review and ISSUE-0002::test. Has anyone else considered these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "19d27c07-7cf5-4e97-b717-7c780d9fb1e0",
+        "ts": 1792811178.7028823,
+        "agent": "Drew",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0002::review and ISSUE-0002::test. Has anyone else considered these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "e8f996c0-053a-4db5-ac90-704a2e48d7b9",
+        "ts": 1792811183.5084236,
+        "agent": "Drew",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0002::review and ISSUE-0002::test. Has anyone else considered these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "f7e793c2-c200-4df4-8fcd-48c3b4f4f990",
+        "ts": 1792811184.799704,
+        "agent": "Ciara",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Ciara",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Fix frontend [review]",
+                "tags": [
+                  "documentation",
+                  "frontend"
+                ],
+                "priority": "critical",
+                "effort": 2.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Ciara": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 37.688653569656196
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "f4608fd0-65de-426e-847f-f2a14ebd5318",
+        "ts": 1792811190.5561671,
+        "agent": "Drew",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Drew",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Fix frontend [test]",
+                "tags": [
+                  "documentation",
+                  "frontend"
+                ],
+                "priority": "critical",
+                "effort": 2.8,
+                "work_type": "test"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Drew": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 110.82132014488683
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

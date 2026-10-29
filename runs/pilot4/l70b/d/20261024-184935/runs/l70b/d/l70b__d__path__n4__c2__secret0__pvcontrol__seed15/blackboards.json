@@ -1,0 +1,503 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Arletha",
+      "Myrle"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "7f8f389c-5ca1-4247-b2b8-eee52baf80bb",
+        "ts": 1792820976.0395427,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Arletha, Myrle"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "df453285-51dd-46cc-98cb-6ea6e7839fd6",
+        "ts": 1792820989.021673,
+        "agent": "Arletha",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Arletha. I'm considering claiming ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, or ISSUE-0001::docs. My top skill is backend with a score of 0.76. What tasks are you considering?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "71adc26f-9024-4955-a051-713a6c524c43",
+        "ts": 1792821002.6307495,
+        "agent": "Myrle",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Myrle. I'm considering claiming ISSUE-0001::review or ISSUE-0001::docs. My top skill is backend with a score of 0.74. What tasks are you considering?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "02d81dc1-3c60-4beb-912c-a2c8dd4c9cbe",
+        "ts": 1792821014.9199665,
+        "agent": "Arletha",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering claiming ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, or ISSUE-0001::docs. My top skill is backend with a score of 0.76. I see Myrle is considering ISSUE-0001::review or ISSUE-0001::docs. I'll wait for further communication before making a decision.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "b7ce7f89-2484-4d29-a424-78da89a48c4a",
+        "ts": 1792821033.1634967,
+        "agent": "Myrle",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering claiming ISSUE-0001::review or ISSUE-0001::docs. My top skill is backend with a score of 0.74. What tasks are you considering?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "a5e1a389-6813-4873-8280-755176bde16e",
+        "ts": 1792821040.1324096,
+        "agent": "Arletha",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Arletha",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build backend [implement]",
+                "tags": [
+                  "backend"
+                ],
+                "priority": "low",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Arletha": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 45.0702241416199
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "2e50aeaa-7d31-4a94-8052-250ba02dc718",
+        "ts": 1792821043.0666063,
+        "agent": "Myrle",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::docs"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Myrle",
+              "task_id": "ISSUE-0001::docs",
+              "task": {
+                "id": "ISSUE-0001::docs",
+                "title": "Build backend [docs]",
+                "tags": [
+                  "backend"
+                ],
+                "priority": "low",
+                "effort": 1.5,
+                "work_type": "docs"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Myrle": "ISSUE-0001::docs"
+                }
+              },
+              "joint_reward": 91.26076947690005
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Arletha",
+      "Shari"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "b3cc52e4-69e8-43d5-b31c-1353c9bacd7f",
+        "ts": 1792820976.0395427,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Arletha, Shari"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "8fd9b672-4d5c-4535-82f2-adf55de59800",
+        "ts": 1792820981.4060702,
+        "agent": "Shari",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Shari. I'm considering claiming ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, or ISSUE-0001::docs. My top skill is backend with a score of 0.95. What tasks are you considering, Arletha?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "7e533625-fb23-4bc5-9ba2-d994c2adcd8f",
+        "ts": 1792820986.5914555,
+        "agent": "Shari",
+        "kind": "communication",
+        "payload": {
+          "content": "I am considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, or ISSUE-0001::docs. My top skill is backend with a score of 0.95. What tasks are you considering, Arletha?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "dfa666e0-add6-41bc-8037-3c1ac9b57cee",
+        "ts": 1792820991.1331613,
+        "agent": "Arletha",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Arletha. I'm considering claiming ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, or ISSUE-0001::docs. My top skill is backend with a score of 0.76. What tasks are you considering?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "74fe08c2-951e-40d4-a0fa-aab905cc0073",
+        "ts": 1792821008.2324247,
+        "agent": "Shari",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::review, it has the lowest cost for me. What's your next step, Arletha?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "5f1bf593-c110-485a-9d97-64780cfa2c65",
+        "ts": 1792821011.677991,
+        "agent": "Shari",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::review, it has the lowest cost for me. What's your next step, Arletha?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "8ea9f02e-aa64-401a-9422-949f6c0414ec",
+        "ts": 1792821017.327054,
+        "agent": "Arletha",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering claiming ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, or ISSUE-0001::docs. My top skill is backend with a score of 0.76. I see Shari is considering ISSUE-0001::review, it has the lowest cost for her. I'll wait for further communication before making a decision.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "b708e9bc-b354-47e8-ae65-ebc9a8c1db24",
+        "ts": 1792821038.357707,
+        "agent": "Shari",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Shari",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build backend [review]",
+                "tags": [
+                  "backend"
+                ],
+                "priority": "low",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Shari": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 23.571174161707106
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "d6fffd61-f509-4fc2-ba0d-8fa0d6292d9e",
+        "ts": 1792821040.1324096,
+        "agent": "Arletha",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Arletha",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build backend [implement]",
+                "tags": [
+                  "backend"
+                ],
+                "priority": "low",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Arletha": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 45.0702241416199
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Junko",
+      "Myrle"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "9198b467-b722-42fb-89a9-703294abd529",
+        "ts": 1792820976.0395427,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Junko, Myrle"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "431e734f-39bd-4faf-a9b8-95b1d38d2338",
+        "ts": 1792820994.7829266,
+        "agent": "Junko",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Myrle, I'm considering claiming ISSUE-0001::implement. What's your plan?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "e1dd73c0-3538-4cb1-8d64-27504296a245",
+        "ts": 1792820999.6705153,
+        "agent": "Junko",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Myrle, I'm considering claiming ISSUE-0001::implement. What's your plan?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "347123ab-3733-4e8a-8215-1aea145357f0",
+        "ts": 1792821004.5036745,
+        "agent": "Myrle",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Myrle. I'm considering claiming ISSUE-0001::review or ISSUE-0001::docs. My top skill is backend with a score of 0.74. What tasks are you considering?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "d3a623bf-28a4-49c3-9725-907f11f1cbfb",
+        "ts": 1792821020.7846148,
+        "agent": "Junko",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Myrle, I'm considering claiming ISSUE-0001::implement. My top skill is backend with a score of 0.94. What tasks are you considering?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "944506d3-e998-493e-a5c4-fcc3450aff56",
+        "ts": 1792821029.8436158,
+        "agent": "Junko",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Myrle, I'm considering claiming ISSUE-0001::implement. My top skill is backend with a score of 0.94. What tasks are you considering?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "17067ee0-d445-450a-8090-1670f0c85783",
+        "ts": 1792821035.281354,
+        "agent": "Myrle",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering claiming ISSUE-0001::review or ISSUE-0001::docs. My top skill is backend with a score of 0.74. What tasks are you considering?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "a93628b5-52c9-46de-8d91-077597c1891c",
+        "ts": 1792821042.1779668,
+        "agent": "Junko",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Junko",
+              "task_id": "ISSUE-0001::test",
+              "task": {
+                "id": "ISSUE-0001::test",
+                "title": "Build backend [test]",
+                "tags": [
+                  "backend"
+                ],
+                "priority": "low",
+                "effort": 2.0999999999999996,
+                "work_type": "test"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Junko": "ISSUE-0001::test"
+                }
+              },
+              "joint_reward": 68.05667960858342
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "96cf48f4-35fd-4416-957c-73e70c8e0140",
+        "ts": 1792821043.0666063,
+        "agent": "Myrle",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::docs"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Myrle",
+              "task_id": "ISSUE-0001::docs",
+              "task": {
+                "id": "ISSUE-0001::docs",
+                "title": "Build backend [docs]",
+                "tags": [
+                  "backend"
+                ],
+                "priority": "low",
+                "effort": 1.5,
+                "work_type": "docs"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Myrle": "ISSUE-0001::docs"
+                }
+              },
+              "joint_reward": 91.26076947690005
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

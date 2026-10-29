@@ -1,0 +1,650 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Agripina",
+      "Judi"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "13947f48-123a-4447-9de2-938984fae248",
+        "ts": 1792810597.2777565,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Agripina, Judi"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "2ad9d150-12b8-425f-bae6-56d729f66798",
+        "ts": 1792810600.9559767,
+        "agent": "Agripina",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0002::review, cost=6.67",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "ad206a16-712c-4e9a-b851-42c913d779e1",
+        "ts": 1792810610.900456,
+        "agent": "Judi",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement, cost=3.36 (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "852f4459-b934-4acb-a745-a6480ca0d2ce",
+        "ts": 1792810629.8592134,
+        "agent": "Agripina",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0002::review, cost=6.67",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "1ce6987d-62a1-4b58-acbc-24072821c408",
+        "ts": 1792810631.4627242,
+        "agent": "Agripina",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0002::test, cost=9.34",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "e50565ac-b385-4535-a440-8dcd9df5f7c0",
+        "ts": 1792810640.6334093,
+        "agent": "Judi",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement, cost=3.36",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "48cdad69-c39b-4857-a58d-af015afb23c0",
+        "ts": 1792810654.3752978,
+        "agent": "Agripina",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Agripina",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve ui-ux-design [review]",
+                "tags": [
+                  "ui-ux-design",
+                  "security"
+                ],
+                "priority": "critical",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Agripina": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 33.33138452726114
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "d2de3b8d-8159-4330-a643-bfa9cfb9dd7b",
+        "ts": 1792810658.3281856,
+        "agent": "Judi",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Judi",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Fix security [review]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "high",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Judi": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 95.68385015757833
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Judi",
+      "Vonnie"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "78b4de01-d3c5-42e2-aabc-a7c9bad81efa",
+        "ts": 1792810597.2777565,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Judi, Vonnie"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "0e1846e4-9f00-4a0d-b28d-b136c9c89fb7",
+        "ts": 1792810605.163361,
+        "agent": "Vonnie",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Vonnie. I'm interested in ISSUE-0001::implement. Has anyone else claimed this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "3d493c75-5294-4291-8b02-9db9a07bbb05",
+        "ts": 1792810612.221056,
+        "agent": "Judi",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement, cost=3.36 (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "aa60f436-7270-4e87-8d68-26b199652648",
+        "ts": 1792810634.0474417,
+        "agent": "Vonnie",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement, cost=5.97",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "11a6c619-0af2-42ae-9e3d-15352fb0af1f",
+        "ts": 1792810645.0695536,
+        "agent": "Judi",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement, cost=3.36",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "da8ee8c3-ce94-4ac7-96c1-bf34079cf26b",
+        "ts": 1792810656.0423598,
+        "agent": "Vonnie",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Vonnie",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Fix security [implement]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "high",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Vonnie": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 62.36365765633806
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "560b72e2-9130-4939-956c-40e538349aa7",
+        "ts": 1792810658.3281856,
+        "agent": "Judi",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Judi",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Fix security [review]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "high",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Judi": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 95.68385015757833
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Lilian",
+      "Vonnie"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "4fcb3f46-2e00-48ec-8c63-81c36a24e411",
+        "ts": 1792810597.2777565,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Lilian, Vonnie"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "73f27bce-50be-40b1-bcb8-d6a57f8aa872",
+        "ts": 1792810607.2721715,
+        "agent": "Vonnie",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Vonnie. I'm interested in ISSUE-0001::implement. Has anyone else claimed this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "4e078f9d-b8d1-4c15-b4f9-8047f544194a",
+        "ts": 1792810626.160127,
+        "agent": "Lilian",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Lilian. I'm interested in ISSUE-0001::test. Has anyone else claimed this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "75e72808-b789-4b8c-8905-0fe4b48a636e",
+        "ts": 1792810636.412453,
+        "agent": "Vonnie",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement, cost=5.97",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "ebb979e9-a140-4705-b91e-373919bd4649",
+        "ts": 1792810652.4714909,
+        "agent": "Lilian",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::test, cost=5.03",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "ab324f9c-b18e-4da5-9ad1-59c04bbaef28",
+        "ts": 1792810656.0423598,
+        "agent": "Vonnie",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Vonnie",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Fix security [implement]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "high",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Vonnie": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 62.36365765633806
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "a4f26ce3-14ee-4343-9c9e-41df119abef9",
+        "ts": 1792810660.4953215,
+        "agent": "Lilian",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Lilian",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Fix security [triage]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "high",
+                "effort": 1.2000000000000002,
+                "work_type": "triage"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Lilian": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 127.80939263059517
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Agripina",
+      "Lilian"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "2ebe9cc5-85c1-4b6c-9f93-6681b9fd81c9",
+        "ts": 1792810597.2782717,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Agripina, Lilian"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "3c4daab7-734e-4e3a-9874-d155dde5b03f",
+        "ts": 1792810599.2589235,
+        "agent": "Agripina",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0002::review, cost=6.67",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "8b59e51e-203c-4ccf-83f5-4de848ded65a",
+        "ts": 1792810602.562464,
+        "agent": "Agripina",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0002::test, cost=9.34",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "f6088f21-9eae-4de3-a051-6b20587216c2",
+        "ts": 1792810622.802186,
+        "agent": "Lilian",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::triage, cost=2.87",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "9e99d860-fbd3-4c31-9c9d-29212a8f865b",
+        "ts": 1792810624.3562617,
+        "agent": "Lilian",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0002::review, cost=6.25",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "fa6228d1-afc8-4c8f-a1e9-d3d2b264f85f",
+        "ts": 1792810649.353671,
+        "agent": "Lilian",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::triage, cost=2.87",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "4e6edbc6-ec52-4aab-907a-15e9c9d8c16d",
+        "ts": 1792810650.5489428,
+        "agent": "Lilian",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0002::review, cost=6.25",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "dbfc9be3-f936-476d-88de-fb18fac6cdfb",
+        "ts": 1792810654.3752978,
+        "agent": "Agripina",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Agripina",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve ui-ux-design [review]",
+                "tags": [
+                  "ui-ux-design",
+                  "security"
+                ],
+                "priority": "critical",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Agripina": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 33.33138452726114
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "2690a06b-bb1b-4d8f-a16b-b58c23c050b1",
+        "ts": 1792810660.4953215,
+        "agent": "Lilian",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Lilian",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Fix security [triage]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "high",
+                "effort": 1.2000000000000002,
+                "work_type": "triage"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Lilian": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 127.80939263059517
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

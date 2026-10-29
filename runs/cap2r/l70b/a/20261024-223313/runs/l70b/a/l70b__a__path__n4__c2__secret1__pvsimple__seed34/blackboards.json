@@ -1,0 +1,618 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Coretta",
+      "Shyla"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "2ec17612-2ee7-4cbc-8d7e-9c257aefd81a",
+        "ts": 1792834395.0748954,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent may claim up to 2 micro-tasks in one call (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Coretta, Shyla"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "45b6fc9f-3c2c-4a7e-8e61-ac6393a55eed",
+        "ts": 1792834415.5788531,
+        "agent": "Shyla",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Shyla. I'm interested in ISSUE-0002::review and ISSUE-0002::test. What are your interests?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "222d1247-c9dc-44d6-956c-eeac87903c19",
+        "ts": 1792834428.187038,
+        "agent": "Coretta",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::review and ISSUE-0001::docs. What do you think?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "e208b2df-3a31-462c-887f-bb66234d6418",
+        "ts": 1792834432.7445116,
+        "agent": "Shyla",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::review and ISSUE-0002::test. What are your interests?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "663523eb-3cb1-4c62-ae06-3f56e91cd584",
+        "ts": 1792834439.304486,
+        "agent": "Coretta",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::review",
+              "ISSUE-0001::docs"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Coretta",
+              "task_ids": [
+                "ISSUE-0001::review",
+                "ISSUE-0001::docs"
+              ],
+              "status": "assigned",
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Coretta": [
+                    "ISSUE-0001::review",
+                    "ISSUE-0001::docs"
+                  ]
+                }
+              },
+              "joint_reward": 125.47635257990854
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "b7e26047-7bb5-40ea-86d8-cafe60338329",
+        "ts": 1792834440.5082352,
+        "agent": "Shyla",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0002::review",
+              "ISSUE-0002::test"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Shyla",
+              "task_ids": [
+                "ISSUE-0002::review",
+                "ISSUE-0002::test"
+              ],
+              "status": "assigned",
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Shyla": [
+                    "ISSUE-0002::review",
+                    "ISSUE-0002::test"
+                  ]
+                }
+              },
+              "joint_reward": 191.00499723316398
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Laila",
+      "Marx"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "b858ce7b-7494-48de-a566-1b0b996c35b2",
+        "ts": 1792834395.0748954,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent may claim up to 2 micro-tasks in one call (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Laila, Marx"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "5cb5130d-1a75-490d-b2f2-9c7f10680bcb",
+        "ts": 1792834397.7666104,
+        "agent": "Laila",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Laila. I'm interested in ISSUE-0001::review and ISSUE-0001::docs. What are your interests?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "4ab1e53b-4b5c-4b8d-afe8-dff2001d3f9c",
+        "ts": 1792834403.492862,
+        "agent": "Marx",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Laila, I'm Marx. I'm interested in ISSUE-0001::implement and ISSUE-0001::test. What are your interests?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "e1a839b8-4114-42f9-aafe-db5c8007037e",
+        "ts": 1792834417.9729683,
+        "agent": "Laila",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::review and ISSUE-0001::docs. What are your interests?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "14e2a18a-d3f0-4423-ace4-338184db851b",
+        "ts": 1792834425.3069425,
+        "agent": "Marx",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::implement and ISSUE-0001::test. What are your interests?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "9650a3ab-1cd5-4810-aa62-9fd9af5ac726",
+        "ts": 1792834436.595717,
+        "agent": "Laila",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::review",
+              "ISSUE-0001::docs"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Laila",
+              "task_ids": [
+                "ISSUE-0001::review",
+                "ISSUE-0001::docs"
+              ],
+              "status": "assigned",
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Laila": [
+                    "ISSUE-0001::review",
+                    "ISSUE-0001::docs"
+                  ]
+                }
+              },
+              "joint_reward": 55.207062524868064
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "a4492862-0fbc-4742-b1fa-f0724fba5102",
+        "ts": 1792834437.8510058,
+        "agent": "Marx",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::implement",
+              "ISSUE-0001::test"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Marx",
+              "task_ids": [
+                "ISSUE-0001::implement",
+                "ISSUE-0001::test"
+              ],
+              "status": "assigned",
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Marx": [
+                    "ISSUE-0001::implement",
+                    "ISSUE-0001::test"
+                  ]
+                }
+              },
+              "joint_reward": 107.9640042087176
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Laila",
+      "Shyla"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "11bb04ce-12a4-45f5-b3d3-dee4ab9f59bf",
+        "ts": 1792834395.0748954,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent may claim up to 2 micro-tasks in one call (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Laila, Shyla"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "58d46ba8-da83-4052-9447-a9ac718ab016",
+        "ts": 1792834399.1918213,
+        "agent": "Laila",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Laila. I'm interested in ISSUE-0001::review and ISSUE-0001::docs. What are your interests?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "76346378-7ec7-4121-b539-9a27c3c94dc0",
+        "ts": 1792834413.8855789,
+        "agent": "Shyla",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Shyla. I'm interested in ISSUE-0002::review and ISSUE-0002::test. What are your interests?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "3005dc0f-46b0-48c2-89a0-b6ccb815061b",
+        "ts": 1792834419.2100859,
+        "agent": "Laila",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::review and ISSUE-0001::docs. What are your interests?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "37c7cfe5-ed55-4206-8623-1c63571c91fd",
+        "ts": 1792834434.0093427,
+        "agent": "Shyla",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0002::review and ISSUE-0002::test. What are your interests?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "30713dda-eca0-4e31-b94d-786e264e1eb3",
+        "ts": 1792834436.595717,
+        "agent": "Laila",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::review",
+              "ISSUE-0001::docs"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Laila",
+              "task_ids": [
+                "ISSUE-0001::review",
+                "ISSUE-0001::docs"
+              ],
+              "status": "assigned",
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Laila": [
+                    "ISSUE-0001::review",
+                    "ISSUE-0001::docs"
+                  ]
+                }
+              },
+              "joint_reward": 55.207062524868064
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "08dd91a7-571e-410b-b955-33828fdb1a25",
+        "ts": 1792834440.5082352,
+        "agent": "Shyla",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0002::review",
+              "ISSUE-0002::test"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Shyla",
+              "task_ids": [
+                "ISSUE-0002::review",
+                "ISSUE-0002::test"
+              ],
+              "status": "assigned",
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Shyla": [
+                    "ISSUE-0002::review",
+                    "ISSUE-0002::test"
+                  ]
+                }
+              },
+              "joint_reward": 191.00499723316398
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Coretta",
+      "Marx"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "2195025d-2a65-4554-92f5-196fd087fe21",
+        "ts": 1792834395.0748954,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent may claim up to 2 micro-tasks in one call (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Marx, Coretta"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "fb0f7a1e-8b9c-48f7-a3bb-f9b0f7794830",
+        "ts": 1792834401.8599966,
+        "agent": "Marx",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Coretta, I'm Marx. I'm interested in ISSUE-0001::implement and ISSUE-0001::test. What are your interests?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "6f4f7878-2ac9-4973-ba0d-eb8eece8e00e",
+        "ts": 1792834407.0480251,
+        "agent": "Coretta",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Marx, I'm Coretta. I'm interested in ISSUE-0001::review and ISSUE-0001::docs. What do you think?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "f792cd30-67b9-4277-a16f-6df3e5618cb0",
+        "ts": 1792834412.0043213,
+        "agent": "Coretta",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello Marx, I'm Coretta. I'm interested in ISSUE-0001::review and ISSUE-0001::docs. What do you think?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "ac87ab0e-fb46-4d1c-8bce-6267a3ebe525",
+        "ts": 1792834422.1744592,
+        "agent": "Marx",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::implement and ISSUE-0001::test. What are your interests?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "42b4c84b-5421-4cd8-845c-8a1ad1e785bf",
+        "ts": 1792834426.619702,
+        "agent": "Coretta",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::review and ISSUE-0001::docs. What do you think?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "1d216531-4ed1-4e4a-a7c7-3c4cb28ce62f",
+        "ts": 1792834430.5535743,
+        "agent": "Coretta",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Coretta. I'm interested in ISSUE-0001::review and ISSUE-0001::docs. What are your interests?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "c686512f-5cc9-497b-b81c-1756aaca10e1",
+        "ts": 1792834437.8510058,
+        "agent": "Marx",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::implement",
+              "ISSUE-0001::test"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Marx",
+              "task_ids": [
+                "ISSUE-0001::implement",
+                "ISSUE-0001::test"
+              ],
+              "status": "assigned",
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Marx": [
+                    "ISSUE-0001::implement",
+                    "ISSUE-0001::test"
+                  ]
+                }
+              },
+              "joint_reward": 107.9640042087176
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "5e9b50fc-074b-4e0e-9c6c-e3337bcb16f5",
+        "ts": 1792834439.304486,
+        "agent": "Coretta",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::review",
+              "ISSUE-0001::docs"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Coretta",
+              "task_ids": [
+                "ISSUE-0001::review",
+                "ISSUE-0001::docs"
+              ],
+              "status": "assigned",
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Coretta": [
+                    "ISSUE-0001::review",
+                    "ISSUE-0001::docs"
+                  ]
+                }
+              },
+              "joint_reward": 125.47635257990854
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

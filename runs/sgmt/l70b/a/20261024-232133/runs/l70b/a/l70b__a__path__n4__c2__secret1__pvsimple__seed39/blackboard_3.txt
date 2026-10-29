@@ -1,0 +1,84 @@
+================================================================================
+BLACKBOARD STATE LOG - 3
+Session started: 2026-10-24 23:22:49
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 3
+- Participants: Aurora Industries, Delta Homes
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-24 23:23:56
+Iteration: 1 | Phase: execution | Last Agent: Beacon Works
+Total Events: 16
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 16
+- By Type: context(1), communication(8), action_executed(7)
+- By Agent: SYSTEM(1), Aurora Industries(7), Delta Homes(8)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [23:22:49] [Execution] SYSTEM (context)  Message: "Assign machines to shared renewable sources across 24h to minimise main-grid usage.
+
+This blackboard is a private communication channel.
+Participants: Aurora Industries, Delta Homes"
+
+[Event #2, Iteration: 1] [23:22:52] [Planning] Aurora Industries (communication)  Content: Aurora Industries tentative machine->source choices: EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass
+
+[Event #3, Iteration: 1] [23:22:56] [Planning] Aurora Industries (communication)  Content: Aurora Industries tentative machine->source choices: EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass
+
+[Event #4, Iteration: 1] [23:23:04] [Planning] Delta Homes (communication)  Content: Delta Homes tentative machine->source choices: Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar
+
+[Event #5, Iteration: 1] [23:23:08] [Planning] Delta Homes (communication)  Content: Delta Homes tentative machine->source choices: Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar
+
+[Event #6, Iteration: 1] [23:23:14] [Planning] Aurora Industries (communication)  Content: Aurora Industries tentative machine->source choices: EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass
+
+[Event #7, Iteration: 1] [23:23:17] [Planning] Aurora Industries (communication)  Content: Aurora Industries tentative machine->source choices: EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass
+
+[Event #8, Iteration: 1] [23:23:24] [Planning] Delta Homes (communication)  Content: Delta Homes tentative machine->source choices: Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar
+
+[Event #9, Iteration: 1] [23:23:28] [Planning] Delta Homes (communication)  Content: Delta Homes tentative machine->source choices: Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar
+
+[Event #10, Iteration: 1] [23:23:34] [Execution] Aurora Industries (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_001', 'source_id': 'src_Hydro'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Aurora Industries', 'machine': {'id': 'machine_001', 'label': 'EV charger', 'window': [7, 11], 'power': 1.613760803994092}, 'source_id': 'src_Hydro', 'total_assigned': 1, 'remaining_machines': 15, 'state_updates': {'assignment': {'machine_001': 'src_Hydro'}}, 'joint_reward': 0.0}}
+
+[Event #11, Iteration: 1] [23:23:35] [Execution] Aurora Industries (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_002', 'source_id': 'src_Geothermal'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Aurora Industries', 'machine': {'id': 'machine_002', 'label': 'Water heater', 'window': [9, 13], 'power': 2.026510052112327}, 'source_id': 'src_Geothermal', 'total_assigned': 2, 'remaining_machines': 14, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal'}}, 'joint_reward': 0.0}}
+
+[Event #12, Iteration: 1] [23:23:36] [Execution] Aurora Industries (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_003', 'source_id': 'src_Biomass'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Aurora Industries', 'machine': {'id': 'machine_003', 'label': 'Water heater', 'window': [1, 4], 'power': 3.578026196883504}, 'source_id': 'src_Biomass', 'total_assigned': 3, 'remaining_machines': 13, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass'}}, 'joint_reward': -9.464509123342905}}
+
+[Event #13, Iteration: 1] [23:23:43] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_013', 'source_id': 'src_Hydro'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_013', 'label': 'Assembly line', 'window': [13, 19], 'power': 0.6721759651403145}, 'source_id': 'src_Hydro', 'total_assigned': 8, 'remaining_machines': 8, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass', 'machine_009': 'src_Wind', 'machine_010': 'src_Solar', 'machine_011': 'src_Solar', 'machine_012': 'src_Wind', 'machine_013': 'src_Hydro'}}, 'joint_reward': -9.464509123342905}}
+
+[Event #14, Iteration: 1] [23:23:44] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_014', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_014', 'label': 'Kiln', 'window': [11, 17], 'power': 1.3382166491763252}, 'source_id': 'src_Solar', 'total_assigned': 9, 'remaining_machines': 7, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass', 'machine_009': 'src_Wind', 'machine_010': 'src_Solar', 'machine_011': 'src_Solar', 'machine_012': 'src_Wind', 'machine_013': 'src_Hydro', 'machine_014': 'src_Solar'}}, 'joint_reward': -9.464509123342905}}
+
+[Event #15, Iteration: 1] [23:23:45] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_015', 'source_id': 'src_Wind'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_015', 'label': 'Water heater', 'window': [11, 17], 'power': 1.029459704468459}, 'source_id': 'src_Wind', 'total_assigned': 10, 'remaining_machines': 6, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass', 'machine_009': 'src_Wind', 'machine_010': 'src_Solar', 'machine_011': 'src_Solar', 'machine_012': 'src_Wind', 'machine_013': 'src_Hydro', 'machine_014': 'src_Solar', 'machine_015': 'src_Wind'}}, 'joint_reward': -9.464509123342905}}
+
+[Event #16, Iteration: 1] [23:23:47] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_016', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_016', 'label': 'Irrigation pump', 'window': [14, 17], 'power': 3.9777323716291235}, 'source_id': 'src_Solar', 'total_assigned': 11, 'remaining_machines': 5, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass', 'machine_009': 'src_Wind', 'machine_010': 'src_Solar', 'machine_011': 'src_Solar', 'machine_012': 'src_Wind', 'machine_013': 'src_Hydro', 'machine_014': 'src_Solar', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar'}}, 'joint_reward': -25.313875136068035}}
+
+
+================================================================================
+

@@ -1,0 +1,606 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Classie",
+      "Cliff"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "16913239-09c0-4eef-88ef-4ce57ad753df",
+        "ts": 1792823479.0103307,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Classie, Cliff"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "bc694ba1-ce98-43e6-b589-0724fe90bd32",
+        "ts": 1792823482.2493758,
+        "agent": "Cliff",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Cliff. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "b36e2a48-c7fd-49de-9adb-3728447301ff",
+        "ts": 1792823488.0980382,
+        "agent": "Classie",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Classie. I'm considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement. I have a high skill level in documentation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "f8170f0e-09de-406e-9974-d9ac0b9ba93e",
+        "ts": 1792823510.0520282,
+        "agent": "Cliff",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "61b2c2ad-952f-4eed-83d6-57879b641f84",
+        "ts": 1792823522.1605449,
+        "agent": "Classie",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Classie. I'm considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement. I have a high skill level in documentation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "34df06dc-ed19-4a66-b554-04bca065a719",
+        "ts": 1792823543.3270016,
+        "agent": "Cliff",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cliff",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Fix machine-learning [implement]",
+                "tags": [
+                  "machine-learning"
+                ],
+                "priority": "low",
+                "effort": 6.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Cliff": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 18.65032228377232
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "506b6acd-c806-4cbc-840d-d5fccf12a7c9",
+        "ts": 1792823545.2960274,
+        "agent": "Classie",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Classie",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Build documentation [review]",
+                "tags": [
+                  "documentation"
+                ],
+                "priority": "high",
+                "effort": 4.0,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Classie": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 49.363672084085636
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Classie",
+      "Ian"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "e4b2807d-06ba-4154-9b64-c958863a4018",
+        "ts": 1792823479.0103307,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Classie, Ian"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "36180b3e-badf-4e28-ae9b-ef9ff88472b7",
+        "ts": 1792823490.2011492,
+        "agent": "Classie",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Classie. I'm considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement. I have a high skill level in documentation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "6ae4bb6a-e235-4303-a322-00d6342774b9",
+        "ts": 1792823504.6184325,
+        "agent": "Ian",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Ian. I'm considering tasks ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::triage, ISSUE-0002::review, and ISSUE-0002::test. I have a high skill level in machine-learning and documentation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "f5db880e-ab15-4f22-aa2f-4bfd156b05cf",
+        "ts": 1792823520.24672,
+        "agent": "Classie",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Classie. I'm considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement. I have a high skill level in documentation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "d5a87cf6-5ec2-4aad-9550-e0c39c8ccbd0",
+        "ts": 1792823534.317461,
+        "agent": "Ian",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::triage, ISSUE-0002::review, and ISSUE-0002::test. I have a high skill level in machine-learning and documentation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "c3ed113d-10da-4a75-be46-8d1fca8bcfd1",
+        "ts": 1792823545.2960274,
+        "agent": "Classie",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Classie",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Build documentation [review]",
+                "tags": [
+                  "documentation"
+                ],
+                "priority": "high",
+                "effort": 4.0,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Classie": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 49.363672084085636
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "cf1a8f5b-fc20-437b-93f5-5c5c25ebadb9",
+        "ts": 1792823548.8960304,
+        "agent": "Ian",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Ian",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Fix machine-learning [triage]",
+                "tags": [
+                  "machine-learning"
+                ],
+                "priority": "low",
+                "effort": 2.4000000000000004,
+                "work_type": "triage"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Ian": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 82.78377677735625
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Ian",
+      "Pauline"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "0e8236e8-5ce6-4eba-a3d5-d9d8f90d70ac",
+        "ts": 1792823479.0103307,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Ian, Pauline"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "b142ee28-c7d2-41b7-9624-0237306f5f6b",
+        "ts": 1792823495.8959763,
+        "agent": "Pauline",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Pauline. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, ISSUE-0001::triage, ISSUE-0002::implement, ISSUE-0002::review, and ISSUE-0002::test. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "15e84762-488d-4133-8260-5d7f4d111a3f",
+        "ts": 1792823506.6433744,
+        "agent": "Ian",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Ian. I'm considering tasks ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::triage, ISSUE-0002::review, and ISSUE-0002::test. I have a high skill level in machine-learning and documentation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "fd668063-c4bc-4089-bcf7-7b163c5b6d0d",
+        "ts": 1792823526.6432505,
+        "agent": "Pauline",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Pauline. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, ISSUE-0001::triage, ISSUE-0002::implement, ISSUE-0002::review, and ISSUE-0002::test.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "0e33273c-511f-47dc-9bed-1587d0225ac2",
+        "ts": 1792823536.4023924,
+        "agent": "Ian",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::triage, ISSUE-0002::review, and ISSUE-0002::test. I have a high skill level in machine-learning and documentation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "aa3ec4de-04dd-4d4c-827d-714a201b5804",
+        "ts": 1792823547.0354571,
+        "agent": "Pauline",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Pauline",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Build documentation [review]",
+                "tags": [
+                  "documentation"
+                ],
+                "priority": "high",
+                "effort": 4.0,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Pauline": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 60.69543530388481
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "b7a1baa9-2544-4e75-8f00-69f518a1fdfb",
+        "ts": 1792823548.8960304,
+        "agent": "Ian",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Ian",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Fix machine-learning [triage]",
+                "tags": [
+                  "machine-learning"
+                ],
+                "priority": "low",
+                "effort": 2.4000000000000004,
+                "work_type": "triage"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Ian": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 82.78377677735625
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Cliff",
+      "Pauline"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "aa65dd0f-0eaa-4d76-87a7-0af253414acb",
+        "ts": 1792823479.0103307,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Pauline, Cliff"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "f872d48d-7043-4714-8d9b-27c8f6b81a03",
+        "ts": 1792823483.86172,
+        "agent": "Cliff",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Cliff. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "6f18a566-4db6-4253-a28e-0e7f1ea095a9",
+        "ts": 1792823499.7937946,
+        "agent": "Pauline",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Pauline. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, ISSUE-0001::triage, ISSUE-0002::implement, ISSUE-0002::review, and ISSUE-0002::test. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "ad5aed44-36c7-4c89-8f47-f475ab03febb",
+        "ts": 1792823516.92444,
+        "agent": "Cliff",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "ef1b3e78-786f-46a0-80ed-a6e6072775a1",
+        "ts": 1792823529.7896397,
+        "agent": "Pauline",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Pauline. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, ISSUE-0001::triage, ISSUE-0002::implement, ISSUE-0002::review, and ISSUE-0002::test.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "ad1eb5e8-b8d5-46cd-bd4a-73a34c493090",
+        "ts": 1792823543.3270016,
+        "agent": "Cliff",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cliff",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Fix machine-learning [implement]",
+                "tags": [
+                  "machine-learning"
+                ],
+                "priority": "low",
+                "effort": 6.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Cliff": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 18.65032228377232
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "7c295460-462a-440d-bc48-58b398ecda87",
+        "ts": 1792823547.0354571,
+        "agent": "Pauline",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Pauline",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Build documentation [review]",
+                "tags": [
+                  "documentation"
+                ],
+                "priority": "high",
+                "effort": 4.0,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Pauline": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 60.69543530388481
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

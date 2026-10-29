@@ -1,0 +1,600 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Brooks",
+      "Christel"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "319203ad-9c40-4087-a3a0-9cb5bb188d99",
+        "ts": 1792832712.4220343,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent may claim up to 2 micro-tasks in one call (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Brooks, Christel"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "665bcba6-2bb5-4db8-bfc5-9e071ef94ef6",
+        "ts": 1792832726.0503278,
+        "agent": "Brooks",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Brooks is considering claiming ISSUE-0002::test. Does anyone else want to claim this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "0aa2321f-5449-485f-a300-7f44660f1da5",
+        "ts": 1792832729.9379566,
+        "agent": "Christel",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Christel is considering claiming ISSUE-0001::review and ISSUE-0001::triage. Does anyone else want to claim these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "9957ad8b-42e8-4b57-aef8-d8a1c8c8b0c9",
+        "ts": 1792832747.3058968,
+        "agent": "Brooks",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Brooks is considering claiming ISSUE-0002::test. Does anyone else want to claim this task? (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "8090ee3a-0915-42d7-bfe6-88f6df63d215",
+        "ts": 1792832750.6919072,
+        "agent": "Christel",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Christel is considering claiming ISSUE-0001::review and ISSUE-0001::triage. Does anyone else want to claim these tasks? (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "836b04a5-c545-4c6c-b229-1143d5eaa451",
+        "ts": 1792832758.3138802,
+        "agent": "Brooks",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0002::test"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Brooks",
+              "task_ids": [
+                "ISSUE-0002::test"
+              ],
+              "status": "assigned",
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Brooks": [
+                    "ISSUE-0002::test"
+                  ]
+                }
+              },
+              "joint_reward": 121.23764376353607
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "dcdd87ca-e9da-447d-acc1-dc319445c947",
+        "ts": 1792832760.3251903,
+        "agent": "Christel",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::docs",
+              "ISSUE-0002::review"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Christel",
+              "task_ids": [
+                "ISSUE-0001::docs",
+                "ISSUE-0002::review"
+              ],
+              "status": "assigned",
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Christel": [
+                    "ISSUE-0001::docs",
+                    "ISSUE-0002::review"
+                  ]
+                }
+              },
+              "joint_reward": 165.8834552806083
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Christel",
+      "Tena"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "7fe11e1f-86dd-48b0-a312-8acf4ff65062",
+        "ts": 1792832712.4220343,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent may claim up to 2 micro-tasks in one call (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Christel, Tena"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "00d8b363-ed03-4f40-b014-0ff0d1e5b4ec",
+        "ts": 1792832714.3288388,
+        "agent": "Tena",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Tena is considering claiming ISSUE-0001::implement and ISSUE-0001::test. Does anyone else want to claim these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "5cfb4176-36c8-4469-ac7b-766ea9a22d59",
+        "ts": 1792832731.314659,
+        "agent": "Christel",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Christel is considering claiming ISSUE-0001::review and ISSUE-0001::triage. Does anyone else want to claim these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "ce008f2e-a412-45f5-ba1b-bf86b62e3434",
+        "ts": 1792832734.1096573,
+        "agent": "Tena",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Tena is considering claiming ISSUE-0001::implement and ISSUE-0001::test. Does anyone else want to claim these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "5423dc9d-ad56-40f5-a044-61a8f99ca01b",
+        "ts": 1792832752.617999,
+        "agent": "Christel",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Christel is considering claiming ISSUE-0001::review and ISSUE-0001::triage. Does anyone else want to claim these tasks? (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "e85ad087-424b-4213-888d-76f9ebea8277",
+        "ts": 1792832755.8716538,
+        "agent": "Tena",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::implement",
+              "ISSUE-0001::test"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Tena",
+              "task_ids": [
+                "ISSUE-0001::implement",
+                "ISSUE-0001::test"
+              ],
+              "status": "assigned",
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Tena": [
+                    "ISSUE-0001::implement",
+                    "ISSUE-0001::test"
+                  ]
+                }
+              },
+              "joint_reward": 48.2029234019149
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "9d0b285e-b138-40af-b2fd-47e22b968e5e",
+        "ts": 1792832760.3251903,
+        "agent": "Christel",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::docs",
+              "ISSUE-0002::review"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Christel",
+              "task_ids": [
+                "ISSUE-0001::docs",
+                "ISSUE-0002::review"
+              ],
+              "status": "assigned",
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Christel": [
+                    "ISSUE-0001::docs",
+                    "ISSUE-0002::review"
+                  ]
+                }
+              },
+              "joint_reward": 165.8834552806083
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Maryanne",
+      "Tena"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "b547518f-bb2c-45d6-a476-b2f170200dfe",
+        "ts": 1792832712.4220343,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent may claim up to 2 micro-tasks in one call (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Maryanne, Tena"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "42203dd5-01a0-444b-b49c-79810a1223ff",
+        "ts": 1792832715.623225,
+        "agent": "Tena",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Tena is considering claiming ISSUE-0001::implement and ISSUE-0001::test. Does anyone else want to claim these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "564679ee-9faf-42e5-b7d4-2035cccc23a2",
+        "ts": 1792832720.1084342,
+        "agent": "Maryanne",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Maryanne is considering claiming ISSUE-0001::review and ISSUE-0001::triage. Does anyone else want to claim these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "a3e2ad52-b40b-4e92-b83b-7f000135bb2e",
+        "ts": 1792832735.8559701,
+        "agent": "Tena",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Tena is considering claiming ISSUE-0001::implement and ISSUE-0001::test. Does anyone else want to claim these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "c53728e6-ada8-43de-85ec-35bd31e65448",
+        "ts": 1792832741.0127068,
+        "agent": "Maryanne",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Maryanne is considering claiming ISSUE-0001::review and ISSUE-0001::triage. Does anyone else want to claim these tasks? (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "dfbf5e69-7e7d-4036-bdd2-d724f85acf23",
+        "ts": 1792832755.8716538,
+        "agent": "Tena",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::implement",
+              "ISSUE-0001::test"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Tena",
+              "task_ids": [
+                "ISSUE-0001::implement",
+                "ISSUE-0001::test"
+              ],
+              "status": "assigned",
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Tena": [
+                    "ISSUE-0001::implement",
+                    "ISSUE-0001::test"
+                  ]
+                }
+              },
+              "joint_reward": 48.2029234019149
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "c0157926-9826-4ba5-96f2-e7f75d472348",
+        "ts": 1792832757.2031803,
+        "agent": "Maryanne",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::review",
+              "ISSUE-0001::triage"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Maryanne",
+              "task_ids": [
+                "ISSUE-0001::review",
+                "ISSUE-0001::triage"
+              ],
+              "status": "assigned",
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Maryanne": [
+                    "ISSUE-0001::review",
+                    "ISSUE-0001::triage"
+                  ]
+                }
+              },
+              "joint_reward": 102.20271339488268
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Brooks",
+      "Maryanne"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "2c62142f-7392-410a-bde5-f79bd90770a3",
+        "ts": 1792832712.4220343,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent may claim up to 2 micro-tasks in one call (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Maryanne, Brooks"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "260a3cc2-ff8a-41ae-a520-a43dcd2a5137",
+        "ts": 1792832718.6272292,
+        "agent": "Maryanne",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Maryanne is considering claiming ISSUE-0001::review and ISSUE-0001::triage. Does anyone else want to claim these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "10867587-90cf-47e2-8146-c8ee9b860b3d",
+        "ts": 1792832723.4374754,
+        "agent": "Brooks",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Brooks is considering claiming ISSUE-0002::test. Does anyone else want to claim this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "22ac8c9c-ff59-49c0-89e3-d533cc1ad444",
+        "ts": 1792832739.2555351,
+        "agent": "Maryanne",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Maryanne is considering claiming ISSUE-0001::review and ISSUE-0001::triage. Does anyone else want to claim these tasks? (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "d0159c03-4501-4f99-a853-e788cb249676",
+        "ts": 1792832745.8388596,
+        "agent": "Brooks",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Brooks is considering claiming ISSUE-0002::test. Does anyone else want to claim this task? (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "f1cdf84c-a329-4d07-81a2-ab8dab25333d",
+        "ts": 1792832757.2031803,
+        "agent": "Maryanne",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0001::review",
+              "ISSUE-0001::triage"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Maryanne",
+              "task_ids": [
+                "ISSUE-0001::review",
+                "ISSUE-0001::triage"
+              ],
+              "status": "assigned",
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Maryanne": [
+                    "ISSUE-0001::review",
+                    "ISSUE-0001::triage"
+                  ]
+                }
+              },
+              "joint_reward": 102.20271339488268
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "373db1b5-4acd-4566-9eda-c94a40e67dc8",
+        "ts": 1792832758.3138802,
+        "agent": "Brooks",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_ids": [
+              "ISSUE-0002::test"
+            ]
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Brooks",
+              "task_ids": [
+                "ISSUE-0002::test"
+              ],
+              "status": "assigned",
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Brooks": [
+                    "ISSUE-0002::test"
+                  ]
+                }
+              },
+              "joint_reward": 121.23764376353607
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

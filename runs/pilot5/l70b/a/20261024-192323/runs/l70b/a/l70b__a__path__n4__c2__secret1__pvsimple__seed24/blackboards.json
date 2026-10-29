@@ -1,0 +1,612 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Collen",
+      "Jacalyn"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "678187bc-196c-4ff0-9cc1-e73db4e93fbb",
+        "ts": 1792823175.515895,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Collen, Jacalyn"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "61f30278-864a-4ff0-b72f-048683b364f4",
+        "ts": 1792823178.8528633,
+        "agent": "Jacalyn",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Jacalyn. I'm considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement. My top skill is documentation with a score of 0.81.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "99989fdc-9399-4c68-b2d6-c683824e701a",
+        "ts": 1792823188.847732,
+        "agent": "Collen",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Collen. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. My top skill is infrastructure with a score of 0.79. I'm available for 9 hours.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "73f23d50-98af-412a-8102-63e75ee02fb5",
+        "ts": 1792823210.353406,
+        "agent": "Jacalyn",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement. My top skill is documentation with a score of 0.81.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "2c9c2ab7-d91a-40c5-8d18-5a463c9a48a6",
+        "ts": 1792823219.1486065,
+        "agent": "Collen",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. Top skill is infrastructure with a score of 0.79. Available for 9 hours.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "181c9697-5709-45b4-b671-613f955f19a3",
+        "ts": 1792823243.060439,
+        "agent": "Jacalyn",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jacalyn",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve documentation [review]",
+                "tags": [
+                  "documentation"
+                ],
+                "priority": "medium",
+                "effort": 4.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Jacalyn": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 25.588678649848223
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "6558f0a3-08eb-4be0-bc22-c7fe85cbafa2",
+        "ts": 1792823244.6755342,
+        "agent": "Collen",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Collen",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build mobile-development [implement]",
+                "tags": [
+                  "mobile-development",
+                  "infrastructure"
+                ],
+                "priority": "medium",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Collen": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 49.51029253274187
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Jacalyn",
+      "Laurice"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "a92f0ae2-63cd-4e63-a8b9-81f2d9a7d4c5",
+        "ts": 1792823175.515895,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Jacalyn, Laurice"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "c165be42-78a4-4e53-9e2a-f4464c380337",
+        "ts": 1792823180.5386045,
+        "agent": "Jacalyn",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Jacalyn. I'm considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement. My top skill is documentation with a score of 0.81.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "1efd3e62-0d71-4416-b66a-38a619eff366",
+        "ts": 1792823196.106022,
+        "agent": "Laurice",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Laurice. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. My top skills are infrastructure and mobile-development with scores of 1.00 and 0.80 respectively.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "a1855fcc-f86c-47ca-a15b-cf1afe071fd0",
+        "ts": 1792823212.193597,
+        "agent": "Jacalyn",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement. My top skill is documentation with a score of 0.81.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "f674a769-1673-4a1b-96ab-f2cfadc8fa8b",
+        "ts": 1792823226.2605028,
+        "agent": "Laurice",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. My top skills are infrastructure and mobile-development with scores of 1.00 and 0.80 respectively.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "d9f123d4-e0da-4002-80f2-a2b748154fe8",
+        "ts": 1792823243.060439,
+        "agent": "Jacalyn",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jacalyn",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve documentation [review]",
+                "tags": [
+                  "documentation"
+                ],
+                "priority": "medium",
+                "effort": 4.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Jacalyn": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 25.588678649848223
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "6cd0df8f-7a61-4534-9842-090f022472e6",
+        "ts": 1792823246.2101438,
+        "agent": "Laurice",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Laurice",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Build mobile-development [triage]",
+                "tags": [
+                  "mobile-development",
+                  "infrastructure"
+                ],
+                "priority": "medium",
+                "effort": 1.2000000000000002,
+                "work_type": "triage"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Laurice": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 78.30906442767072
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Laurice",
+      "Ninfa"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "d800b9ae-5329-4b91-91e3-f4e420f7c9e7",
+        "ts": 1792823175.515895,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Laurice, Ninfa"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "68c2018a-d63e-4398-a0c4-78abca3cc5e9",
+        "ts": 1792823198.962666,
+        "agent": "Laurice",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Laurice. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. My top skills are infrastructure and mobile-development with scores of 1.00 and 0.80 respectively.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "c57708b2-ee48-4b62-9fe5-c425c2376d82",
+        "ts": 1792823206.4238253,
+        "agent": "Ninfa",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Ninfa. I'm considering tasks ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::triage, and ISSUE-0002::review. My top skills are documentation and mobile-development with scores of 0.98 and 0.87 respectively. I'm available for 4 hours.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "5a8d1aa2-280b-4d9e-83de-39045ae50a52",
+        "ts": 1792823229.3871605,
+        "agent": "Laurice",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. My top skills are infrastructure and mobile-development with scores of 1.00 and 0.80 respectively.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "e95b3033-163f-488f-a992-8b96cdaa1f1f",
+        "ts": 1792823239.0501463,
+        "agent": "Ninfa",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::triage, and ISSUE-0002::review. My top skills are documentation and mobile-development with scores of 0.98 and 0.87 respectively. I'm available for 4 hours.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "1a71921f-9f36-4510-a136-cc1afeac38b2",
+        "ts": 1792823246.2101438,
+        "agent": "Laurice",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Laurice",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Build mobile-development [triage]",
+                "tags": [
+                  "mobile-development",
+                  "infrastructure"
+                ],
+                "priority": "medium",
+                "effort": 1.2000000000000002,
+                "work_type": "triage"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Laurice": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 78.30906442767072
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "3f72f5c2-f044-4453-a626-7bfedaeec16c",
+        "ts": 1792823247.4680347,
+        "agent": "Ninfa",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Ninfa",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build mobile-development [review]",
+                "tags": [
+                  "mobile-development",
+                  "infrastructure"
+                ],
+                "priority": "medium",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Ninfa": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 105.51181330720308
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Collen",
+      "Ninfa"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "29f92983-c7cd-443c-b0ae-6e3e11974b02",
+        "ts": 1792823175.515895,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Collen, Ninfa"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "3b7e0bc0-e8ce-4d10-983a-e034da64d55e",
+        "ts": 1792823185.1803083,
+        "agent": "Collen",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Collen. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. My top skill is infrastructure with a score of 0.79. I'm available for 9 hours.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "df32a07c-3ecc-4895-832a-e95d4e6bc4c6",
+        "ts": 1792823203.846703,
+        "agent": "Ninfa",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Ninfa. I'm considering tasks ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::triage, and ISSUE-0002::review. My top skills are documentation and mobile-development with scores of 0.98 and 0.87 respectively. I'm available for 4 hours.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "9d8b996e-3a9b-4001-9bb4-ed6c9780cfbe",
+        "ts": 1792823217.2293365,
+        "agent": "Collen",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. Top skill is infrastructure with a score of 0.79. Available for 9 hours.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "74018837-a8ec-46d9-86b5-d7677c150480",
+        "ts": 1792823236.151826,
+        "agent": "Ninfa",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::triage, and ISSUE-0002::review. My top skills are documentation and mobile-development with scores of 0.98 and 0.87 respectively. I'm available for 4 hours.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "58582b61-4ece-4897-a62e-e4a2fccac532",
+        "ts": 1792823244.6755342,
+        "agent": "Collen",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Collen",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build mobile-development [implement]",
+                "tags": [
+                  "mobile-development",
+                  "infrastructure"
+                ],
+                "priority": "medium",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Collen": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 49.51029253274187
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "b0f2f01b-3ed0-44bb-847f-4637e74744a1",
+        "ts": 1792823247.4680347,
+        "agent": "Ninfa",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Ninfa",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build mobile-development [review]",
+                "tags": [
+                  "mobile-development",
+                  "infrastructure"
+                ],
+                "priority": "medium",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Ninfa": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 105.51181330720308
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

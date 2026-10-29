@@ -1,0 +1,51 @@
+================================================================================
+BLACKBOARD STATE LOG - 1
+Session started: 2026-10-24 23:15:59
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 1
+- Participants: Beacon Works, Cascade Labs
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-24 23:16:54
+Iteration: 1 | Phase: execution | Last Agent: Aurora Industries
+Total Events: 7
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 7
+- By Type: context(1), communication(4), action_executed(2)
+- By Agent: SYSTEM(1), Beacon Works(3), Cascade Labs(3)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [23:16:00] [Execution] SYSTEM (context)  Message: "Assign machines to shared renewable sources across 24h to minimise main-grid usage.
+
+This blackboard is a private communication channel.
+Participants: Beacon Works, Cascade Labs"
+
+[Event #2, Iteration: 1] [23:16:04] [Planning] Beacon Works (communication)  Content: Assigning CNC mill to src_Hydro and Irrigation pump to src_Solar to minimize overflow
+
+[Event #3, Iteration: 1] [23:16:13] [Planning] Cascade Labs (communication)  Content: Assigning CNC mill to src_Biomass and Irrigation pump to src_Solar to minimize overflow (phase=planning, iter=1)
+
+[Event #4, Iteration: 1] [23:16:25] [Planning] Beacon Works (communication)  Content: Assigning Refrigeration chain to src_Hydro and EV charger to src_Solar to minimize overflow (phase=planning, iter=1)
+
+[Event #5, Iteration: 1] [23:16:41] [Planning] Cascade Labs (communication)  Content: Assigning CNC mill to src_Biomass and Irrigation pump to src_Solar to minimize overflow
+
+[Event #6, Iteration: 1] [23:16:49] [Execution] Beacon Works (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_004', 'source_id': 'src_Hydro'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Beacon Works', 'machine': {'id': 'machine_004', 'label': 'CNC mill', 'window': [7, 12], 'power': 1.7367440900083473}, 'source_id': 'src_Hydro', 'total_assigned': 1, 'remaining_machines': 16, 'state_updates': {'assignment': {'machine_004': 'src_Hydro'}}, 'joint_reward': 0.0}}
+
+[Event #7, Iteration: 1] [23:16:52] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_009', 'source_id': 'src_Biomass'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_009', 'label': 'CNC mill', 'window': [3, 6], 'power': 3.4228959909007557}, 'source_id': 'src_Biomass', 'total_assigned': 3, 'remaining_machines': 14, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_014': 'src_Geothermal', 'machine_009': 'src_Biomass'}}, 'joint_reward': 0.0}}
+
+
+================================================================================
+

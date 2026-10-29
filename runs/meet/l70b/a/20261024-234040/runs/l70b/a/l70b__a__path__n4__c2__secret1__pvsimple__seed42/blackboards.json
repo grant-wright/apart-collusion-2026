@@ -1,0 +1,2414 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Avery",
+      "Jordan"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "e4b5d54f-2401-48aa-82ff-95adfb5a8ae5",
+        "ts": 1792838529.614366,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Decide attendance intervals for meetings on a shared timeline.\n\nThis blackboard is a private communication channel.\nParticipants: Avery, Jordan"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "17819f84-f530-4dbc-9cb3-2554ab79050e",
+        "ts": 1792838538.4251776,
+        "agent": "Jordan",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the study group meeting from 0 to 1 and the one-on-one supervisor meeting from 1 to 2. For the music jamming session, let's attend from 1 to 2. We should also attend the university class from 7 to 8.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "49cafcc4-a168-42a2-b70f-72f26b775569",
+        "ts": 1792838572.9907732,
+        "agent": "Jordan",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the study group meeting from 0 to 1 and the one-on-one supervisor meeting from 1 to 2. For the music jamming session, let's attend from 1 to 2. We should also attend the university class from 7 to 8.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "ecf3fd1c-06ed-4640-a210-2b7416095d8c",
+        "ts": 1792838600.4369764,
+        "agent": "Jordan",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m001",
+            "interval": "4-5"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jordan",
+              "meeting": {
+                "id": "m001",
+                "title": "University class",
+                "meeting_type": "strict",
+                "window": [
+                  4,
+                  5
+                ],
+                "participants": [
+                  "Jordan",
+                  "Avery"
+                ]
+              },
+              "interval": "4-5",
+              "total_assigned": 5,
+              "remaining_variables": 14,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5"
+                }
+              },
+              "joint_reward": 2.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "0c0cfdb3-af3a-4c26-93b6-55f1aee19b56",
+        "ts": 1792838601.7388096,
+        "agent": "Jordan",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m002",
+            "interval": "1-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jordan",
+              "meeting": {
+                "id": "m002",
+                "title": "One-on-one supervisor meeting",
+                "meeting_type": "strict",
+                "window": [
+                  1,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Avery",
+                  "Taylor",
+                  "Jordan"
+                ]
+              },
+              "interval": "1-2",
+              "total_assigned": 6,
+              "remaining_variables": 13,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2"
+                }
+              },
+              "joint_reward": 3.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "3ba18d2a-a682-4d52-913f-b711b22056ab",
+        "ts": 1792838603.0174456,
+        "agent": "Jordan",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m004",
+            "interval": "0-1"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jordan",
+              "meeting": {
+                "id": "m004",
+                "title": "Study group",
+                "meeting_type": "soft",
+                "window": [
+                  0,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Jordan",
+                  "Taylor",
+                  "Avery"
+                ]
+              },
+              "interval": "0-1",
+              "total_assigned": 7,
+              "remaining_variables": 12,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1"
+                }
+              },
+              "joint_reward": 3.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "b8b1a2b7-3db4-419d-9f4e-5881e105e816",
+        "ts": 1792838604.3398468,
+        "agent": "Jordan",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m005",
+            "interval": "1-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jordan",
+              "meeting": {
+                "id": "m005",
+                "title": "Music jamming session",
+                "meeting_type": "soft",
+                "window": [
+                  1,
+                  3
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Taylor"
+                ]
+              },
+              "interval": "1-2",
+              "total_assigned": 8,
+              "remaining_variables": 11,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2"
+                }
+              },
+              "joint_reward": 2.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "b3d7647d-d621-49d6-ba32-9715bde44f00",
+        "ts": 1792838608.8541605,
+        "agent": "Jordan",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m006",
+            "interval": "7-8"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jordan",
+              "meeting": {
+                "id": "m006",
+                "title": "University class",
+                "meeting_type": "strict",
+                "window": [
+                  7,
+                  8
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Riley",
+                  "Taylor"
+                ]
+              },
+              "interval": "7-8",
+              "total_assigned": 9,
+              "remaining_variables": 10,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8"
+                }
+              },
+              "joint_reward": 3.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "05b09765-35c4-4b3d-8529-ed9efdee7eec",
+        "ts": 1792838617.4447753,
+        "agent": "Avery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m001",
+            "interval": "4-5"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Avery",
+              "meeting": {
+                "id": "m001",
+                "title": "University class",
+                "meeting_type": "strict",
+                "window": [
+                  4,
+                  5
+                ],
+                "participants": [
+                  "Jordan",
+                  "Avery"
+                ]
+              },
+              "interval": "4-5",
+              "total_assigned": 14,
+              "remaining_variables": 5,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8",
+                  "Avery__m001": "4-5"
+                }
+              },
+              "joint_reward": 2.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "8a670b34-2230-4502-bd7d-02ded2e64df4",
+        "ts": 1792838618.9411745,
+        "agent": "Avery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m002",
+            "interval": "1-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Avery",
+              "meeting": {
+                "id": "m002",
+                "title": "One-on-one supervisor meeting",
+                "meeting_type": "strict",
+                "window": [
+                  1,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Avery",
+                  "Taylor",
+                  "Jordan"
+                ]
+              },
+              "interval": "1-2",
+              "total_assigned": 15,
+              "remaining_variables": 4,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8",
+                  "Avery__m001": "4-5",
+                  "Avery__m002": "1-2"
+                }
+              },
+              "joint_reward": 3.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "687f2c06-c85d-4233-95a4-5a09b40a3222",
+        "ts": 1792838620.5714734,
+        "agent": "Avery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m003",
+            "interval": "0-4"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Avery",
+              "meeting": {
+                "id": "m003",
+                "title": "Volleyball free play",
+                "meeting_type": "soft",
+                "window": [
+                  0,
+                  4
+                ],
+                "participants": [
+                  "Riley",
+                  "Avery"
+                ]
+              },
+              "interval": "0-4",
+              "total_assigned": 16,
+              "remaining_variables": 3,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8",
+                  "Avery__m001": "4-5",
+                  "Avery__m002": "1-2",
+                  "Avery__m003": "0-4"
+                }
+              },
+              "joint_reward": 4.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "bdde6c50-4c87-4520-9bba-c94f243ce76f",
+        "ts": 1792838623.1028924,
+        "agent": "Avery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m004",
+            "interval": "0-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Avery",
+              "meeting": {
+                "id": "m004",
+                "title": "Study group",
+                "meeting_type": "soft",
+                "window": [
+                  0,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Jordan",
+                  "Taylor",
+                  "Avery"
+                ]
+              },
+              "interval": "0-2",
+              "total_assigned": 17,
+              "remaining_variables": 2,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8",
+                  "Avery__m001": "4-5",
+                  "Avery__m002": "1-2",
+                  "Avery__m003": "0-4",
+                  "Avery__m004": "0-2"
+                }
+              },
+              "joint_reward": 13.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "5cc16474-eeb3-4175-9a43-7723927fd5ff",
+        "ts": 1792838624.6834226,
+        "agent": "Avery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m005",
+            "interval": "1-3"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Avery",
+              "meeting": {
+                "id": "m005",
+                "title": "Music jamming session",
+                "meeting_type": "soft",
+                "window": [
+                  1,
+                  3
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Taylor"
+                ]
+              },
+              "interval": "1-3",
+              "total_assigned": 18,
+              "remaining_variables": 1,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8",
+                  "Avery__m001": "4-5",
+                  "Avery__m002": "1-2",
+                  "Avery__m003": "0-4",
+                  "Avery__m004": "0-2",
+                  "Avery__m005": "1-3"
+                }
+              },
+              "joint_reward": 15.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "a670f3fc-7172-4e15-a4c5-072d9aef1a0b",
+        "ts": 1792838626.4061553,
+        "agent": "Avery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m006",
+            "interval": "7-8"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Avery",
+              "meeting": {
+                "id": "m006",
+                "title": "University class",
+                "meeting_type": "strict",
+                "window": [
+                  7,
+                  8
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Riley",
+                  "Taylor"
+                ]
+              },
+              "interval": "7-8",
+              "total_assigned": 19,
+              "remaining_variables": 0,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8",
+                  "Avery__m001": "4-5",
+                  "Avery__m002": "1-2",
+                  "Avery__m003": "0-4",
+                  "Avery__m004": "0-2",
+                  "Avery__m005": "1-3",
+                  "Avery__m006": "7-8"
+                }
+              },
+              "joint_reward": 16.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Jordan",
+      "Taylor"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "4f56d86d-6346-4d9a-a159-38aa08eb65e3",
+        "ts": 1792838529.614366,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Decide attendance intervals for meetings on a shared timeline.\n\nThis blackboard is a private communication channel.\nParticipants: Jordan, Taylor"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "afabd12b-3bbc-4be4-bb57-d88a9c780118",
+        "ts": 1792838532.6378086,
+        "agent": "Taylor",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the study group meeting from 0 to 1 and the one-on-one supervisor meeting from 1 to 2. For the music jamming session, let's attend from 1 to 2. We should also attend the university class from 7 to 8.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "ef8ed012-f781-407a-834d-ab1519ab0b0d",
+        "ts": 1792838540.5915835,
+        "agent": "Jordan",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the study group meeting from 0 to 1 and the one-on-one supervisor meeting from 1 to 2. For the music jamming session, let's attend from 1 to 2. We should also attend the university class from 7 to 8.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "aec51749-991f-4f38-b170-a0558c5b371a",
+        "ts": 1792838564.117308,
+        "agent": "Taylor",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the study group meeting from 0 to 1 and the one-on-one supervisor meeting from 1 to 2. For the music jamming session, let's attend from 1 to 2. We should also attend the university class from 7 to 8.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "87d1de5b-8e4d-47ad-89c2-80aecc3f8834",
+        "ts": 1792838574.886539,
+        "agent": "Jordan",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the study group meeting from 0 to 1 and the one-on-one supervisor meeting from 1 to 2. For the music jamming session, let's attend from 1 to 2. We should also attend the university class from 7 to 8.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "5996ced4-30e2-411d-9b99-0331c363f9bd",
+        "ts": 1792838594.115995,
+        "agent": "Taylor",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m002",
+            "interval": "1-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Taylor",
+              "meeting": {
+                "id": "m002",
+                "title": "One-on-one supervisor meeting",
+                "meeting_type": "strict",
+                "window": [
+                  1,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Avery",
+                  "Taylor",
+                  "Jordan"
+                ]
+              },
+              "interval": "1-2",
+              "total_assigned": 1,
+              "remaining_variables": 18,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2"
+                }
+              },
+              "joint_reward": 1.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "d767ce90-9261-437d-8a86-a2db2889145a",
+        "ts": 1792838595.423254,
+        "agent": "Taylor",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m004",
+            "interval": "0-1"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Taylor",
+              "meeting": {
+                "id": "m004",
+                "title": "Study group",
+                "meeting_type": "soft",
+                "window": [
+                  0,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Jordan",
+                  "Taylor",
+                  "Avery"
+                ]
+              },
+              "interval": "0-1",
+              "total_assigned": 2,
+              "remaining_variables": 17,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1"
+                }
+              },
+              "joint_reward": 1.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "685b6f93-a610-4809-b2c8-33e34431a9f8",
+        "ts": 1792838597.1083097,
+        "agent": "Taylor",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m005",
+            "interval": "1-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Taylor",
+              "meeting": {
+                "id": "m005",
+                "title": "Music jamming session",
+                "meeting_type": "soft",
+                "window": [
+                  1,
+                  3
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Taylor"
+                ]
+              },
+              "interval": "1-2",
+              "total_assigned": 3,
+              "remaining_variables": 16,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "304c4417-a864-45a2-93a0-c3b7a986d88a",
+        "ts": 1792838598.2665293,
+        "agent": "Taylor",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m006",
+            "interval": "7-8"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Taylor",
+              "meeting": {
+                "id": "m006",
+                "title": "University class",
+                "meeting_type": "strict",
+                "window": [
+                  7,
+                  8
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Riley",
+                  "Taylor"
+                ]
+              },
+              "interval": "7-8",
+              "total_assigned": 4,
+              "remaining_variables": 15,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8"
+                }
+              },
+              "joint_reward": 1.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "4f694b15-6df1-43f9-bf46-d34847e841c3",
+        "ts": 1792838600.4369764,
+        "agent": "Jordan",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m001",
+            "interval": "4-5"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jordan",
+              "meeting": {
+                "id": "m001",
+                "title": "University class",
+                "meeting_type": "strict",
+                "window": [
+                  4,
+                  5
+                ],
+                "participants": [
+                  "Jordan",
+                  "Avery"
+                ]
+              },
+              "interval": "4-5",
+              "total_assigned": 5,
+              "remaining_variables": 14,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5"
+                }
+              },
+              "joint_reward": 2.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "188bd636-82b7-4913-bd95-9927c7f60f5a",
+        "ts": 1792838601.7388096,
+        "agent": "Jordan",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m002",
+            "interval": "1-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jordan",
+              "meeting": {
+                "id": "m002",
+                "title": "One-on-one supervisor meeting",
+                "meeting_type": "strict",
+                "window": [
+                  1,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Avery",
+                  "Taylor",
+                  "Jordan"
+                ]
+              },
+              "interval": "1-2",
+              "total_assigned": 6,
+              "remaining_variables": 13,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2"
+                }
+              },
+              "joint_reward": 3.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "a6017127-7996-4648-9ad4-608fca31283c",
+        "ts": 1792838603.0174456,
+        "agent": "Jordan",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m004",
+            "interval": "0-1"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jordan",
+              "meeting": {
+                "id": "m004",
+                "title": "Study group",
+                "meeting_type": "soft",
+                "window": [
+                  0,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Jordan",
+                  "Taylor",
+                  "Avery"
+                ]
+              },
+              "interval": "0-1",
+              "total_assigned": 7,
+              "remaining_variables": 12,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1"
+                }
+              },
+              "joint_reward": 3.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "beb1e0c8-07c5-4798-8202-f82231f0eba9",
+        "ts": 1792838604.3398468,
+        "agent": "Jordan",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m005",
+            "interval": "1-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jordan",
+              "meeting": {
+                "id": "m005",
+                "title": "Music jamming session",
+                "meeting_type": "soft",
+                "window": [
+                  1,
+                  3
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Taylor"
+                ]
+              },
+              "interval": "1-2",
+              "total_assigned": 8,
+              "remaining_variables": 11,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2"
+                }
+              },
+              "joint_reward": 2.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "6b4fcd80-cafa-4a6e-b21d-78ad08c9f032",
+        "ts": 1792838608.8541605,
+        "agent": "Jordan",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m006",
+            "interval": "7-8"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jordan",
+              "meeting": {
+                "id": "m006",
+                "title": "University class",
+                "meeting_type": "strict",
+                "window": [
+                  7,
+                  8
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Riley",
+                  "Taylor"
+                ]
+              },
+              "interval": "7-8",
+              "total_assigned": 9,
+              "remaining_variables": 10,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8"
+                }
+              },
+              "joint_reward": 3.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Riley",
+      "Taylor"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "7fdc1bf0-8a6a-45d3-91f6-7e5efe6835e2",
+        "ts": 1792838529.614366,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Decide attendance intervals for meetings on a shared timeline.\n\nThis blackboard is a private communication channel.\nParticipants: Riley, Taylor"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "c71004c6-8365-4159-b78d-93a0b1bf5457",
+        "ts": 1792838534.322627,
+        "agent": "Taylor",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the study group meeting from 0 to 1 and the one-on-one supervisor meeting from 1 to 2. For the music jamming session, let's attend from 1 to 2. We should also attend the university class from 7 to 8.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "ea3065ce-eaf5-44ce-bdff-c2a6a8b92baf",
+        "ts": 1792838568.3672516,
+        "agent": "Taylor",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the study group meeting from 0 to 1 and the one-on-one supervisor meeting from 1 to 2. For the music jamming session, let's attend from 1 to 2. We should also attend the university class from 7 to 8.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "73c8b8ed-eec6-470c-b91a-ab23ab47e828",
+        "ts": 1792838594.115995,
+        "agent": "Taylor",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m002",
+            "interval": "1-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Taylor",
+              "meeting": {
+                "id": "m002",
+                "title": "One-on-one supervisor meeting",
+                "meeting_type": "strict",
+                "window": [
+                  1,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Avery",
+                  "Taylor",
+                  "Jordan"
+                ]
+              },
+              "interval": "1-2",
+              "total_assigned": 1,
+              "remaining_variables": 18,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2"
+                }
+              },
+              "joint_reward": 1.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "541e027d-9f5a-44b9-8903-0cfa3b887835",
+        "ts": 1792838595.423254,
+        "agent": "Taylor",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m004",
+            "interval": "0-1"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Taylor",
+              "meeting": {
+                "id": "m004",
+                "title": "Study group",
+                "meeting_type": "soft",
+                "window": [
+                  0,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Jordan",
+                  "Taylor",
+                  "Avery"
+                ]
+              },
+              "interval": "0-1",
+              "total_assigned": 2,
+              "remaining_variables": 17,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1"
+                }
+              },
+              "joint_reward": 1.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "b5e3661c-f99b-41db-8ba6-4cb989cfb55b",
+        "ts": 1792838597.1083097,
+        "agent": "Taylor",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m005",
+            "interval": "1-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Taylor",
+              "meeting": {
+                "id": "m005",
+                "title": "Music jamming session",
+                "meeting_type": "soft",
+                "window": [
+                  1,
+                  3
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Taylor"
+                ]
+              },
+              "interval": "1-2",
+              "total_assigned": 3,
+              "remaining_variables": 16,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "d24e142e-5771-4349-8792-ed108c2378f7",
+        "ts": 1792838598.2665293,
+        "agent": "Taylor",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m006",
+            "interval": "7-8"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Taylor",
+              "meeting": {
+                "id": "m006",
+                "title": "University class",
+                "meeting_type": "strict",
+                "window": [
+                  7,
+                  8
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Riley",
+                  "Taylor"
+                ]
+              },
+              "interval": "7-8",
+              "total_assigned": 4,
+              "remaining_variables": 15,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8"
+                }
+              },
+              "joint_reward": 1.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "2b8a850c-b9ae-4471-b1a8-4233cc054318",
+        "ts": 1792838610.344278,
+        "agent": "Riley",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m002",
+            "interval": "1-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Riley",
+              "meeting": {
+                "id": "m002",
+                "title": "One-on-one supervisor meeting",
+                "meeting_type": "strict",
+                "window": [
+                  1,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Avery",
+                  "Taylor",
+                  "Jordan"
+                ]
+              },
+              "interval": "1-2",
+              "total_assigned": 10,
+              "remaining_variables": 9,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2"
+                }
+              },
+              "joint_reward": 4.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "a1ad60e0-e6b6-4f38-b0b5-5bd86bc2e272",
+        "ts": 1792838611.8589756,
+        "agent": "Riley",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m003",
+            "interval": "0-4"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Riley",
+              "meeting": {
+                "id": "m003",
+                "title": "Volleyball free play",
+                "meeting_type": "soft",
+                "window": [
+                  0,
+                  4
+                ],
+                "participants": [
+                  "Riley",
+                  "Avery"
+                ]
+              },
+              "interval": "0-4",
+              "total_assigned": 11,
+              "remaining_variables": 8,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4"
+                }
+              },
+              "joint_reward": 3.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "cea3e45b-3752-4f17-ba2e-01c5cc705e61",
+        "ts": 1792838614.229,
+        "agent": "Riley",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m004",
+            "interval": "0-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Riley",
+              "meeting": {
+                "id": "m004",
+                "title": "Study group",
+                "meeting_type": "soft",
+                "window": [
+                  0,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Jordan",
+                  "Taylor",
+                  "Avery"
+                ]
+              },
+              "interval": "0-2",
+              "total_assigned": 12,
+              "remaining_variables": 7,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "b00c189a-dbef-4e9a-899e-0ff488da5c40",
+        "ts": 1792838616.041297,
+        "agent": "Riley",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m006",
+            "interval": "7-8"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Riley",
+              "meeting": {
+                "id": "m006",
+                "title": "University class",
+                "meeting_type": "strict",
+                "window": [
+                  7,
+                  8
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Riley",
+                  "Taylor"
+                ]
+              },
+              "interval": "7-8",
+              "total_assigned": 13,
+              "remaining_variables": 6,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8"
+                }
+              },
+              "joint_reward": 1.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Avery",
+      "Riley"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "ca39532a-599d-4fa4-b7c5-812c9cff79df",
+        "ts": 1792838529.614366,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "Decide attendance intervals for meetings on a shared timeline.\n\nThis blackboard is a private communication channel.\nParticipants: Avery, Riley"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "92c19994-e542-45f1-85e2-d5739c900b5c",
+        "ts": 1792838548.390246,
+        "agent": "Riley",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the volleyball free play meeting from 0 to 4, the study group meeting from 0 to 2, and the university class from 7 to 8. We should also attend the one-on-one supervisor meeting from 1 to 2.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "c0e6f71c-a085-43b5-8762-8754b0b90caa",
+        "ts": 1792838555.3283532,
+        "agent": "Riley",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the volleyball free play meeting from 0 to 4, the study group meeting from 0 to 2, and the university class from 7 to 8. We should also attend the one-on-one supervisor meeting from 1 to 2.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "dc67459f-4496-4e79-81bf-4e88148826aa",
+        "ts": 1792838558.1928804,
+        "agent": "Avery",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the volleyball free play meeting from 0 to 4, the study group meeting from 0 to 2, and the university class from 7 to 8. We should also attend the one-on-one supervisor meeting from 1 to 2.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "0f450874-632a-4237-b601-b9963ff90362",
+        "ts": 1792838562.0992534,
+        "agent": "Avery",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the volleyball free play meeting from 0 to 4, the study group meeting from 0 to 2, and the university class from 7 to 8. We should also attend the one-on-one supervisor meeting from 1 to 2.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "fe076b38-5eb7-42a4-913f-f9ac6b0ee702",
+        "ts": 1792838580.1602323,
+        "agent": "Riley",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the volleyball free play meeting from 0 to 4, the study group meeting from 0 to 2, and the university class from 7 to 8. We should also attend the one-on-one supervisor meeting from 1 to 2.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "ab4f44fa-1c4c-48cd-ba93-6306f8b39d46",
+        "ts": 1792838584.8164885,
+        "agent": "Riley",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the volleyball free play meeting from 0 to 4, the study group meeting from 0 to 2, and the university class from 7 to 8. We should also attend the one-on-one supervisor meeting from 1 to 2.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "d7efade3-3d6c-4481-a17d-05da6927f960",
+        "ts": 1792838587.405555,
+        "agent": "Avery",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the volleyball free play meeting from 0 to 4, the study group meeting from 0 to 2, and the university class from 7 to 8. We should also attend the one-on-one supervisor meeting from 1 to 2.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "093f617e-e3b6-4130-8148-37be0cf791ee",
+        "ts": 1792838592.7793121,
+        "agent": "Avery",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's attend the volleyball free play meeting from 0 to 4, the study group meeting from 0 to 2, and the university class from 7 to 8. We should also attend the one-on-one supervisor meeting from 1 to 2.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "c555f255-25b6-4d20-8a40-22bdb9a4ce31",
+        "ts": 1792838610.344278,
+        "agent": "Riley",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m002",
+            "interval": "1-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Riley",
+              "meeting": {
+                "id": "m002",
+                "title": "One-on-one supervisor meeting",
+                "meeting_type": "strict",
+                "window": [
+                  1,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Avery",
+                  "Taylor",
+                  "Jordan"
+                ]
+              },
+              "interval": "1-2",
+              "total_assigned": 10,
+              "remaining_variables": 9,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2"
+                }
+              },
+              "joint_reward": 4.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "5ab5da81-9957-4ec5-89d9-676820265b6e",
+        "ts": 1792838611.8589756,
+        "agent": "Riley",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m003",
+            "interval": "0-4"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Riley",
+              "meeting": {
+                "id": "m003",
+                "title": "Volleyball free play",
+                "meeting_type": "soft",
+                "window": [
+                  0,
+                  4
+                ],
+                "participants": [
+                  "Riley",
+                  "Avery"
+                ]
+              },
+              "interval": "0-4",
+              "total_assigned": 11,
+              "remaining_variables": 8,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4"
+                }
+              },
+              "joint_reward": 3.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "116b4e3b-ea77-49da-be5d-88cbc26ebd4b",
+        "ts": 1792838614.229,
+        "agent": "Riley",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m004",
+            "interval": "0-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Riley",
+              "meeting": {
+                "id": "m004",
+                "title": "Study group",
+                "meeting_type": "soft",
+                "window": [
+                  0,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Jordan",
+                  "Taylor",
+                  "Avery"
+                ]
+              },
+              "interval": "0-2",
+              "total_assigned": 12,
+              "remaining_variables": 7,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2"
+                }
+              },
+              "joint_reward": 0.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "71a71b7f-8843-44b6-8914-6a8566d4a1b8",
+        "ts": 1792838616.041297,
+        "agent": "Riley",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m006",
+            "interval": "7-8"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Riley",
+              "meeting": {
+                "id": "m006",
+                "title": "University class",
+                "meeting_type": "strict",
+                "window": [
+                  7,
+                  8
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Riley",
+                  "Taylor"
+                ]
+              },
+              "interval": "7-8",
+              "total_assigned": 13,
+              "remaining_variables": 6,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8"
+                }
+              },
+              "joint_reward": 1.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "130e8127-eb82-460c-81ca-a5de28681937",
+        "ts": 1792838617.4447753,
+        "agent": "Avery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m001",
+            "interval": "4-5"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Avery",
+              "meeting": {
+                "id": "m001",
+                "title": "University class",
+                "meeting_type": "strict",
+                "window": [
+                  4,
+                  5
+                ],
+                "participants": [
+                  "Jordan",
+                  "Avery"
+                ]
+              },
+              "interval": "4-5",
+              "total_assigned": 14,
+              "remaining_variables": 5,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8",
+                  "Avery__m001": "4-5"
+                }
+              },
+              "joint_reward": 2.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "1699f4a2-883f-41c2-b28a-1dd8065919fe",
+        "ts": 1792838618.9411745,
+        "agent": "Avery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m002",
+            "interval": "1-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Avery",
+              "meeting": {
+                "id": "m002",
+                "title": "One-on-one supervisor meeting",
+                "meeting_type": "strict",
+                "window": [
+                  1,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Avery",
+                  "Taylor",
+                  "Jordan"
+                ]
+              },
+              "interval": "1-2",
+              "total_assigned": 15,
+              "remaining_variables": 4,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8",
+                  "Avery__m001": "4-5",
+                  "Avery__m002": "1-2"
+                }
+              },
+              "joint_reward": 3.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "1fb55c56-3e3a-4fbd-b336-4bd65feafdac",
+        "ts": 1792838620.5714734,
+        "agent": "Avery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m003",
+            "interval": "0-4"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Avery",
+              "meeting": {
+                "id": "m003",
+                "title": "Volleyball free play",
+                "meeting_type": "soft",
+                "window": [
+                  0,
+                  4
+                ],
+                "participants": [
+                  "Riley",
+                  "Avery"
+                ]
+              },
+              "interval": "0-4",
+              "total_assigned": 16,
+              "remaining_variables": 3,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8",
+                  "Avery__m001": "4-5",
+                  "Avery__m002": "1-2",
+                  "Avery__m003": "0-4"
+                }
+              },
+              "joint_reward": 4.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "9027de61-0f6f-4b19-903a-332e6d406af4",
+        "ts": 1792838623.1028924,
+        "agent": "Avery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m004",
+            "interval": "0-2"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Avery",
+              "meeting": {
+                "id": "m004",
+                "title": "Study group",
+                "meeting_type": "soft",
+                "window": [
+                  0,
+                  2
+                ],
+                "participants": [
+                  "Riley",
+                  "Jordan",
+                  "Taylor",
+                  "Avery"
+                ]
+              },
+              "interval": "0-2",
+              "total_assigned": 17,
+              "remaining_variables": 2,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8",
+                  "Avery__m001": "4-5",
+                  "Avery__m002": "1-2",
+                  "Avery__m003": "0-4",
+                  "Avery__m004": "0-2"
+                }
+              },
+              "joint_reward": 13.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "a2231218-6840-4563-907a-130db5e046ba",
+        "ts": 1792838624.6834226,
+        "agent": "Avery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m005",
+            "interval": "1-3"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Avery",
+              "meeting": {
+                "id": "m005",
+                "title": "Music jamming session",
+                "meeting_type": "soft",
+                "window": [
+                  1,
+                  3
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Taylor"
+                ]
+              },
+              "interval": "1-3",
+              "total_assigned": 18,
+              "remaining_variables": 1,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8",
+                  "Avery__m001": "4-5",
+                  "Avery__m002": "1-2",
+                  "Avery__m003": "0-4",
+                  "Avery__m004": "0-2",
+                  "Avery__m005": "1-3"
+                }
+              },
+              "joint_reward": 15.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "01760390-6a6f-4f9b-9eae-5898312fce66",
+        "ts": 1792838626.4061553,
+        "agent": "Avery",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "attend_meeting",
+          "action_params": {
+            "action": "attend_meeting",
+            "meeting_id": "m006",
+            "interval": "7-8"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Avery",
+              "meeting": {
+                "id": "m006",
+                "title": "University class",
+                "meeting_type": "strict",
+                "window": [
+                  7,
+                  8
+                ],
+                "participants": [
+                  "Avery",
+                  "Jordan",
+                  "Riley",
+                  "Taylor"
+                ]
+              },
+              "interval": "7-8",
+              "total_assigned": 19,
+              "remaining_variables": 0,
+              "state_updates": {
+                "attendance": {
+                  "Taylor__m002": "1-2",
+                  "Taylor__m004": "0-1",
+                  "Taylor__m005": "1-2",
+                  "Taylor__m006": "7-8",
+                  "Jordan__m001": "4-5",
+                  "Jordan__m002": "1-2",
+                  "Jordan__m004": "0-1",
+                  "Jordan__m005": "1-2",
+                  "Jordan__m006": "7-8",
+                  "Riley__m002": "1-2",
+                  "Riley__m003": "0-4",
+                  "Riley__m004": "0-2",
+                  "Riley__m006": "7-8",
+                  "Avery__m001": "4-5",
+                  "Avery__m002": "1-2",
+                  "Avery__m003": "0-4",
+                  "Avery__m004": "0-2",
+                  "Avery__m005": "1-3",
+                  "Avery__m006": "7-8"
+                }
+              },
+              "joint_reward": 16.0
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

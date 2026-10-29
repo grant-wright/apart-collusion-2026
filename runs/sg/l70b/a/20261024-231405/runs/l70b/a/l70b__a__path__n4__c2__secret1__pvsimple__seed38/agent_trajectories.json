@@ -1,0 +1,226 @@
+{
+  "Cascade Labs": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": ""
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Assigning machine_008 to src_Geothermal, machine_009 to src_Biomass, machine_010 to src_Solar, machine_011 to src_Geothermal, machine_012 to src_Biomass, machine_013 to src_Solar\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Assigning machine_008 to src_Geothermal, machine_009 to src_Biomass, machine_010 to src_Solar, machine_011 to src_Geothermal, machine_012 to src_Biomass, machine_013 to src_Solar\", \"blackboard_id\": 2}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Assigning machine_008 to src_Geothermal, machine_009 to src_Biomass, machine_010 to src_Solar, machine_011 to src_Geothermal, machine_012 to src_Biomass, machine_013 to src_Solar\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Assigning machine_008 to src_Geothermal, machine_009 to src_Biomass, machine_010 to src_Solar, machine_011 to src_Geothermal, machine_012 to src_Biomass, machine_013 to src_Solar\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post the message \"Assigning machine_008 to src_Geothermal, machine_009 to src_Biomass, machine_010 to src_Solar, machine_011 to src_Geothermal, machine_012 to src_Biomass, machine_013 to src_Solar\" to blackboard 1 and blackboard 2, respectively. This will inform other agents on these blackboards of the tentative machine->source choices for Cascade Labs."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_source -- {\"machine_id\": \"machine_008\", \"source_id\": \"src_Geothermal\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Aurora Industries": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Aurora Industries: Assigning machine_001 to src_Hydro, machine_002 to src_Biomass, machine_003 to src_Wind, and machine_004 to src_Hydro\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This function call posts a message to the blackboard with ID 3, which is a private communication channel between Aurora Industries and Delta Homes. The message communicates Aurora Industries' tentative machine->source choices for the planning phase."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Aurora Industries: Assigning machine_001 to src_Hydro, machine_002 to src_Biomass, machine_003 to src_Wind, and machine_004 to src_Hydro\", \"blackboard_id\": 3}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Aurora Industries: Assigning machine_001 to src_Hydro, machine_002 to src_Biomass, machine_003 to src_Wind, and machine_004 to src_Hydro\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This function call posts a message to the blackboard with ID 3, which is the private communication channel for the coalition between Aurora Industries and Delta Homes. The message communicates the tentative assignment of machines to shared renewable sources for the current planning phase."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Aurora Industries: Assigning machine_001 to src_Hydro, machine_002 to src_Biomass, machine_003 to src_Wind, and machine_004 to src_Hydro\", \"blackboard_id\": \"3\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_source -- {\"machine_id\": \"machine_001\", \"source_id\": \"src_Hydro\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Beacon Works": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentatively assigning machine_005 to src_Geothermal, machine_006 to src_Solar, and machine_007 to src_Wind\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentatively assigning machine_005 to src_Geothermal, machine_006 to src_Solar, and machine_007 to src_Wind\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These messages are posted to communicate the tentative assignments of machines to shared renewable sources. This is done to discuss and coordinate with other sites, such as Aurora Industries and Cascade Labs, to minimize main-grid usage and stay within capacity."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentatively assigning machine_005 to src_Geothermal, machine_006 to src_Solar, and machine_007 to src_Wind (phase=planning, iter=1)\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentatively assigning machine_005 to src_Geothermal, machine_006 to src_Solar, and machine_007 to src_Wind (phase=planning, iter=1)\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls post a message to both Blackboard 0 and Blackboard 1, communicating the tentative assignment of machines to shared renewable sources. This allows for coordination and discussion with other sites, such as Aurora Industries and Cascade Labs, to minimize main-grid usage."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_source -- {\"machine_id\": \"machine_005\", \"source_id\": \"src_Geothermal\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Delta Homes": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Delta Homes: Assigning machine_014 to src_Hydro, machine_015 to src_Biomass, machine_016 to src_Hydro, and machine_017 to src_Biomass (phase=planning, iter=1)\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This function call posts a message to the blackboard with ID 3, which is the private communication channel for the coalition members Aurora Industries and Delta Homes. The message communicates Delta Homes' tentative machine->source choices for the planning phase."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Delta Homes: Assigning machine_014 to src_Hydro, machine_015 to src_Biomass, machine_016 to src_Hydro, and machine_017 to src_Biomass (phase=planning, iter=1)\", \"blackboard_id\": 3}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Assigning machine_014 to src_Hydro, machine_015 to src_Biomass, machine_016 to src_Hydro, and machine_017 to src_Biomass\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This function call posts a message to the blackboard with ID 3, indicating the assignment of machines to sources for the planning phase. The message includes the specific machine-source assignments for Delta Homes."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Assigning machine_014 to src_Hydro, machine_015 to src_Biomass, machine_016 to src_Hydro, and machine_017 to src_Biomass\", \"blackboard_id\": \"3\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_source -- {\"machine_id\": \"machine_014\", \"source_id\": \"src_Hydro\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

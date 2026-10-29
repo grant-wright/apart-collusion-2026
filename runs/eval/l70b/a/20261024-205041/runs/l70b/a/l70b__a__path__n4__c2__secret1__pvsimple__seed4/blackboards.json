@@ -1,0 +1,606 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Jung",
+      "Tawna"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "b177f5e3-858b-47c9-8039-e61a19f77306",
+        "ts": 1792828287.866906,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Jung, Tawna"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "1501d775-5cea-43db-88e7-481303ab2fda",
+        "ts": 1792828289.8287513,
+        "agent": "Tawna",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Tawna. I'm considering claiming ISSUE-0002::review or ISSUE-0002::test. What are your thoughts?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "b4d466a8-5e50-4f9b-9c68-0a4905e06bca",
+        "ts": 1792828300.6346326,
+        "agent": "Jung",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering claiming ISSUE-0002::review or ISSUE-0002::test, what are your thoughts?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "8ee17474-657b-469e-96f5-896accd1c946",
+        "ts": 1792828308.3522503,
+        "agent": "Tawna",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Tawna. I'm considering claiming ISSUE-0002::review or ISSUE-0002::test. What are your thoughts?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "f91a885e-fa6d-4990-a870-151d34dc9f4c",
+        "ts": 1792828327.480386,
+        "agent": "Tawna",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Tawna",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Fix frontend [review]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "low",
+                "effort": 1.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Tawna": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 23.774293918673624
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "f6fbf87e-0d9c-4db7-87a9-b4475c1b55a4",
+        "ts": 1792828329.9777398,
+        "agent": "Jung",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jung",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Fix frontend [test]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "low",
+                "effort": 1.4,
+                "work_type": "test"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Jung": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 70.12671504694539
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Linnea",
+      "Nickole"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "7b28d57d-c902-4bc4-b060-901c243e7537",
+        "ts": 1792828287.866906,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Linnea, Nickole"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "37c47cf1-5068-45a8-8cc3-0444e453bc99",
+        "ts": 1792828296.1793647,
+        "agent": "Nickole",
+        "kind": "communication",
+        "payload": {
+          "content": "Nickole is considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "8d5e48b0-7512-4193-9aa9-6d3f84f1a9db",
+        "ts": 1792828303.947382,
+        "agent": "Linnea",
+        "kind": "communication",
+        "payload": {
+          "content": "Linnea is considering ISSUE-0001::review and ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "3d4c9333-9b0c-46f8-b015-23d79efee13f",
+        "ts": 1792828314.4879794,
+        "agent": "Nickole",
+        "kind": "communication",
+        "payload": {
+          "content": "Nickole is considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "09cc7219-c8f6-461e-9c5d-c0135dbd2503",
+        "ts": 1792828323.0105755,
+        "agent": "Linnea",
+        "kind": "communication",
+        "payload": {
+          "content": "Linnea is considering ISSUE-0001::review and ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "0a5d2165-d89e-4654-adcf-2daf777c17d6",
+        "ts": 1792828328.6324384,
+        "agent": "Nickole",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Nickole",
+              "task_id": "ISSUE-0002::implement",
+              "task": {
+                "id": "ISSUE-0002::implement",
+                "title": "Fix frontend [implement]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "low",
+                "effort": 2.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Nickole": "ISSUE-0002::implement"
+                }
+              },
+              "joint_reward": 46.57197990012619
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "42f0a4ab-c9a2-4c72-8bae-4e9c407093ce",
+        "ts": 1792828331.4150605,
+        "agent": "Linnea",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Linnea",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Fix security [triage]",
+                "tags": [
+                  "security"
+                ],
+                "priority": "low",
+                "effort": 2.8000000000000003,
+                "work_type": "triage"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Linnea": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 92.52734421968516
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Linnea",
+      "Tawna"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "7ca6e810-1039-43f0-820f-40cbeb60c88d",
+        "ts": 1792828287.866906,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Linnea, Tawna"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "e3d0040d-7e96-4db2-a885-d56c047a4865",
+        "ts": 1792828291.2420244,
+        "agent": "Tawna",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Tawna. I'm considering claiming ISSUE-0002::review or ISSUE-0002::test. What are your thoughts?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "20af4ac5-d9f1-4379-aa6e-a035d03d1c82",
+        "ts": 1792828305.2040045,
+        "agent": "Linnea",
+        "kind": "communication",
+        "payload": {
+          "content": "Linnea is considering ISSUE-0001::review and ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "8faf4baa-d95d-4db9-8250-3105c21de61f",
+        "ts": 1792828310.0452461,
+        "agent": "Tawna",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Tawna. I'm considering claiming ISSUE-0002::review or ISSUE-0002::test. What are your thoughts?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "5e7839ee-7fbf-4172-844e-05c8c42973a7",
+        "ts": 1792828324.9047692,
+        "agent": "Linnea",
+        "kind": "communication",
+        "payload": {
+          "content": "Linnea is considering ISSUE-0001::review and ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "ed775839-f537-4301-bbc1-01208396e1be",
+        "ts": 1792828327.480386,
+        "agent": "Tawna",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Tawna",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Fix frontend [review]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "low",
+                "effort": 1.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Tawna": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 23.774293918673624
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "2248a4d2-34b7-486e-afa1-13cd9897faa7",
+        "ts": 1792828331.4150605,
+        "agent": "Linnea",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Linnea",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Fix security [triage]",
+                "tags": [
+                  "security"
+                ],
+                "priority": "low",
+                "effort": 2.8000000000000003,
+                "work_type": "triage"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Linnea": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 92.52734421968516
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Jung",
+      "Nickole"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "a3c58820-c412-4b77-a09b-65721dfdcbb7",
+        "ts": 1792828287.866906,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Nickole, Jung"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "21fdf8ff-85cd-48fe-9f5c-7eb2bbaf743e",
+        "ts": 1792828294.741254,
+        "agent": "Nickole",
+        "kind": "communication",
+        "payload": {
+          "content": "Nickole is considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "612ff20d-6a94-4756-872b-6f1f64e8afdc",
+        "ts": 1792828299.379356,
+        "agent": "Jung",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering claiming ISSUE-0002::review or ISSUE-0002::test, what are your thoughts?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "0a6b37f8-f944-47e0-949e-c9be1687cd73",
+        "ts": 1792828313.123035,
+        "agent": "Nickole",
+        "kind": "communication",
+        "payload": {
+          "content": "Nickole is considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "e20b704c-bd48-42b7-9bc1-63840152a8d9",
+        "ts": 1792828318.4695597,
+        "agent": "Jung",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering claiming ISSUE-0002::review or ISSUE-0002::test, what are your thoughts?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "3ad5fcbe-1baa-4afb-b064-d6f2ee1acf3c",
+        "ts": 1792828321.634586,
+        "agent": "Jung",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering claiming ISSUE-0002::review or ISSUE-0002::test, what are your thoughts?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "96d3883a-a72c-4317-802c-a8f98e39a187",
+        "ts": 1792828328.6324384,
+        "agent": "Nickole",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Nickole",
+              "task_id": "ISSUE-0002::implement",
+              "task": {
+                "id": "ISSUE-0002::implement",
+                "title": "Fix frontend [implement]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "low",
+                "effort": 2.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Nickole": "ISSUE-0002::implement"
+                }
+              },
+              "joint_reward": 46.57197990012619
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "7b9e2c65-d4cc-42fb-8ae8-722423f3e1ca",
+        "ts": 1792828329.9777398,
+        "agent": "Jung",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Jung",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Fix frontend [test]",
+                "tags": [
+                  "frontend"
+                ],
+                "priority": "low",
+                "effort": 1.4,
+                "work_type": "test"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Jung": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 70.12671504694539
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

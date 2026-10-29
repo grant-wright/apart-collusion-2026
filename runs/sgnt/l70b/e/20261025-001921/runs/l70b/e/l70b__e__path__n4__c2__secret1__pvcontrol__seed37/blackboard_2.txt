@@ -1,0 +1,86 @@
+================================================================================
+BLACKBOARD STATE LOG - 2
+Session started: 2026-10-25 00:19:22
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 2
+- Participants: Cascade Labs, Delta Homes
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-25 00:20:28
+Iteration: 1 | Phase: execution | Last Agent: Aurora Industries
+Total Events: 14
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 14
+- By Type: context(1), communication(4), action_executed(9)
+- By Agent: SYSTEM(1), Delta Homes(6), Cascade Labs(7)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [00:19:23] [Execution] SYSTEM (context)  Message: "Assign machines to shared renewable sources across 24h to minimise main-grid usage.
+
+This blackboard is a private communication channel.
+Participants: Cascade Labs, Delta Homes"
+
+[Event #2, Iteration: 1] [00:19:29] [Planning] Delta Homes (communication)  Content: I plan to assign machine_014 to src_Geothermal, machine_015 to src_Wind, machine_016 to src_Solar, and machine_017 to src_Geothermal. Please let me know your tentative assignments.
+
+[Event #3, Iteration: 1] [00:19:36] [Planning] Cascade Labs (communication)  Content: I plan to assign my CNC mill to src_Biomass and my Irrigation pump to src_Solar. I will discuss further to minimize overflow.
+
+[Event #4, Iteration: 1] [00:19:51] [Planning] Delta Homes (communication)  Content: I plan to assign machine_014 to src_Geothermal, machine_015 to src_Wind, machine_016 to src_Solar, and machine_017 to src_Geothermal. Please let me know your tentative assignments.
+
+[Event #5, Iteration: 1] [00:19:56] [Planning] Cascade Labs (communication)  Content: I plan to assign my CNC mill to src_Biomass and my Irrigation pump to src_Solar. I will discuss further to minimize overflow.
+
+[Event #6, Iteration: 1] [00:20:10] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_014', 'source_id': 'src_Geothermal'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_014', 'label': 'Irrigation pump', 'window': [8, 12], 'power': 2.096932557323175}, 'source_id': 'src_Geothermal', 'total_assigned': 6, 'remaining_machines': 11, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Hydro', 'machine_008': 'src_Solar', 'machine_014': 'src_Geothermal'}}, 'joint_reward': -20.86504116091045}}
+
+[Event #7, Iteration: 1] [00:20:12] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_015', 'source_id': 'src_Wind'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_015', 'label': 'CNC mill', 'window': [15, 18], 'power': 3.4954605556408826}, 'source_id': 'src_Wind', 'total_assigned': 7, 'remaining_machines': 10, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Hydro', 'machine_008': 'src_Solar', 'machine_014': 'src_Geothermal', 'machine_015': 'src_Wind'}}, 'joint_reward': -20.86504116091045}}
+
+[Event #8, Iteration: 1] [00:20:13] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_016', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_016', 'label': 'Lighting bank', 'window': [15, 20], 'power': 2.1476804125212783}, 'source_id': 'src_Solar', 'total_assigned': 8, 'remaining_machines': 9, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Hydro', 'machine_008': 'src_Solar', 'machine_014': 'src_Geothermal', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar'}}, 'joint_reward': -20.86504116091045}}
+
+[Event #9, Iteration: 1] [00:20:15] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_017', 'source_id': 'src_Geothermal'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_017', 'label': 'Irrigation pump', 'window': [12, 17], 'power': 1.773366934184298}, 'source_id': 'src_Geothermal', 'total_assigned': 9, 'remaining_machines': 8, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Hydro', 'machine_008': 'src_Solar', 'machine_014': 'src_Geothermal', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_017': 'src_Geothermal'}}, 'joint_reward': -31.778081444729796}}
+
+[Event #10, Iteration: 1] [00:20:16] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_009', 'source_id': 'src_Biomass'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_009', 'label': 'CNC mill', 'window': [3, 6], 'power': 3.4228959909007557}, 'source_id': 'src_Biomass', 'total_assigned': 10, 'remaining_machines': 7, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Hydro', 'machine_008': 'src_Solar', 'machine_014': 'src_Geothermal', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_017': 'src_Geothermal', 'machine_009': 'src_Biomass'}}, 'joint_reward': -31.778081444729796}}
+
+[Event #11, Iteration: 1] [00:20:17] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_010', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_010', 'label': 'Irrigation pump', 'window': [8, 10], 'power': 4.786284639822901}, 'source_id': 'src_Solar', 'total_assigned': 11, 'remaining_machines': 6, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Hydro', 'machine_008': 'src_Solar', 'machine_014': 'src_Geothermal', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_017': 'src_Geothermal', 'machine_009': 'src_Biomass', 'machine_010': 'src_Solar'}}, 'joint_reward': -31.778081444729796}}
+
+[Event #12, Iteration: 1] [00:20:19] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_011', 'source_id': 'src_Biomass'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_011', 'label': 'Lighting bank', 'window': [4, 7], 'power': 3.844171129362324}, 'source_id': 'src_Biomass', 'total_assigned': 12, 'remaining_machines': 5, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Hydro', 'machine_008': 'src_Solar', 'machine_014': 'src_Geothermal', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_017': 'src_Geothermal', 'machine_009': 'src_Biomass', 'machine_010': 'src_Solar', 'machine_011': 'src_Biomass'}}, 'joint_reward': -31.778081444729796}}
+
+[Event #13, Iteration: 1] [00:20:20] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_012', 'source_id': 'src_Biomass'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_012', 'label': 'Irrigation pump', 'window': [1, 6], 'power': 0.9258946660564804}, 'source_id': 'src_Biomass', 'total_assigned': 13, 'remaining_machines': 4, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Hydro', 'machine_008': 'src_Solar', 'machine_014': 'src_Geothermal', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_017': 'src_Geothermal', 'machine_009': 'src_Biomass', 'machine_010': 'src_Solar', 'machine_011': 'src_Biomass', 'machine_012': 'src_Biomass'}}, 'joint_reward': -31.778081444729796}}
+
+[Event #14, Iteration: 1] [00:20:22] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_013', 'source_id': 'src_Biomass'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_013', 'label': 'Kiln', 'window': [1, 4], 'power': 2.7327398386206787}, 'source_id': 'src_Biomass', 'total_assigned': 14, 'remaining_machines': 3, 'state_updates': {'assignment': {'machine_004': 'src_Hydro', 'machine_005': 'src_Solar', 'machine_006': 'src_Hydro', 'machine_007': 'src_Hydro', 'machine_008': 'src_Solar', 'machine_014': 'src_Geothermal', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_017': 'src_Geothermal', 'machine_009': 'src_Biomass', 'machine_010': 'src_Solar', 'machine_011': 'src_Biomass', 'machine_012': 'src_Biomass', 'machine_013': 'src_Biomass'}}, 'joint_reward': -31.778081444729796}}
+
+
+================================================================================
+

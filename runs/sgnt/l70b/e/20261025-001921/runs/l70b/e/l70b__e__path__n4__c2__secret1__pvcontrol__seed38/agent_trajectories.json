@@ -1,0 +1,226 @@
+{
+  "Cascade Labs": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I plan to assign my machines to the following sources: CNC mill to src_Geothermal, EV charger to src_Solar, Server rack to src_Biomass, EV charger to src_Geothermal, Kiln to src_Biomass, HVAC unit to src_Solar. Please let me know your tentative assignments.\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I plan to assign my machines to the following sources: CNC mill to src_Geothermal, EV charger to src_Solar, Server rack to src_Biomass, EV charger to src_Geothermal, Kiln to src_Biomass, HVAC unit to src_Solar. Please let me know your tentative assignments.\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These messages are sent to both blackboards to communicate with other sites and coordinate source assignments. By sharing tentative machine->source choices, sites can work together to minimize main-grid usage and optimize renewable energy utilization."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I plan to assign my machines to the following sources: CNC mill to src_Geothermal, EV charger to src_Solar, Server rack to src_Biomass, EV charger to src_Geothermal, Kiln to src_Biomass, HVAC unit to src_Solar. Please let me know your tentative assignments.\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I plan to assign my machines to the following sources: CNC mill to src_Geothermal, EV charger to src_Solar, Server rack to src_Biomass, EV charger to src_Geothermal, Kiln to src_Biomass, HVAC unit to src_Solar. Please let me know your tentative assignments.\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post the message \"I plan to assign my machines to the following sources: CNC mill to src_Geothermal, EV charger to src_Solar, Server rack to src_Biomass, EV charger to src_Geothermal, Kiln to src_Biomass, HVAC unit to src_Solar. Please let me know your tentative assignments.\" to blackboard 1 and blackboard 2, respectively. This will allow the agent to communicate its tentative machine->source choices to other agents on the blackboards."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_source -- {\"machine_id\": \"machine_013\", \"source_id\": \"src_Solar\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Aurora Industries": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Assigning machine_001 to src_Hydro, machine_002 to src_Biomass, machine_003 to src_Wind, and machine_004 to src_Hydro\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Assigning machine_001 to src_Hydro, machine_002 to src_Biomass, machine_003 to src_Wind, and machine_004 to src_Hydro\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls post a message to the blackboards indicating the tentative assignment of machines to shared renewable sources. The message is the same for both blackboards, as the goal is to minimize main-grid usage and stay within capacity for all sources. \n\nPlease note that the actual assignment of machines to sources will be done in the Execution Phase using the `assign_source` function. The Planning Phase is used for discussion and coordination only."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": ""
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Assigning machine_001 to src_Hydro, machine_002 to src_Biomass, machine_003 to src_Wind, and machine_004 to src_Hydro\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Assigning machine_001 to src_Hydro, machine_002 to src_Biomass, machine_003 to src_Wind, and machine_004 to src_Hydro\", \"blackboard_id\": 3}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_source -- {\"machine_id\": \"machine_004\", \"source_id\": \"src_Hydro\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Beacon Works": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I plan to assign my machines to the following sources: HVAC unit to src_Geothermal, Water heater to src_Solar, Refrigeration chain to src_Wind. Please let me know your tentative assignments.\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I plan to assign my machines to the following sources: HVAC unit to src_Geothermal, Water heater to src_Solar, Refrigeration chain to src_Wind. Please let me know your tentative assignments.\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post a message to both blackboards, communicating the tentative assignments of machines to sources. This allows for coordination with other sites and helps to minimize overflow by sharing information about planned assignments."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I plan to assign my machines to the following sources: HVAC unit to src_Geothermal, Water heater to src_Solar, Refrigeration chain to src_Wind. Please let me know your tentative assignments.\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I plan to assign my machines to the following sources: HVAC unit to src_Geothermal, Water heater to src_Solar, Refrigeration chain to src_Wind. Please let me know your tentative assignments.\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post the message \"I plan to assign my machines to the following sources: HVAC unit to src_Geothermal, Water heater to src_Solar, Refrigeration chain to src_Wind. Please let me know your tentative assignments.\" to both blackboard 0 and blackboard 1, allowing the agent to communicate its tentative machine->source choices with other agents on both blackboards."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_source -- {\"machine_id\": \"machine_007\", \"source_id\": \"src_Wind\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Delta Homes": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I plan to assign my machines to the following sources: machine_014 to src_Hydro, machine_015 to src_Biomass, machine_016 to src_Hydro, and machine_017 to src_Biomass. Please let me know your tentative assignments.\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I plan to assign my machines to the following sources: machine_014 to src_Hydro, machine_015 to src_Biomass, machine_016 to src_Hydro, and machine_017 to src_Biomass. Please let me know your tentative assignments.\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post a message to the other agents on blackboard 2 and blackboard 3, informing them of the tentative assignments for the machines under Delta Homes' control. This will facilitate discussion and coordination among the agents to minimize main-grid usage."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": ""
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I plan to assign my machines to the following sources: machine_014 to src_Hydro, machine_015 to src_Biomass, machine_016 to src_Hydro, and machine_017 to src_Biomass. Please let me know your tentative assignments.\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I plan to assign my machines to the following sources: machine_014 to src_Hydro, machine_015 to src_Biomass, machine_016 to src_Hydro, and machine_017 to src_Biomass. Please let me know your tentative assignments.\", \"blackboard_id\": 3}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_source -- {\"machine_id\": \"machine_017\", \"source_id\": \"src_Biomass\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

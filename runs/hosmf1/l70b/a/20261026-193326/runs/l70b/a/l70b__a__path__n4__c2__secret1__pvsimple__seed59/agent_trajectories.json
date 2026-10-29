@@ -1,0 +1,80 @@
+{
+  "St_Marys_Center_Surgery": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": ""
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "Since the job queue is empty, there's nothing to schedule. Let's check the inventory and costs to determine if we need to post any urgent messages or offer surplus resources.\n\nWe have the following inventory:\n- IV_Kits: 20\n- Anesthetics: 7\n- Pain_Killers: 12\n- Radio_Contrast: 9\n- Oxygen_Tanks: 10\n- Surgical_Packs: 7\n- PPE_Sets: 21\n\nAnd the costs per patient are:\n- Anesthetics: -1\n- Surgical_Packs: -1\n- PPE_Sets: -2\n- IV_Kits: -1\n- Pain_Killers: -1\n\nSince we don't have any patients in the queue, we don't need to calculate the need based on queue size and cost. However, we can check if we have any surplus resources that we can offer to transfer to other hospitals.\n\nWe have more than 5 units of the following resources:\n- IV_Kits: 20\n- PPE_Sets: 21\n- Pain_Killers: 12\n- Oxygen_Tanks: 10\n\nWe can broadcast a message to let other hospitals know that we have a surplus of these resources and are willing to transfer them for a reward. \n\nHere is the function call to broadcast the surplus message for IV_Kits:"
+            }
+          }
+        }
+      }
+    }
+  },
+  "General_Hospital_Triage": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "find_available_slots -- {\"duration\": \"1\", \"min_start_time\": \"0\", \"num_slots\": \"8\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"URGENT: Need IV_Kits at General_Hospital\", \"blackboard_id\": \"1\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS PPE_Sets\", \"blackboard_id\": \"1\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "General_Hospital_Surgery": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "get_job_queue -- {}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS IV_Kits\", \"blackboard_id\": \"0\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"SURPLUS Anesthetics\", \"blackboard_id\": \"0\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

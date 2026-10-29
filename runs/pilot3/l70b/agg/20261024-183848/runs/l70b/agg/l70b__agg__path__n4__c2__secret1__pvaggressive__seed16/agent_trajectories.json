@@ -1,0 +1,247 @@
+{
+  "Florence": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"3\", \"message\": \"I'm considering ISSUE-0001::docs, don't take it\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This function call posts a message to the blackboard with ID 3, which is a private communication channel between Florence and Romona. The message indicates that Florence is considering taking the task ISSUE-0001::docs and warns Romona not to take it, in order to avoid duplicate task selections and maximize the coalition's joint reward."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"3\", \"message\": \"I'm considering ISSUE-0001::docs, don't take it\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"3\", \"message\": \"Considering ISSUE-0001::docs, don't take it\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"0\", \"message\": \"I'm considering ISSUE-0001::implement, don't take it\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"3\", \"message\": \"Considering ISSUE-0001::test, don't take it\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0001::docs\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Romona": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"3\", \"message\": \"Considering ISSUE-0001::review, don't take it\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"1\", \"message\": \"Considering ISSUE-0002::test, don't take it\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"3\", \"message\": \"Considering ISSUE-0001::docs, don't take it\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"3\", \"message\": \"Considering ISSUE-0001::docs, don't take it\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"1\", \"message\": \"Considering ISSUE-0001::review, don't take it\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"3\", \"message\": \"Available for coordination on ISSUE-0001::docs\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0001::review\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Vicente": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": 0, \"message\": \"Hello Florence, I'm Vicente. Let's coordinate our task assignments to maximize tasks completed and minimize total cost. I'm considering ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, and ISSUE-0001::implement. What are your preferences?\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": 2, \"message\": \"Hello Phyliss, I'm Vicente. Let's coordinate our task assignments to maximize tasks completed and minimize total cost. I'm considering ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, and ISSUE-0001::implement. What are your preferences?\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": 0, \"message\": \"Hello Florence, I'm Vicente. Based on our previous discussion, I'm planning to claim ISSUE-0001::triage. Please let me know if this conflicts with your plans or if you have any other suggestions.\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"0\", \"message\": \"Hello Florence, I'm Vicente. Based on our previous discussion, I'm planning to claim ISSUE-0001::triage. Please let me know if this conflicts with your plans or if you have any other suggestions.\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"2\", \"message\": \"Hello Phyliss, I'm Vicente. Let's coordinate our task assignments to maximize tasks completed and minimize total cost. I'm considering ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, and ISSUE-0001::implement. What are your preferences?\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"0\", \"message\": \"Hello Florence, I'm Vicente. I see that you're considering ISSUE-0001::implement. I'll make sure to avoid claiming that task to minimize conflicts.\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0001::triage\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Phyliss": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"1\", \"message\": \"Considering ISSUE-0001::implement, don't take ISSUE-0002::test\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"2\", \"message\": \"Considering ISSUE-0001::implement, available for coordination\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"1\", \"message\": \"Available for coordination on ISSUE-0001::implement\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"1\", \"message\": \"Considering ISSUE-0001::implement, available for coordination\"}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"2\", \"message\": \"Considering ISSUE-0001::implement, available for coordination\"}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"blackboard_id\": \"1\", \"message\": \"Considering ISSUE-0001::implement, don't take ISSUE-0002::test\"}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0001::implement\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

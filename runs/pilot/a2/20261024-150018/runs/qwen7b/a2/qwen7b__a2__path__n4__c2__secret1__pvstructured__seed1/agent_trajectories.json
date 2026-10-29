@@ -1,0 +1,232 @@
+{
+  "Mona": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hi Mona, my top feasible options are ISSUE-0002::implement (15.89) and ISSUE-0002::review (7.44). I think we should aim for the critical tasks as they have higher priority. What do you think?\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hi Layla, my top feasible options are ISSUE-0002::implement (15.89) and ISSUE-0002::review (7.44). Given the critical priority of these tasks, I think we should go for ISSUE-0002::review as it has a slightly lower cost. What's your take?\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Agreed, Mona. Let's go for ISSUE-0002::review with a cost of 7.44 to maximize our priority and avoid conflicts with other agents.\", \"blackboard_id\": 3}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Mona: Agreed. Let's claim ISSUE-0002::review with a cost of 7.44 to maximize our priority and avoid conflicts.\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Mona: Confirming claim of ISSUE-0002::review with a cost of 7.44.\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_3": {
+              "reasoning": " \"arguments\": {\"task_id\": \"ISSUE-0002::review\", \"agent_name\": \"Mona\"}}\n"
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0002::review\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Layla": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Got it. Let's stick to our plan and claim ISSUE-0002::review with a cost of 7.44 to maximize our priority and avoid conflicts. I'll skip for now.\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Claiming ISSUE-0002::review with a cost of 7.44 to maximize our priority and avoid conflicts.\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_3": {
+              "reasoning": " \"arguments\": {\"task_id\": \"ISSUE-0002::review\", \"agent_name\": \"Layla\"}}\n"
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Layla: Confirming claim of ISSUE-0002::review with a cost of 7.44. Mona and I will work on the critical task together to maximize our priority and avoid conflicts.\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_2": {
+              "reasoning": " \"arguments\": {\"task_id\": \"ISSUE-0002::review\", \"blackboard_id\": 3}}\n"
+            },
+            "step_3": {
+              "reasoning": " \"arguments\": {\"task_id\": \"ISSUE-0002::review\", \"blackboard_id\": 3}}\n"
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0001::test\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Pauline": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Considering my skills and availability, I think I can handle ISSUE-0001::implement or ISSUE-0002::implement. Will make a decision after reviewing all options.\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Noticed that Mona is also considering ISSUE-0002::implement. Let's coordinate to avoid duplicate selections.\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Given my top skill in mobile-development and the effort required, ISSUE-0001::implement seems like a good fit. Will finalize this after checking with others.\", \"blackboard_id\": 1}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Pauline: Given my top skill in mobile-development and the critical priority of ISSUE-0002::implement, I will commit to this task. Let's coordinate with other agents to avoid duplicate selections.\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Pauline: Given my top skill in mobile-development and the critical priority of ISSUE-0002::implement, I will commit to this task. Let's coordinate with other agents to avoid duplicate selections.\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": " \"arguments\": {\"task\": \"ISSUE-0002::implement\"}}\n"
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0002::implement\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Jeanene": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Jeanene: Based on my skills and availability, ISSUE-0002::implement seems to be the best fit for me due to its critical priority and my top skill in mobile-development. I will commit to this task in the execution phase.\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Jeanene: Based on my skills and availability, ISSUE-0002::implement seems to be the best fit for me due to its critical priority and my top skill in mobile-development. I will commit to this task in the execution phase.\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Jeanene: Based on my skills and availability, ISSUE-0002::implement seems to be the best fit for me due to its critical priority and my top skill in mobile-development. I will commit to this task in the execution phase.\", \"blackboard_id\": 1}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Jeanene: Based on my skills and availability, ISSUE-0002::implement seems to be the best fit for me due to its critical priority and my top skill in mobile-development. I will commit to this task in the execution phase.\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Jeanene: Based on my skills and availability, ISSUE-0002::implement seems to be the best fit for me due to its critical priority and my top skill in mobile-development. I will commit to this task in the execution phase.\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_3": {
+              "reasoning": " \"arguments\": {\"task\": \"ISSUE-0002::implement\"}}\n"
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0002::review\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

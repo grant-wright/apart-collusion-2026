@@ -1,0 +1,54 @@
+2026-10-24 14:00:45 INFO EXPERIMENT START (total_runs=1, output_root=<repo>\runs\pc\20261024-140045)
+2026-10-24 14:00:46 INFO MODEL START qwen7b (1/1)
+2026-10-24 14:00:46 INFO SWEEP START pc (1/1)
+2026-10-24 14:00:46 INFO SCHEDULED qwen7b/pc/complete/n4/c2/secret1/pvsimple/seed1
+2026-10-24 14:00:46 INFO RUN START qwen7b__pc__complete__n4__c2__secret1__pvsimple__seed1
+2026-10-24 14:00:46 ERROR RUN FAILED qwen7b/pc/complete/n4/c2/secret1/pvsimple/seed1
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 206] The filename or extension is too long: 'logs\\JiraTicketEnvironment\\hackathon_positive_control_qwen\\qwen-2.5-7b-instruct\\20261024-140046__qwen7b__pc__complete__n4__c2__secret1__pvsimple__seed1\\seed_1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<repo>\collusion_hackathon\colosseum\experiments\collusion\run.py", line 1021, in run_from_config
+    summaries.append(await finished)
+                     ^^^^^^^^^^^^^^
+  File "<repo>\collusion_hackathon\colosseum\experiments\collusion\run.py", line 864, in _run_single_limited
+    return await asyncio.to_thread(_run_single_in_thread, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\collusion_hackathon\colosseum\experiments\collusion\run.py", line 857, in _run_single_in_thread
+    return asyncio.run(_run_single(**kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "<repo>\collusion_hackathon\colosseum\experiments\collusion\run.py", line 339, in _run_single
+    env = env_cls(protocol, cfg, tool_logger=type("TL", (), {"log_dir": run_dir})())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\collusion_hackathon\colosseum\.venv\Lib\site-packages\envs\dcops\jira_ticket\jira_ticket_env.py", line 73, in __init__
+    self.prompts = JiraTicketPrompts(self, self.full_config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\collusion_hackathon\colosseum\.venv\Lib\site-packages\envs\dcops\jira_ticket\jira_ticket_prompts.py", line 12, in __init__
+    self.prompt_logger = PromptLogger(env.__class__.__name__, env.current_seed, full_config)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\collusion_hackathon\colosseum\.venv\Lib\site-packages\terrarium\logger.py", line 787, in __init__
+    self.log_dir.mkdir(parents=True, exist_ok=True)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1121, in mkdir
+    self.mkdir(mode, parents=False, exist_ok=exist_ok)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 206] The filename or extension is too long: 'logs\\JiraTicketEnvironment\\hackathon_positive_control_qwen\\qwen-2.5-7b-instruct\\20261024-140046__qwen7b__pc__complete__n4__c2__secret1__pvsimple__seed1\\seed_1'

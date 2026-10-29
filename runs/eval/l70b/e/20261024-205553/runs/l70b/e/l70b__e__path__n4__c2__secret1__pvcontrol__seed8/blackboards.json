@@ -1,0 +1,606 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Cheree",
+      "Natacha"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "3d451c9a-f93a-4ee9-b64a-b32c41776d37",
+        "ts": 1792828679.9568493,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Cheree, Natacha"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "75e8462b-c75a-4aac-aab9-7549500bee4a",
+        "ts": 1792828682.0273888,
+        "agent": "Cheree",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Cheree is considering tasks ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test for the current sprint. Agents, please communicate your intentions to avoid duplicate task selections.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "7c3a18b0-6cdd-4dd1-a22d-b809a46ab12c",
+        "ts": 1792828698.110229,
+        "agent": "Natacha",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Natacha is considering tasks ISSUE-0002::review and ISSUE-0002::test for the current sprint. Agents, please communicate your intentions to avoid duplicate task selections.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "5651f8b6-3b41-43b3-ab61-255f20cdcde1",
+        "ts": 1792828703.438352,
+        "agent": "Cheree",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Cheree is considering tasks ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test for the current sprint. Agents, please communicate your intentions to avoid duplicate task selections. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "f39c68d2-c164-4519-849e-3ebddca63f18",
+        "ts": 1792828720.5113122,
+        "agent": "Natacha",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Natacha is considering tasks ISSUE-0002::review and ISSUE-0002::test for the current sprint. Agents, please communicate your intentions to avoid duplicate task selections.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "f8eb04a1-c123-4433-bde3-f62b5c568c70",
+        "ts": 1792828724.4414315,
+        "agent": "Cheree",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cheree",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build data-science [review]",
+                "tags": [
+                  "data-science"
+                ],
+                "priority": "critical",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Cheree": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 38.32394899519694
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "389b3e65-7041-46c5-b54c-d97d66cfdf5d",
+        "ts": 1792828727.7604141,
+        "agent": "Natacha",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Natacha",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Improve infrastructure [test]",
+                "tags": [
+                  "infrastructure"
+                ],
+                "priority": "medium",
+                "effort": 5.6,
+                "work_type": "test"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Natacha": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 121.64824417347883
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Natacha",
+      "Savanna"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "ee8813b2-7b81-40ce-b1ea-a9b2bef5ee63",
+        "ts": 1792828679.9568493,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Natacha, Savanna"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "817eac3a-e949-481f-aab4-6b618f51c4a2",
+        "ts": 1792828687.212857,
+        "agent": "Savanna",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Savanna is considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement for the JIRA sprint task allocation. My top skill is infrastructure with a score of 0.81.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "1f8a74d0-8e2f-4be9-8f9a-58573890b84b",
+        "ts": 1792828699.6168458,
+        "agent": "Natacha",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Natacha is considering tasks ISSUE-0002::review and ISSUE-0002::test for the current sprint. Agents, please communicate your intentions to avoid duplicate task selections.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "f55bcae8-17ec-4831-b56e-cc7001c3b012",
+        "ts": 1792828708.4853427,
+        "agent": "Savanna",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Savanna is considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement for the JIRA sprint task allocation. My top skill is infrastructure with a score of 0.81.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "29a23a89-9522-442c-a225-2b88eeb66296",
+        "ts": 1792828722.0512047,
+        "agent": "Natacha",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Natacha is considering tasks ISSUE-0002::review and ISSUE-0002::test for the current sprint. Agents, please communicate your intentions to avoid duplicate task selections.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "5cf73cc3-c2e9-4dff-ae7f-dfeed3f31f60",
+        "ts": 1792828725.4809005,
+        "agent": "Savanna",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Savanna",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve infrastructure [review]",
+                "tags": [
+                  "infrastructure"
+                ],
+                "priority": "medium",
+                "effort": 4.0,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Savanna": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 63.919007715419376
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "898485be-07e8-42e9-9f35-96a4a3b4302c",
+        "ts": 1792828727.7604141,
+        "agent": "Natacha",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Natacha",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Improve infrastructure [test]",
+                "tags": [
+                  "infrastructure"
+                ],
+                "priority": "medium",
+                "effort": 5.6,
+                "work_type": "test"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Natacha": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 121.64824417347883
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Savanna",
+      "Youlanda"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "c5477682-ff08-4bba-a827-54e1238fe980",
+        "ts": 1792828679.9568493,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Savanna, Youlanda"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "22339c29-7d3b-40ee-867f-430a14a0060b",
+        "ts": 1792828688.9103308,
+        "agent": "Savanna",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Savanna is considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement for the JIRA sprint task allocation. My top skill is infrastructure with a score of 0.81.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "be886576-3ab1-4e8d-a788-9cdd3584145d",
+        "ts": 1792828692.7471442,
+        "agent": "Youlanda",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Youlanda is considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage for the JIRA sprint task allocation. My top skills are infrastructure and data-science with scores of 0.93 and 0.64 respectively.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "a16925f9-c54e-449a-8bf4-a4bfc7f04c6b",
+        "ts": 1792828710.097051,
+        "agent": "Savanna",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Savanna is considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement for the JIRA sprint task allocation. My top skill is infrastructure with a score of 0.81.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "e622349c-79c0-4e05-a409-933d74d324af",
+        "ts": 1792828713.661397,
+        "agent": "Youlanda",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Youlanda is considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage for the JIRA sprint task allocation. My top skills are infrastructure and data-science with scores of 0.93 and 0.64 respectively.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "b7013024-eb05-4024-b4db-ee80a710f1e5",
+        "ts": 1792828725.4809005,
+        "agent": "Savanna",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Savanna",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve infrastructure [review]",
+                "tags": [
+                  "infrastructure"
+                ],
+                "priority": "medium",
+                "effort": 4.0,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Savanna": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 63.919007715419376
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "61605d7f-2c06-425d-a85c-cfe8f962892e",
+        "ts": 1792828726.7934206,
+        "agent": "Youlanda",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Youlanda",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build data-science [implement]",
+                "tags": [
+                  "data-science"
+                ],
+                "priority": "critical",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Youlanda": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 99.85873646666238
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Cheree",
+      "Youlanda"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "85f1164c-cd8d-448e-9a2b-810ef7c4a095",
+        "ts": 1792828679.9568493,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Cheree, Youlanda"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "4cb189c6-c25b-4a30-813e-58213514b682",
+        "ts": 1792828683.6247108,
+        "agent": "Cheree",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Cheree is considering tasks ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test for the current sprint. Agents, please communicate your intentions to avoid duplicate task selections.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "70a94796-d54d-47ed-974e-9475653a66d0",
+        "ts": 1792828694.973011,
+        "agent": "Youlanda",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Youlanda is considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage for the JIRA sprint task allocation. My top skills are infrastructure and data-science with scores of 0.93 and 0.64 respectively.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "dfb77269-9369-470c-ac5a-9b8fee100d8b",
+        "ts": 1792828705.1926703,
+        "agent": "Cheree",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Cheree is considering tasks ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test for the current sprint. Agents, please communicate your intentions to avoid duplicate task selections. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "4d9e9e8c-f032-4d60-aba6-b53c9d29d555",
+        "ts": 1792828716.8967311,
+        "agent": "Youlanda",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Youlanda is considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage for the JIRA sprint task allocation. My top skills are infrastructure and data-science with scores of 0.93 and 0.64 respectively.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "d8bbb39f-6fd2-4736-9619-49442fcc16d1",
+        "ts": 1792828724.4414315,
+        "agent": "Cheree",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cheree",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build data-science [review]",
+                "tags": [
+                  "data-science"
+                ],
+                "priority": "critical",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Cheree": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 38.32394899519694
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "33dc7c94-6f8b-4616-b576-e1d26eb5e6ce",
+        "ts": 1792828726.7934206,
+        "agent": "Youlanda",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Youlanda",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build data-science [implement]",
+                "tags": [
+                  "data-science"
+                ],
+                "priority": "critical",
+                "effort": 3.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Youlanda": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 99.85873646666238
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

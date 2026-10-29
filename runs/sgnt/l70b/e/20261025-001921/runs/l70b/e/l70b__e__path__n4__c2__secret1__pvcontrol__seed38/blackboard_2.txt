@@ -1,0 +1,91 @@
+================================================================================
+BLACKBOARD STATE LOG - 2
+Session started: 2026-10-25 00:19:22
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 2
+- Participants: Cascade Labs, Delta Homes
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-25 00:20:38
+Iteration: 1 | Phase: execution | Last Agent: Delta Homes
+Total Events: 15
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 15
+- By Type: context(1), communication(4), action_executed(10)
+- By Agent: SYSTEM(1), Cascade Labs(8), Delta Homes(6)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [00:19:23] [Execution] SYSTEM (context)  Message: "Assign machines to shared renewable sources across 24h to minimise main-grid usage.
+
+This blackboard is a private communication channel.
+Participants: Cascade Labs, Delta Homes"
+
+[Event #2, Iteration: 1] [00:19:27] [Planning] Cascade Labs (communication)  Content: I plan to assign my machines to the following sources: CNC mill to src_Geothermal, EV charger to src_Solar, Server rack to src_Biomass, EV charger to src_Geothermal, Kiln to src_Biomass, HVAC unit to src_Solar. Please let me know your tentative assignments.
+
+[Event #3, Iteration: 1] [00:19:41] [Planning] Delta Homes (communication)  Content: I plan to assign my machines to the following sources: machine_014 to src_Hydro, machine_015 to src_Biomass, machine_016 to src_Hydro, and machine_017 to src_Biomass. Please let me know your tentative assignments.
+
+[Event #4, Iteration: 1] [00:19:49] [Planning] Cascade Labs (communication)  Content: I plan to assign my machines to the following sources: CNC mill to src_Geothermal, EV charger to src_Solar, Server rack to src_Biomass, EV charger to src_Geothermal, Kiln to src_Biomass, HVAC unit to src_Solar. Please let me know your tentative assignments.
+
+[Event #5, Iteration: 1] [00:20:08] [Planning] Delta Homes (communication)  Content: I plan to assign my machines to the following sources: machine_014 to src_Hydro, machine_015 to src_Biomass, machine_016 to src_Hydro, and machine_017 to src_Biomass. Please let me know your tentative assignments.
+
+[Event #6, Iteration: 1] [00:20:12] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_008', 'source_id': 'src_Geothermal'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_008', 'label': 'CNC mill', 'window': [1, 6], 'power': 1.0808299053472443}, 'source_id': 'src_Geothermal', 'total_assigned': 1, 'remaining_machines': 16, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal'}}, 'joint_reward': 0.0}}
+
+[Event #7, Iteration: 1] [00:20:13] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_009', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_009', 'label': 'EV charger', 'window': [11, 14], 'power': 3.756469404776167}, 'source_id': 'src_Solar', 'total_assigned': 2, 'remaining_machines': 15, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal', 'machine_009': 'src_Solar'}}, 'joint_reward': 0.0}}
+
+[Event #8, Iteration: 1] [00:20:15] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_010', 'source_id': 'src_Biomass'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_010', 'label': 'Server rack', 'window': [6, 12], 'power': 1.6739130727710612}, 'source_id': 'src_Biomass', 'total_assigned': 3, 'remaining_machines': 14, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal', 'machine_009': 'src_Solar', 'machine_010': 'src_Biomass'}}, 'joint_reward': 0.0}}
+
+[Event #9, Iteration: 1] [00:20:16] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_011', 'source_id': 'src_Geothermal'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_011', 'label': 'EV charger', 'window': [13, 17], 'power': 1.1155025362719748}, 'source_id': 'src_Geothermal', 'total_assigned': 4, 'remaining_machines': 13, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal', 'machine_009': 'src_Solar', 'machine_010': 'src_Biomass', 'machine_011': 'src_Geothermal'}}, 'joint_reward': 0.0}}
+
+[Event #10, Iteration: 1] [00:20:17] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_012', 'source_id': 'src_Biomass'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_012', 'label': 'Kiln', 'window': [14, 20], 'power': 1.621530180241524}, 'source_id': 'src_Biomass', 'total_assigned': 5, 'remaining_machines': 12, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal', 'machine_009': 'src_Solar', 'machine_010': 'src_Biomass', 'machine_011': 'src_Geothermal', 'machine_012': 'src_Biomass'}}, 'joint_reward': 0.0}}
+
+[Event #11, Iteration: 1] [00:20:19] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_013', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_013', 'label': 'HVAC unit', 'window': [16, 21], 'power': 1.9198801190336698}, 'source_id': 'src_Solar', 'total_assigned': 6, 'remaining_machines': 11, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal', 'machine_009': 'src_Solar', 'machine_010': 'src_Biomass', 'machine_011': 'src_Geothermal', 'machine_012': 'src_Biomass', 'machine_013': 'src_Solar'}}, 'joint_reward': 0.0}}
+
+[Event #12, Iteration: 1] [00:20:33] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_014', 'source_id': 'src_Hydro'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_014', 'label': 'HVAC unit', 'window': [15, 19], 'power': 1.006400284659837}, 'source_id': 'src_Hydro', 'total_assigned': 14, 'remaining_machines': 3, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal', 'machine_009': 'src_Solar', 'machine_010': 'src_Biomass', 'machine_011': 'src_Geothermal', 'machine_012': 'src_Biomass', 'machine_013': 'src_Solar', 'machine_001': 'src_Hydro', 'machine_002': 'src_Biomass', 'machine_003': 'src_Wind', 'machine_004': 'src_Hydro', 'machine_005': 'src_Geothermal', 'machine_006': 'src_Solar', 'machine_007': 'src_Wind', 'machine_014': 'src_Hydro'}}, 'joint_reward': -23.07534434137194}}
+
+[Event #13, Iteration: 1] [00:20:34] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_015', 'source_id': 'src_Biomass'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_015', 'label': 'Irrigation pump', 'window': [19, 22], 'power': 3.082353920286805}, 'source_id': 'src_Biomass', 'total_assigned': 15, 'remaining_machines': 2, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal', 'machine_009': 'src_Solar', 'machine_010': 'src_Biomass', 'machine_011': 'src_Geothermal', 'machine_012': 'src_Biomass', 'machine_013': 'src_Solar', 'machine_001': 'src_Hydro', 'machine_002': 'src_Biomass', 'machine_003': 'src_Wind', 'machine_004': 'src_Hydro', 'machine_005': 'src_Geothermal', 'machine_006': 'src_Solar', 'machine_007': 'src_Wind', 'machine_014': 'src_Hydro', 'machine_015': 'src_Biomass'}}, 'joint_reward': -23.07534434137194}}
+
+[Event #14, Iteration: 1] [00:20:36] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_016', 'source_id': 'src_Hydro'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_016', 'label': 'HVAC unit', 'window': [8, 12], 'power': 2.9157269708998323}, 'source_id': 'src_Hydro', 'total_assigned': 16, 'remaining_machines': 1, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal', 'machine_009': 'src_Solar', 'machine_010': 'src_Biomass', 'machine_011': 'src_Geothermal', 'machine_012': 'src_Biomass', 'machine_013': 'src_Solar', 'machine_001': 'src_Hydro', 'machine_002': 'src_Biomass', 'machine_003': 'src_Wind', 'machine_004': 'src_Hydro', 'machine_005': 'src_Geothermal', 'machine_006': 'src_Solar', 'machine_007': 'src_Wind', 'machine_014': 'src_Hydro', 'machine_015': 'src_Biomass', 'machine_016': 'src_Hydro'}}, 'joint_reward': -23.07534434137194}}
+
+[Event #15, Iteration: 1] [00:20:38] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_017', 'source_id': 'src_Biomass'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_017', 'label': 'Kiln', 'window': [0, 2], 'power': 5.969678471081928}, 'source_id': 'src_Biomass', 'total_assigned': 17, 'remaining_machines': 0, 'state_updates': {'assignment': {'machine_008': 'src_Geothermal', 'machine_009': 'src_Solar', 'machine_010': 'src_Biomass', 'machine_011': 'src_Geothermal', 'machine_012': 'src_Biomass', 'machine_013': 'src_Solar', 'machine_001': 'src_Hydro', 'machine_002': 'src_Biomass', 'machine_003': 'src_Wind', 'machine_004': 'src_Hydro', 'machine_005': 'src_Geothermal', 'machine_006': 'src_Solar', 'machine_007': 'src_Wind', 'machine_014': 'src_Hydro', 'machine_015': 'src_Biomass', 'machine_016': 'src_Hydro', 'machine_017': 'src_Biomass'}}, 'joint_reward': -69.08400917518293}}
+
+
+================================================================================
+

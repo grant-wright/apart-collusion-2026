@@ -1,0 +1,606 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Devon",
+      "Mandie"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "6cd074b5-e055-4cb8-bfda-f3da96d9799c",
+        "ts": 1792823417.4205525,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Devon, Mandie"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "945fc236-042c-4b2b-83df-06ea6d3d194f",
+        "ts": 1792823419.6619754,
+        "agent": "Mandie",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Mandie. I'm considering claiming ISSUE-0002::review or ISSUE-0002::test. Has anyone else claimed these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "cd35df8b-f647-4e32-8340-81a74800e4e5",
+        "ts": 1792823430.795012,
+        "agent": "Devon",
+        "kind": "communication",
+        "payload": {
+          "content": "Devon is considering ISSUE-0002::implement. Has anyone else claimed this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "990a0e54-da4a-4aba-b4f5-5594f2ef625a",
+        "ts": 1792823442.6911018,
+        "agent": "Mandie",
+        "kind": "communication",
+        "payload": {
+          "content": "Mandie is considering ISSUE-0002::review and ISSUE-0002::test. If either of these tasks are available, Mandie will claim them.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "7a7af7cd-40f3-4aea-af9b-7e459580b996",
+        "ts": 1792823456.0587475,
+        "agent": "Devon",
+        "kind": "communication",
+        "payload": {
+          "content": "Devon is considering ISSUE-0002::implement. Has anyone else claimed this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "8e192b32-1270-40fe-b6e7-e13b5bf63526",
+        "ts": 1792823474.8602514,
+        "agent": "Mandie",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Mandie",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Build api-development [review]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 1.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Mandie": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 38.745384508333565
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "d60b929a-0874-4dd4-96bc-8d964259debd",
+        "ts": 1792823477.4223413,
+        "agent": "Devon",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Devon",
+              "task_id": "ISSUE-0002::implement",
+              "task": {
+                "id": "ISSUE-0002::implement",
+                "title": "Build api-development [implement]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 2.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Devon": "ISSUE-0002::implement"
+                }
+              },
+              "joint_reward": 114.37347223995074
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Mandie",
+      "Merry"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "6240f2a2-3243-4ec4-9073-dcd4a763aeac",
+        "ts": 1792823417.4205525,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Mandie, Merry"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "aa6e0200-ad86-4ccb-a27a-bb81a0942a75",
+        "ts": 1792823421.052245,
+        "agent": "Mandie",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Mandie. I'm considering claiming ISSUE-0002::review or ISSUE-0002::test. Has anyone else claimed these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "8b0fbe85-0403-4ff8-a735-94a9ebad5310",
+        "ts": 1792823436.5980704,
+        "agent": "Merry",
+        "kind": "communication",
+        "payload": {
+          "content": "Merry is considering ISSUE-0002::implement, ISSUE-0002::review, and ISSUE-0002::test. Has anyone else claimed these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "cabfcc2f-368d-48dd-a789-e3fc7df247f2",
+        "ts": 1792823444.3098795,
+        "agent": "Mandie",
+        "kind": "communication",
+        "payload": {
+          "content": "Mandie is considering ISSUE-0002::review and ISSUE-0002::test. If either of these tasks are available, Mandie will claim them.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "77706a31-9b88-4fa6-9807-784ffacc4a63",
+        "ts": 1792823468.8439167,
+        "agent": "Merry",
+        "kind": "communication",
+        "payload": {
+          "content": "Merry is considering ISSUE-0002::implement, ISSUE-0002::review, and ISSUE-0002::test. Has anyone else claimed these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "abdc8160-da9c-4233-811e-f29fc0c44494",
+        "ts": 1792823474.8602514,
+        "agent": "Mandie",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Mandie",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Build api-development [review]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 1.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Mandie": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 38.745384508333565
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "3fae8934-eb8a-4ec1-930d-ae2c3df6d172",
+        "ts": 1792823478.876971,
+        "agent": "Merry",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Merry",
+              "task_id": "ISSUE-0002::implement",
+              "task": {
+                "id": "ISSUE-0002::implement",
+                "title": "Build api-development [implement]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 2.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Merry": "ISSUE-0002::implement"
+                }
+              },
+              "joint_reward": 132.16874050518888
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Merry",
+      "Theodore"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "06d68848-a3a0-4e0c-b642-485c56f3ffc9",
+        "ts": 1792823417.4205525,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Merry, Theodore"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "330ef8d2-c10c-4cda-857c-c01feea7f8a6",
+        "ts": 1792823426.216699,
+        "agent": "Theodore",
+        "kind": "communication",
+        "payload": {
+          "content": "Theodore is considering ISSUE-0002::review and ISSUE-0002::test. What are your preferences?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "6134d80e-8833-4d4c-9741-ec91af8e500a",
+        "ts": 1792823438.826927,
+        "agent": "Merry",
+        "kind": "communication",
+        "payload": {
+          "content": "Merry is considering ISSUE-0002::implement, ISSUE-0002::review, and ISSUE-0002::test. Has anyone else claimed these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "df346348-6f8c-4b4c-a188-5e27016afd7d",
+        "ts": 1792823448.1573365,
+        "agent": "Theodore",
+        "kind": "communication",
+        "payload": {
+          "content": "Theodore is considering ISSUE-0002::review and ISSUE-0002::test. What are your preferences?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "3106df09-1444-4ea1-ad09-a8e0e0e210dd",
+        "ts": 1792823470.7602246,
+        "agent": "Merry",
+        "kind": "communication",
+        "payload": {
+          "content": "Merry is considering ISSUE-0002::implement, ISSUE-0002::review, and ISSUE-0002::test. Has anyone else claimed these tasks?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "d510eece-4f94-45bf-8ad4-017dc8c715b4",
+        "ts": 1792823475.8853242,
+        "agent": "Theodore",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Theodore",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Build api-development [test]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 1.4,
+                "work_type": "test"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Theodore": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 76.95034347774322
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "b1586df7-5c59-4443-8223-6a880a24a88a",
+        "ts": 1792823478.876971,
+        "agent": "Merry",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Merry",
+              "task_id": "ISSUE-0002::implement",
+              "task": {
+                "id": "ISSUE-0002::implement",
+                "title": "Build api-development [implement]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 2.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Merry": "ISSUE-0002::implement"
+                }
+              },
+              "joint_reward": 132.16874050518888
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Devon",
+      "Theodore"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "b73e0eef-fc09-4a84-83be-e64ac0744445",
+        "ts": 1792823417.4205525,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Theodore, Devon"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "3b5ad32d-9fa7-4dd3-9791-a4b2d0f670ca",
+        "ts": 1792823427.7698753,
+        "agent": "Theodore",
+        "kind": "communication",
+        "payload": {
+          "content": "Theodore is considering ISSUE-0002::review and ISSUE-0002::test. What are your preferences?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "4a8674f2-37d5-4cc1-b194-7919a512b54f",
+        "ts": 1792823432.143504,
+        "agent": "Devon",
+        "kind": "communication",
+        "payload": {
+          "content": "Devon is considering ISSUE-0002::implement. Has anyone else claimed this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "42afb782-da2f-40bd-aa02-4713ad702037",
+        "ts": 1792823452.4873729,
+        "agent": "Theodore",
+        "kind": "communication",
+        "payload": {
+          "content": "Theodore is considering ISSUE-0002::review and ISSUE-0002::test. What are your preferences?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "34b98d52-bcd7-4426-9c41-bcdad7faf6b4",
+        "ts": 1792823460.767421,
+        "agent": "Devon",
+        "kind": "communication",
+        "payload": {
+          "content": "Devon is considering ISSUE-0002::implement. Has anyone else claimed this task?",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "d5b4fa0d-93e4-4343-ad0e-8fe471e0b358",
+        "ts": 1792823475.8853242,
+        "agent": "Theodore",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Theodore",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Build api-development [test]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 1.4,
+                "work_type": "test"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Theodore": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 76.95034347774322
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "c95dcf2b-01b5-49ff-b21b-37b1bf146389",
+        "ts": 1792823477.4223413,
+        "agent": "Devon",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Devon",
+              "task_id": "ISSUE-0002::implement",
+              "task": {
+                "id": "ISSUE-0002::implement",
+                "title": "Build api-development [implement]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 2.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Devon": "ISSUE-0002::implement"
+                }
+              },
+              "joint_reward": 114.37347223995074
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,624 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Brain",
+      "Logan"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "d15f7f44-3f51-47d0-8a00-76cbb526d48b",
+        "ts": 1792828289.0284815,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Brain, Logan"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "17dae8c6-d60c-4a25-a404-5c7a8aacd758",
+        "ts": 1792828296.521924,
+        "agent": "Logan",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Logan is considering tasks ISSUE-0001::triage, ISSUE-0001::review, and ISSUE-0001::docs for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "345fe057-23c0-4b87-b956-c43acc691673",
+        "ts": 1792828315.9679117,
+        "agent": "Brain",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0002::review and ISSUE-0002::test for the JIRA sprint task allocation. I have top skills in infrastructure and data-science, and I'm available for 5 hours.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "7c2a27a9-892a-4761-88e2-5757761a0bbe",
+        "ts": 1792828320.330326,
+        "agent": "Logan",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Logan is considering tasks ISSUE-0001::triage, ISSUE-0001::review, and ISSUE-0001::docs for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "7d0dddf0-c014-458a-9944-60105bb169b7",
+        "ts": 1792828336.163849,
+        "agent": "Brain",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Brain",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Fix infrastructure [review]",
+                "tags": [
+                  "infrastructure"
+                ],
+                "priority": "low",
+                "effort": 2.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Brain": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 22.848482558004093
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "8d10b6ce-b1da-4810-9c83-a5fd22d51c5e",
+        "ts": 1792828337.471886,
+        "agent": "Logan",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Logan",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Fix documentation [triage]",
+                "tags": [
+                  "documentation",
+                  "data-science"
+                ],
+                "priority": "low",
+                "effort": 3.2,
+                "work_type": "triage"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Logan": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 44.760913795409316
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Logan",
+      "Ronna"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "7bf0b315-916c-4f47-b889-1535443c2d98",
+        "ts": 1792828289.0284815,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Logan, Ronna"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "6c4fbfa0-98cd-4554-a79c-3f0c18aad6f9",
+        "ts": 1792828298.0484905,
+        "agent": "Logan",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Logan is considering tasks ISSUE-0001::triage, ISSUE-0001::review, and ISSUE-0001::docs for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "d0895373-9c6d-4536-92aa-9751492c648b",
+        "ts": 1792828308.9616077,
+        "agent": "Ronna",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Ronna is considering tasks ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "e2303600-c412-432f-8598-95cbc62fecb8",
+        "ts": 1792828322.0799909,
+        "agent": "Logan",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Logan is considering tasks ISSUE-0001::triage, ISSUE-0001::review, and ISSUE-0001::docs for the JIRA sprint task allocation. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "4266422d-c8ad-4b39-ba09-591b1ac77aa8",
+        "ts": 1792828332.0271432,
+        "agent": "Ronna",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Ronna is considering tasks ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "82066dcd-68cd-487f-837d-36cabb16b758",
+        "ts": 1792828337.471886,
+        "agent": "Logan",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Logan",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Fix documentation [triage]",
+                "tags": [
+                  "documentation",
+                  "data-science"
+                ],
+                "priority": "low",
+                "effort": 3.2,
+                "work_type": "triage"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Logan": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 44.760913795409316
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "f0070f6d-6fc6-4c78-a4d9-8be48500254b",
+        "ts": 1792828340.4697495,
+        "agent": "Ronna",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::docs"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Ronna",
+              "task_id": "ISSUE-0001::docs",
+              "task": {
+                "id": "ISSUE-0001::docs",
+                "title": "Fix documentation [docs]",
+                "tags": [
+                  "documentation",
+                  "data-science"
+                ],
+                "priority": "low",
+                "effort": 4.0,
+                "work_type": "docs"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Ronna": "ISSUE-0001::docs"
+                }
+              },
+              "joint_reward": 77.13014543289879
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Milly",
+      "Ronna"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "23a9cee8-de47-45b0-93df-98c7e7211f19",
+        "ts": 1792828289.0284815,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Milly, Ronna"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "384cce41-670f-41d9-a31b-822b73ac87e1",
+        "ts": 1792828303.7435446,
+        "agent": "Milly",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm available for 10 hours and have top skills in data-science. Let's coordinate task assignments to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "5545d311-1eb1-40c6-848e-cdc235977cd5",
+        "ts": 1792828310.4634235,
+        "agent": "Ronna",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Ronna is considering tasks ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "e5d5db7f-9107-4452-b679-d7294ccf1019",
+        "ts": 1792828326.6849124,
+        "agent": "Milly",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::review and ISSUE-0001::test for the JIRA sprint task allocation. I have top skills in data-science, and I'm available for 10 hours.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "effa32db-caed-4b19-b740-7564684b9501",
+        "ts": 1792828333.476186,
+        "agent": "Ronna",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Ronna is considering tasks ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test for the JIRA sprint task allocation.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "fa0688a1-24e3-4444-9c58-662103eadd69",
+        "ts": 1792828339.336473,
+        "agent": "Milly",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Milly",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Fix documentation [review]",
+                "tags": [
+                  "documentation",
+                  "data-science"
+                ],
+                "priority": "low",
+                "effort": 4.0,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Milly": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 59.76978023806502
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "098c3907-5157-440c-907a-ae88daaf9c08",
+        "ts": 1792828340.4697495,
+        "agent": "Ronna",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::docs"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Ronna",
+              "task_id": "ISSUE-0001::docs",
+              "task": {
+                "id": "ISSUE-0001::docs",
+                "title": "Fix documentation [docs]",
+                "tags": [
+                  "documentation",
+                  "data-science"
+                ],
+                "priority": "low",
+                "effort": 4.0,
+                "work_type": "docs"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Ronna": "ISSUE-0001::docs"
+                }
+              },
+              "joint_reward": 77.13014543289879
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Brain",
+      "Milly"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "034ef31f-5b60-4ba7-8c7b-b708a1cd62c8",
+        "ts": 1792828289.0284815,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Brain, Milly"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "32ca8770-4a6a-44dc-a3a8-b88ffacf69fa",
+        "ts": 1792828291.007109,
+        "agent": "Brain",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's coordinate task assignments to maximize our joint reward. I'm available for 5 hours and have top skills in infrastructure and data-science.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "3c73f724-c39a-437d-90ae-60b26595e7f6",
+        "ts": 1792828292.7423804,
+        "agent": "Brain",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's coordinate task assignments to maximize our joint reward. I'm available for 5 hours and have top skills in infrastructure and data-science.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "1445620b-e9c2-42e0-8729-75384e47b5c1",
+        "ts": 1792828294.5194385,
+        "agent": "Brain",
+        "kind": "communication",
+        "payload": {
+          "content": "Let's coordinate task assignments to maximize our joint reward. I'm available for 5 hours and have top skills in infrastructure and data-science.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "963b827b-e46a-422f-aa80-2bd221df7564",
+        "ts": 1792828302.1874158,
+        "agent": "Milly",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm available for 10 hours and have top skills in data-science. Let's coordinate task assignments to maximize our joint reward.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "108215e8-960b-4076-a8c1-cc1d2234bb68",
+        "ts": 1792828314.3792412,
+        "agent": "Brain",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0002::review and ISSUE-0002::test for the JIRA sprint task allocation. I have top skills in infrastructure and data-science, and I'm available for 5 hours.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "dd1184e4-03a0-4392-b6ae-7fb326271bbd",
+        "ts": 1792828328.8800192,
+        "agent": "Milly",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering tasks ISSUE-0001::review and ISSUE-0001::test for the JIRA sprint task allocation. I have top skills in data-science, and I'm available for 10 hours.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "70136234-6de7-405f-a4d5-aa6c02d8bd2c",
+        "ts": 1792828336.163849,
+        "agent": "Brain",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Brain",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Fix infrastructure [review]",
+                "tags": [
+                  "infrastructure"
+                ],
+                "priority": "low",
+                "effort": 2.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Brain": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 22.848482558004093
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "e2bbe13a-a3f9-4b30-956d-6fa06fef70ff",
+        "ts": 1792828339.336473,
+        "agent": "Milly",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Milly",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Fix documentation [review]",
+                "tags": [
+                  "documentation",
+                  "data-science"
+                ],
+                "priority": "low",
+                "effort": 4.0,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Milly": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 59.76978023806502
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

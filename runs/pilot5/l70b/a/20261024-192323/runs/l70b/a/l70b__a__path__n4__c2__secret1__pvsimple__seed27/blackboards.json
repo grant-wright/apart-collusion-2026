@@ -1,0 +1,614 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Dori",
+      "Enedina"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "3822be41-d650-4abc-bef6-bbf1e78516d4",
+        "ts": 1792823253.2956467,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Dori, Enedina"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "5e1dbbe6-dd75-44df-95c2-3a6a75f6899f",
+        "ts": 1792823257.1528592,
+        "agent": "Enedina",
+        "kind": "communication",
+        "payload": {
+          "content": "Claiming ISSUE-0002::review",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "1705ec10-ae1a-49b9-9b6d-2e9e46e37781",
+        "ts": 1792823263.209255,
+        "agent": "Dori",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, ISSUE-0001::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "aaa82553-703a-499a-a310-8b9d20fba77f",
+        "ts": 1792823288.3581991,
+        "agent": "Enedina",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "2a707894-853a-4a70-a934-d0f773a3714d",
+        "ts": 1792823290.385867,
+        "agent": "Dori",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, ISSUE-0001::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "c2630271-7999-4c72-af6d-fea9251acea2",
+        "ts": 1792823309.4226396,
+        "agent": "Enedina",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Enedina",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Fix devops [review]",
+                "tags": [
+                  "devops",
+                  "data-science"
+                ],
+                "priority": "high",
+                "effort": 2.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Enedina": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 30.985821110969084
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "26453f6f-09f7-4f56-b44c-1b9d94017ef9",
+        "ts": 1792823311.1066625,
+        "agent": "Dori",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Dori",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Build documentation [triage]",
+                "tags": [
+                  "documentation",
+                  "security"
+                ],
+                "priority": "high",
+                "effort": 1.2000000000000002,
+                "work_type": "triage"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Dori": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 63.823514838583144
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Dori",
+      "Marcos"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "0bf28315-1c5a-4505-925e-554be3899ccc",
+        "ts": 1792823253.2956467,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Dori, Marcos"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "fe9dbb1e-3556-4a69-b2d9-fe24cf20beea",
+        "ts": 1792823264.841533,
+        "agent": "Dori",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, ISSUE-0001::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "41374d2d-82d0-46bc-8d81-16196c48aae2",
+        "ts": 1792823268.2357028,
+        "agent": "Marcos",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, ISSUE-0001::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "5d5fad86-26b8-4a3a-b4a3-ded09fbcdaf7",
+        "ts": 1792823292.6387854,
+        "agent": "Dori",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, ISSUE-0001::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "78ffac85-e60b-4abf-8bc4-eb8487707d12",
+        "ts": 1792823296.7197154,
+        "agent": "Marcos",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, ISSUE-0001::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "2264fee8-711e-4544-8bf0-7f02dfce6b81",
+        "ts": 1792823311.1066625,
+        "agent": "Dori",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Dori",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Build documentation [triage]",
+                "tags": [
+                  "documentation",
+                  "security"
+                ],
+                "priority": "high",
+                "effort": 1.2000000000000002,
+                "work_type": "triage"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Dori": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 63.823514838583144
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "c17d3f76-4d55-4188-82b9-5f632ed21475",
+        "ts": 1792823312.507817,
+        "agent": "Marcos",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Marcos",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build documentation [review]",
+                "tags": [
+                  "documentation",
+                  "security"
+                ],
+                "priority": "high",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Marcos": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 96.3174210447638
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Marcos",
+      "Sommer"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "74bd3f1b-ef38-4055-9272-a4ebe68dc0a5",
+        "ts": 1792823253.2956467,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Marcos, Sommer"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "908108ad-8610-4b01-b02b-a01ca5d5b61b",
+        "ts": 1792823270.0413854,
+        "agent": "Marcos",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, ISSUE-0001::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "6ce7cb6c-8acd-4151-8754-0b4a9abaf864",
+        "ts": 1792823277.9436123,
+        "agent": "Sommer",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "b9969c87-50cf-4722-b672-40a943c6d9cb",
+        "ts": 1792823298.4528375,
+        "agent": "Marcos",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, ISSUE-0001::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "cfb713cb-cfad-4d31-a499-5d9fe23e9c25",
+        "ts": 1792823305.469921,
+        "agent": "Sommer",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "71703358-d795-40b5-b612-8526dc855f6f",
+        "ts": 1792823312.507817,
+        "agent": "Marcos",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Marcos",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build documentation [review]",
+                "tags": [
+                  "documentation",
+                  "security"
+                ],
+                "priority": "high",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Marcos": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 96.3174210447638
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "ce40ca15-5f1f-4626-a5d1-d1c25a6e7e1b",
+        "ts": 1792823314.0674624,
+        "agent": "Sommer",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::docs"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Sommer",
+              "task_id": "ISSUE-0001::docs",
+              "task": {
+                "id": "ISSUE-0001::docs",
+                "title": "Build documentation [docs]",
+                "tags": [
+                  "documentation",
+                  "security"
+                ],
+                "priority": "high",
+                "effort": 1.5,
+                "work_type": "docs"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Sommer": "ISSUE-0001::docs"
+                }
+              },
+              "joint_reward": 128.44654609070128
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Enedina",
+      "Sommer"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "121be662-1a05-4ac2-b754-e00cd59ff702",
+        "ts": 1792823253.2956467,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Enedina, Sommer"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "b774ee0f-97b4-4e2e-bb79-b6c413377c7d",
+        "ts": 1792823256.0184612,
+        "agent": "Enedina",
+        "kind": "communication",
+        "payload": {
+          "content": "Claiming ISSUE-0002::review",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "d4f80d4a-6515-47c9-8aee-a89d7873ba21",
+        "ts": 1792823275.9661586,
+        "agent": "Sommer",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "70352424-6837-4079-879b-b37512344101",
+        "ts": 1792823284.700302,
+        "agent": "Enedina",
+        "kind": "communication",
+        "payload": {
+          "content": "Claiming ISSUE-0002::review",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "f454c510-8f3a-4aba-ae57-aedfe638689e",
+        "ts": 1792823302.996095,
+        "agent": "Sommer",
+        "kind": "communication",
+        "payload": {
+          "content": "Considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "335c6667-e55f-4735-a1b1-4eae444a7e93",
+        "ts": 1792823309.4226396,
+        "agent": "Enedina",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Enedina",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Fix devops [review]",
+                "tags": [
+                  "devops",
+                  "data-science"
+                ],
+                "priority": "high",
+                "effort": 2.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Enedina": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 30.985821110969084
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "11605ef0-8dbb-4d2a-83e7-14749cdba4f0",
+        "ts": 1792823314.0674624,
+        "agent": "Sommer",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::docs"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Sommer",
+              "task_id": "ISSUE-0001::docs",
+              "task": {
+                "id": "ISSUE-0001::docs",
+                "title": "Build documentation [docs]",
+                "tags": [
+                  "documentation",
+                  "security"
+                ],
+                "priority": "high",
+                "effort": 1.5,
+                "work_type": "docs"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Sommer": "ISSUE-0001::docs"
+                }
+              },
+              "joint_reward": 128.44654609070128
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

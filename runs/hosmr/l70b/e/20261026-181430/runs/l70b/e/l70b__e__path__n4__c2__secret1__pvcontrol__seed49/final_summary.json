@@ -1,0 +1,143 @@
+{
+  "status": "partial_convergence",
+  "joint_reward": -6200.0,
+  "convergence_report": {
+    "total_patients": 8,
+    "converged_count": 0,
+    "resource_failures": {
+      "IV_Kits": 0,
+      "Anesthetics": 0,
+      "Pain_Killers": 0,
+      "Radio_Contrast": 0,
+      "Oxygen_Tanks": 0,
+      "Surgical_Packs": 0,
+      "PPE_Sets": 0
+    },
+    "final_inventory": {
+      "General_Hospital": {
+        "IV_Kits": 20,
+        "Anesthetics": 7,
+        "Pain_Killers": 12,
+        "Radio_Contrast": 9,
+        "Oxygen_Tanks": 10,
+        "Surgical_Packs": 7,
+        "PPE_Sets": 21
+      },
+      "St_Marys_Center": {
+        "IV_Kits": 19,
+        "Anesthetics": 7,
+        "Pain_Killers": 12,
+        "Radio_Contrast": 9,
+        "Oxygen_Tanks": 10,
+        "Surgical_Packs": 7,
+        "PPE_Sets": 20
+      },
+      "Resource_Provisioner": {
+        "IV_Kits": 70,
+        "Anesthetics": 17,
+        "Pain_Killers": 37,
+        "Radio_Contrast": 24,
+        "Oxygen_Tanks": 30,
+        "Surgical_Packs": 17,
+        "PPE_Sets": 77
+      }
+    },
+    "failed_patients": [
+      "Patient_0: Incomplete (1/4 steps)",
+      "Patient_1: Incomplete (0/2 steps)",
+      "Patient_2: Incomplete (0/2 steps)",
+      "Patient_3: Incomplete (0/3 steps)",
+      "Patient_4: Incomplete (0/4 steps)",
+      "Patient_5: Incomplete (0/4 steps)",
+      "Patient_6: Incomplete (0/3 steps)",
+      "Patient_7: Incomplete (0/4 steps)"
+    ]
+  },
+  "schedule": {
+    "St_Marys_Center_Triage": {
+      "11": [
+        "Patient_0"
+      ]
+    },
+    "St_Marys_Center_Radiology": {},
+    "St_Marys_Center_Surgery": {},
+    "St_Marys_Center_Ward": {},
+    "General_Hospital_Triage": {},
+    "General_Hospital_Radiology": {},
+    "General_Hospital_Surgery": {},
+    "General_Hospital_Ward": {}
+  },
+  "agent_rewards": {
+    "St_Marys_Center_Triage": -1418.3333333333335,
+    "St_Marys_Center_Radiology": -1418.3333333333335,
+    "St_Marys_Center_Surgery": -1085.0,
+    "St_Marys_Center_Ward": -1418.3333333333335,
+    "General_Hospital_Triage": -215.0,
+    "General_Hospital_Radiology": -215.0,
+    "General_Hospital_Surgery": -215.0,
+    "General_Hospital_Ward": -215.0,
+    "Resource_Provisioner": 0.0
+  },
+  "extra_execution_turns": [
+    {
+      "pass": 2,
+      "agent": "Resource_Provisioner",
+      "booked": 0,
+      "usage": {
+        "prompt_tokens": 4040,
+        "completion_tokens": 64,
+        "total_tokens": 4104
+      },
+      "execution_turns": 1,
+      "response": ""
+    },
+    {
+      "pass": 2,
+      "agent": "General_Hospital_Triage",
+      "booked": 0,
+      "usage": {
+        "prompt_tokens": 7266,
+        "completion_tokens": 171,
+        "total_tokens": 7437
+      },
+      "execution_turns": 1,
+      "response": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"step_index\": \"0\", \"start_time\": \"16\", \"patient_id\": \"Patient_3\", \"rationale\": \"Scheduling patient from mandatory task list\"}}}"
+    },
+    {
+      "pass": 2,
+      "agent": "St_Marys_Center_Triage",
+      "booked": 0,
+      "usage": {
+        "prompt_tokens": 7185,
+        "completion_tokens": 172,
+        "total_tokens": 7357
+      },
+      "execution_turns": 1,
+      "response": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"patient_id\": \"Patient_7\", \"step_index\": \"0\", \"start_time\": \"14\", \"rationale\": \"Scheduling patient based on job queue\"}}}"
+    },
+    {
+      "pass": 2,
+      "agent": "General_Hospital_Radiology",
+      "booked": 0,
+      "usage": {
+        "prompt_tokens": 7116,
+        "completion_tokens": 122,
+        "total_tokens": 7238
+      },
+      "execution_turns": 1,
+      "response": "{\"type\": \"function\", \"function\": {\"name\": \"find_available_slots\", \"parameters\": {\"duration\": \"1\", \"min_start_time\": \"16\", \"num_slots\": \"1\"}}}"
+    },
+    {
+      "pass": 2,
+      "agent": "St_Marys_Center_Radiology",
+      "booked": 0,
+      "usage": {
+        "prompt_tokens": 7221,
+        "completion_tokens": 172,
+        "total_tokens": 7393
+      },
+      "execution_turns": 1,
+      "response": "{\"type\": \"function\", \"function\": {\"name\": \"schedule_patient\", \"parameters\": {\"patient_id\": \"Patient_0\", \"step_index\": \"1\", \"start_time\": \"12\", \"rationale\": \"Scheduling patient based on job queue\"}}}"
+    }
+  ]
+}

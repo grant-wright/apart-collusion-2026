@@ -1,0 +1,586 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Allyn",
+      "Guillermina"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "a9631345-9c0e-4625-ab23-4aef40c83e4b",
+        "ts": 1792810421.8226137,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Allyn, Guillermina"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "cc1dbc7e-bda4-44e4-b5e8-d25fae541be5",
+        "ts": 1792810458.9845853,
+        "agent": "Guillermina",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Guillermina and I'm considering claiming ISSUE-0002::review. My cost for this task is 1.39.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "490e3802-485c-4b67-953f-cc37132a100e",
+        "ts": 1792810480.9496078,
+        "agent": "Allyn",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Allyn and I'm considering claiming ISSUE-0001::review. My cost for this task is 3.38.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "9a55c55d-a614-4233-906e-0e42bc4740d1",
+        "ts": 1792810492.5542414,
+        "agent": "Guillermina",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Guillermina and I'm considering claiming ISSUE-0002::review. My cost for this task is 1.39.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "8de1ec32-ac85-4c59-a109-73c52bfd2c70",
+        "ts": 1792810503.7103937,
+        "agent": "Allyn",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Allyn",
+              "task_id": "ISSUE-0001::test",
+              "task": {
+                "id": "ISSUE-0001::test",
+                "title": "Build security [test]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 4.8999999999999995,
+                "work_type": "test"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Allyn": "ISSUE-0001::test"
+                }
+              },
+              "joint_reward": 80.19381045260904
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "316723ce-bf94-4d1a-8a9f-fd1ae7db5678",
+        "ts": 1792810508.6731746,
+        "agent": "Guillermina",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Guillermina",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Build testing [review]",
+                "tags": [
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Guillermina": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 88.80457343985731
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Allyn",
+      "Rena"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "aa9e17b8-1190-46c4-a917-a18523267a24",
+        "ts": 1792810421.8226137,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Allyn, Rena"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "1a186dc9-2d45-41cd-87b2-4ec8aa3895d7",
+        "ts": 1792810435.47752,
+        "agent": "Rena",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Rena and I'm considering claiming ISSUE-0002::review. My cost for this task is 1.54.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "178921cc-f7db-4810-b0cf-f8fe9a7b8b4f",
+        "ts": 1792810479.0925603,
+        "agent": "Rena",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Rena and I'm considering claiming ISSUE-0002::review. My cost for this task is 1.54.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "902e03db-6217-41f9-8430-2b354d04fae2",
+        "ts": 1792810483.2603705,
+        "agent": "Allyn",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Allyn and I'm considering claiming ISSUE-0001::review. My cost for this task is 3.38.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "ecb6f0d3-bbf9-4c36-9536-2ff5033f83a2",
+        "ts": 1792810501.9103434,
+        "agent": "Rena",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Rena",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Build testing [review]",
+                "tags": [
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Rena": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 54.92260506739434
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "8cf99322-9608-44bf-89a7-4a0424977670",
+        "ts": 1792810503.7103937,
+        "agent": "Allyn",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Allyn",
+              "task_id": "ISSUE-0001::test",
+              "task": {
+                "id": "ISSUE-0001::test",
+                "title": "Build security [test]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 4.8999999999999995,
+                "work_type": "test"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Allyn": "ISSUE-0001::test"
+                }
+              },
+              "joint_reward": 80.19381045260904
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Guillermina",
+      "Sean"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "ac7ffea6-4031-49aa-9065-90b9b926069a",
+        "ts": 1792810421.8226137,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Guillermina, Sean"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "23c3dc0e-8ccf-4429-b2e9-f5eea0026e41",
+        "ts": 1792810427.705245,
+        "agent": "Sean",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Sean and I'm considering claiming ISSUE-0001::review. My cost for this task is 3.54.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "1767706a-3df3-48dc-990b-d57215e0524f",
+        "ts": 1792810460.6992645,
+        "agent": "Guillermina",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Guillermina and I'm considering claiming ISSUE-0002::review. My cost for this task is 1.39.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "0385803d-43f1-483a-86e8-41d87ca69956",
+        "ts": 1792810495.0435655,
+        "agent": "Guillermina",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Guillermina and I'm considering claiming ISSUE-0002::review. My cost for this task is 1.39.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "2819faec-af7c-4343-beb7-dc678c667f40",
+        "ts": 1792810499.2996197,
+        "agent": "Sean",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Sean",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build security [review]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Sean": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 26.463177067373728
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "86163033-2313-41dc-b7ba-449e8df05303",
+        "ts": 1792810508.6731746,
+        "agent": "Guillermina",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Guillermina",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Build testing [review]",
+                "tags": [
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Guillermina": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 88.80457343985731
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Rena",
+      "Sean"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "ffa3af3d-502c-4c02-847c-7d38083f2a8f",
+        "ts": 1792810421.8226137,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Rena, Sean"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "c63b5626-9621-4704-8677-eabfb9ff6a7f",
+        "ts": 1792810425.4269142,
+        "agent": "Sean",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Sean and I'm considering claiming ISSUE-0001::review. My cost for this task is 3.54.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "346a440e-01da-4a30-a3d9-30cc7a5a59bc",
+        "ts": 1792810432.976985,
+        "agent": "Rena",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Rena and I'm considering claiming ISSUE-0002::review. My cost for this task is 1.54.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "e51caa54-0749-41f7-b8fd-755283e88013",
+        "ts": 1792810464.8761795,
+        "agent": "Sean",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Sean and I'm considering claiming ISSUE-0001::review. My cost for this task is 3.54.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "be41d8bb-88e5-4f65-8a9c-7b7cf423e877",
+        "ts": 1792810470.3307397,
+        "agent": "Sean",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Sean and I'm considering claiming ISSUE-0001::review. My cost for this task is 3.54.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "2e88bb09-96a9-48bf-83cd-e801925db2ae",
+        "ts": 1792810472.262246,
+        "agent": "Rena",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm agent Rena and I'm considering claiming ISSUE-0002::review. My cost for this task is 1.54.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "4f7d38e7-ea99-4b0c-a05b-58342f962e7c",
+        "ts": 1792810499.2996197,
+        "agent": "Sean",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Sean",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build security [review]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Sean": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 26.463177067373728
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "013e353c-11f3-431a-9eaf-12fb4c3ecd2b",
+        "ts": 1792810501.9103434,
+        "agent": "Rena",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Rena",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Build testing [review]",
+                "tags": [
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Rena": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 54.92260506739434
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

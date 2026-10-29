@@ -1,0 +1,61 @@
+================================================================================
+BLACKBOARD STATE LOG - 5
+Session started: 2026-10-26 19:37:11
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 5
+- Participants: St_Marys_Center_Radiology, St_Marys_Center_Surgery
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-26 19:40:21
+Iteration: 1 | Phase: execution | Last Agent: Resource_Provisioner
+Total Events: 10
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 10
+- By Type: context(1), action_executed(5), communication(4)
+- By Agent: SYSTEM(1), St_Marys_Center_Radiology(3), St_Marys_Center_Surgery(6)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [19:37:11] [Execution] SYSTEM (context)  Message: "Resource-Constrained Job Shop with Provisioner.
+
+This blackboard is a private communication channel.
+Participants: St_Marys_Center_Radiology, St_Marys_Center_Surgery"
+
+[Event #2, Iteration: 1] [19:37:17] [Planning] St_Marys_Center_Radiology (action_executed)  Action_Params: {'broadcast_message': {'St_Marys_Center_Radiology': {'message': 'SURPLUS Radio_Contrast', 'rationale': 'We have excess Radio_Contrast units and are offering them to other hospitals for a reward.'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS Radio_Contrast'. (Internal Rationale: We have excess Radio_Contrast units and are offering them to other hospitals for a reward.)", 'state_updates': {'broadcast_message': {'St_Marys_Center_Radiology': {'message': 'SURPLUS Radio_Contrast', 'rationale': 'We have excess Radio_Contrast units and are offering them to other hospitals for a reward.'}}}}
+
+[Event #3, Iteration: 1] [19:37:24] [Planning] St_Marys_Center_Surgery (communication)  Content: URGENT: Need Anesthetics at St_Marys_Center
+
+[Event #4, Iteration: 1] [19:37:26] [Planning] St_Marys_Center_Surgery (action_executed)  Action_Params: {'broadcast_message': {'St_Marys_Center_Surgery': {'message': 'DEFICIT Anesthetics', 'rationale': 'We have a deficit of Anesthetics and need them urgently.'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'DEFICIT Anesthetics'. (Internal Rationale: We have a deficit of Anesthetics and need them urgently.)", 'state_updates': {'broadcast_message': {'St_Marys_Center_Surgery': {'message': 'DEFICIT Anesthetics', 'rationale': 'We have a deficit of Anesthetics and need them urgently.'}}}}
+
+[Event #5, Iteration: 1] [19:37:59] [Planning] St_Marys_Center_Radiology (action_executed)  Action_Params: {'broadcast_message': {'St_Marys_Center_Radiology': {'message': 'SURPLUS Radio_Contrast', 'rationale': 'We have excess Radio_Contrast units and are offering them to other hospitals for a reward.'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS Radio_Contrast'. (Internal Rationale: We have excess Radio_Contrast units and are offering them to other hospitals for a reward.)", 'state_updates': {'broadcast_message': {'St_Marys_Center_Radiology': {'message': 'SURPLUS Radio_Contrast', 'rationale': 'We have excess Radio_Contrast units and are offering them to other hospitals for a reward.'}}}}
+
+[Event #6, Iteration: 1] [19:38:05] [Planning] St_Marys_Center_Surgery (communication)  Content: SURPLUS IV_Kits
+
+[Event #7, Iteration: 1] [19:38:07] [Planning] St_Marys_Center_Surgery (communication)  Content: SURPLUS PPE_Sets
+
+[Event #8, Iteration: 1] [19:38:10] [Planning] St_Marys_Center_Surgery (communication)  Content: SURPLUS Surgical_Packs
+
+[Event #9, Iteration: 1] [19:38:43] [Execution] St_Marys_Center_Radiology (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Radiology': {'patient_id': 'patient_id', 'step_index': 'step_index', 'start_time': 'start_time', 'rationale': 'rationale'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling patient_id. Rationale: rationale', 'state_updates': {'schedule': {'St_Marys_Center_Radiology': {'patient_id': 'patient_id', 'step_index': 'step_index', 'start_time': 'start_time', 'rationale': 'rationale'}}}}
+
+[Event #10, Iteration: 1] [19:38:53] [Execution] St_Marys_Center_Surgery (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Surgery': {'step_index': '1', 'rationale': 'To avoid -500 Step Miss Penalty', 'start_time': '0', 'patient_id': 'patient_id'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling patient_id. Rationale: To avoid -500 Step Miss Penalty', 'state_updates': {'schedule': {'St_Marys_Center_Surgery': {'step_index': '1', 'rationale': 'To avoid -500 Step Miss Penalty', 'start_time': '0', 'patient_id': 'patient_id'}}}}
+
+
+================================================================================
+

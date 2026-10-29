@@ -1,0 +1,81 @@
+================================================================================
+BLACKBOARD STATE LOG - 6
+Session started: 2026-10-25 09:41:50
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 6
+- Participants: St_Marys_Center_Radiology, St_Marys_Center_Triage
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-25 09:44:17
+Iteration: 1 | Phase: execution | Last Agent: St_Marys_Center_Triage
+Total Events: 13
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 13
+- By Type: context(1), action_executed(12)
+- By Agent: SYSTEM(1), St_Marys_Center_Radiology(3), St_Marys_Center_Triage(9)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [09:41:50] [Execution] SYSTEM (context)  Message: "Resource-Constrained Job Shop with Provisioner.
+
+This blackboard is a private communication channel.
+Participants: St_Marys_Center_Radiology, St_Marys_Center_Triage"
+
+[Event #2, Iteration: 1] [09:42:07] [Planning] St_Marys_Center_Radiology (action_executed)  Action_Params: {'broadcast_message': {'St_Marys_Center_Radiology': {'message': 'SURPLUS Radio_Contrast', 'rationale': 'We have more than 5 units of Radio_Contrast'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS Radio_Contrast'. (Internal Rationale: We have more than 5 units of Radio_Contrast)", 'state_updates': {'broadcast_message': {'St_Marys_Center_Radiology': {'message': 'SURPLUS Radio_Contrast', 'rationale': 'We have more than 5 units of Radio_Contrast'}}}}
+
+[Event #3, Iteration: 1] [09:42:26] [Planning] St_Marys_Center_Triage (action_executed)  Action_Params: {'broadcast_message': {'St_Marys_Center_Triage': {'message': 'DEFICIT IV_Kits', 'rationale': 'We have less than 5 units of IV_Kits'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'DEFICIT IV_Kits'. (Internal Rationale: We have less than 5 units of IV_Kits)", 'state_updates': {'broadcast_message': {'St_Marys_Center_Triage': {'message': 'DEFICIT IV_Kits', 'rationale': 'We have less than 5 units of IV_Kits'}}}}
+
+[Event #4, Iteration: 1] [09:43:23] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_3', 'step_index': '0', 'start_time': '0', 'rationale': 'Scheduling patient from task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_3. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_3', 'step_index': '0', 'start_time': '0', 'rationale': 'Scheduling patient from task list'}}}}
+
+[Event #5, Iteration: 1] [09:43:26] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_5', 'rationale': 'Scheduling patient from task list', 'start_time': '3', 'step_index': '0'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_5. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_5', 'rationale': 'Scheduling patient from task list', 'start_time': '3', 'step_index': '0'}}}}
+
+[Event #6, Iteration: 1] [09:43:27] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_0', 'step_index': '0', 'start_time': '13', 'rationale': 'Scheduling patient from task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_0. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_0', 'step_index': '0', 'start_time': '13', 'rationale': 'Scheduling patient from task list'}}}}
+
+[Event #7, Iteration: 1] [09:43:28] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'step_index': '0', 'rationale': 'Scheduling patient from task list', 'start_time': '8', 'patient_id': 'Patient_1'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_1. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'step_index': '0', 'rationale': 'Scheduling patient from task list', 'start_time': '8', 'patient_id': 'Patient_1'}}}}
+
+[Event #8, Iteration: 1] [09:43:30] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'step_index': '0', 'start_time': '9', 'patient_id': 'Patient_2', 'rationale': 'Scheduling patient from task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_2. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'step_index': '0', 'start_time': '9', 'patient_id': 'Patient_2', 'rationale': 'Scheduling patient from task list'}}}}
+
+[Event #9, Iteration: 1] [09:43:31] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'step_index': '0', 'rationale': 'Scheduling patient from task list', 'start_time': '15', 'patient_id': 'Patient_4'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_4. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'step_index': '0', 'rationale': 'Scheduling patient from task list', 'start_time': '15', 'patient_id': 'Patient_4'}}}}
+
+[Event #10, Iteration: 1] [09:43:32] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'step_index': '0', 'start_time': '3', 'rationale': 'Scheduling patient from task list', 'patient_id': 'Patient_6'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_6. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'step_index': '0', 'start_time': '3', 'rationale': 'Scheduling patient from task list', 'patient_id': 'Patient_6'}}}}
+
+[Event #11, Iteration: 1] [09:43:33] [Execution] St_Marys_Center_Triage (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_7', 'step_index': '0', 'start_time': '23', 'rationale': 'Scheduling patient from task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_7. Rationale: Scheduling patient from task list', 'state_updates': {'schedule': {'St_Marys_Center_Triage': {'patient_id': 'Patient_7', 'step_index': '0', 'start_time': '23', 'rationale': 'Scheduling patient from task list'}}}}
+
+[Event #12, Iteration: 1] [09:43:51] [Execution] St_Marys_Center_Radiology (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Radiology': {'patient_id': 'Patient_2', 'rationale': 'Because the patient is in the job queue', 'start_time': '10', 'step_index': '1'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_2. Rationale: Because the patient is in the job queue', 'state_updates': {'schedule': {'St_Marys_Center_Radiology': {'patient_id': 'Patient_2', 'rationale': 'Because the patient is in the job queue', 'start_time': '10', 'step_index': '1'}}}}
+
+[Event #13, Iteration: 1] [09:43:52] [Execution] St_Marys_Center_Radiology (action_executed)  Action_Params: {'schedule': {'St_Marys_Center_Radiology': {'rationale': 'Because the patient is in the job queue', 'step_index': '1', 'start_time': '16', 'patient_id': 'Patient_4'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_4. Rationale: Because the patient is in the job queue', 'state_updates': {'schedule': {'St_Marys_Center_Radiology': {'rationale': 'Because the patient is in the job queue', 'step_index': '1', 'start_time': '16', 'patient_id': 'Patient_4'}}}}
+
+
+================================================================================
+

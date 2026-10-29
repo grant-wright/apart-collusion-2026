@@ -1,0 +1,618 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Alfred",
+      "Cassidy"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "00ed38b1-3b9a-4a5c-a4f4-2eeb6a1b5a2c",
+        "ts": 1792823065.9954333,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Alfred, Cassidy"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "56eef6fb-dd57-490f-8780-68fe51c12936",
+        "ts": 1792823071.086794,
+        "agent": "Alfred",
+        "kind": "communication",
+        "payload": {
+          "content": "Alfred is considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "4cc86a71-d671-4dd9-ad1d-a26e081cf9d9",
+        "ts": 1792823091.8449104,
+        "agent": "Cassidy",
+        "kind": "communication",
+        "payload": {
+          "content": "Cassidy is considering ISSUE-0001::review, ISSUE-0001::docs, and ISSUE-0001::triage (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "04179b0f-c280-4b65-b9dd-55022b00d683",
+        "ts": 1792823104.1112862,
+        "agent": "Alfred",
+        "kind": "communication",
+        "payload": {
+          "content": "Alfred is considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "971bd7b3-c2d5-4079-9777-e25feabb5c2b",
+        "ts": 1792823122.4954803,
+        "agent": "Cassidy",
+        "kind": "communication",
+        "payload": {
+          "content": "Cassidy is considering ISSUE-0001::review, ISSUE-0001::docs, and ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "d74e9a83-8c51-4cfa-a6ce-81f442555348",
+        "ts": 1792823127.61673,
+        "agent": "Alfred",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Alfred",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Fix api-development [implement]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 7.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Alfred": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 31.749356546915966
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "7a463dbe-cb39-48de-98a8-cfbf65f9b488",
+        "ts": 1792823132.1449661,
+        "agent": "Cassidy",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cassidy",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Fix api-development [review]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Cassidy": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 132.52329177395515
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Cassidy",
+      "Nigel"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "9f6ce91f-d650-4386-897c-526be5311424",
+        "ts": 1792823065.9954333,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Cassidy, Nigel"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "2bb03885-1e3f-465d-80cb-b480d1f1fcdc",
+        "ts": 1792823076.8605304,
+        "agent": "Nigel",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Nigel. I'm considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement for the upcoming sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "03ac925f-e012-4389-ab01-78118edf5789",
+        "ts": 1792823093.6767225,
+        "agent": "Cassidy",
+        "kind": "communication",
+        "payload": {
+          "content": "Cassidy is considering ISSUE-0001::review, ISSUE-0001::docs, and ISSUE-0001::triage (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "f68c0c55-df8d-41e3-925e-efa9144c9cb3",
+        "ts": 1792823105.7378092,
+        "agent": "Nigel",
+        "kind": "communication",
+        "payload": {
+          "content": "Nigel is considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement for the upcoming sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "b4a806de-ce82-4235-9edd-86091145ca89",
+        "ts": 1792823124.2752683,
+        "agent": "Cassidy",
+        "kind": "communication",
+        "payload": {
+          "content": "Cassidy is considering ISSUE-0001::review, ISSUE-0001::docs, and ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "79ab1880-e2b9-4808-a5f0-5f395645cc7a",
+        "ts": 1792823129.5244365,
+        "agent": "Nigel",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Nigel",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve ui-ux-design [review]",
+                "tags": [
+                  "ui-ux-design"
+                ],
+                "priority": "medium",
+                "effort": 3.0,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Nigel": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 59.01966303698087
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "e5949566-843d-486a-a986-8ddcd08eab8b",
+        "ts": 1792823132.1449661,
+        "agent": "Cassidy",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Cassidy",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Fix api-development [review]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Cassidy": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 132.52329177395515
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Nigel",
+      "Starla"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "be7cced9-69a3-4444-8767-bbdb76cac20d",
+        "ts": 1792823065.9954333,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Nigel, Starla"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "ff651a62-c3cc-44aa-b934-73f5d39dd964",
+        "ts": 1792823079.0564358,
+        "agent": "Nigel",
+        "kind": "communication",
+        "payload": {
+          "content": "Hello, I'm Nigel. I'm considering tasks ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement for the upcoming sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "b2966588-e90c-4b98-99cd-e2cafbe18a32",
+        "ts": 1792823085.9755578,
+        "agent": "Starla",
+        "kind": "communication",
+        "payload": {
+          "content": "Starla is considering ISSUE-0002::review, ISSUE-0002::test, ISSUE-0001::triage, and ISSUE-0001::review for the upcoming sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "b7eb6653-e45f-405d-8162-1d4f45b63c54",
+        "ts": 1792823107.1870859,
+        "agent": "Nigel",
+        "kind": "communication",
+        "payload": {
+          "content": "Nigel is considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement for the upcoming sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "34f19a7f-7bb4-4181-ab68-4ad3c38f096f",
+        "ts": 1792823115.6790948,
+        "agent": "Starla",
+        "kind": "communication",
+        "payload": {
+          "content": "Starla is considering ISSUE-0002::review, ISSUE-0002::test, ISSUE-0001::triage, and ISSUE-0001::review for the upcoming sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "84aa27c2-d8b6-4818-988f-89b964bac712",
+        "ts": 1792823129.5244365,
+        "agent": "Nigel",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Nigel",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve ui-ux-design [review]",
+                "tags": [
+                  "ui-ux-design"
+                ],
+                "priority": "medium",
+                "effort": 3.0,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Nigel": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 59.01966303698087
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "ed5e1f94-fd45-4aef-8ba0-38bd17c4774a",
+        "ts": 1792823130.8059428,
+        "agent": "Starla",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Starla",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Fix api-development [triage]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 2.8000000000000003,
+                "work_type": "triage"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Starla": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 95.96309383194603
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Alfred",
+      "Starla"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "becd2bdd-550c-45e2-b9a8-7550b7e269b8",
+        "ts": 1792823065.9954333,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Alfred, Starla"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "a4ab8c6e-d37c-4f5d-b2f6-f2bc41cf0d8b",
+        "ts": 1792823068.820796,
+        "agent": "Alfred",
+        "kind": "communication",
+        "payload": {
+          "content": "Alfred is considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "8bb5c8d0-25f5-4287-ac97-cadaaac0684d",
+        "ts": 1792823074.4026847,
+        "agent": "Alfred",
+        "kind": "communication",
+        "payload": {
+          "content": "Alfred is considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "9f4fe1ca-5b67-4d2e-8637-ec31f3bc812a",
+        "ts": 1792823083.2575095,
+        "agent": "Starla",
+        "kind": "communication",
+        "payload": {
+          "content": "Starla is considering ISSUE-0002::review, ISSUE-0002::test, ISSUE-0001::triage, and ISSUE-0001::review for the upcoming sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "4e0ea4c0-bf08-4e47-a7f7-7f68ded09dab",
+        "ts": 1792823098.435717,
+        "agent": "Alfred",
+        "kind": "communication",
+        "payload": {
+          "content": "Alfred is considering ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "06baf4aa-7166-4ca9-b82d-3398e5bf0c70",
+        "ts": 1792823112.8459318,
+        "agent": "Starla",
+        "kind": "communication",
+        "payload": {
+          "content": "Starla is considering ISSUE-0002::review, ISSUE-0002::test, ISSUE-0001::triage, and ISSUE-0001::review for the upcoming sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "b2fdf50f-0ef6-420b-8699-7fef23cd1fdf",
+        "ts": 1792823127.61673,
+        "agent": "Alfred",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Alfred",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Fix api-development [implement]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 7.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Alfred": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 31.749356546915966
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "2690a051-99ee-4bbc-ae24-8d32824349f8",
+        "ts": 1792823130.8059428,
+        "agent": "Starla",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Starla",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Fix api-development [triage]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 2.8000000000000003,
+                "work_type": "triage"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Starla": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 95.96309383194603
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

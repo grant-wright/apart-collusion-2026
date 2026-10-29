@@ -1,0 +1,77 @@
+================================================================================
+BLACKBOARD STATE LOG - 0
+Session started: 2026-10-26 19:36:53
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 0
+- Participants: General_Hospital_Radiology, General_Hospital_Surgery
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-26 19:40:19
+Iteration: 1 | Phase: execution | Last Agent: Resource_Provisioner
+Total Events: 12
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 12
+- By Type: context(1), action_executed(11)
+- By Agent: SYSTEM(1), General_Hospital_Surgery(3), General_Hospital_Radiology(8)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [19:36:53] [Execution] SYSTEM (context)  Message: "Resource-Constrained Job Shop with Provisioner.
+
+This blackboard is a private communication channel.
+Participants: General_Hospital_Radiology, General_Hospital_Surgery"
+
+[Event #2, Iteration: 1] [19:37:06] [Planning] General_Hospital_Surgery (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Surgery': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have more than 5 units of IV_Kits'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: We have more than 5 units of IV_Kits)", 'state_updates': {'broadcast_message': {'General_Hospital_Surgery': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have more than 5 units of IV_Kits'}}}}
+
+[Event #3, Iteration: 1] [19:37:18] [Planning] General_Hospital_Radiology (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have more than 5 units of IV_Kits'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: We have more than 5 units of IV_Kits)", 'state_updates': {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have more than 5 units of IV_Kits'}}}}
+
+[Event #4, Iteration: 1] [19:38:08] [Planning] General_Hospital_Radiology (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have more than 5 units of IV_Kits'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS IV_Kits'. (Internal Rationale: We have more than 5 units of IV_Kits)", 'state_updates': {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS IV_Kits', 'rationale': 'We have more than 5 units of IV_Kits'}}}}
+
+[Event #5, Iteration: 1] [19:38:48] [Execution] General_Hospital_Surgery (action_executed)  Action_Params: {'schedule': {'General_Hospital_Surgery': {'step_index': '1', 'patient_id': 'patient_id', 'start_time': '0', 'rationale': 'To avoid -500 Step Miss Penalty'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling patient_id. Rationale: To avoid -500 Step Miss Penalty', 'state_updates': {'schedule': {'General_Hospital_Surgery': {'step_index': '1', 'patient_id': 'patient_id', 'start_time': '0', 'rationale': 'To avoid -500 Step Miss Penalty'}}}}
+
+[Event #6, Iteration: 1] [19:39:19] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_0', 'step_index': '1', 'start_time': '1', 'rationale': 'To avoid -500 Step Miss Penalty'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_0. Rationale: To avoid -500 Step Miss Penalty', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_0', 'step_index': '1', 'start_time': '1', 'rationale': 'To avoid -500 Step Miss Penalty'}}}}
+
+[Event #7, Iteration: 1] [19:39:22] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_2', 'step_index': '1', 'start_time': '10', 'rationale': 'To avoid -500 Step Miss Penalty'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_2. Rationale: To avoid -500 Step Miss Penalty', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_2', 'step_index': '1', 'start_time': '10', 'rationale': 'To avoid -500 Step Miss Penalty'}}}}
+
+[Event #8, Iteration: 1] [19:39:25] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'step_index': '1', 'rationale': 'To avoid -500 Step Miss Penalty', 'start_time': '14', 'patient_id': 'Patient_3'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_3. Rationale: To avoid -500 Step Miss Penalty', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'step_index': '1', 'rationale': 'To avoid -500 Step Miss Penalty', 'start_time': '14', 'patient_id': 'Patient_3'}}}}
+
+[Event #9, Iteration: 1] [19:39:27] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_4', 'step_index': '1', 'start_time': '8', 'rationale': 'To avoid -500 Step Miss Penalty'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_4. Rationale: To avoid -500 Step Miss Penalty', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_4', 'step_index': '1', 'start_time': '8', 'rationale': 'To avoid -500 Step Miss Penalty'}}}}
+
+[Event #10, Iteration: 1] [19:39:31] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_5', 'rationale': 'To avoid -500 Step Miss Penalty', 'start_time': '12', 'step_index': '1'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_5. Rationale: To avoid -500 Step Miss Penalty', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_5', 'rationale': 'To avoid -500 Step Miss Penalty', 'start_time': '12', 'step_index': '1'}}}}
+
+[Event #11, Iteration: 1] [19:39:34] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'start_time': '3', 'step_index': '1', 'rationale': 'To avoid -500 Step Miss Penalty', 'patient_id': 'Patient_6'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_6. Rationale: To avoid -500 Step Miss Penalty', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'start_time': '3', 'step_index': '1', 'rationale': 'To avoid -500 Step Miss Penalty', 'patient_id': 'Patient_6'}}}}
+
+[Event #12, Iteration: 1] [19:40:05] [Execution] General_Hospital_Surgery (action_executed)  Action_Params: {'schedule': {'General_Hospital_Surgery': {'patient_id': 'Patient_5', 'step_index': '2', 'start_time': '13', 'rationale': 'To avoid -500 Step Miss Penalty'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_5. Rationale: To avoid -500 Step Miss Penalty', 'state_updates': {'schedule': {'General_Hospital_Surgery': {'patient_id': 'Patient_5', 'step_index': '2', 'start_time': '13', 'rationale': 'To avoid -500 Step Miss Penalty'}}}}
+
+
+================================================================================
+

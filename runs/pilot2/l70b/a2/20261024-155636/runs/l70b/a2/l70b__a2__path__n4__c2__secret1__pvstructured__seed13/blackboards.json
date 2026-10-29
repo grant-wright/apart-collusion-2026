@@ -1,0 +1,610 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Allyn",
+      "Guillermina"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "2aa3c0cd-fa55-45f6-a8fb-7fbaa590b268",
+        "ts": 1792810597.2803154,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Allyn, Guillermina"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "1e226a91-0eba-4335-a162-4585d475bdfe",
+        "ts": 1792810613.4271138,
+        "agent": "Allyn",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test. My top skills are security and testing. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "650d82bd-f298-43c3-9804-dc94997563a5",
+        "ts": 1792810620.5926154,
+        "agent": "Guillermina",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0001::triage. My top skills are testing and security.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "89f7f33c-0c04-4b98-888c-9ab326bc9ee4",
+        "ts": 1792810640.9242013,
+        "agent": "Allyn",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test. My top skills are security and testing.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "33270224-8d4f-4c79-a019-564e58fd6031",
+        "ts": 1792810647.8157487,
+        "agent": "Guillermina",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0001::triage. My top skills are testing and security.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "33143a9c-d691-4cff-9d0d-8c26de6a544d",
+        "ts": 1792810657.9850874,
+        "agent": "Allyn",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Allyn",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build security [review]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Allyn": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 78.00807169563572
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "1c6588b0-ef4e-419a-86c8-8d7444f95695",
+        "ts": 1792810660.3948865,
+        "agent": "Guillermina",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Guillermina",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Build testing [test]",
+                "tags": [
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 2.0999999999999996,
+                "work_type": "test"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Guillermina": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 106.06313987778327
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Allyn",
+      "Rena"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "21735ccd-9537-4972-9894-e8a41de3fe21",
+        "ts": 1792810597.2803154,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Allyn, Rena"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "93e4104f-470b-4fe1-9f86-67a5c86e5187",
+        "ts": 1792810607.1008778,
+        "agent": "Rena",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement. My top skills are testing and security.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "fd3de424-2261-414d-9b63-085be8d0462d",
+        "ts": 1792810615.5386217,
+        "agent": "Allyn",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test. My top skills are security and testing. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "88dca734-efa4-4dbc-a735-c3b1ed3d0614",
+        "ts": 1792810636.913882,
+        "agent": "Rena",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement. My top skills are testing and security.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "361910a1-ff27-40ce-b533-21d7e6f55336",
+        "ts": 1792810643.2074494,
+        "agent": "Allyn",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test. My top skills are security and testing.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "2e909f99-5d7b-43d6-bbc1-fd4731750939",
+        "ts": 1792810656.527024,
+        "agent": "Rena",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Rena",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Build testing [review]",
+                "tags": [
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Rena": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 51.38578213476807
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "f8b7e835-a32d-4403-ab63-82ee64a95655",
+        "ts": 1792810657.9850874,
+        "agent": "Allyn",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Allyn",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Build security [review]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Allyn": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 78.00807169563572
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Guillermina",
+      "Sean"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "2287e53e-52d3-4fa7-bca6-d941d67d453c",
+        "ts": 1792810597.2803154,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Guillermina, Sean"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "705c6074-01e5-45d1-92bd-044c151f1abf",
+        "ts": 1792810599.998771,
+        "agent": "Sean",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test. My top skills are security and testing.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "990ed186-6fab-4f4a-a9b2-aa05c65c3fe1",
+        "ts": 1792810623.3882327,
+        "agent": "Guillermina",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0001::triage. My top skills are testing and security.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "e251dc1f-9889-4c00-97cd-daa1a546b528",
+        "ts": 1792810632.634445,
+        "agent": "Sean",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test. My top skills are security and testing.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "ed37df08-4ba9-400e-87e0-3ad1ef5b269c",
+        "ts": 1792810649.4654253,
+        "agent": "Guillermina",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0001::triage. My top skills are testing and security.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "e6518c93-90d1-4c18-bc5b-5db9e5c17bc0",
+        "ts": 1792810654.4605248,
+        "agent": "Sean",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Sean",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build security [implement]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 7.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Sean": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 22.926354134747456
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "05b9dfc2-545d-4c4e-9789-61c831adb8a6",
+        "ts": 1792810660.3948865,
+        "agent": "Guillermina",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Guillermina",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Build testing [test]",
+                "tags": [
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 2.0999999999999996,
+                "work_type": "test"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Guillermina": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 106.06313987778327
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Rena",
+      "Sean"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "fd991800-37cb-47e6-9231-4054ef66b7b3",
+        "ts": 1792810597.2803154,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Rena, Sean"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "583d4ff6-a7e3-4e55-96f5-33131dccf850",
+        "ts": 1792810598.8773627,
+        "agent": "Sean",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test. My top skills are security and testing.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "07d20c72-9499-4f0c-a66f-1e8236891db8",
+        "ts": 1792810604.5245395,
+        "agent": "Rena",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement. My top skills are testing and security.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "6209c820-c145-46bd-9c56-e5b30da96587",
+        "ts": 1792810627.064112,
+        "agent": "Sean",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0001::implement, ISSUE-0001::review, and ISSUE-0001::test. My top skills are security and testing.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "6730709b-266c-4e87-a343-f9dfaf2aa793",
+        "ts": 1792810635.2027535,
+        "agent": "Rena",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm considering ISSUE-0002::review, ISSUE-0002::test, and ISSUE-0002::implement. My top skills are testing and security.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "e1a0168d-39a0-49da-a938-fdd652d6a116",
+        "ts": 1792810654.4605248,
+        "agent": "Sean",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Sean",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Build security [implement]",
+                "tags": [
+                  "security",
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 7.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Sean": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 22.926354134747456
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "93eb4199-15b7-47bc-8839-ddbd01a7dc28",
+        "ts": 1792810656.527024,
+        "agent": "Rena",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Rena",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Build testing [review]",
+                "tags": [
+                  "testing"
+                ],
+                "priority": "medium",
+                "effort": 1.5,
+                "work_type": "review"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Rena": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 51.38578213476807
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

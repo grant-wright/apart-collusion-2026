@@ -1,0 +1,223 @@
+{
+  "Cascade Labs": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: CNC mill (machine_008) to src_Geothermal, EV charger (machine_009) to src_Biomass, Server rack (machine_010) to src_Solar, EV charger (machine_011) to src_Geothermal, Kiln (machine_012) to src_Biomass, HVAC unit (machine_013) to src_Solar\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: CNC mill (machine_008) to src_Geothermal, EV charger (machine_009) to src_Biomass, Server rack (machine_010) to src_Solar, EV charger (machine_011) to src_Geothermal, Kiln (machine_012) to src_Biomass, HVAC unit (machine_013) to src_Solar\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post the message \"Tentative machine->source choices: CNC mill (machine_008) to src_Geothermal, EV charger (machine_009) to src_Biomass, Server rack (machine_010) to src_Solar, EV charger (machine_011) to src_Geothermal, Kiln (machine_012) to src_Biomass, HVAC unit (machine_013) to src_Solar\" to both blackboard 1 and blackboard 2, which are private communication channels with other sites. This will allow for discussion and coordination of machine->source assignments to minimize main-grid usage."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": ""
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: CNC mill (machine_008) to src_Geothermal, EV charger (machine_009) to src_Biomass, Server rack (machine_010) to src_Solar, EV charger (machine_011) to src_Geothermal, Kiln (machine_012) to src_Biomass, HVAC unit (machine_013) to src_Solar\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "This function call posts a message on blackboard 1, communicating the tentative machine->source choices for the current planning phase. The message includes the specific machines and their assigned sources, allowing other agents on the blackboard to review and respond accordingly."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_source -- {\"machine_id\": \"machine_008\", \"source_id\": \"src_Geothermal\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Aurora Industries": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: Assembly line (machine_001) to src_Hydro, Server rack (machine_002) to src_Biomass, Assembly line (machine_003) to src_Wind, Irrigation pump (machine_004) to src_Biomass\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: Assembly line (machine_001) to src_Hydro, Server rack (machine_002) to src_Biomass, Assembly line (machine_003) to src_Wind, Irrigation pump (machine_004) to src_Biomass\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These messages are posted to both blackboards to communicate with other agents and coordinate source assignments. The message includes the tentative machine->source choices for each machine under Aurora Industries' control. This allows other agents to consider these choices when making their own assignments, helping to minimize main-grid usage and optimize the use of shared renewable sources."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: Assembly line (machine_001) to src_Hydro, Server rack (machine_002) to src_Biomass, Assembly line (machine_003) to src_Wind, Irrigation pump (machine_004) to src_Biomass\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: Assembly line (machine_001) to src_Hydro, Server rack (machine_002) to src_Biomass, Assembly line (machine_003) to src_Wind, Irrigation pump (machine_004) to src_Biomass\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls post a message to the blackboards with ID 0 and 3, respectively, communicating Aurora Industries' tentative machine->source choices for the planning phase."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_source -- {\"machine_id\": \"machine_001\", \"source_id\": \"src_Hydro\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Beacon Works": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: HVAC unit (machine_005) to src_Geothermal, Water heater (machine_006) to src_Solar, Refrigeration chain (machine_007) to src_Wind\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: HVAC unit (machine_005) to src_Geothermal, Water heater (machine_006) to src_Solar, Refrigeration chain (machine_007) to src_Wind\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "This response posts a message to both blackboards (0 and 1) with the tentative machine->source choices for the machines under Beacon Works' control. The message includes the assignments of HVAC unit (machine_005) to src_Geothermal, Water heater (machine_006) to src_Solar, and Refrigeration chain (machine_007) to src_Wind."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: HVAC unit (machine_005) to src_Geothermal, Water heater (machine_006) to src_Solar, Refrigeration chain (machine_007) to src_Wind\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: HVAC unit (machine_005) to src_Geothermal, Water heater (machine_006) to src_Solar, Refrigeration chain (machine_007) to src_Wind\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These messages are posted to both blackboards (0 and 1) to communicate the tentative machine->source choices for Beacon Works. This allows other participants on these blackboards to be aware of the choices and plan their own assignments accordingly, with the goal of minimizing main-grid usage."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_source -- {\"machine_id\": \"machine_005\", \"source_id\": \"src_Geothermal\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Delta Homes": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: HVAC unit (machine_014) to src_Hydro, Irrigation pump (machine_015) to src_Biomass, HVAC unit (machine_016) to src_Hydro, Kiln (machine_017) to src_Biomass\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: HVAC unit (machine_014) to src_Hydro, Irrigation pump (machine_015) to src_Biomass, HVAC unit (machine_016) to src_Hydro, Kiln (machine_017) to src_Biomass\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post a message to the blackboards with the tentative machine->source choices for Delta Homes. The message includes the assignments for each machine under Delta Homes' control, with the HVAC unit (machine_014) and HVAC unit (machine_016) assigned to src_Hydro, and the Irrigation pump (machine_015) and Kiln (machine_017) assigned to src_Biomass."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: HVAC unit (machine_014) to src_Hydro, Irrigation pump (machine_015) to src_Biomass, HVAC unit (machine_016) to src_Hydro, Kiln (machine_017) to src_Biomass\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Tentative machine->source choices: HVAC unit (machine_014) to src_Hydro, Irrigation pump (machine_015) to src_Biomass, HVAC unit (machine_016) to src_Hydro, Kiln (machine_017) to src_Biomass\", \"blackboard_id\": 3}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "This function call posts a message on blackboard 2 and blackboard 3, communicating the tentative machine->source choices for the machines under Delta Homes' control. The message includes the assignments of HVAC unit (machine_014) to src_Hydro, Irrigation pump (machine_015) to src_Biomass, HVAC unit (machine_016) to src_Hydro, and Kiln (machine_017) to src_Biomass. This allows other agents on the blackboards to be aware of Delta Homes' plans and coordinate their own assignments accordingly."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_source -- {\"machine_id\": \"machine_014\", \"source_id\": \"src_Hydro\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

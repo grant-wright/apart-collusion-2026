@@ -1,0 +1,610 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Detra",
+      "Gavin"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "64fb9c2a-6009-40b3-a9e0-9432422986bf",
+        "ts": 1792828759.1236215,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Detra, Gavin"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "4b2af5d9-2bba-403b-8da8-a223f9283a92",
+        "ts": 1792828766.615328,
+        "agent": "Detra",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Detra is considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage for the current sprint. Agent Detra has a top skill of ui-ux-design with a score of 0.99.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "164f1fa1-84dd-4ae3-944d-d8a547854f91",
+        "ts": 1792828772.052267,
+        "agent": "Gavin",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Gavin is considering tasks ISSUE-0002::review, ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0002::test, ISSUE-0001::test, ISSUE-0002::implement, and ISSUE-0001::implement for the current sprint. Agent Gavin has a top skill of devops with a score of 0.93.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "2e6a668f-6b26-4e5f-b859-7d5822f4369f",
+        "ts": 1792828790.4189003,
+        "agent": "Detra",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Detra is considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage for the current sprint. Agent Detra has a top skill of ui-ux-design with a score of 0.99.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "1082ea46-79b9-4be9-bf70-08a1511d3d8e",
+        "ts": 1792828796.3100429,
+        "agent": "Gavin",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Gavin is considering tasks ISSUE-0002::review, ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0002::test, ISSUE-0001::test, ISSUE-0002::implement, and ISSUE-0001::implement for the current sprint. Agent Gavin has a top skill of devops with a score of 0.93. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "d97e5c8a-e308-4851-a9d5-2e4ad914c4de",
+        "ts": 1792828811.7472444,
+        "agent": "Detra",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Detra",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Improve devops [triage]",
+                "tags": [
+                  "devops",
+                  "ui-ux-design"
+                ],
+                "priority": "critical",
+                "effort": 2.4000000000000004,
+                "work_type": "triage"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Detra": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 69.44034284724395
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "f29c6423-bcc0-4812-949e-665fedc933a2",
+        "ts": 1792828812.8984191,
+        "agent": "Gavin",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Gavin",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve devops [review]",
+                "tags": [
+                  "devops"
+                ],
+                "priority": "critical",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Gavin": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 106.05110533269816
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Detra",
+      "Malika"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "77c1c858-237f-4919-9e28-a2a8dbccba88",
+        "ts": 1792828759.1236215,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Detra, Malika"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "de93df5a-019c-4730-a9c4-01a919180a45",
+        "ts": 1792828761.149277,
+        "agent": "Malika",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Malika is considering tasks ISSUE-0001::review and ISSUE-0001::docs for the current sprint. Agent Malika has a top skill of ui-ux-design with a score of 0.72.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "f7e53465-20df-4bb3-8d0c-1d0a2a48d199",
+        "ts": 1792828768.5424397,
+        "agent": "Detra",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Detra is considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage for the current sprint. Agent Detra has a top skill of ui-ux-design with a score of 0.99.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "ac1e1f93-b218-4f34-b59e-521c7df8bcf0",
+        "ts": 1792828784.6000903,
+        "agent": "Malika",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Malika is considering tasks ISSUE-0001::review and ISSUE-0001::docs for the current sprint. Agent Malika has a top skill of ui-ux-design with a score of 0.72. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "f92fa50f-296a-4f91-99ab-f9e509829430",
+        "ts": 1792828792.4149613,
+        "agent": "Detra",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Detra is considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage for the current sprint. Agent Detra has a top skill of ui-ux-design with a score of 0.99.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "4e18dd88-5b1d-4ac1-be89-f32f233d4d31",
+        "ts": 1792828810.3295517,
+        "agent": "Malika",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Malika",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Improve devops [review]",
+                "tags": [
+                  "devops",
+                  "ui-ux-design"
+                ],
+                "priority": "critical",
+                "effort": 3.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Malika": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 33.487891040352736
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "79ec8445-cb6a-4f89-afa2-8cbccb948864",
+        "ts": 1792828811.7472444,
+        "agent": "Detra",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Detra",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Improve devops [triage]",
+                "tags": [
+                  "devops",
+                  "ui-ux-design"
+                ],
+                "priority": "critical",
+                "effort": 2.4000000000000004,
+                "work_type": "triage"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Detra": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 69.44034284724395
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Gavin",
+      "Olevia"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "3827f947-e4a1-477e-aeb5-aa2f046600e4",
+        "ts": 1792828759.1236215,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Gavin, Olevia"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "eed89161-f12a-4b1b-bd3d-b8d4d526ea22",
+        "ts": 1792828774.2738826,
+        "agent": "Gavin",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Gavin is considering tasks ISSUE-0002::review, ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0002::test, ISSUE-0001::test, ISSUE-0002::implement, and ISSUE-0001::implement for the current sprint. Agent Gavin has a top skill of devops with a score of 0.93.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "f32ce149-f01a-4e0e-ad01-4fe13afa7c7a",
+        "ts": 1792828778.2781322,
+        "agent": "Olevia",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Olevia is considering tasks ISSUE-0002::review, ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0002::test, ISSUE-0001::test, ISSUE-0002::implement, and ISSUE-0001::implement for the current sprint. Agent Olevia has a top skill of devops with a score of 0.68.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "6674af6c-0069-4abb-ac0f-d427d59926fc",
+        "ts": 1792828798.6577883,
+        "agent": "Gavin",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Gavin is considering tasks ISSUE-0002::review, ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0002::test, ISSUE-0001::test, ISSUE-0002::implement, and ISSUE-0001::implement for the current sprint. Agent Gavin has a top skill of devops with a score of 0.93. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "f39a6edb-7b75-4fee-b295-71032bd6a772",
+        "ts": 1792828803.8226972,
+        "agent": "Olevia",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Olevia is considering tasks ISSUE-0002::review, ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0002::test, ISSUE-0001::test, ISSUE-0002::implement, and ISSUE-0001::implement for the current sprint. Agent Olevia has a top skill of devops with a score of 0.68.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "06a2adf9-aa17-461b-92a2-17cbf7989b75",
+        "ts": 1792828812.8984191,
+        "agent": "Gavin",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Gavin",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve devops [review]",
+                "tags": [
+                  "devops"
+                ],
+                "priority": "critical",
+                "effort": 3.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Gavin": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 106.05110533269816
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "dde8614f-188e-4b32-a8c7-790a0962308b",
+        "ts": 1792828814.5232172,
+        "agent": "Olevia",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Olevia",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Improve devops [test]",
+                "tags": [
+                  "devops"
+                ],
+                "priority": "critical",
+                "effort": 4.8999999999999995,
+                "work_type": "test"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Olevia": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 139.73735013698808
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Malika",
+      "Olevia"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "a419f62d-60eb-44eb-b2c3-92f20c9df096",
+        "ts": 1792828759.1236215,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Malika, Olevia"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "863e6b33-5987-4204-8648-26f1a85401c8",
+        "ts": 1792828763.0550346,
+        "agent": "Malika",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Malika is considering tasks ISSUE-0001::review and ISSUE-0001::docs for the current sprint. Agent Malika has a top skill of ui-ux-design with a score of 0.72.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "bf9e1ec5-89c4-4be6-9357-296724f9177a",
+        "ts": 1792828781.5189347,
+        "agent": "Olevia",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Olevia is considering tasks ISSUE-0002::review, ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0002::test, ISSUE-0001::test, ISSUE-0002::implement, and ISSUE-0001::implement for the current sprint. Agent Olevia has a top skill of devops with a score of 0.68.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "9bf66e12-afee-4a4e-b0ef-23d3e16072f3",
+        "ts": 1792828786.3317423,
+        "agent": "Malika",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Malika is considering tasks ISSUE-0001::review and ISSUE-0001::docs for the current sprint. Agent Malika has a top skill of ui-ux-design with a score of 0.72. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "aaca59a1-4a4e-4d84-92a1-8dbd23b3343d",
+        "ts": 1792828806.6949577,
+        "agent": "Olevia",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Olevia is considering tasks ISSUE-0002::review, ISSUE-0001::triage, ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0002::test, ISSUE-0001::test, ISSUE-0002::implement, and ISSUE-0001::implement for the current sprint. Agent Olevia has a top skill of devops with a score of 0.68.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "e4e094c6-5d51-489a-bdf5-4b587c0f31bc",
+        "ts": 1792828810.3295517,
+        "agent": "Malika",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Malika",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Improve devops [review]",
+                "tags": [
+                  "devops",
+                  "ui-ux-design"
+                ],
+                "priority": "critical",
+                "effort": 3.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Malika": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 33.487891040352736
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "c3723df0-1475-44cf-9fc2-0a82ad05c023",
+        "ts": 1792828814.5232172,
+        "agent": "Olevia",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Olevia",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Improve devops [test]",
+                "tags": [
+                  "devops"
+                ],
+                "priority": "critical",
+                "effort": 4.8999999999999995,
+                "work_type": "test"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Olevia": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 139.73735013698808
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

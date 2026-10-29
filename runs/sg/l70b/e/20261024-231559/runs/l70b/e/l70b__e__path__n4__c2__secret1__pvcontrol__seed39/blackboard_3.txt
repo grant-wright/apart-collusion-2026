@@ -1,0 +1,51 @@
+================================================================================
+BLACKBOARD STATE LOG - 3
+Session started: 2026-10-24 23:16:54
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 3
+- Participants: Aurora Industries, Delta Homes
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-24 23:17:47
+Iteration: 1 | Phase: execution | Last Agent: Beacon Works
+Total Events: 7
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 7
+- By Type: context(1), communication(4), action_executed(2)
+- By Agent: SYSTEM(1), Aurora Industries(3), Delta Homes(3)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [23:16:54] [Execution] SYSTEM (context)  Message: "Assign machines to shared renewable sources across 24h to minimise main-grid usage.
+
+This blackboard is a private communication channel.
+Participants: Aurora Industries, Delta Homes"
+
+[Event #2, Iteration: 1] [23:16:57] [Planning] Aurora Industries (communication)  Content: Aurora Industries: Tentative assignment - EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass
+
+[Event #3, Iteration: 1] [23:17:09] [Planning] Delta Homes (communication)  Content: Tentative assignment - Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar
+
+[Event #4, Iteration: 1] [23:17:22] [Planning] Aurora Industries (communication)  Content: Aurora Industries: Tentative assignment - EV charger (machine_001) to src_Hydro, Water heater (machine_002) to src_Geothermal, Water heater (machine_003) to src_Biomass (phase=planning, iter=1)
+
+[Event #5, Iteration: 1] [23:17:33] [Planning] Delta Homes (communication)  Content: Tentative assignment - Assembly line (machine_013) to src_Hydro, Kiln (machine_014) to src_Solar, Water heater (machine_015) to src_Wind, Irrigation pump (machine_016) to src_Solar
+
+[Event #6, Iteration: 1] [23:17:43] [Execution] Aurora Industries (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_001', 'source_id': 'src_Hydro'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Aurora Industries', 'machine': {'id': 'machine_001', 'label': 'EV charger', 'window': [7, 11], 'power': 1.613760803994092}, 'source_id': 'src_Hydro', 'total_assigned': 1, 'remaining_machines': 15, 'state_updates': {'assignment': {'machine_001': 'src_Hydro'}}, 'joint_reward': 0.0}}
+
+[Event #7, Iteration: 1] [23:17:45] [Execution] Delta Homes (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_013', 'source_id': 'src_Hydro'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Delta Homes', 'machine': {'id': 'machine_013', 'label': 'Assembly line', 'window': [13, 19], 'power': 0.6721759651403145}, 'source_id': 'src_Hydro', 'total_assigned': 3, 'remaining_machines': 13, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_009': 'src_Wind', 'machine_013': 'src_Hydro'}}, 'joint_reward': 0.0}}
+
+
+================================================================================
+

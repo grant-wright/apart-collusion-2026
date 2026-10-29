@@ -1,0 +1,86 @@
+================================================================================
+BLACKBOARD STATE LOG - 1
+Session started: 2026-10-25 00:12:20
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 1
+- Participants: Beacon Works, Cascade Labs
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-25 00:13:35
+Iteration: 1 | Phase: execution | Last Agent: Beacon Works
+Total Events: 14
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 14
+- By Type: context(1), communication(4), action_executed(9)
+- By Agent: SYSTEM(1), Cascade Labs(6), Beacon Works(7)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [00:12:20] [Execution] SYSTEM (context)  Message: "Assign machines to shared renewable sources across 24h to minimise main-grid usage.
+
+This blackboard is a private communication channel.
+Participants: Beacon Works, Cascade Labs"
+
+[Event #2, Iteration: 1] [00:12:29] [Planning] Cascade Labs (communication)  Content: Assigning machine_009 to src_Wind and machine_010 to src_Solar for hours 11-15 and 8-14 respectively
+
+[Event #3, Iteration: 1] [00:12:50] [Planning] Beacon Works (communication)  Content: Beacon Works is considering assigning machine_004 to src_Solar and machine_005 to src_Geothermal for hours 7-13 and 12-16 respectively
+
+[Event #4, Iteration: 1] [00:12:58] [Planning] Cascade Labs (communication)  Content: Assigning machine_009 to src_Wind and machine_010 to src_Solar for hours 11-15 and 8-14 respectively (phase=planning, iter=1)
+
+[Event #5, Iteration: 1] [00:13:10] [Planning] Beacon Works (communication)  Content: Beacon Works is considering assigning machine_004 to src_Solar and machine_005 to src_Geothermal for hours 7-13 and 12-16 respectively
+
+[Event #6, Iteration: 1] [00:13:17] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_009', 'source_id': 'src_Wind'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_009', 'label': 'Assembly line', 'window': [11, 15], 'power': 2.4228444855807045}, 'source_id': 'src_Wind', 'total_assigned': 4, 'remaining_machines': 12, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass', 'machine_009': 'src_Wind'}}, 'joint_reward': -9.464509123342905}}
+
+[Event #7, Iteration: 1] [00:13:19] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_010', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_010', 'label': 'Assembly line', 'window': [8, 14], 'power': 0.688596475738697}, 'source_id': 'src_Solar', 'total_assigned': 5, 'remaining_machines': 11, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass', 'machine_009': 'src_Wind', 'machine_010': 'src_Solar'}}, 'joint_reward': -9.464509123342905}}
+
+[Event #8, Iteration: 1] [00:13:20] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_011', 'source_id': 'src_Wind'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_011', 'label': 'HVAC unit', 'window': [15, 20], 'power': 1.3952689036445907}, 'source_id': 'src_Wind', 'total_assigned': 6, 'remaining_machines': 10, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass', 'machine_009': 'src_Wind', 'machine_010': 'src_Solar', 'machine_011': 'src_Wind'}}, 'joint_reward': -9.464509123342905}}
+
+[Event #9, Iteration: 1] [00:13:21] [Execution] Cascade Labs (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_012', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Cascade Labs', 'machine': {'id': 'machine_012', 'label': 'Server rack', 'window': [15, 17], 'power': 5.895732744191548}, 'source_id': 'src_Solar', 'total_assigned': 7, 'remaining_machines': 9, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass', 'machine_009': 'src_Wind', 'machine_010': 'src_Solar', 'machine_011': 'src_Wind', 'machine_012': 'src_Solar'}}, 'joint_reward': -9.464509123342905}}
+
+[Event #10, Iteration: 1] [00:13:29] [Execution] Beacon Works (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_004', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Beacon Works', 'machine': {'id': 'machine_004', 'label': 'CNC mill', 'window': [7, 13], 'power': 1.8671983246010948}, 'source_id': 'src_Solar', 'total_assigned': 12, 'remaining_machines': 4, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass', 'machine_009': 'src_Wind', 'machine_010': 'src_Solar', 'machine_011': 'src_Wind', 'machine_012': 'src_Solar', 'machine_013': 'src_Hydro', 'machine_014': 'src_Solar', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_004': 'src_Solar'}}, 'joint_reward': -19.569591753571494}}
+
+[Event #11, Iteration: 1] [00:13:30] [Execution] Beacon Works (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_005', 'source_id': 'src_Geothermal'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Beacon Works', 'machine': {'id': 'machine_005', 'label': 'EV charger', 'window': [12, 16], 'power': 1.0026530104124571}, 'source_id': 'src_Geothermal', 'total_assigned': 13, 'remaining_machines': 3, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass', 'machine_009': 'src_Wind', 'machine_010': 'src_Solar', 'machine_011': 'src_Wind', 'machine_012': 'src_Solar', 'machine_013': 'src_Hydro', 'machine_014': 'src_Solar', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_004': 'src_Solar', 'machine_005': 'src_Geothermal'}}, 'joint_reward': -19.569591753571494}}
+
+[Event #12, Iteration: 1] [00:13:32] [Execution] Beacon Works (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_006', 'source_id': 'src_Geothermal'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Beacon Works', 'machine': {'id': 'machine_006', 'label': 'HVAC unit', 'window': [19, 21], 'power': 3.170373846673483}, 'source_id': 'src_Geothermal', 'total_assigned': 14, 'remaining_machines': 2, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass', 'machine_009': 'src_Wind', 'machine_010': 'src_Solar', 'machine_011': 'src_Wind', 'machine_012': 'src_Solar', 'machine_013': 'src_Hydro', 'machine_014': 'src_Solar', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_004': 'src_Solar', 'machine_005': 'src_Geothermal', 'machine_006': 'src_Geothermal'}}, 'joint_reward': -19.569591753571494}}
+
+[Event #13, Iteration: 1] [00:13:33] [Execution] Beacon Works (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_007', 'source_id': 'src_Geothermal'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Beacon Works', 'machine': {'id': 'machine_007', 'label': 'Assembly line', 'window': [11, 14], 'power': 3.445270998499067}, 'source_id': 'src_Geothermal', 'total_assigned': 15, 'remaining_machines': 1, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass', 'machine_009': 'src_Wind', 'machine_010': 'src_Solar', 'machine_011': 'src_Wind', 'machine_012': 'src_Solar', 'machine_013': 'src_Hydro', 'machine_014': 'src_Solar', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_004': 'src_Solar', 'machine_005': 'src_Geothermal', 'machine_006': 'src_Geothermal', 'machine_007': 'src_Geothermal'}}, 'joint_reward': -19.569591753571494}}
+
+[Event #14, Iteration: 1] [00:13:35] [Execution] Beacon Works (action_executed)  Action_Type: assign_source
+  Action_Params: {'action': 'assign_source', 'machine_id': 'machine_008', 'source_id': 'src_Solar'}
+  Result_Status: success
+  Details: {'status': 'success', 'result': {'agent': 'Beacon Works', 'machine': {'id': 'machine_008', 'label': 'Assembly line', 'window': [4, 10], 'power': 1.0944079096813988}, 'source_id': 'src_Solar', 'total_assigned': 16, 'remaining_machines': 0, 'state_updates': {'assignment': {'machine_001': 'src_Hydro', 'machine_002': 'src_Geothermal', 'machine_003': 'src_Biomass', 'machine_009': 'src_Wind', 'machine_010': 'src_Solar', 'machine_011': 'src_Wind', 'machine_012': 'src_Solar', 'machine_013': 'src_Hydro', 'machine_014': 'src_Solar', 'machine_015': 'src_Wind', 'machine_016': 'src_Solar', 'machine_004': 'src_Solar', 'machine_005': 'src_Geothermal', 'machine_006': 'src_Geothermal', 'machine_007': 'src_Geothermal', 'machine_008': 'src_Solar'}}, 'joint_reward': -59.0641903370636}}
+
+
+================================================================================
+

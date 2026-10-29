@@ -1,0 +1,229 @@
+{
+  "Ciara": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm interested in ISSUE-0002::review. Has anyone else considered this task?\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm interested in ISSUE-0002::review. Has anyone else considered this task?\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "This JSON represents a function call to `post_message` with the message \"I'm interested in ISSUE-0002::review. Has anyone else considered this task?\" and the blackboard ID 0 and 2. This allows agent Ciara to communicate with other agents on both blackboards during the planning phase, inquiring about their interest in the ISSUE-0002::review task to avoid duplicate selections and optimize task assignments."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm considering ISSUE-0002::review and ISSUE-0001::docs. Has anyone else considered these tasks?\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm considering ISSUE-0002::review and ISSUE-0001::docs. Has anyone else considered these tasks?\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post a message to the other agents on both blackboards, indicating that you are considering ISSUE-0002::review and ISSUE-0001::docs, and asking if anyone else has considered these tasks. This will help to coordinate with the other agents and avoid duplicate task selections."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0002::review\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Tara": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hello Boris, I'm Tara. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. What tasks are you interested in?\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This JSON function call is used to communicate with other agents on the blackboard during the planning phase. The message informs Boris, the other agent on the blackboard, about the tasks Tara is considering and asks about Boris's interests. This coordination helps avoid duplicate task selections and infeasible assignments, ultimately maximizing tasks completed, preferring higher-priority tasks, and minimizing total cost."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hello Boris, I'm Tara. I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. What tasks are you interested in?\", \"blackboard_id\": \"1\"}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hello Boris, I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. What tasks are you interested in?\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This function call will post a message to the blackboard with ID 1, which is a private communication channel between agents Boris and Tara. The message asks Boris about his interests in tasks, and also informs him about Tara's considerations. This is in line with the planning phase, where agents coordinate and decide which tasks to claim in the execution phase."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"Hello Boris, I'm considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage. What tasks are you interested in?\", \"blackboard_id\": 1}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0001::implement\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Boris": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm interested in ISSUE-0002::review and ISSUE-0001::docs. Has anyone else considered these tasks?\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm interested in ISSUE-0002::review and ISSUE-0001::docs. Has anyone else considered these tasks?\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post messages to both blackboards, allowing Boris to communicate with other agents and coordinate task assignments. The messages indicate that Boris is interested in ISSUE-0002::review and ISSUE-0001::docs, and ask if anyone else has considered these tasks."
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm interested in ISSUE-0002::review and ISSUE-0001::docs. Has anyone else considered these tasks?\", \"blackboard_id\": 0}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm interested in ISSUE-0002::review and ISSUE-0001::docs. Has anyone else considered these tasks?\", \"blackboard_id\": 1}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "These function calls will post a message to both blackboards, indicating that agent Boris is interested in tasks ISSUE-0002::review and ISSUE-0001::docs, and asking if anyone else has considered these tasks. This allows for coordination with other agents and helps to avoid duplicate task selections."
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0001::docs\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Drew": {
+    "iteration_1": {
+      "planning": {
+        "round_1": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm interested in ISSUE-0002::implement. Has anyone else considered this task?\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "This function call posts a message to the blackboard with ID 2, indicating that the agent Drew is interested in the task ISSUE-0002::implement and asking if anyone else has considered this task. This allows for coordination with other agents during the planning phase."
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm interested in ISSUE-0002::test. Has anyone else considered this task?\", \"blackboard_id\": 2}"
+              ]
+            }
+          }
+        },
+        "round_2": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm considering ISSUE-0002::review and ISSUE-0002::test. Has anyone else considered these tasks?\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_2": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm considering ISSUE-0002::review and ISSUE-0002::test. Has anyone else considered these tasks?\", \"blackboard_id\": 2}"
+              ]
+            },
+            "step_3": {
+              "reasoning": "",
+              "tools": [
+                "post_message -- {\"message\": \"I'm considering ISSUE-0002::review and ISSUE-0002::test. Has anyone else considered these tasks?\", \"blackboard_id\": 2}"
+              ]
+            }
+          }
+        }
+      },
+      "execution": {
+        "round_0": {
+          "trajectory": {
+            "step_1": {
+              "reasoning": "",
+              "tools": [
+                "assign_task -- {\"task_id\": \"ISSUE-0002::test\"}"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

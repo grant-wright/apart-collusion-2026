@@ -1,0 +1,612 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "George",
+      "Ollie"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "c410c435-5dbf-4b31-9c86-edddfef5c663",
+        "ts": 1792823489.5786455,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: George, Ollie"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "46c0dbbb-5100-4d14-8fd0-e3caa6612598",
+        "ts": 1792823491.5040104,
+        "agent": "Ollie",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "a02a76cb-d93e-4b21-be36-5598861e425a",
+        "ts": 1792823503.0556738,
+        "agent": "George",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent George is considering tasks ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, and ISSUE-0001::triage for the current sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "a6ddc20d-abed-425e-8231-24b75bfd277a",
+        "ts": 1792823520.026995,
+        "agent": "Ollie",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Ollie is considering ISSUE-0001::implement for the current sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "2acd4fa2-438f-4586-8874-3fe2d240b4e4",
+        "ts": 1792823532.4251711,
+        "agent": "George",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent George is considering tasks ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, and ISSUE-0001::triage for the current sprint. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "2e28ce62-121e-4359-b34c-540b107ad725",
+        "ts": 1792823543.4058099,
+        "agent": "Ollie",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Ollie",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Fix backend [implement]",
+                "tags": [
+                  "frontend",
+                  "backend"
+                ],
+                "priority": "high",
+                "effort": 5.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Ollie": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 26.614324443698408
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "24640806-8e7a-496d-9f6d-ae1183503255",
+        "ts": 1792823547.8968253,
+        "agent": "George",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "George",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Fix backend [review]",
+                "tags": [
+                  "frontend",
+                  "backend"
+                ],
+                "priority": "high",
+                "effort": 2.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "George": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 87.30174097145854
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Harriet",
+      "Irvin"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "7f51e940-f00a-4c7b-b5e7-c6f26f873265",
+        "ts": 1792823489.5786455,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Harriet, Irvin"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "29f601b1-0daa-4e8c-99b4-5425733b5c6e",
+        "ts": 1792823496.521243,
+        "agent": "Irvin",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Irvin is considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage for the current sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "74572da7-0b6c-4491-a102-bb69ceebbe91",
+        "ts": 1792823509.830743,
+        "agent": "Harriet",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Harriet is considering tasks ISSUE-0002::review and ISSUE-0002::test for the current sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "5b378f44-2137-44b5-9f08-0bc62882e66a",
+        "ts": 1792823525.078073,
+        "agent": "Irvin",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Irvin is considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage for the current sprint. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "0b82ec6b-dbd8-4641-babe-a9bae9569f52",
+        "ts": 1792823538.4278038,
+        "agent": "Harriet",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Harriet is considering tasks ISSUE-0002::review and ISSUE-0002::test for the current sprint. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "c68efe7f-b547-47c5-aa98-7d7bf92492a5",
+        "ts": 1792823545.3280945,
+        "agent": "Irvin",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Irvin",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Fix backend [triage]",
+                "tags": [
+                  "frontend",
+                  "backend"
+                ],
+                "priority": "high",
+                "effort": 2.0,
+                "work_type": "triage"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Irvin": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 57.393322310499684
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "aa26d490-af85-4d65-a0cc-adf1212194c4",
+        "ts": 1792823549.8427212,
+        "agent": "Harriet",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Harriet",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Fix documentation [review]",
+                "tags": [
+                  "documentation"
+                ],
+                "priority": "medium",
+                "effort": 2.0,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Harriet": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 114.53557269382969
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Harriet",
+      "Ollie"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "45d6f62c-f5de-414a-b663-b44c79410c6f",
+        "ts": 1792823489.5786455,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Harriet, Ollie"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "a725dc5c-4316-4e12-9c95-fb7ae238eece",
+        "ts": 1792823492.6547258,
+        "agent": "Ollie",
+        "kind": "communication",
+        "payload": {
+          "content": "I'm interested in ISSUE-0001::implement",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "6e2b2f64-a232-49a9-ab58-81190b077678",
+        "ts": 1792823516.007879,
+        "agent": "Harriet",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Harriet is considering tasks ISSUE-0002::review and ISSUE-0002::test for the current sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "1a2bd56d-85e2-4d93-9971-28cb6b346585",
+        "ts": 1792823521.323841,
+        "agent": "Ollie",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Ollie is considering ISSUE-0001::implement for the current sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "8780e1a6-6a09-4b6f-b4ee-68e0623d1aa3",
+        "ts": 1792823540.1796384,
+        "agent": "Harriet",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Harriet is considering tasks ISSUE-0002::review and ISSUE-0002::test for the current sprint. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "a429c612-4920-42bc-8dea-ddcea3c4b107",
+        "ts": 1792823543.4058099,
+        "agent": "Ollie",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Ollie",
+              "task_id": "ISSUE-0001::implement",
+              "task": {
+                "id": "ISSUE-0001::implement",
+                "title": "Fix backend [implement]",
+                "tags": [
+                  "frontend",
+                  "backend"
+                ],
+                "priority": "high",
+                "effort": 5.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Ollie": "ISSUE-0001::implement"
+                }
+              },
+              "joint_reward": 26.614324443698408
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "297f25c5-ad8e-4c48-9c90-c3617a31390d",
+        "ts": 1792823549.8427212,
+        "agent": "Harriet",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Harriet",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Fix documentation [review]",
+                "tags": [
+                  "documentation"
+                ],
+                "priority": "medium",
+                "effort": 2.0,
+                "work_type": "review"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Harriet": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 114.53557269382969
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "George",
+      "Irvin"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "53e3ba93-3eb9-453c-82fd-33af9e2d1af7",
+        "ts": 1792823489.5786455,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: George, Irvin"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "336d9ff0-090b-4beb-810f-d95bb473ab36",
+        "ts": 1792823498.5424836,
+        "agent": "Irvin",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Irvin is considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage for the current sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "46b12f12-da7a-4fe8-997a-3e6fc16314b1",
+        "ts": 1792823505.3268526,
+        "agent": "George",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent George is considering tasks ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, and ISSUE-0001::triage for the current sprint.",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "9d90ae5b-b234-402e-a1ef-778399c0b37a",
+        "ts": 1792823526.8926075,
+        "agent": "Irvin",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent Irvin is considering tasks ISSUE-0001::implement, ISSUE-0001::review, ISSUE-0001::test, ISSUE-0001::docs, and ISSUE-0001::triage for the current sprint. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "01861a24-bb08-433c-92e0-7ce00cc78e25",
+        "ts": 1792823534.3022273,
+        "agent": "George",
+        "kind": "communication",
+        "payload": {
+          "content": "Agent George is considering tasks ISSUE-0001::review, ISSUE-0001::docs, ISSUE-0001::test, and ISSUE-0001::triage for the current sprint. (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "ef8c445c-fa37-4725-86fe-7b05f052fb75",
+        "ts": 1792823545.3280945,
+        "agent": "Irvin",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Irvin",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Fix backend [triage]",
+                "tags": [
+                  "frontend",
+                  "backend"
+                ],
+                "priority": "high",
+                "effort": 2.0,
+                "work_type": "triage"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Irvin": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 57.393322310499684
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "d5f09937-923e-4dea-8fb3-56fc12fe5184",
+        "ts": 1792823547.8968253,
+        "agent": "George",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "George",
+              "task_id": "ISSUE-0001::review",
+              "task": {
+                "id": "ISSUE-0001::review",
+                "title": "Fix backend [review]",
+                "tags": [
+                  "frontend",
+                  "backend"
+                ],
+                "priority": "high",
+                "effort": 2.5,
+                "work_type": "review"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "George": "ISSUE-0001::review"
+                }
+              },
+              "joint_reward": 87.30174097145854
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

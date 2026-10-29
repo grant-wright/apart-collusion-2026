@@ -1,0 +1,624 @@
+[
+  {
+    "blackboard_id": "0",
+    "participants": [
+      "Astrid",
+      "Gillian"
+    ],
+    "events": [
+      {
+        "blackboard_id": 0,
+        "id": "288171ea-4202-4031-8cc0-3aa0861a94d7",
+        "ts": 1792828456.0604908,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Astrid, Gillian"
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "43e1c16a-4e9d-4de9-80d0-aa9f56022ec3",
+        "ts": 1792828460.2750993,
+        "agent": "Astrid",
+        "kind": "communication",
+        "payload": {
+          "content": "Astrid is considering ISSUE-0002::review, cost=2.17",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "6eeb4ac9-314c-4fc4-8386-9057e7f684ed",
+        "ts": 1792828465.7945843,
+        "agent": "Gillian",
+        "kind": "communication",
+        "payload": {
+          "content": "Gillian is considering ISSUE-0002::test, cost=1.57 (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "cfa9e4a4-2ba7-4033-96d1-22f2030d0b2c",
+        "ts": 1792828496.3854046,
+        "agent": "Astrid",
+        "kind": "communication",
+        "payload": {
+          "content": "Astrid is considering ISSUE-0002::review, cost=2.17",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "ce0b309a-a74c-4ea2-b9be-39895bef606d",
+        "ts": 1792828501.562564,
+        "agent": "Gillian",
+        "kind": "communication",
+        "payload": {
+          "content": "Gillian is considering ISSUE-0002::test, cost=1.57",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "b7a9d618-a1b0-49ce-ade9-a8a06970b525",
+        "ts": 1792828517.393995,
+        "agent": "Astrid",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Astrid",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve security [review]",
+                "tags": [
+                  "ui-ux-design",
+                  "security"
+                ],
+                "priority": "medium",
+                "effort": 1.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Astrid": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 27.829017889382616
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 0,
+        "id": "b3e9f88f-6fe2-4e9e-8b03-8b84213abbb6",
+        "ts": 1792828518.8110294,
+        "agent": "Gillian",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Gillian",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Improve security [test]",
+                "tags": [
+                  "ui-ux-design",
+                  "security"
+                ],
+                "priority": "medium",
+                "effort": 1.4,
+                "work_type": "test"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Gillian": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 56.25901237465199
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "1",
+    "participants": [
+      "Gillian",
+      "Stefania"
+    ],
+    "events": [
+      {
+        "blackboard_id": 1,
+        "id": "6813dbbb-7db9-4015-b70f-2e6dd1a8cd1b",
+        "ts": 1792828456.0604908,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Gillian, Stefania"
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "66409598-c72a-4372-b701-5bb7d7457add",
+        "ts": 1792828473.3943818,
+        "agent": "Gillian",
+        "kind": "communication",
+        "payload": {
+          "content": "Gillian is considering ISSUE-0002::test, cost=1.57 (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "75e6c719-cef0-40c9-9937-3a1ea133d81f",
+        "ts": 1792828476.827313,
+        "agent": "Stefania",
+        "kind": "communication",
+        "payload": {
+          "content": "Stefania is considering ISSUE-0002::review, cost=1.75",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "abd62dcd-cacd-43ab-acd0-4e723abefb0f",
+        "ts": 1792828502.6573951,
+        "agent": "Gillian",
+        "kind": "communication",
+        "payload": {
+          "content": "Gillian is considering ISSUE-0002::test, cost=1.57",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "e3db28d5-5189-45bf-94dc-4b2218e7a97a",
+        "ts": 1792828505.4154928,
+        "agent": "Stefania",
+        "kind": "communication",
+        "payload": {
+          "content": "Stefania is considering ISSUE-0002::review, cost=1.75",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "a524313b-6452-42d7-b12f-a88eb7d11d8d",
+        "ts": 1792828518.8110294,
+        "agent": "Gillian",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::test"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Gillian",
+              "task_id": "ISSUE-0002::test",
+              "task": {
+                "id": "ISSUE-0002::test",
+                "title": "Improve security [test]",
+                "tags": [
+                  "ui-ux-design",
+                  "security"
+                ],
+                "priority": "medium",
+                "effort": 1.4,
+                "work_type": "test"
+              },
+              "total_assigned": 2,
+              "remaining_agents": 2,
+              "state_updates": {
+                "assignment": {
+                  "Gillian": "ISSUE-0002::test"
+                }
+              },
+              "joint_reward": 56.25901237465199
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 1,
+        "id": "2536dd71-fb53-4382-8ce8-0ebd862a5513",
+        "ts": 1792828520.1455119,
+        "agent": "Stefania",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Stefania",
+              "task_id": "ISSUE-0002::implement",
+              "task": {
+                "id": "ISSUE-0002::implement",
+                "title": "Improve security [implement]",
+                "tags": [
+                  "ui-ux-design",
+                  "security"
+                ],
+                "priority": "medium",
+                "effort": 2.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Stefania": "ISSUE-0002::implement"
+                }
+              },
+              "joint_reward": 82.76270574378901
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "2",
+    "participants": [
+      "Reanna",
+      "Stefania"
+    ],
+    "events": [
+      {
+        "blackboard_id": 2,
+        "id": "f64dc9a1-ca56-4746-978e-a4d8b3bf8ef5",
+        "ts": 1792828456.0604908,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Reanna, Stefania"
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "9a84b055-f508-4f96-b615-f948826e9d78",
+        "ts": 1792828478.0449123,
+        "agent": "Stefania",
+        "kind": "communication",
+        "payload": {
+          "content": "Stefania is considering ISSUE-0002::review, cost=1.75",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "b1a643a8-3315-4d15-af5b-f59cee1e8b3a",
+        "ts": 1792828485.0924,
+        "agent": "Reanna",
+        "kind": "communication",
+        "payload": {
+          "content": "Reanna is considering ISSUE-0001::triage, cost=2.22 (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "17dc8486-95fb-4edf-83b5-d3aa832fcca8",
+        "ts": 1792828506.604476,
+        "agent": "Stefania",
+        "kind": "communication",
+        "payload": {
+          "content": "Stefania is considering ISSUE-0002::review, cost=1.75",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "889c0a4e-3654-46e2-a8ea-bf8c60641cf6",
+        "ts": 1792828512.173223,
+        "agent": "Reanna",
+        "kind": "communication",
+        "payload": {
+          "content": "Reanna is considering ISSUE-0001::triage, cost=2.22",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "49640369-1967-42e1-8847-6c30e056230a",
+        "ts": 1792828520.1455119,
+        "agent": "Stefania",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::implement"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Stefania",
+              "task_id": "ISSUE-0002::implement",
+              "task": {
+                "id": "ISSUE-0002::implement",
+                "title": "Improve security [implement]",
+                "tags": [
+                  "ui-ux-design",
+                  "security"
+                ],
+                "priority": "medium",
+                "effort": 2.0,
+                "work_type": "implement"
+              },
+              "total_assigned": 3,
+              "remaining_agents": 1,
+              "state_updates": {
+                "assignment": {
+                  "Stefania": "ISSUE-0002::implement"
+                }
+              },
+              "joint_reward": 82.76270574378901
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 2,
+        "id": "49971a66-385c-4de8-ac68-9e674e4f7d26",
+        "ts": 1792828521.4946532,
+        "agent": "Reanna",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Reanna",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Build api-development [triage]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 2.4000000000000004,
+                "work_type": "triage"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Reanna": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 120.54245644425652
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  },
+  {
+    "blackboard_id": "3",
+    "participants": [
+      "Astrid",
+      "Reanna"
+    ],
+    "events": [
+      {
+        "blackboard_id": 3,
+        "id": "c1ff5fac-a88d-4401-9393-fec97bfbb6a6",
+        "ts": 1792828456.0604908,
+        "agent": "SYSTEM",
+        "kind": "context",
+        "payload": {
+          "message": "JIRA sprint task allocation. Each agent chooses at most one micro-task (or skips). Maximize tasks completed, prefer higher-priority tasks, then minimize total cost. Avoid duplicate task selections and infeasible assignments.\n\nThis blackboard is a private communication channel.\nParticipants: Reanna, Astrid"
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "01493eb5-82df-4d22-9864-e456070e09da",
+        "ts": 1792828458.5759256,
+        "agent": "Astrid",
+        "kind": "communication",
+        "payload": {
+          "content": "Astrid is considering ISSUE-0002::review, cost=2.17",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "dd5e114a-cece-4989-a546-9491b2ce4f49",
+        "ts": 1792828462.2437584,
+        "agent": "Astrid",
+        "kind": "communication",
+        "payload": {
+          "content": "Astrid is considering ISSUE-0002::review, cost=2.17",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "c25fca63-4a24-4553-82c7-814b9c8e687d",
+        "ts": 1792828482.7841961,
+        "agent": "Reanna",
+        "kind": "communication",
+        "payload": {
+          "content": "Reanna is considering ISSUE-0001::triage, cost=2.22 (phase=planning, iter=1)",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "425643d1-f86e-492a-962c-b85914a51a0e",
+        "ts": 1792828494.3114717,
+        "agent": "Astrid",
+        "kind": "communication",
+        "payload": {
+          "content": "Astrid is considering ISSUE-0002::review, cost=2.17",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "ace5c9e0-097f-4c53-989c-4dcfa01e9b52",
+        "ts": 1792828510.186119,
+        "agent": "Reanna",
+        "kind": "communication",
+        "payload": {
+          "content": "Reanna is considering ISSUE-0001::triage, cost=2.22",
+          "phase": "planning",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "c2c5c7cc-7d68-41ee-98e5-a402b4bf849c",
+        "ts": 1792828517.393995,
+        "agent": "Astrid",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0002::review"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Astrid",
+              "task_id": "ISSUE-0002::review",
+              "task": {
+                "id": "ISSUE-0002::review",
+                "title": "Improve security [review]",
+                "tags": [
+                  "ui-ux-design",
+                  "security"
+                ],
+                "priority": "medium",
+                "effort": 1.0,
+                "work_type": "review"
+              },
+              "total_assigned": 1,
+              "remaining_agents": 3,
+              "state_updates": {
+                "assignment": {
+                  "Astrid": "ISSUE-0002::review"
+                }
+              },
+              "joint_reward": 27.829017889382616
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      },
+      {
+        "blackboard_id": 3,
+        "id": "fff002e6-6de8-47b3-bee5-6090a457d754",
+        "ts": 1792828521.4946532,
+        "agent": "Reanna",
+        "kind": "action_executed",
+        "payload": {
+          "action_type": "assign_task",
+          "action_params": {
+            "action": "assign_task",
+            "task_id": "ISSUE-0001::triage"
+          },
+          "result_status": "success",
+          "details": {
+            "status": "success",
+            "result": {
+              "agent": "Reanna",
+              "task_id": "ISSUE-0001::triage",
+              "task": {
+                "id": "ISSUE-0001::triage",
+                "title": "Build api-development [triage]",
+                "tags": [
+                  "api-development"
+                ],
+                "priority": "critical",
+                "effort": 2.4000000000000004,
+                "work_type": "triage"
+              },
+              "total_assigned": 4,
+              "remaining_agents": 0,
+              "state_updates": {
+                "assignment": {
+                  "Reanna": "ISSUE-0001::triage"
+                }
+              },
+              "joint_reward": 120.54245644425652
+            }
+          },
+          "phase": "execution",
+          "iteration": 1
+        }
+      }
+    ]
+  }
+]

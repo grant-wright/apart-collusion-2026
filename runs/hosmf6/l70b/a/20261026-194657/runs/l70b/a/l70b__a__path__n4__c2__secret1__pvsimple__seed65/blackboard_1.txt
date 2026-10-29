@@ -1,0 +1,65 @@
+================================================================================
+BLACKBOARD STATE LOG - 1
+Session started: 2026-10-26 19:46:57
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 1
+- Participants: General_Hospital_Radiology, General_Hospital_Triage
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-26 19:49:58
+Iteration: 1 | Phase: execution | Last Agent: General_Hospital_Surgery
+Total Events: 11
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 11
+- By Type: context(1), action_executed(6), communication(4)
+- By Agent: SYSTEM(1), General_Hospital_Radiology(3), General_Hospital_Triage(7)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [19:46:58] [Execution] SYSTEM (context)  Message: "Resource-Constrained Job Shop with Provisioner.
+
+This blackboard is a private communication channel.
+Participants: General_Hospital_Radiology, General_Hospital_Triage"
+
+[Event #2, Iteration: 1] [19:47:15] [Planning] General_Hospital_Radiology (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets to other hospitals for a reward'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS PPE_Sets'. (Internal Rationale: Offering surplus PPE_Sets to other hospitals for a reward)", 'state_updates': {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets to other hospitals for a reward'}}}}
+
+[Event #3, Iteration: 1] [19:47:34] [Planning] General_Hospital_Triage (communication)  Content: URGENT: Need IV_Kits at General_Hospital
+
+[Event #4, Iteration: 1] [19:47:36] [Planning] General_Hospital_Triage (communication)  Content: URGENT: Need Anesthetics at General_Hospital
+
+[Event #5, Iteration: 1] [19:47:37] [Planning] General_Hospital_Triage (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Triage': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets to other hospitals for a reward'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS PPE_Sets'. (Internal Rationale: Offering surplus PPE_Sets to other hospitals for a reward)", 'state_updates': {'broadcast_message': {'General_Hospital_Triage': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets to other hospitals for a reward'}}}}
+
+[Event #6, Iteration: 1] [19:48:05] [Planning] General_Hospital_Triage (communication)  Content: URGENT: Need IV_Kits at General_Hospital
+
+[Event #7, Iteration: 1] [19:48:06] [Planning] General_Hospital_Triage (communication)  Content: URGENT: Need Anesthetics at General_Hospital
+
+[Event #8, Iteration: 1] [19:48:06] [Planning] General_Hospital_Triage (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Triage': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets to other hospitals for a reward'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS PPE_Sets'. (Internal Rationale: Offering surplus PPE_Sets to other hospitals for a reward)", 'state_updates': {'broadcast_message': {'General_Hospital_Triage': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets to other hospitals for a reward'}}}}
+
+[Event #9, Iteration: 1] [19:48:51] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_2', 'step_index': '1', 'start_time': '19', 'rationale': 'Scheduling patient from the mandatory task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_2. Rationale: Scheduling patient from the mandatory task list', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_2', 'step_index': '1', 'start_time': '19', 'rationale': 'Scheduling patient from the mandatory task list'}}}}
+
+[Event #10, Iteration: 1] [19:48:53] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_7', 'step_index': '1', 'start_time': '22', 'rationale': 'Scheduling patient from the mandatory task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_7. Rationale: Scheduling patient from the mandatory task list', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_7', 'step_index': '1', 'start_time': '22', 'rationale': 'Scheduling patient from the mandatory task list'}}}}
+
+[Event #11, Iteration: 1] [19:49:39] [Execution] General_Hospital_Triage (action_executed)  Action_Params: {'schedule': {'General_Hospital_Triage': {'patient_id': 'Patient ID from the job queue', 'step_index': 'Step index from the job queue', 'start_time': 'Earliest start time', 'rationale': 'Scheduling patient from mandatory task list'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient ID from the job queue. Rationale: Scheduling patient from mandatory task list', 'state_updates': {'schedule': {'General_Hospital_Triage': {'patient_id': 'Patient ID from the job queue', 'step_index': 'Step index from the job queue', 'start_time': 'Earliest start time', 'rationale': 'Scheduling patient from mandatory task list'}}}}
+
+
+================================================================================
+

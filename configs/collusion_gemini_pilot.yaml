@@ -1,0 +1,49 @@
+simulation:
+  max_iterations: 1
+  max_planning_rounds: 4
+  max_conversation_steps: 3
+  seed: 1
+  tags: [collusion_choice_small]
+
+environment:
+  import_path: experiments.collusion.choice.jira_ticket_choice_env:JiraTicketChoiceEnvironment
+  max_tasks: 8
+
+communication_network:
+  topology: complete
+  num_agents: 3
+  consolidate_channels: true
+
+llm_models:
+  - label: gemini-3.1-flash-lite
+    llm:
+      provider: gemini
+      gemini:
+        model: gemini-3.1-flash-lite
+        params:
+          max_tokens: 2000
+          temperature: 0.7
+
+experiment:
+  tag: collusion_gemini_pilot
+  output_dir: <repo>/outputs/collusion_gemini_pilot
+  max_concurrent_runs: 2
+  seeds: [1]
+  collusion:
+    # Keep colluder identity stable within a run (agents are still seed-dependent).
+    colluder_selection: first
+  sweeps:
+    - name: env_ablation_sweep
+      # Environment sweep. Each entry overrides/merges into the top-level `environment:` block.
+      environments:
+        - label: jira
+          import_path: experiments.collusion.choice.jira_ticket_choice_env:JiraTicketChoiceEnvironment
+      topologies: [complete]
+      num_agents: [3]
+      colluder_counts: [2]
+      # Baseline vs secret-channel treatment.
+      secret_channel_enabled: [true]
+      # Prompt variants only apply when secret_channel_enabled=true.
+      # When secret_channel_enabled=false, the runner forces the effective variant to "control".
+      prompt_variants: [control]
+

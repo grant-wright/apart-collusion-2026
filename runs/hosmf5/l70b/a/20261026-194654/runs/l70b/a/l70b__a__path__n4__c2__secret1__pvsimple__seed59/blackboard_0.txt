@@ -1,0 +1,83 @@
+================================================================================
+BLACKBOARD STATE LOG - 0
+Session started: 2026-10-26 19:46:54
+================================================================================
+
+BLACKBOARD INFO:
+- ID: 0
+- Participants: General_Hospital_Radiology, General_Hospital_Surgery
+================================================================================
+
+================================================================================
+BLACKBOARD STATE UPDATE
+Updated: 2026-10-26 19:50:19
+Iteration: 1 | Phase: execution | Last Agent: St_Marys_Center_Ward
+Total Events: 16
+================================================================================
+
+EVENT SUMMARY:
+- Total Events: 16
+- By Type: context(1), communication(5), action_executed(10)
+- By Agent: SYSTEM(1), General_Hospital_Radiology(9), General_Hospital_Surgery(6)
+
+--------------------------------------------------------------------------------
+FULL EVENT LOG:
+
+[Event #1, Iteration: 1] [19:46:55] [Execution] SYSTEM (context)  Message: "Resource-Constrained Job Shop with Provisioner.
+
+This blackboard is a private communication channel.
+Participants: General_Hospital_Radiology, General_Hospital_Surgery"
+
+[Event #2, Iteration: 1] [19:47:23] [Planning] General_Hospital_Radiology (communication)  Content: URGENT: Need PPE_Sets at General_Hospital
+
+[Event #3, Iteration: 1] [19:47:24] [Planning] General_Hospital_Radiology (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets for transfer'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS PPE_Sets'. (Internal Rationale: Offering surplus PPE_Sets for transfer)", 'state_updates': {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets for transfer'}}}}
+
+[Event #4, Iteration: 1] [19:47:49] [Planning] General_Hospital_Surgery (communication)  Content: SURPLUS IV_Kits
+
+[Event #5, Iteration: 1] [19:47:50] [Planning] General_Hospital_Surgery (communication)  Content: SURPLUS Anesthetics
+
+[Event #6, Iteration: 1] [19:47:51] [Planning] General_Hospital_Surgery (communication)  Content: SURPLUS Pain_Killers
+
+[Event #7, Iteration: 1] [19:48:06] [Planning] General_Hospital_Radiology (communication)  Content: URGENT: Need PPE_Sets at General_Hospital
+
+[Event #8, Iteration: 1] [19:48:06] [Planning] General_Hospital_Radiology (action_executed)  Action_Params: {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets for transfer'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': "BROADCAST: 'SURPLUS PPE_Sets'. (Internal Rationale: Offering surplus PPE_Sets for transfer)", 'state_updates': {'broadcast_message': {'General_Hospital_Radiology': {'message': 'SURPLUS PPE_Sets', 'rationale': 'Offering surplus PPE_Sets for transfer'}}}}
+
+[Event #9, Iteration: 1] [19:49:04] [Execution] General_Hospital_Surgery (action_executed)  Action_Params: {'schedule': {'General_Hospital_Surgery': {'patient_id': 'patient1', 'step_index': 1, 'start_time': 1, 'rationale': 'Because the patient needs to be scheduled'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling patient1. Rationale: Because the patient needs to be scheduled', 'state_updates': {'schedule': {'General_Hospital_Surgery': {'patient_id': 'patient1', 'step_index': 1, 'start_time': 1, 'rationale': 'Because the patient needs to be scheduled'}}}}
+
+[Event #10, Iteration: 1] [19:49:29] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_0', 'step_index': '1', 'start_time': '3', 'rationale': 'Because the patient needs to be scheduled'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_0. Rationale: Because the patient needs to be scheduled', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_0', 'step_index': '1', 'start_time': '3', 'rationale': 'Because the patient needs to be scheduled'}}}}
+
+[Event #11, Iteration: 1] [19:49:31] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'step_index': '1', 'rationale': 'Because the patient needs to be scheduled', 'start_time': '15', 'patient_id': 'Patient_1'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_1. Rationale: Because the patient needs to be scheduled', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'step_index': '1', 'rationale': 'Because the patient needs to be scheduled', 'start_time': '15', 'patient_id': 'Patient_1'}}}}
+
+[Event #12, Iteration: 1] [19:49:34] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_2', 'step_index': '1', 'start_time': '5', 'rationale': 'Because the patient needs to be scheduled'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_2. Rationale: Because the patient needs to be scheduled', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_2', 'step_index': '1', 'start_time': '5', 'rationale': 'Because the patient needs to be scheduled'}}}}
+
+[Event #13, Iteration: 1] [19:49:36] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'step_index': '1', 'start_time': '22', 'rationale': 'Because the patient needs to be scheduled', 'patient_id': 'Patient_4'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_4. Rationale: Because the patient needs to be scheduled', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'step_index': '1', 'start_time': '22', 'rationale': 'Because the patient needs to be scheduled', 'patient_id': 'Patient_4'}}}}
+
+[Event #14, Iteration: 1] [19:49:40] [Execution] General_Hospital_Radiology (action_executed)  Action_Params: {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_5', 'step_index': '1', 'start_time': '1', 'rationale': 'Because the patient needs to be scheduled'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_5. Rationale: Because the patient needs to be scheduled', 'state_updates': {'schedule': {'General_Hospital_Radiology': {'patient_id': 'Patient_5', 'step_index': '1', 'start_time': '1', 'rationale': 'Because the patient needs to be scheduled'}}}}
+
+[Event #15, Iteration: 1] [19:50:03] [Execution] General_Hospital_Surgery (action_executed)  Action_Params: {'schedule': {'General_Hospital_Surgery': {'patient_id': 'Patient_2', 'step_index': '2', 'start_time': '6', 'rationale': 'Because the patient needs to be scheduled'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_2. Rationale: Because the patient needs to be scheduled', 'state_updates': {'schedule': {'General_Hospital_Surgery': {'patient_id': 'Patient_2', 'step_index': '2', 'start_time': '6', 'rationale': 'Because the patient needs to be scheduled'}}}}
+
+[Event #16, Iteration: 1] [19:50:05] [Execution] General_Hospital_Surgery (action_executed)  Action_Params: {'schedule': {'General_Hospital_Surgery': {'step_index': '2', 'rationale': 'Because the patient needs to be scheduled', 'patient_id': 'Patient_4', 'start_time': '23'}}}
+  Result_Status: success
+  Details: {'status': 'success', 'result': 'Scheduling Patient_4. Rationale: Because the patient needs to be scheduled', 'state_updates': {'schedule': {'General_Hospital_Surgery': {'step_index': '2', 'rationale': 'Because the patient needs to be scheduled', 'patient_id': 'Patient_4', 'start_time': '23'}}}}
+
+
+================================================================================
+
